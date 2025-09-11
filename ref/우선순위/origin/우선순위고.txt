@@ -1,0 +1,1620 @@
+ tradition	전통,전설
+  patriotism	애국심
+  religious	종교
+  conscience	양심
+  intellect	지성
+  culture	문화,교양
+  civilization	문명
+  prejudice	편견, 선입관
+  instinct	본능
+  privilege	특권
+  impulse	충동
+  virtue	미덕, 장점
+  vice	악덕
+  revolution	혁명
+  stimulus	자극
+  ambition	대망, 야심
+  vanity	허영심
+  envy	시기, 부러움
+  jealousy	질투
+  fatigue	피로
+  passion	정열
+  famine	기근
+  calamity	재난, 불행
+  individual	개인
+  emotion	감정, 정서
+  evolution	진화, 발전
+  hypocrisy	위선
+  character	특징, 인격
+  method	방법
+  psychology	심리학
+  chivalry	기사도
+  literature	문학
+  responsibility	책임
+  system	조직, 체계
+  challenge	도전
+  monotony	단조로움
+  disgrace	불명예,치욕
+  luxury	사치, 사치품
+  anachronism	시대착오
+  conquest	정복
+  siege	포위공격
+  insight	통찰력
+  panic	공황
+  universe	우주, 전세계
+  criticism	비평, 비판
+  influence	영향, 영향력
+  resistance	저항
+  convenience	편리
+  hardship	고난
+  existence	존재, 생존
+  fortitude	인내, 용기
+  compromise	타협, 타협하다
+  prosperity	번영
+  comfort	위안, 안락
+  sacrifice	희생, 희생하다
+  superstition	미신
+  sympathy	동정, 공감
+  perseverance	인내
+  disgust	혐오
+  monopoly	독점
+  species	인류, 종류
+  moisture	습기
+  solitude	고독
+  candidate	지원자, 후보자
+  environment	환경
+  destiny	운명
+  hindrance	방해
+  property	재산, 소유권
+  increase	증가
+  decrease	감소
+  courtesy	예절
+  theory	이론
+  medium	매개, 중간에
+  principle	원리, 주의
+  shortcoming	결정
+  crisis	위기
+  policy	정책, 방침
+  affection	애정
+  homage	경애
+  conceit	자부심
+  hostility	적의, 적개심
+  frustration	좌절, 욕구불만
+  victory	승리
+  triumph	승리
+  hatred	증오
+  purpose	목적
+  fantasy	공상, 환상
+  struggle	분투노력하다
+  access	접근
+  contempt	경멸
+  convention	회의
+  harmony	조화
+  scorn	경멸
+  comment	주석, 논평
+  dignity	위엄
+  mercy	자비
+  cowardice	겁, 비겁
+  logic	논리학
+  eloquence	웅변
+  pastime	오락, 기분전환
+  talent	재능
+  misery	비창
+  modesty	겸손
+  circumstance	환경, 사정
+  quality	질
+  quantity	양
+  commerce	상업
+  conception	개념
+  identity	신원, 정책
+  legend	전설
+  trick	계략, 장난
+  wealth	부, 재산
+  charity	자비, 자선
+  fate	운명
+  evidence	증거
+  tension	긴장
+  impression	인상, 감명
+  elegy	애가, 슬픈노래
+  strain	긴장, 압박
+  bribe	뇌물을 주다
+  fame	명성
+  soul	영혼, 사랑
+  gratitude	감상
+  sin	죄
+  crime	범죄
+  strategy	전략, 전술
+  heritage	유산
+  strife	투쟁
+  pollution	오염
+  industry	산업
+  defect	결점, 단점
+  sincerity	성실
+  piety	경건,신앙심
+  adolescence	청년기
+  phenomenon	현상
+  account	계산, 설명
+  emphasis	강조
+  proportion	비례, 비율
+  rumor	소문
+  faculty	능력
+  worship	숭배
+  doctrine	학설
+  pity	연민, 유감
+  commodity	상품, 일용품
+  distress	고통, 괴롭히다
+  discourse	이야기하다
+  function	기능, 역할
+  fallacy	오류
+  violence	폭력, 맹렬
+  appetite	식욕, 욕구
+  revival	부활
+  foundation	기초
+  behavior	행위, 태도
+  discipline	훈련, 규율
+  poverty	빈곤
+  threat	협박, 위협
+  menace	협박하다
+  plague	전염병
+  capacity	능력, 수용력
+  attitude	태도
+  merit	장점, 공적
+  astronomy	천문학
+  despair	절망
+  patience	인내
+  confidence	신용, 자신
+  enthusiasm	열광
+  peril	위험
+  livelihood	생계, 살림
+  opportunity	기회
+  ridicule	조롱, 조소
+  liberty	자유
+  spirit	정신, 원기
+  traffic	교통, 교통에
+  remedy	구제책, 요법
+  symptom	징후
+  tyranny	전제정치, 포악
+  prospect	기대, 전망
+  credit	신용, 명예
+  profit	이익, 이익을보다
+  oblivion	망각
+  constitution	헌법, 체격
+  extent	범위, 정도
+  efficiency	능률, 효력
+  genius	천재
+  nightmare	악몽
+  benefit	이익, 은혜
+  reign	통치, 군림하다
+  ruin	파멸
+  factor	요인, 요소
+  vocation	직업
+  contrast	계약, 계약하다
+  welfare	복지
+  community	사회
+  faith	신앙, 신용
+  propaganda	선전
+  thrift	절약, 검약
+  melancholy	우울, 우울한
+  temper	기질, 노여움
+  finance	재정
+  significance	의의, 중요성
+  suffrage	참정권, 투표
+  rage	격노, 격노하다
+  thirst	목마름, 갈망
+  infancy	유년시대, 초기
+  adoration	숭배, 동경
+  insult	모욕
+  epidemic	유행병, 전염병
+  analogy	유사, 유추
+  ethics	윤리학
+  analysis	분석, 분해
+  labor	노동, 노력
+  indignation	분개, 분노
+  substance	실질, 실체
+  slang	속어
+  chaos	혼돈, 무질서
+  vigor	활력, 원기
+  heaven	하늘, 천국
+  hell	지옥
+  shame	수치, 치욕
+  dialect	방언, 사투리
+  barrier	장애물
+  barometer	기압계, 지표
+  glory	영광
+  generosity	관대함, 너그러움
+  technology	과학기술
+  basis	기초
+  biography	전기
+  gravity	중력, 중대성
+  treaty	조약
+  advantage	유리, 이점
+  vacuum	진공, 진공의
+  economy	경제, 절약
+  bravery	용기
+  epoch	신기원, 신시대
+  courage	용기
+  sphere	구, 범위
+  achievement	성취, 업적
+  biology	생물학
+  recreation	기분전환, 오락
+  gravitation	중력, 인력
+  fury	격분
+  behalf	위함, 이익
+  generalization	일반화, 보편화
+  damage	손해, 손상
+  horizon	지평선, 수평선
+  degree	정도, 학위
+  folly	어리석음
+  heredity	유전
+  describe	묘사하다
+  declare	선언하다
+  approve	시인하다
+  recommend	추천하다
+  reconcile	화해시키다
+  contribute	공언하다
+  distribute	분배하다
+  extinguish	끄다
+  survive	살아남다
+  contrast	대조
+  invade	침입하다
+  upset	뒤엎다
+  accomplish	성취하다
+  violate	위반하다
+  stride	성큼성큼걷다
+  forbear	참고견디다
+  calculate	계산하다
+  blame	비난하다
+  plow	갈다
+  grasp	파악하다
+  stumble	비틀거리다
+  require	필요로하다
+  cancel	취소하다
+  deceive	속이다
+  combine	결합하다
+  relate	관련시키다
+  arrest	체포하다
+  embody	구체화하다
+  select	고르다, 선발한
+  persist	고집하다
+  tremble	떨다, 떨리다
+  isolate	격리시키다
+  desert	사막, 버리다
+  establish	설립하다
+  vary	변화하다
+  investigate	조사하다
+  vanish	사라지다
+  lament	한탄하다
+  stretch	잡아늘이다
+  starve	굶주리다
+  generate	낳다, 발생하다
+  reform	계약하다
+  possess	소유하다
+  devote	받치다
+  tend	~경향이있다
+  pursue	추구하다
+  attach	붙이다
+  perish	멸망하다
+  dispose	처리하다
+  quit	떠나다
+  secure	획득하다
+  reveal	나타내다
+  persuade	설득하다
+  gaze	응시하다
+  restore	회복시키다
+  heal	고치다
+  acquire	얻다
+  halt	서다, 정지
+  maintain	유지하다
+  mourn	슬퍼하다
+  suspect	의심하다
+  grumble	불평하다
+  entertain	즐겁게하다
+  utilize	이용하다
+  convert	바꾸다
+  despise	경멸하다
+  commence	시작하다
+  consume	소비하다
+  assimilate	동화하다
+  impose	부과하다
+  encounter	만나다
+  release	면제하다
+  specialize	전공하다
+  respond	응답하다
+  soar	치솟다
+  comprehend	이해하다
+  detect	발견하다
+  qualify	자격을주다
+  decorate	장식하다
+  accelerate	촉진하다
+  betray	배반하다
+  dominate	통치하다
+  preserve	보존하다
+  entreat	간청하다
+  lack	부족하다
+  interrupt	방해하다
+  surpass	~뛰어나다
+  render	~되게하다
+  export	수출하다
+  fulfil	이행하다
+  inspect	검사하다
+  indulge	탐닉하다
+  prevail	유리하다
+  adjust	적응시키다
+  estimate	어림잡다
+  compensate	배상하다
+  restrain	억제하다
+  appreciate	감상하다
+  insist	주장하다
+  acknowledge	인정하다
+  distinguish	구별하다
+  involve	포함하다
+  intrude	침입하다
+  torment	고문하다
+  exhaust	다써버리다
+  endure	견디다
+  hesitate	주저하다
+  substitute	대용하다
+  prohibit	금지하다
+  forbid	금하다
+  display	보이다
+  concentrate	집중하다
+  yearn	그리워하다
+  forsake	버리다
+  endeavor	노력
+  soothe	위로하다
+  congratulate	축하하다
+  confuse	혼란시키다
+  improve	진보하다
+  diffuse	퍼지게하다
+  alter	바꾸다
+  speculate	사색하다
+  recover	회복하다
+  urge	역설하다
+  command	명령하다
+  warn	경고하다
+  transport	수송하다
+  ignore	무시하다
+  conceal	감추다
+  utter	완전한
+  flatter	아첨하다
+  absorb	흡수하다
+  yield	산출하다
+  meditate	숙고하다
+  perform	수행하다
+  embarrass	난처하게하다
+  reproach	비난하다
+  bewilder	당황하게하다
+  overcome	이겨내다
+  assert	주장하다
+  recognize	인정하다
+  admit	들어오게하다
+  persecute	학대하다
+  launch	내보내다
+  pretend	가장하다
+  circulate	유통하다
+  contemplate	응시하다
+  cope	맞서다
+  adapt	적응시키다
+  alarm	경보
+  adopt	채용하다
+  submit	복종시키다
+  convince	확신시키다
+  repent	후회하다
+  predict	예언하다
+  avoid	피하다
+  boast	자랑하다
+  participate	참가하다
+  abolish	폐지하다
+  attribute	~덕분에
+  survey	조사하다
+  invest	투자하다
+  seek	찾다, 구하다
+  communicate	전달하다
+  perplex	당황하게하다
+  broadcast	방송하다
+  reject	거절하다
+  vex	초조하게하다
+  overlook	내려다보다
+  reinforce	보강하다
+  accuse	고발하다
+  restrict	제안하다
+  attain	달성하다
+  cherish	소중히하다
+  suspend	중재하다
+  inherit	상속하다
+  bestow	수여하다
+  undertake	떠맡다
+  include	포함하다
+  exclude	제외하다
+  justify	정당화하다
+  annoy	괴롭히다
+  esteem	존중하다
+  cure	치료하다
+  resign	사직하다
+  accurate	정확한
+  rational	합리적인
+  literate	글을읽고쓸줄아는사람
+  conservative	보수적인
+  radical	근본적인
+  pure	순수한
+  queer	별난
+  sane	제정신의
+  genuine	진짜의, 순수한
+  vague	막연한
+  entire	완전한,전체의
+  absurd	터무니없는
+  lonely	쓸쓸한
+  savage	야만스러운
+  nuclear	핵의
+  obscure	무명의, 애매한
+  intricate	뒤얽힌
+  mortal	죽을운명의
+  vivid 	생생한
+  arrogant	오만한
+  exotic	외국의,이국풍
+  extreme	극단의
+  imperative	명령적인
+  mature	성숙한
+  tight	단단한,팽팽한
+  adequate	적당한,충분한
+  dissolute	방탕한,타락한
+  mutual	서로의
+  splendid	화려한,훌륭한
+  timid	겁많은
+  durable	오래견디는
+  conspicuous	유난히눈에띄는
+  brisk	활발한
+  primitive	원시의
+  superficial	피상적인,천박한
+  brilliant	빛나는,훌륭한
+  conscious	의식적인
+  abstract	추상적인
+  concrete	구체적인
+  profound	깊이가있는
+  supreme	최고의
+  trivial	시시한,하찮은
+  apparent	명백한,외관상의
+  thorough	철저한
+  athletic	운동경기의
+  absolute	절대적인
+  meager(-re)	야윈,빈약한
+  ultimate	최후의,궁극적인
+  initial	처음의,머리문자
+  solemn	엄숙한
+  notorious	소문난
+  sublime	숭고한,원대한
+  immemorial	태고의
+  constructive	건설적인
+  destructive	파괴적인
+  temporary	임시의,한때의
+  contemporary	현대의
+  aloof	따로떨어져서
+  indispensable	없어서는안되는
+  juvenile	소년소녀의
+  abnormal	비정상적인
+  external	외부의
+  rare	대문,진귀한
+  main	주요한
+  complex	복잡한
+  bold	대담한
+  crude	천연그대로의
+  polite	예의바른
+  current	유행의
+  severe	엄격한,격렬한
+  remote	먼, 먼곳의
+  deliberate	신중한
+  separate	분리된
+  physical	물리적인
+  eternal	영원한
+  unique	유일한,독특한
+  transparent	투명한
+  swift	신속한
+  surplus	과잉
+  obstinate	완고한,고집센
+  stubborn	완고한,고집센
+  dense	짙은,빽빽한
+  familiar	친한,잘알고있는
+  shrewd	영리한,빈틈없는
+  remarkable	현저한,두드러진
+  punctual	시간을지키는
+  terrible	지독한,끔직한
+  rude	무례한
+  earnest	열심인, 진지한
+  typical	전형적인
+  sole	유일한,독특한
+  fundamental	근본적인
+  intense	강렬한
+  essential	본질적인
+  distinct	명백한,명확한
+  particular	특수한,까다로운
+  subtle	미묘한
+  ordinary	보통의
+  vulgar	천한,상스러운
+  preferable	더마음에드는
+  strict	엄격한,엄밀한
+  naked	나체의
+  feminine	여성의
+  deficient	부족한
+  tender	부드러운,상냥한
+  incurable	불치의
+  infinite	무한의
+  irresistible	저항할수없는
+  barren	불모의,메마른
+  annual	해마다의
+  precise	정확한
+  native	타고난, 태어난
+  constant	불멸의,끊임없는
+  concise	간결한
+  moral	도덕적인
+  delicate	미묘한,민감한
+  ambiguous	애매한
+  neutral	중립의
+  sacred	신성한
+  resolute	결심이굳은
+  instructive	유익한
+  unanimous	만장일치의
+  decent	고상한
+  legal	법률의,합법적인
+  ancient	고대의
+  precious	귀중한
+  stern	엄한,엄격한
+  education	교육
+  prey	먹이,희생
+  tumult	소동
+  surrender	항복,항복하다
+  reputation	평판,명성
+  landscape	풍경,경치
+  posterity	자선,후세사람
+  offspring	자손,소산
+  growth	성장, 발전
+  orbit	천체의, 궤도
+  channel	해협, 경로
+  ancestor	선조
+  justice	정의, 공정
+  theme	주제, 제목
+  routine	일상적인일
+  protest	항의, 주장
+  tendency	경향
+  prophecy	예언
+  career	경력,생애
+  advertisement	광고
+  role	역할
+  origin	기원, 태생
+  process	진행, 과정
+  agriculture	농업
+  skyscraper	고층건물
+  nuisance	방해물
+  vote	투표,투표하다
+  spur	박차를가하다
+  average	평균, 평균의
+  category	범주
+  doom	운명, 파멸
+  utility	유의, 효용
+  slavery	노예제도
+  antipathy	반감
+  caution	조심, 경고
+  reaction	반동, 반익
+  atmosphere	분위기
+  satellite	위성,위성의
+  sage	현의, 성인
+  excess	초과, 과잉
+  architecture	건축, 건축술
+  prose	산문(시)
+  temperature	온도
+  purchase	구입,구입하다
+  oracle	신탁
+  heir	상속인,후계자
+  applause	박수갈채, 칭찬
+  anarchy	무정부상태
+  scrutiny	면밀한조사,응시
+  sculpture	조각
+  notion	생각,개념
+  diplomacy	외교,외교술
+  decade	10년간
+  witness	증거, 증인
+  thermometer	온도계
+  usage	용법, 어법
+  institution	제도,협회
+  exertion	노력
+  feature	특징,용모
+  disguise	변장,변장하다
+  congress	회의
+  germ	세균
+  algebra	대수,대수학
+  geometry	기하학
+  sojourn	체류,묵다
+  expedition	탐험대
+  definition	정의
+  issue	문제,발행하다
+  conflict	투쟁
+  disaster	재해,불행
+  focus	초점
+  budget	예산, 예산안
+  intercourse	교재
+  ceremony	의식, 의례
+  regret	후회,후회하다
+  enterprise	기억,진취적기상
+  ravage	황폐
+  tragedy	비극
+  miser	구두쇠
+  muscle	근육
+  unemployment	실업
+  arithmetic	산수, 셈
+  skill	숙련
+  instrument	기구, 수단
+  equator	적도
+  structure	구조, 건조물
+  mode	방법, 양식
+  aristocracy	귀족정치
+  wage	임금
+  zeal	열심
+  trial	시도, 시련, 재판
+  burden	무거운짐,부담
+  tribe	종족
+  realm	영지, 왕국
+  fright	놀람,공포
+  demand	요구,수요
+  supply	공급,공급하다
+  intelligence	지능,지성
+  frame	구조,골격
+  hobby	취미
+  source	원천,출처
+  twilight	황혼,희미한빛
+  fever	열
+  relief	구제,안심
+  refuge	피난, 피난처
+  experiment	실험,실험하다
+  expense	비용, 희생
+  reliance	신뢰
+  grief	슬픔
+  effect	결과,효과
+  scope	범의, 시야
+  habit	습관
+  defense	방어, 변호
+  aviation	비행, 비행술
+ navigation	항해,항해술
+  resource	자원, 지략
+  cruelty	잔인,잔혹
+  negligence	태만
+  bliss	환희
+  delay	연기,지체
+  contact	접촉
+  poison	독, 독약
+  awe	두려움
+  nutrition	영향, 영향물
+  obligation	의미, 은혜
+  reward	보답,상
+  peer	귀족, 동료
+  controversy	논쟁
+  material	물질, 재료
+  nationality	국적, 국민성
+  majority	대다수
+  personality	개성, 성격
+  region	지방
+  clue	단서,실마리
+  parliament	의회
+  government	정치, 정부
+  oath	맹세, 서약
+  revenue	세입
+ explanation	설명
+  minister	장관, 목사
+  obstacle	장애(물)
+  majesty	존엄
+  globe	지구
+  pressure	압력, 압박
+  standpoint	입장, 견지
+  monument	기념비, 기념물
+  opponent	적, 적수
+  fiction	소설, 꾸며낸 이야기
+  detail	상세, 상세히 말하다
+  solution	해결, 용해
+  maximum	최대한(의)
+  communism	공산주의
+  tide	조수, 풍조
+  honesty	정직
+  brute	짐승
+  beast	짐승, 짐승 같은 인간
+  inspiration	영감, 고취
+  harm	해, 해치다
+  taste	맛, 취미
+  independence	독립(심)
+  engagement	약속, 약혼
+  rank	열, 지위, 계급
+  glacier	빙하
+  prairie	대초원
+  cradle	요람, 발상지
+  incident	사건
+  disillusion	환멸, 환멸을 느끼게 하다
+  election	선거
+  gesture	몸짓
+  warfare	전쟁
+  adventure	모험
+  resort	놀이터, 수단
+  situation	위치, 사태
+  emigrant	(다른 나라로의) 이주자
+  historian	역사가
+  creature	창조물, 생물
+  victim	희생(자)
+  delight	즐거움, 즐겁게 하다
+  decay	부패(하다)
+  admiral	해군 대장, 제독
+  colony	식민지, 거류지
+  philosophy	철학
+  treasure	보물
+  admiration	감탄, 칭찬
+  flesh	살, 육체
+  conduct	행위,지도, 행동하다, 인도하다
+  aspect	양상, 국면
+  anniversary	기념일
+  laboratory	실험실, 연구소
+  cell	세포
+  area	면적, 지역
+  symbol	상징, 부호
+  assent	동의(하다)
+  manuscript	원고
+  mechanism	기계(장치), 기구
+  scent	향기, 냄새맡다
+  donation	기부(급), 기증
+  miracle	기적
+  continent	대퓩
+  horror	공포
+  essay	수필
+  armament	군비
+  fable	우화
+  maxim	격언
+  perspective	가망, 전망
+  income	수입
+  fortune	운, 행운, 재산
+  aid	도움, 도와 주다
+  fuel	연료, 연료를 공급하다
+  sigh	한숨 (쉬다)
+  furniture	가구
+  shelter	피난(처)
+  view	경치, 의견
+  navy	해군
+  inability	무능, 무력
+  territory	영토
+  imitation	모방
+  alternative	양자택일, 양자택일의
+  foliage	(무성한) 나뭇잎
+  preface	머리말
+  review	복습, 재검토, 평론
+  mischief	장난, 손해
+  departure	출발
+  surface	표면 ,표면의
+  funeral	장례식
+  ignorance	무지
+  popularity	인기, 유행
+  pace	걸음
+  merchandise	상품
+  space	공간, 우주
+  predecessor	전임자, 선배, 선조
+  soil	흙, 땅
+  hospitality	환대
+  trait	특색
+  traitor	배반자, 반역자
+  puzzle	수수께끼
+  riddle	수수께끼
+  solace	위안, 위로(하다)
+  vision	시력, 통찰력
+  treachery	배신, 반역
+  pasture	목장, 목초지
+  renown	명성
+  vessel	(큰) 배, 그릇
+  specimen	표본, 실례
+  trace	자국, 자국을 밟아가다
+  slumber	잠, 잠자다
+  harvest	수확(기)
+  tact	재치, 요령
+  element	요소, 원소
+  pang	심한 고통
+  flaw	결점, 흠
+  riot	폭동(을 일으키다)
+  folk	사람들, 가족
+  temperance	절제, 금주
+  garbage	쓰레기, 찌꺼기
+  mob	군중, 폭도
+  adult	성인, 성인의
+  temperament	기질
+  expansion	확장
+  output	생산량
+  glance	힐끗 봄, 힐끗 보다
+  vein	혈관, 광맥
+  conclusion	결말, 결론
+  revolt	반역, 혐오
+  pessimist	비관론자
+  reverie	환상
+  mixture	혼합(물)
+  outcome	결과, 성과
+  expert	익숙한 사람, 전문가
+  project	계획, 계획하다, 내던지다
+  consequence	결과, 중요성
+  rapture	큰 기쁨, 환희
+  pioneer	개척자, 선구자
+  revenge	복수, 원한
+  amount	총계, 총계 …이 되다
+  repose	휴식, 쉬다
+  author	저자, 창시자
+  audience	청중
+  throne	왕위, 왕좌
+  outlook	전망, …관
+  expression	표현, 표정
+  benefactor	은인, 후원자
+  suburb	교외, 변두리
+  apology	사과, 변명
+  proposal	제의, 신청
+  phase	국면, 양상
+  male	남자, 수컷
+  relish	맛, 흥미
+  motive	동기, 동기가 되다
+  summary	요약, 요약한
+  plot	음모, 계획
+  relic	유물
+  bronze	청동
+  status	지위, 현상
+  mystery	신비, 불가사의
+  treason	반역(죄)
+  trifle	사소한 일, 조금
+  trend	경향, 추세
+  spectacle	광경
+  statue	조각상
+  cliff	절벽, 낭떠러지
+  trap	덫, 함정
+  sermon	설교
+  imagination	상상(력)
+  omen	전조, 조짐
+  diameter	지름, 직경
+  effort	노력
+  adversity	역경
+  snare	덫, 유혹
+  satisfaction	만족
+  estate	재산, 지위
+  orator	웅변가
+  plea	구실, 탄원
+  meadow	목초지
+  shortage	부족
+  activity	활동
+  stage	무대, 시기
+  decree	명령, 포고, 명령하다
+  myth	신화
+  hazard	위험, 우연
+  pattern	모범, 모형
+  fluid	액체, 유동성의
+  union	결합, 일치
+  disciple	제자
+  playwright	극작가
+  truce	휴전
+  cave	동굴
+  feat	공적
+  forest	숲
+  friction	마찰, 알력
+  digestion	소화, 숙고
+  verse	운문, 시
+  counsel	의논, 충고
+  token	표시, 증거
+  value	가치, 존중하다
+  flavor	맛, 향기
+  transition	변천, 과도기
+  pause	멈춤, 중지
+  heathen	이교도, 이방인
+  worth	가치, …의 가치가 있는
+  heretic	이단자, 이교도
+  fund	자금
+  bait	미끼, 유혹
+  range	범위, 산맥
+  orientation	방향 결정, 안내
+  elegance	우아함
+  masterpiece	걸작
+  stature	키, 신장
+  retort	말대꾸(하다)
+  metropolis	수도, 중심지
+  layer	층
+  volume	책, 권
+  testimony	증거, 증명
+  haven	항구, 피난처
+  research	연구(하다), 조사(하다)
+  spot	장소, 지점
+  seed	씨, 종자
+  drudgery	고된 일, 고역
+  reverence	존경, 존경하다
+  summit	정상
+  crust	(빵)껍질
+  boss	우두머리, 사장
+  agony	고민, 고뇌
+  wisdom	지혜
+  propriety	예의 바름, 적당
+  physics	물리학
+  timber	재목
+  planet	행성, 유성
+  design	디자인, 계획
+  lung	폐, 허파
+  leisure	틈, 여가, 한가한
+  organization	조직, 단체
+  republic	공화국, 공화정체
+  prosecution	수행
+  torture	고난, 고뇌
+  cottage	오두막집, 시골집
+  castle	성
+  conference	회의
+  tomb	무덤, 묘
+  fault	결점, 잘못
+  magic	마술(의), 마력(의)
+  aim	목적, 표적
+  sword	검, 무력
+  risk	위험, 위험을 무릅쓰다
+  tool	도구, 연장
+  weapon	무기
+  vehicle	탈것, 차량
+  peculiarity	트갯ㄱ, 버릇
+  contest	투쟁,경기, 다투다, 겨루다
+  favor	호의, 찬성
+  mankind	인간, 인류
+  draft	설계도, 초안, 설계하다, 기초하다
+  bomb	폴탄
+  nerve	신경
+  chemistry	화학
+  addition	부가
+  measure	수단, 치수
+  vogue	유행
+  reserve	사양, 보존하다
+  occasion	경우, 기회
+  dictator	독재자
+  curiosity	호기심
+  disorder	무질서, 혼란
+  cast	형, 주조, 배역
+  cancer	암
+  well-being	복지, 행복
+  chamber	방
+  devil	악마
+  barbarian	야만인, 야만의
+  stuff	재료, 물건
+  scheme	계획
+  legislation	입법, 법제
+  symmetry	균형, 조화
+  pomp	화려
+  antiquity	고대(인)
+  malice	악의, 원환
+  multitude	다수
+  bent	경향, 구부러진
+  creed	신조, 주의
+  procedure	수속, 진행
+  standard	표준(의), 모범(적인)
+  boredom	지루함
+  device	고안, 장치
+  greed	탐욕
+  contagion	전염(병)
+  satire	풍자
+  hypothesis	가설
+  proposition	명제, 제의
+  perfume	향수, 향기
+  miniature	축소 지도, 축소모형
+  bond	속박
+  providence	섭리, 신의 뜻
+  compassion	동정
+  domain	영토
+  caricature	(풍자적) 만화
+  anguish	고민, 고뇌
+  facility	손쉬움, 설비, 기관
+  hygiene	위생
+  conspiracy	음모, 공모
+  accordance	일치, 조화
+  ecstasy	무아의 경지, 황홀
+  censure	비난(하다)
+  allowance	급여, 허가
+  campaign	(선거)운동, 전쟁
+  canal	운하
+  apparatus	기구, 기계
+  defiance	도전, 무시
+  craft	기능, 교묘
+  patent	전매 특허(의)
+  countenance	표정, 안색
+  pulse	맥박
+  implement	기구, 도구
+  insurance	보험, 보증
+  catastrophe	파국, 재난
+  accident	사고, 사건
+  district	구역, 지역
+  direction	방향, 지도
+  textile	직물, 직물의
+  organ	(생물의)기관
+  blood	피, 혈액
+  ray	광선
+  crop	농작물, 수확
+  drought	가뭄
+  skin	피부, (동물의) 가죽
+  bone	뼈
+  interest	이익, 흥미
+  limit	제한, 제한하다
+  haste	서두름
+  bless	축복하다
+  irritate	화나게 하다, 안달나게 하다
+  prolong	연장하다
+  postpone	연기하다
+  co-operate	협력하다
+  refer	언급하다, 참조하다
+  permit	허가하다
+  exaggerate	과장하다
+  emerge	나타나다
+  equip	갖추다, 장비하다
+  ornament	장식(하다)
+  furnish	공급하다, 비치하다
+  advance	전진하다, 진보하다
+  embark	베를 타다, 시작하다
+  flourish	번창하다
+  deprive	빼앗다
+  diminish	줄어들다, 감소하다
+  derive	…을 얻다, 유래하다
+  exchange	교환(하다)
+  rejoice	기뻐하다
+  promote	촉진하다, 승진시키다
+  nourish	기르다, (영양분을)주다
+  inquire	묻다, 안부를 묻다
+  ascertain	확인하다
+  swear	맹세하다
+  celebrate	축하하다
+  marvel	놀라다, 경탄(할 만한 일)
+  pray	빌다
+  reflect	반사하다, 반영하다
+  ascend	올라가다
+  descend	내려오다
+  mention	말핟
+  quote	인용하다
+  occupy	차지하다, 종사하다
+  surround	둘러싸다
+  avail	쓸모 있다, 소용되다
+  preach	설교하다
+  retire	물러나다, 은퇴하다
+  argue	논하다, 설득하다
+  graduate	졸업하다, 졸업생
+  affect	영향을 주다
+  unify	통일하다
+  operate	움직이다, 운영하다
+  ccondemn	비난하다
+  praise	칭찬하다, 칭찬
+  forgive	용서하다
+  deserve	…할 가치가 있다.
+  correspond	일치하다
+  explore	탐험하다
+  recollect	회상하다
+  fascinate	매혹하다
+  stir	휘젓다, 움직이다
+  exploit	개발하다, 이용하다, 공훈, 위업
+  contradict	반박하다, 모순되다
+  develop	발달하다, 개발하다
+  approach	접근하다, 접근
+  emancipate	해방하다
+  classify	분류하다
+  represent	나타내다, 묘사하다
+  reduce	줄이다
+  wither	시들다, 말라 죽다
+  astonish	놀라게 하다
+  commit	맡기다, 범하다
+  claim	요구(하다), 주장(하다)
+  seclude	은퇴시키다
+  appoint	임명하다, 지정하다
+  animate	활기를 주다, 고무하다
+  apply	적용하다, 전념하다
+  disappoint	실망시키다
+  trespass	침해하다
+  decide	결정하다, 결심하다
+  afford	주다, …할 여우가 있다
+  compete	경쟁하다
+  perceive	지각하다, 이해하다
+  enchant	매혹시키다
+  consider	숙고하다
+  transform	변형하다
+  amaze	몹시 놀라게 하다
+  expose	드러내다, 폭로하다
+  penetrate	꿰뚫다, 간파하다
+  extend	넓히다, 뻗치다
+  reside	살다, 존재하다
+  confine	가두다, 경계, 한도
+  exhibit	보이다, 전시하다
+  extract	뽑다, 추출물, 발췌
+  imply	의미하다, 암시하다
+  determine	결정하다
+  indicate	지시하다, 나타내다
+  confront	직면하다
+  pierce	꿰뚫다, 간파하다
+  dread	두려워하다
+  foster	기르다, (성장을) 촉진하다
+  cease	끝내다, 중지하다
+  convey	나르다, 전하다
+  rescue	구하다
+  dismiss	해고하다, 해산하다
+  disturb	방해하다
+  incline	기울이다
+  languish	원기가 없어지다, 시들다
+  illustrate	예증하다, 설명하다
+  excel	(남보다) 낫다
+  mold	틀에 넣어 만들다
+  taint	더럽히다
+  discharge	수행하다, 면제하다
+  exceed	넘다, 능가하다
+  usher	안내하다, 수위
+  owe	힘입다
+  heed	주의하다, 주의
+  resemble	…을 닮다
+  compose	구성하다
+  refrain	…을 그만두다
+  relax	늦추다, 쉬다
+  subscribe	서명하다, 기부하다
+  interfere	간섭하다, 방해하다
+  share	분배하다, 분담하다
+  injure	해치다
+  depend	…에 의존하다
+  disperse	퍼뜨리다, 흩어지다
+  remove	이사하다, 제거하다
+  realize	깨닫다, 실현하다
+  cultivate	경작하다, 기르다
+  sum	합계하다, 요약하다
+  throng	떼지어 모이다
+  scatter	뿌리다
+  modify	변경하다, 수식하다
+  intoxicate	취하게 하다
+  offend	화나게 하다, 범하다
+  associate	교제하다, 연상하다
+  behold	보다
+  mingle	섞다
+  venture	감히 …하다
+  invert	…을 거꾸로 하다
+  collect	모으다, 수집하다
+  complain	불평하다
+  spoil	망치다, 손상하다
+  mock	비웃다
+  recall	상기하다, 소환하다
+  reproduce	재생하다, 번식하다
+  assemble	모이다
+  retreat	물러가다, 후퇴
+  punish	처벌하다
+  settle	정착하다, 해결하다
+  conceive	상상하다, 품다
+  disclose	드러내다, 폭로(적발)하다
+  repair	수리(하다)
+  repeat	되풀이하다
+  degrade	타락하다
+  amuse	재미나게 하다
+  obtain	얻다
+  inform	알리다
+  curse	저주하다, 저주
+  provide	…을 주다, 준비하다
+  refresh	상쾌하게 하다
+  manage	관리하다
+  confess	자백하다, 자인하다
+  demonstrate	증명하다, 시위하다
+  stoop	(몸을) 구부리다
+  profess	공언하다
+  fade	(색이) 바래다, 시들다
+  manufacture	제조(하다), 제품
+  appeal	호소하다, 간청하다
+  contend	다투다
+  publish	출판하다, 발표하다
+  interpret	통역하다
+  entitle	권리(자격)을 주다
+  disregard	무시하다
+  ascribe	(원인을) …으로 돌리다
+  astound	깜짝 놀라게 하다
+  protect	보호하다
+  accomodate	수용하다
+  progress	진행, 진보
+  overtake	…을 뒤따라 잡다, 덮치다
+  assist	돕다
+  advocate	변호하다, 주장하다
+  attempt	시도하다
+  partake	…에 관여하다
+  greet	인사하다
+  suggest	암시하다, 제안하다
+  waste	낭비하다
+  dissolve	…을 녹이다
+  oblige	강요하다, 고맙게 여기다
+  decline	기울다, 쇠퇴하다
+  accustom	익히다, 습관을 붙이다
+  defeat	패배시키다
+  tempt	유혹하다
+  exempt	면제하다, 면제된
+  induce	권유하다
+  oppress	압박하다
+  acquaint	알리다
+ impoverish	가난하게 하다
+  resent	분개하다
+  abuse	남용하다, 학대하다
+  bother	괼보히다, 걱정하다
+  shrink	줄다, 오그라들다
+  compel	억지로 …시키다
+  deliver	배달하다, 연설하다
+  register	등록하다
+  coincide	일치하다, 부합하다
+  complicate	복잡하게 하다
+  discern	분간하다, 식별하다
+  dispute	논쟁(하다)
+  remark	말하다, 주목하다
+  supplement	보충(하다)
+  debate	논쟁(하다)
+  humiliate	창피를 주다, 모욕하다
+  explode	폭발하다
+  narrate	이야기하다
+  administer	관리하다, 시행하다
+  haunt	자주 가다
+  dispense	나눠 주다, …없이 지내다
+  differ	다르다
+  eliminate	제거하다
+  dwell	살다, 거주하다
+  assume	…체하다, 생각하다
+  apprehend	이해하다, 체포하다
+  capture	사로잡다, 포획
+  rear	기르다, 세우다
+  stare	뚫어지게 보다
+  confer	수여하다, 상담하다
+  discard	버리다
+  negotiate	교섭하다
+  anticipate	예상하다
+  contrive	연구해내다, 고안하다
+  consent	동의(하다), 승낙(하다)
+  defy	도전하다, 무시하다
+  beware	조심하다
+  summon	소환하다
+  thrive	번영하다, 무성하다
+  subdue	진입하다 완화하다
+  bloom	꽃(피다)
+  discriminate	구별하다
+  sustain	떠받치다, 부양하다
+  enforce	실시하다, 강제하다
+  transact	처리하다, 거래하다
+  support	지지하다, 부양하다
+  cling	달라붙다, 고수하다
+  entrust	위임하다
+  adhere	들러붙다, 고수하다
+  transmit	보내다, 전달하다
+  infect	전염시키다
+  wrap	싸다, 포장하다
+  inflict	(형벌, 고통, 손해를) 주다
+  undergo	(수술, 시험 따위를) 받다
+  withstand	저항하다
+  withhold	보류하다, 억제하다
+  adorn	장식하다
+  accumulate	쌓아 올리다, 축적하다
+  lurk	숨어 있다
+  provoke	화나게 하다, 도발하다
+  trim	정돈하다, 손질하다
+  rebuke	비난(하다)
+  confirm	확인하다
+  conform	일치시키다(하다)
+  aspire	열망하다
+  detach	떼어놓다, 파견하다
+  rebel	반역하다, 반역자
+  repel	쫓아버리다, 불쾌감을 주다
+  annihilate	전멸시키다
+  allude	언급하다, 암시하다
+  sting	찌르다, (동물의) 침, 고통
+  allure	유혹하다
+  replace	…을 대신하다
+  console	위로하다
+  surmount	극복하다
+  treat	다루다, 대접하다
+  swell	부풀다, 부풂
+  sneer	비웃다, 냉소하다
+  befall	일어나다
+  subside	(비, 바람 따위가) 가라앉다
+  seize	붙잡다
+  implore	애원하다, 탄원하다
+  abandon	버리다
+  deal	거래하다, 취급하다
+  steer	조종하다, 나아가다
+  depress	억압하다
+  inhabit	…에 살다, …에 거주하다
+  grant	허락하다, 주다
+  muse	명상하다
+  attract	끌다
+  introduce	소개하다, 도입하다
+  portray	그리다
+  guarantee	보증하다
+  regulate	규정하다, 조절하다
+  presume	상상하다, 생각하다
+  resume	다시 시작하다
+  lure	유혹하다
+  award	(심사하여) 주다, 수여하다
+  multiply	증가하다, (수를) 곱하다
+  spare	절약하다, 아끼다
+  grudge	아까워하다
+  stroll	한가롭게 거닐다
+  execute	실시하다, 성취하다
+  imprison	…을 감옥에 넣다
+  proceed	나아가다
+  recede	물러가다
+  ponder	…을 깊이 생각하다
+  scratch	할퀴다, 긁다
+  compare	비교하다, 비유하다
+  embrace	…을 껴안다
+  reckon	계산하다
+  throb	(심장이) 뛰다
+  suppress	억압하다
+  preoccupy	마음을 빼앗다, 먼저 차지하다
+  salute	인사(하다), 경례
+  revise	개정하다
+  lessen	적어지다, 적게 하다
+  beguile	속이다
+  bid	명령하다, 말하다
+  reap	베다, 수확하다
+  concede	양보하다
+  lade	싣다
+  deplore	한탄하다
+  precede	…에 앞서다
+  banish	추방하다
+  stifle	숨막히게 하다
+  abound	풍부하다
+  deposit	맡기다, 예금
+  retain	보유하다, 간직하다
+  sob	흐느껴 울다
+  withdraw	물러나다, 탈퇴하다
+  reprove	비난하다, 꾸짖다
+  ally	동맹하다
+  renounce	버리다, 부인하다
+  allot	할당하다
+  assign	할당하다
+  vow	맹세(하다)
+  vouch	보증하다
+  carve	조각하다
+  verify	증명하다, 확인하다
+  ordain	명령하다, 운명지우다
+  avenge	복수하다
+  confound	혼동하다
+  beckon	(손짓 따위로) 부르다
+ collapse	붕괴(하다)
+ mar	상하게 하다
+  kneel	무릎 꿇다, 굴복하다
+  pant	헐떢이다
+  warrant	보증(하다)
+  kindle	불을 붙이다
+  uphold	지지하다, 돕다
+  disdain	경멸(하다)
+  prescribe	규정하다
+  accompany	동반하다, (음악) 반주하다
+  abide	살다, 머무르다
+  divide	나누다, 분할하다
+  paralyze	마비시키다
+  contain	포함하다
+  endow	기부하다, 주다
+  guard	지키다, 조심하다
+  crash	와르르 무너지다
+  burst	폭발하다, 파열하다
+  worry	괴롭히다, 걱정하다
+  military	군대의, 육군으
+  trustworthy	신뢰(신용)할 수 있는
+  delicious	맛있는
+  manifest	명백한, 명시하다
+  gradual	점진적인
+  voluntary	자발적인
+  stately	위엄이 있는, 당당한
+  proficient	숙달한
+  tropical	열대의
+  superfluous	여분의
+  eminent	저명한, 뛰어난
+ contrary	반대의, 반대
+  feudal	봉건적인
+  fertile	비옥한, 다산의
+  intimate	친밀한
+  primary	제일의 주요한
+  enormous	막대한, 거대한
+  disinterested	사심 없는, 공평한
+  magnificent	웅대한, 장엄한
+  similar	비슷한
+  tranquil	조용한
+  commonplace	평범한
+  artificial	인공적인
+  wretched	불쌍한, 비참한
+ sovereign	최고의, 주권을 가진
+  staple	주요한
+  vital	생명의, 중요한
+  moderate	알맞은, 중용의
+  casual	우연한
+  stable	안정된, 외양간
+  royal	왕의, 왕위의
+  tiny	몹시 작은
+  sufficient	충분한
+  tidy	단정한
+  acute	날카로운
+  subjective	주관적인
+  ripe	익은
+  arctic	북극의
+  parallel	평행의, 유사한
+  brief	짧은, 간결한
+  slight	적은, 하찮은
+  inevitable	피할 수 없는
+  perpetual	영원한, 끊임없는
+  reckless	무모한
+  vast	막대한
+  immense	막대한
+  tremendous	엄청난, 무서운
+  innocent	순결한, 결백한
+  divine	신성한, 비범한
+  tedious	지루한
+  domestic	가정의, 국내의
+  huge	거대한, 막대한
+  colloquial	구어(체)의
+  vacant	텅 빈, 멍한
+  reluctant	마음이 내키지 않는
+  sceptical	회의적인
+  awkward	어색한, 귀찮은
+  scanty	부족한
+  inherent	타고난, 고유의
+  extravagant	사치스러운, 터무니없는
+  aware	알고 있는
+  ignoble	천한, 비열한
+  shy	수줍어하는
+  frank	솔직한
+  spontaneous	자발적인, 자연적인
+  visible	눈에 보이는
+  inferior	보다 열등한
+  ashamed	부끄러워하는
+  capable	…할 수 있는, 유능한
+  keen	날카로운
+  exact	정확한
+  utmost	최고(의), 최대(의)
+  dumb	벙어리의
+  fierce	사나운, 맹렬한
+  faint	희미한, 약한
+  affirmative	긍정적인
+  guilty	유죄의
+  firm	견고한, 단호한
+  diverse	다양한, 다른
+  plain	명백한, 검소한
+  stupid	어리석은
+  fatal	숙명적인, 치명적인
+  fluent	유창한
+  tolerable	참을 수 있는, 상당한
+  mechanical	기계의
+  elastic	탄력 있는
+  upright	똑바른, 정직한
+  permanent	영구적인
+  hideous	무서운
+  uniform	같은 모양의, 일정한
+  ardent	열렬한, 열심인
+  liable	…하기 쉬운
+  discreet	사려 깊은, 신중한
+  informal	비공식의
+  daring	대담(한)
+  frugal	검소한, 알뜰한
+  aggressive	침략(공격)적인, 적극적인
+  invalid	허약한, 병자
+  actual	현실의
+  holy	신성한
+  sensitive	민감한
+  periodical	정기(간행)의
+  human	인간의 인간다운
+  numerous	매우 많은
+  rapid	빠른
+  inborn	타고난, 선천적인
+  vain	헛된, 허영심이 강한
+  obvious	명백한, 검소한
+  idealistic	이상주의적인
+  undaunted	굽히지 않는, 용감한
+  indifferent	무관심한
+  timely	때맞춘, 적시의
+  prompt	신속한, 즉시의
+  clumsy	어색한
+  imperial	제국의, 황제의
+  atomic	원자(력)의
+  intent	열중한, 의지
+  private	개인의
+  positive	명백한, 적극적인
+  lofty	매우 높은, 숭고한
+  mental	정신의
+  official	공식의 공무상의
+  humble	격ㅁ손한, 하찮은
+  harsh	거친, 가혹한
+  loyal	충성스러운, 성실한
+  pathetic	측은한
+  liberal	너그러운, 일반 교육의
+  perpendicular	수동적인
+  technical 	기술적인, 전문의
+  medieval 	중세의
+  prime 	제일의, 주요한
+  gloomy	어두운, 우울한
+  partial	부분적인, 불공평한
+  stout 	튼튼한, 뚱뚱한
+  civil 	시민의, 국내의
+  exquisite	정교한, 우아한
+  local 	지방의
+  principal	주요한, 장, 교장
+  sinister	불길한
+  previous 	이전의
+  prone 	…하기 쉬운
+  silly	어리석은
+  reverse	반대의
+  slender	가느다란, 호리호리한
+  strenuous	활기 찬, 분투하는
+  futile	쓸데없는, 무익한
+  raw	날것의, 미숙한
+  wicked	사악한
+  sheer	완전한
+  relative	상대적인, 관계가 있는
+  hardy	튼튼한
+  solid	고체의, 견실한
+  rural	시골의
+  sly	교활한
+  sober	진지한, 냉정한
+  stiff	굳은, 뻣뻣한
+  tame	길든, 길들이다
+  destitute	빈곤한
+  tough	단단한, 질긴
+  steady	한결같은, 확고한
+  innumerable	무수한
+  steadfast	확고한
+  drastic	맹렬한, 철저한
+  vertical	수직의
+  selfish	이기적인
+  vile	비열한
+  alert	빈틈없는, 경계
+  figurative	비유적인
+  appropriate	적당한
+  indebted	은혜를 입고 있는
+  approximate	대략의
+  flexible	구부리기 쉬운, 융통성 있는
+  smart	재치 있는, 멋진
+  gallant	용감한
+  haughty	거만한
+  astray	길을 잃어
+  consistent	변함없는
+  compulsory	강제적인, 의무적인
+  ingenious	교묘한
+  naughty	장난꾸러기인
+  notable	주목할 만한, 유명한
+  potent	강력한, 유력한
+  dismal	음침한
+  eccentric	(행동 따위가) 별난
+  predominant	뛰어난, 우세한
+  serene	고요한, 화창한
+  sanitary	위생(상)의
+  petty	작은
+  simultaneous	동시의
+  prominent	눈에 띄는, 저명한
+  steep	험한
+  prodigal	낭비하는, 방탕한
+  prudent	사려 깊은
+  sullen	뚱한, 시무룩한
+  righteous	바른
+  sterile	메마른, 불모의
+  transient	덧없는, 일시적인
+  rigid	단단한, 엄격한
+  senior	손위의 연장자
+  quaint	진기한
+  sagacious	현명한, 영리한
+  plausible	그럴듯한
+  potential	잠재적인, 가능한
+  unprecedented	전례가 없는
+  robust	건장한, 튼튼한
+  ample	충분한
+  akin	동족의, 동류의
+  cordial	진심의
+  coarse	조잡한, 야비한
+  vehement	열정적인, 맹력한
+  venerable	존경할 만한
+  compatible	양립할 수 있는
+  weary	피로한
+  complacent	자기 만족의
+  whimsical	변덕스러운
+  corrupt	썩은, 타락시키다
+  wholesome	건전한
+  credulous	(남의 말을) 잘 믿는
+  abrupt	갑작스러운
+  devoid	…이 없는
+  alien	외국의 성질이 다른
+  capricious	변덕스러운
+  shabby	초라한
+  dreary	쓸쓸한, 황량한
+  outstanding	눈에 띄는
+  erroneous	틀린, 잘못된
+  pensive	깊은 생각에 잠겨 있는
+  forlorn	고독한, 쓸쓸한
+  gorgeous	화려한
+  impudent	뻔뻔스러운
+  pertinent	적절한
+  frivolous	경박한
+  genial	따뜻한, 친절한
+  insolent	오만한
+  indolent	게으른
+  ruthless	무자비한
+  incessant	끊임없는
+  myriad	무수한
+  legitimate	합법적인 정당한
+  wistful	탐내는 듯한
