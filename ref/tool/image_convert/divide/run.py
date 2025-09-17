@@ -11,7 +11,7 @@ def divide_img(img, output_path):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     # 이진화 (분리선을 강조하기 위해 threshold 적용)
-    _, thresh = cv2.threshold(gray, 200, 255, cv2.THRESH_BINARY_INV)
+    _, thresh = cv2.threshold(gray, 230, 255, cv2.THRESH_BINARY_INV)
 
     # 모폴로지 연산으로 가로/세로 선 추출
     # 세로 선 검출

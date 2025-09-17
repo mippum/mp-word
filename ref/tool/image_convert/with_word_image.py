@@ -8,21 +8,29 @@ from divide.run import divide_img
 from ocr_recong import remove_word
 from remove_white_background.run import remove_background
 from to_svg.potrace_with_command import run_potrace
+from word_named.run import set_image_named
 
-def run(origin_filename):
-    print(f'with_word_image convert {origin_filename}')
+def to_word_removed(origin_filename):
     img = cv2.imread(f'img/origin/{origin_filename}')
-
     divide_img(img, 'img/divide')
 
-    if os.path.exists('img/word_removed'):
-        shutil.rmtree('img/word_removed')
-    os.makedirs('img/divide', exist_ok=True)
+    if os.path.exists('img/word_named'):
+        shutil.rmtree('img/word_named')
+    os.makedirs('img/word_named', exist_ok=True)
     for filename in os.listdir('img/divide'):
         file_path = os.path.join('img/divide', filename)
         divided_img = cv2.imread(file_path)
-        remove_word.run(divided_img, 'img/word_removed')
+        set_image_named(divided_img, 'img/word_named')
+    #
+    if os.path.exists('img/word_removed'):
+        shutil.rmtree('img/word_removed')
+    os.makedirs('img/word_removed', exist_ok=True)
+    for filename in os.listdir('img/word_named'):
+        file_path = os.path.join('img/word_named', filename)
+        divided_img = cv2.imread(file_path)
+        remove_word.run(divided_img, filename.replace('.png', ''), 'img/word_removed')
 
+def after_word_removed():
     if os.path.exists('img/remove_white_background'):
         shutil.rmtree('img/remove_white_background')
     os.makedirs('img/remove_white_background', exist_ok=True)
@@ -38,5 +46,11 @@ def run(origin_filename):
         file_path = os.path.join('img/remove_white_background', filename)
         run_potrace(file_path, filename.replace('.bmp', ''), 'img/to_svg')
 
+def run(origin_filename):
+    print(f'with_word_image convert {origin_filename}')
+
+    # to_word_removed(origin_filename)
+    after_word_removed()
+
 if __name__ == '__main__':
-    run('0uA-.png')
+    run('xEpxLHFxI12xYNJU-.png')

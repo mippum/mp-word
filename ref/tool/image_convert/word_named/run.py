@@ -37,7 +37,10 @@ def decode_predictions(scores, geometry, confThreshold=0.5):
             confidences.append(float(scoresData[x]))
     return boxes, confidences
 
-def run(image, word, out_path):
+
+def set_image_named(image, out_path):
+    # image_loaded = cv2.imread("C:/Users/sojun/github/mp-word/ref/tool/image_convert/img/divide/crop_0.png")
+
     # Tesseract 경로 지정 (Windows)
     pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
     # EAST 모델 로드
@@ -59,6 +62,7 @@ def run(image, word, out_path):
     # 출력 레이어
     scores, geometry = net.forward(["feature_fusion/Conv_7/Sigmoid", "feature_fusion/concat_3"])
     boxes, confidences = decode_predictions(scores, geometry)
+    # indices = cv2.dnn.NMSBoxes(boxes, confidences, 0.5, 0.4)
     indices = cv2.dnn.NMSBoxes(boxes, confidences, 0.5, 0.4)
 
     # 글자 영역 지우기
@@ -67,21 +71,17 @@ def run(image, word, out_path):
         i = i[0] if isinstance(i, (list, tuple, np.ndarray)) else i
         (startX, startY, endX, endY) = boxes[i]
         # 원본 비율로 좌표 조정
-        startX = math.floor(startX * rW)
-        # startX = 0
+        # startX = math.floor(startX * rW)
+        startX = 0
         startY = math.floor(startY * rH)
-        endX = math.ceil(endX * rW)
-        # endX =newW
+        # endX = math.ceil(endX * rW)
+        endX = newW
         endY = math.ceil(endY * rH) + padding_bottom
 
         roi = orig[startY:endY, startX:endX]
         custom_config = r'--oem 3 --psm 7 -c tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
         try:
             text += pytesseract.image_to_string(roi, config=custom_config).strip()
-
-            # 영역을 흰색으로 지우기 (혹은 주변 배경으로 inpaint 가능)
-            cv2.rectangle(orig, (startX, startY), (endX, endY), (255, 255, 255), -1)
-
         except SystemError:
             print('SystemError')
 
@@ -92,16 +92,16 @@ def run(image, word, out_path):
     if not os.path.exists(out_path):
         os.makedirs(out_path, exist_ok=True)
 
-    cv2.imwrite(f"{out_path}/{word}.png", orig)
+    cv2.imwrite(f"{out_path}/{text.lower()}.png", orig)
     # cv2.imwrite(f"{out_path}/{text}.bmp", orig)
 
-    print(f"{out_path}/{word}.png 저장")
+    print(f"{out_path}/{text.lower()}.png 저장")
     # print(f"{out_path}/{text}.bmp 저장")
 
-if __name__ == "__main__":
-    image_loaded = cv2.imread("C:/Users/sojun/github/mp-word/ref/tool/image_convert/img/word_named/crop.png")
-    run(image_loaded, 'crop', '../img/word_removed')
+    pass
 
-    # cv2.imshow("Original", orig)
-    # cv2.waitKey(0)
-    print("글자 영역 제거 완료!")
+if __name__ == '__main__':
+    image_loaded = cv2.imread("C:/Users/sojun/github/mp-word/ref/tool/image_convert/img/divide/crop_0.png")
+    set_image_named(image_loaded, '../img/word_named')
+
+    pass
