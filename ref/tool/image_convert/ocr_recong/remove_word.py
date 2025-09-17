@@ -84,8 +84,10 @@ def run(image, out_path):
         os.makedirs(out_path, exist_ok=True)
 
     cv2.imwrite(f"{out_path}/{text}.png", orig)
+    # cv2.imwrite(f"{out_path}/{text}.bmp", orig)
 
     print(f"{out_path}/{text}.png 저장")
+    # print(f"{out_path}/{text}.bmp 저장")
 
 if __name__ == "__main__":
     image_loaded = cv2.imread("C:/Users/sojun/github/mp-word/ref/tool/image_convert/img/divide/crop_0.png")
