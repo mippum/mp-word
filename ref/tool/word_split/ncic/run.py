@@ -3,7 +3,7 @@ import json
 from more_itertools import chunked
 
 
-with open("words.json", "r", encoding="utf-8") as f:
+with open("ncic_2star.json", "r", encoding="utf-8") as f:
     words = json.load(f)
 
 for word_chucked in chunked(words, 6):
