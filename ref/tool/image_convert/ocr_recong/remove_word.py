@@ -45,7 +45,9 @@ def run(image, word, out_path):
     # 입력 이미지 블롭 생성
     newW, newH = (320, 320)
 
-    padding_bottom = 5
+    padding_left = 10
+    padding_right = 5
+    padding_bottom = 10
 
     orig = image.copy()
     (H, W) = image.shape[:2]
@@ -67,10 +69,10 @@ def run(image, word, out_path):
         i = i[0] if isinstance(i, (list, tuple, np.ndarray)) else i
         (startX, startY, endX, endY) = boxes[i]
         # 원본 비율로 좌표 조정
-        startX = math.floor(startX * rW)
+        startX = math.floor(startX * rW) - padding_left
         # startX = 0
         startY = math.floor(startY * rH)
-        endX = math.ceil(endX * rW)
+        endX = math.ceil(endX * rW) + padding_right
         # endX =newW
         endY = math.ceil(endY * rH) + padding_bottom
 

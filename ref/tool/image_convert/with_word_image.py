@@ -49,8 +49,9 @@ def after_word_removed():
 def run(origin_filename):
     print(f'with_word_image convert {origin_filename}')
 
-    # to_word_removed(origin_filename)
+    to_word_removed(origin_filename)
     after_word_removed()
+    # img/word_removed 에서 ocr 에러 있는지 확인하고, 있으면 그림 수정 후 after_word_removed 만 다시 실행
 
 if __name__ == '__main__':
-    run('xEpxLHFxI12xYNJU-.png')
+    run('xEpxLHFxI12xYNJU.png')
