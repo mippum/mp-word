@@ -20,7 +20,6 @@ WINDOWS_RESERVED = {
 }
 
 def safe_filename(text: str, replace_with: str = "_") -> str:
-    # text = re.sub(r'[\\/:*?"<>|\r\n]', replace_with, text)
     text = re.sub(r'[\\/:*?"<>|\r\n\t]', replace_with, text)
     text = text.strip()
     text = text.rstrip(". ")
@@ -49,8 +48,8 @@ Keep the composition simple and clear.'''
         )
     )
 
-    os.makedirs(f'jpg-images/{word}', exist_ok=True)
-    os.makedirs(f'jpg-images/{word}/sentences', exist_ok=True)
+    os.makedirs(f'jpg-images/{word.lower()}', exist_ok=True)
+    os.makedirs(f'jpg-images/{word.lower()}/sentences', exist_ok=True)
 
     for idx, generated_image in enumerate(response.generated_images):
         image_bytes = generated_image.image.image_bytes
@@ -58,7 +57,7 @@ Keep the composition simple and clear.'''
         image = Image.open(io.BytesIO(image_bytes))
         print(image.format)
 
-        filename = f"jpg-images/{word}/sentences/{safe_filename(sentence)}.jpg"
+        filename = f"jpg-images/{word.lower()}/sentences/{safe_filename(sentence)}.jpg"
         with open(filename, "wb") as f:
             image.save(filename, format="JPEG", quality=90)
         print(f"Saved image to {filename}")
