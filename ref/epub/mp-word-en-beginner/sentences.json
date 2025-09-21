@@ -1,0 +1,129 @@
+[{
+	"sentence": "Hello! I am Jina.",
+	"ko-repr": "안녕! 나는 지나야.",
+	"words": [{
+		"word": "hello",
+		"pronunciation": "helóu, hə-, hélou",
+		"ko-repr": "안녕 / 안녕하세요"
+	}, {
+		"word": "i",
+		"ko-repr": "나"
+	}, {
+		"word": "am",
+		"ko-repr": "동사 am은 be 동사의 한 형태. 주어가 1인칭 단수(I)일 때 현재 시제일 때 사용\nbe 동사\n - ~이다 (정체, 성질, 상태)\n - ~에 있다 (장소, 위치)\n - ~하고 있다 (진행형 만들 때 조동사 역할)\nam 이외에도 are(2인칭 단수, 복수), is(3인칭 단수) 가 있고, 시제(과거, 현재, 미래)에 따라 형태가 변화한다."
+	}]
+},{
+	"sentence": "My name is Jina.",
+	"words": [{
+		"word": "my",
+		"ko-repr": "나의"
+	}, {
+		"word": "name",
+		"ko-repr": "이름"
+	}]
+},{
+	"sentence": "Nice to meet you.",
+	"words": []
+},{
+	"sentence": "What is your name?",
+	"words": []
+},{
+	"sentence": "Hi! I'm Tom.",
+	"words": []
+},{
+	"sentence": "Nice to meet you, too.",
+	"words": [{
+		"word": "too"
+	}]
+},{
+	"sentence": "Good morning!",
+	"words": []
+},{
+	"sentence": "How are you?",
+	"words": []
+},{
+	"sentence": "I am fine.",
+	"words": []
+},{
+	"sentence": "See you later!",
+	"words": []
+},{
+	"sentence": "Goodbye!",
+	"words": []
+},{
+	"sentence": "What is this?",
+	"words": []
+},{
+	"sentence": "It is a book.",
+	"words": [{
+		"word": "a",
+		"ko-repr": "아직 특정하지 않은, \"어떤 하나\"라는 뜻을 나타낼 때 씁니다.\na book, a car, a university / an apple, an egg, an hour"
+	}]
+},{
+	"sentence": "What is that?",
+	"words": []
+},{
+	"sentence": "It's a pencel.",
+	"words": []
+},{
+	"sentence": "Do you have a dog?",
+	"words": []
+},{
+	"sentence": "I have a lot of dogs.",
+	"words": []
+},{
+	"sentence": "How many do you have?",
+	"words": []
+},{
+	"sentence": "Five dogs.",
+	"words": []
+},{
+	"sentence": "Do you have a dog too?",
+	"words": []
+},{
+	"sentence": "No, I have a cat.",
+	"words": []
+},{
+	"sentence": "What color is it?",
+	"words": []
+},{
+	"sentence": "It's black.",
+	"words": []
+},{
+	"sentence": "Do you like pizza??",
+	"ko-repr": "너는 피자를 좋아하니?",
+	"words": []
+},{
+	"sentence": "No, I do not like it.",
+	"words": []
+},{
+	"sentence": "Do you like hamburgers?",
+	"words": []
+},{
+	"sentence": "No, I don't like it.",
+	"words": []
+},{
+	"sentence": "What's your favorite food?",
+	"words": []
+},{
+	"sentence": "I like bananas.",
+	"words": []
+},{
+	"sentence": "Do you like sports?",
+	"words": []
+},{
+	"sentence": "Yes, I do.",
+	"words": []
+},{
+	"sentence": "What kind of sport do you like?",
+	"words": []
+},{
+	"sentence": "I like basketball.",
+	"words": []
+},{
+	"sentence": "",
+	"words": []
+},{
+	"sentence": "",
+	"words": []
+}]
