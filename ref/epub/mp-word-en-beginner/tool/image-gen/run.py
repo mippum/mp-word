@@ -15,104 +15,104 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"C:\Users\wogud\.gcloud\greenyan
 client = genai.Client(api_key=GOOGLE_API_KEY)
 
 sentence_concepts = [{
-#    "sentence": "Hello! I am Jina.",
-#    "concept": "a friendly greeting, person waving, smiling"
-# }, {
+   "sentence": "Hello! I am Jina.",
+   "concept": "a friendly greeting from a woman, waving and smiling."
+}, {
    "sentence": "My name is Jina.",
-   "concept": "a person introducing themselves, pointing to self, smiling"
+   "concept": "a woman introducing themselves, pointing to self, smiling"
 }, {
    "sentence": "Nice to meet you.",
-   "concept": "two people meeting, shaking hands, friendly expression"
+   "concept": "two people(a man and a woman) meeting, shaking hands, friendly expression"
 }, {
    "sentence": "What is your name?",
-   "concept": "a person asking a question, pointing at another person, curious expression"
+   "concept": "a woman asking a question, pointing at a man, curious expression, the man smiling and waiting for the question."
 }, {
    "sentence": "Hi! I'm Tom.",
-   "concept": "a cheerful greeting, person smiling and waving"
+   "concept": "a cheerful greeting, a man smiling and waving"
 }, {
    "sentence": "Nice to meet you, too.",
-   "concept": "two people smiling and shaking hands in response"
+   "concept": "two people(a man and a woman) smiling and shaking hands in response"
 }, {
    "sentence": "Good morning!",
-   "concept": "a person greeting in the morning, sun rising in the background"
+   "concept": "a man smiling and greeting in the morning, sun rising slightly in the background"
 }, {
    "sentence": "How are you?",
-   "concept": "a person asking kindly, open hand gesture, friendly face"
+   "concept": "a man asking kindly, open hand gesture, friendly face"
 }, {
    "sentence": "I am fine.",
-   "concept": "a smiling person showing thumbs up, looking well"
+   "concept": "a smiling woman showing thumbs up, looking well"
 }, {
    "sentence": "See you later!",
-   "concept": "a person waving goodbye while walking away"
+   "concept": "a woman waving goodbye while walking away"
 }, {
    "sentence": "Goodbye!",
-   "concept": "a person waving hand in farewell"
+   "concept": "a man waving hand in farewell"
 }, {
    "sentence": "What is this?",
-   "concept": "a person pointing at an object nearby, questioning expression"
+   "concept": "a woman pointing at an object nearby, questioning expression"
 }, {
    "sentence": "It is a book.",
    "concept": "an open book being shown clearly"
 }, {
    "sentence": "What is that?",
-   "concept": "a person pointing at something far away, curious look"
+   "concept": "a woman pointing at something far away, curious look"
 }, {
    "sentence": "It's a pencil.",
    "concept": "a pencil being held up or shown clearly"
 }, {
    "sentence": "Do you have a dog?",
-   "concept": "a person asking about a pet dog, with a dog nearby"
+   "concept": "a woman asking a question, with a dog nearby"
 }, {
    "sentence": "I have a lot of dogs.",
-   "concept": "a person surrounded by several dogs, smiling happily"
+   "concept": "a man with three dogs nearby, smiling happily"
 }, {
    "sentence": "How many do you have?",
-   "concept": "a person counting with fingers, asking curiously"
+   "concept": "a woman counting with fingers to the three dogs, asking curiously"
 }, {
    "sentence": "Five dogs.",
-   "concept": "five dogs grouped together near a person"
+   "concept": "five dogs grouped together near a man"
 }, {
    "sentence": "Do you have a dog too?",
-   "concept": "two people talking, one asking if the other also has a dog"
+   "concept": "two people(a man and a woman) talking, the man asking a question near by three dogs"
 }, {
    "sentence": "No, I have a cat.",
-   "concept": "a person pointing to a cat, shaking head"
+   "concept": "a woman pointing to a cat, shaking head"
 }, {
    "sentence": "What color is it?",
-   "concept": "a person asking about the color of an animal or object"
+   "concept": "a man asking a question to a woman, the man pointing to a cat, the woman smiling and waiting for the question"
 }, {
    "sentence": "It's black.",
-   "concept": "a black-colored cat shown clearly"
+   "concept": "A cat as black as pitch, shown clearly"
 }, {
    "sentence": "Do you like pizza?",
-   "concept": "a person asking while holding a slice of pizza"
+   "concept": "a man asking while holding a slice of pizza"
 }, {
    "sentence": "No, I do not like it.",
-   "concept": "a person rejecting food by waving hand, pizza nearby"
+   "concept": "a woman rejecting food by waving hand, pizza nearby"
 }, {
    "sentence": "Do you like hamburgers?",
-   "concept": "a person asking while holding a hamburger"
+   "concept": "a man asking while holding a hamburger"
 }, {
    "sentence": "No, I don't like it.",
-   "concept": "a person rejecting food by waving hand, hamburger nearby"
+   "concept": "a woman rejecting food by waving hand, hamburger nearby"
 }, {
    "sentence": "What's your favorite food?",
-   "concept": "a person asking about favorite food, curious face"
+   "concept": "a man asking a question nearby a pizza, a hamburger, a pasta, curious face"
 }, {
    "sentence": "I like bananas.",
-   "concept": "a person happily holding a bunch of bananas"
+   "concept": "a woman happily holding a bunch of bananas"
 }, {
    "sentence": "Do you like sports?",
-   "concept": "a person asking with a ball in hand"
+   "concept": "a man wearing a tracksuit and asking nearby a ball"
 }, {
    "sentence": "Yes, I do.",
-   "concept": "a person nodding with a positive expression, thumbs up"
+   "concept": "a woman nodding with a positive expression, thumbs up"
 }, {
    "sentence": "What kind of sport do you like?",
-   "concept": "a person asking about sports, ball nearby"
+   "concept": "a man wearing a tracksuit asking a question, ball nearby"
 }, {
    "sentence": "I like basketball.",
-   "concept": "a person playing basketball, holding or shooting a ball"
+   "concept": "a woman playing basketball, holding or shooting a ball"
 }, {
    "sentence": "She likes me.",
    "concept": "a girl smiling warmly at a boy"
@@ -124,7 +124,7 @@ sentence_concepts = [{
    "concept": "a tall man standing upright, clearly taller than average"
 }, {
    "sentence": "I have one apple.",
-   "concept": "a person holding a single apple in their hand"
+   "concept": "a man holding a single apple in his hand"
 }, {
    "sentence": "We are going to the park.",
    "concept": "a group of people walking together toward a park with trees"
@@ -157,10 +157,10 @@ def run():
         concept = sentence_concept['concept']
 
         prompt = f'''A simple black-and-white line drawing on a white background, using only thin black lines, no shading, no colors.
-    Minimalist, hand-drawn style.
-    Concept: {concept}
-    Do not include any text, letters, or numbers in the drawing.
-    Keep the composition simple and clear.'''
+        Minimalist, hand-drawn style.
+        Concept: {concept}
+        Do not include any text, letters, or numbers in the drawing.
+        Keep the composition simple and clear.'''
 
         response = client.models.generate_images(
             model='imagen-3.0-generate-002',
@@ -171,9 +171,6 @@ def run():
             )
         )
 
-        # os.makedirs(f'jpg-images/', exist_ok=True)
-        # os.makedirs(f'jpg-images/{word.lower()}/sentences', exist_ok=True)
-
         for idx, generated_image in enumerate(response.generated_images):
             image_bytes = generated_image.image.image_bytes
 
@@ -181,7 +178,6 @@ def run():
             print(image.format)
 
             filename = f"jpg-images/{safe_filename(sentence)}.jpg"
-            # with open(filename, "wb") as f:
             if idx > 0:
                 filename += f'_{idx}'
             image.save(filename, format="JPEG", quality=90)
