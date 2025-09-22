@@ -17,12 +17,12 @@
 		}],
 		"ko-repr": "나"
 	}, {
-		"word": "am",
+		"word": "be",
 		"pronunciations": [{
 			"us": "əm, (strong) æm",
 			"gb": "əm, (strong) æm"
 		}],
-		"ko-repr": "동사 am은 be 동사의 한 형태. 주어가 1인칭 단수(I)일 때 현재 시제일 때 사용\nbe 동사\n - ~이다 (정체, 성질, 상태)\n - ~에 있다 (장소, 위치)\n - ~하고 있다 (진행형 만들 때 조동사 역할)\nam 이외에도 are(2인칭 단수, 복수), is(3인칭 단수) 가 있고, 시제(과거, 현재, 미래)에 따라 형태가 변화한다."
+		"ko-repr": "be 동사의 원형 (am/are/is 등으로 활용)\nbe 동사\n - ~이다 (정체, 성질, 상태)\n - ~에 있다 (장소, 위치)\n - ~하고 있다"
 	}]
 },{
 	"setence_number": 2,
@@ -30,41 +30,70 @@
 	"ko-repr": "내 이름은 지나야.",
 	"words": [{
 		"word": "my",
+		"pronunciations": [{
+			"us": "mai",
+			"gb": "mai"
+		}],
 		"ko-repr": "나의"
 	}, {
-		"word": "name",
+	"word": "name",
+		"pronunciations": [{
+			"us": "neim",
+			"gb": "neim"
+		}],
 		"ko-repr": "이름"
-	}]
+	},]
 },{
 	"setence_number": 3,
 	"sentence": "Nice to meet you.",
 	"ko-repr": "만나서 반가워.",
 	"words": [{
 		"word": "nice",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "nais",
+			"gb": "nais"
+		}],
+		"ko-repr": "좋은, 멋진, 친절한"
 	}, {
-		"word": "to",
-		"ko-repr": ""
-	}, {
+        "word": "to",
+        "pronunciations": [{
+            "us": "tuː, tə",
+            "gb": "tuː, tə"
+        }],
+        "ko-repr": "~으로, ~에게, ~하기 위해"
+    }, {
 		"word": "meet",
-		"ko-repr": ""
-	}{
-		"word": "you",
-		"ko-repr": ""
-	}]
+		"pronunciations": [{
+			"us": "miːt",
+			"gb": "miːt"
+		}],
+		"ko-repr": "만나다"
+	}, {
+        "word": "you",
+        "pronunciations": [{
+            "us": "juː",
+            "gb": "juː"
+        }],
+        "ko-repr": "너, 당신, 여러분"
+    }]
 },{
 	"setence_number": 4,
 	"sentence": "What is your name?",
 	"ko-repr": "이름이 뭐니?",
 	"words": [{
 		"word": "what",
-		"ko-repr": ""
-	}, {
-		"word": "is",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "hwʌt, wʌt",
+			"gb": "wɒt, wət"
+		}],
+		"ko-repr": "무엇"
 	}, {
 		"word": "your",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "jɔːr, jər, jʊr",
+			"gb": "jɔː, jʊə, jə"
+		}],
+		"ko-repr": "너의, 당신의"
 	}]
 },{
 	"setence_number": 5,
@@ -72,7 +101,11 @@
 	"ko-repr": "안녕! 난 톰이야.",
 	"words": [{
 		"word": "hi",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "hai",
+			"gb": "hai"
+		}],
+		"ko-repr": "안녕 (가볍게 인사하는 표현)"
 	}]
 },{
 	"setence_number": 6,
@@ -80,7 +113,11 @@
 	"ko-repr": "나도 만나서 반가워.",
 	"words": [{
 		"word": "too",
-		"ko-repo": ""
+		"pronunciations": [{
+			"us": "tuː",
+			"gb": "tuː"
+		}],
+		"ko-repr": "또한, 너무"
 	}]
 },{
 	"setence_number": 7,
@@ -88,18 +125,30 @@
 	"ko-repr": "좋은 아침이야.",
 	"words": [{
 		"word": "good",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "ɡʊd",
+			"gb": "ɡʊd"
+		}],
+		"ko-repr": "좋은"
 	}, {
-		"word": "morning",
-		"ko-repr": ""
-	}]
+        "word": "morning",
+        "pronunciations": [{
+            "us": "ˈmɔːrnɪŋ",
+            "gb": "ˈmɔːnɪŋ"
+        }],
+        "ko-repr": "아침"
+    }]
 },{
 	"setence_number": 8,
 	"sentence": "How are you?",
 	"ko-repr": "잘 지내?",
 	"words": [{
 		"word": "how",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "hau",
+			"gb": "hau"
+		}],
+		"ko-repr": "어떻게, 어떻게 지내니?"
 	}]
 },{
 	"setence_number": 9,
@@ -107,7 +156,11 @@
 	"ko-repr": "잘 지내.",
 	"words": [{
 		"word": "fine",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "fain",
+			"gb": "fain"
+		}],
+		"ko-repr": "좋은, 괜찮은"
 	}]
 },{
 	"setence_number": 10,
@@ -115,26 +168,42 @@
 	"ko-repr": "다음에 봐!",
 	"words": [{
 		"word": "see",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "siː",
+			"gb": "siː"
+		}],
+		"ko-repr": "보다"
 	}, {
 		"word": "later",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "léitər",
+			"gb": "léitə"
+		}],
+		"ko-repr": "나중에, 이후에"
 	}]
 },{
 	"setence_number": 11,
 	"sentence": "Goodbye!",
 	"ko-repr": "잘가!",
 	"words": [{
-		"word": "goodbye",
-		"ko-repr": ""
-	}]
+        "word": "goodbye",
+        "pronunciations": [{
+            "us": "ˌɡʊdˈbaɪ",
+            "gb": "ˌɡʊdˈbaɪ"
+        }],
+        "ko-repr": "안녕히 가세요 / 계세요"
+    }]
 },{
 	"setence_number": 12,
 	"sentence": "What is this?",
 	"ko-repr": "이게 뭐야?",
 	"words": [{
 		"word": "this",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "ðɪs",
+			"gb": "ðɪs"
+		}],
+		"ko-repr": "이것"
 	}]
 },{
 	"setence_number": 13,
@@ -142,7 +211,11 @@
 	"ko-repr": "책이야",
 	"words": [{
 		"word": "it",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "ɪt",
+			"gb": "ɪt"
+		}],
+		"ko-repr": "그것"
 	}, {
 		"word": "a",
 		"ko-repr": "아직 특정하지 않은, \"어떤 하나\"라는 뜻을 나타낼 때 씁니다.\na book, a car, a university / an apple, an egg, an hour"
@@ -156,7 +229,11 @@
 	"ko-repr": "저게 뭐야?",
 	"words": [{
 		"word": "that",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "ðæt, ðət",
+			"gb": "ðæt, ðət"
+		}],
+		"ko-repr": "저것, 그것"
 	}]
 },{
 	"setence_number": 15,
@@ -164,7 +241,11 @@
 	"ko-repr": "연필이야.",
 	"words": [{
 		"word": "pencil",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "pénsəl",
+			"gb": "pénsəl"
+		}],
+		"ko-repr": "연필"
 	}]
 },{
 	"setence_number": 16,
@@ -172,13 +253,25 @@
 	"ko-repr": "개를 키우니?",
 	"words": [{
 		"word": "do",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "duː",
+			"gb": "duː"
+		}],
+		"ko-repr": "하다"
 	}, {
 		"word": "have",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "hæv, həv",
+			"gb": "hæv, həv"
+		}],
+		"ko-repr": "가지다"
 	}, {
 		"word": "dog",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "dɔːg",
+			"gb": "dɒg"
+		}],
+		"ko-repr": "개"
 	}]
 },{
 	"setence_number": 17,
@@ -186,10 +279,18 @@
 	"ko-repr": "나는 개를 많이 키워.",
 	"words": [{
 		"word": "lot",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "lat",
+			"gb": "lɒt"
+		}],
+		"ko-repr": "많음, 다수"
 	}, {
 		"word": "of",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "əv, ʌv",
+			"gb": "əv, ɒv"
+		}],
+		"ko-repr": "~의, ~에 관한 (소유, 부분, 출처 표현)"
 	}]
 },{
 	"setence_number": 18,
@@ -197,7 +298,11 @@
 	"ko-repr": "얼마나 많이 있어?",
 	"words": [{
 		"word": "many",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "méni",
+			"gb": "méni"
+		}],
+		"ko-repr": "많은 (셀 수 있는 명사와 함께 사용)"
 	}]
 },{
 	"setence_number": 19,
@@ -205,7 +310,11 @@
 	"ko-repr": "개 다섯 마리.",
 	"words": [{
 		"word": "five",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "faiv",
+			"gb": "faiv"
+		}],
+		"ko-repr": "숫자 5"
 	}]
 },{
 	"setence_number": 20,
@@ -218,10 +327,18 @@
 	"ko-repr": "아니, 난 고양이를 키워.",
 	"words": [{
 		"word": "no",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "noʊ",
+			"gb": "nəʊ"
+		}],
+		"ko-repr": "아니오; ~이 없는"
 	}, {
 		"word": "cat",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "kæt",
+			"gb": "kæt"
+		}],
+		"ko-repr": "고양이"
 	}]
 },{
 	"setence_number": 22,
@@ -229,15 +346,23 @@
 	"ko-repr": "무슨 색이야?",
 	"words": [{
 		"word": "color",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "kʌlər",
+			"gb": "kʌlə"
+		}],
+		"ko-repr": "색, 색깔"
 	}]
 },{
 	"setence_number": 23,
 	"sentence": "It's black.",
 	"ko-repr": "검은색이야.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "black",
+		"pronunciations": [{
+			"us": "blæk",
+			"gb": "blæk"
+		}],
+		"ko-repr": "검은색"
 	}]
 },{
 	"setence_number": 24,
@@ -245,53 +370,71 @@
 	"ko-repr": "너는 피자를 좋아하니?",
 	"words": [{
 		"word": "like",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "laɪk",
+			"gb": "laɪk"
+		}],
+		"ko-repr": "좋아하다; ~처럼"
 	}, {
 		"word": "pizza",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "píːtsə",
+			"gb": "píːtsə"
+		}],
+		"ko-repr": "피자"
 	}]
 },{
 	"setence_number": 25,
 	"sentence": "No, I do not like it.",
 	"ko-repr": "아니, 난 싫어해.",
-	"words": [{
-		"word": "",
-		"ko-repr": ""
-	}]
+	"words": []
 },{
 	"setence_number": 26,
 	"sentence": "Do you like hamburgers?",
 	"ko-repr": "햄버거 좋아하니?",
 	"words": [{
 		"word": "hamburger",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "hæ̀mbəːrgər",
+			"gb": "hæ̀mbəːgə"
+		}],
+		"ko-repr": "햄버거"
 	}]
 },{
 	"setence_number": 27,
 	"sentence": "No, I don't like it.",
 	"ko-repr": "아니, 난 싫어해.",
-	"words": [{
-		"word": "",
-		"ko-repr": ""
-	}]
+	"words": []
 },{
 	"setence_number": 28,
 	"sentence": "What's your favorite food?",
 	"ko-repr": "가장 좋아하는 음식이 뭐야?",
 	"words": [{
 		"word": "favorite",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "féivərit",
+			"gb": "féivərit, féivrit"
+		}],
+		"ko-repr": "가장 좋아하는, 마음에 드는"
 	}, {
-		"word": "food",
-		"ko-repr": ""
-	}]
+        "word": "food",
+        "pronunciations": [{
+            "us": "fuːd",
+            "gb": "fuːd"
+        }],
+        "ko-repr": "음식"
+    }]
 },{
 	"setence_number": 29,
 	"sentence": "I like bananas.",
 	"ko-repr": "난 바나나를 좋아해.",
 	"words": [{
 		"word": "banana",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "bənǽnə",
+			"gb": "bənɑ́ːnə"
+		}],
+		"ko-repr": "바나나"
 	}]
 },{
 	"setence_number": 30,
@@ -299,23 +442,28 @@
 	"ko-repr": "스포츠를 좋아하니?",
 	"words": [{
 		"word": "sport",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "spɔːrt",
+			"gb": "spɔːt"
+		}],
+		"ko-repr": "스포츠, 운동"
 	}]
 },{
 	"setence_number": 31,
 	"sentence": "Yes, I do.",
 	"ko-repr": "응, 좋아해.",
-	"words": [{
-		"word": "",
-		"ko-repr": ""
-	}]
+	"words": []
 },{
 	"setence_number": 32,
 	"sentence": "What kind of sport do you like?",
 	"ko-repr": "어떤 종류의 스포츠를 좋아하니?",
 	"words": [{
 		"word": "kind",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "kaind",
+			"gb": "kaind"
+		}],
+		"ko-repr": "종류; 친절한 (문맥에 따라 다르게 쓰임)"
 	}]
 },{
 	"setence_number": 33,
@@ -323,23 +471,35 @@
 	"ko-repr": "난 농구가 좋아.",
 	"words": [{
 		"word": "basketball",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "bǽskitbɔːl",
+			"gb": "bɑ́ːskitbɔːl"
+		}],
+		"ko-repr": "농구"
 	}]
 },{
 	"setence_number": 34,
 	"sentence": "She likes me.",
 	"ko-repr": "그녀는 나를 좋아한다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
-	}]
+        "word": "she",
+        "pronunciations": [{
+            "us": "ʃiː",
+            "gb": "ʃiː"
+        }],
+        "ko-repr": "그녀"
+    }]
 },{
 	"setence_number": 35,
 	"sentence": "He is tall.",
 	"ko-repr": "그는 키가 크다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "he",
+		"pronunciations": [{
+			"us": "hiː",
+			"gb": "hiː"
+		}],
+		"ko-repr": "그(남자)"
 	}]
 },{
 	"setence_number": 36,
@@ -347,505 +507,763 @@
 	"ko-repr": "그 남자는 키가 크다.",
 	"words": [{
 		"word": "the",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "ðə, ðiː",
+			"gb": "ðə, ðiː"
+		}],
+		"ko-repr": "그, 저(정관사. 특정한 것을 가리킬 때 사용)"
 	}, {
 		"word": "man",
-		"ko-repr": ""
+		"pronunciations": [{
+			"us": "mæn",
+			"gb": "mæn"
+		}],
+		"ko-repr": "남자"
 	}]
 },{
 	"setence_number": 37,
 	"sentence": "I have one apple.",
 	"ko-repr": "나는 사과 하나를 가지고 있다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "one",
+		"pronunciations": [{
+			"us": "wʌn",
+			"gb": "wʌn"
+		}],
+		"ko-repr": "하나, 1"
 	}]
 },{
 	"setence_number": 38,
 	"sentence": "We are going to the park.",
 	"ko-repr": "우리는 공원에 간다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+        "word": "we",
+        "pronunciations": [{
+            "us": "wiː",
+            "gb": "wiː"
+        }],
+        "ko-repr": "우리"
+    }, {
+		"word": "go",
+		"pronunciations": [{
+			"us": "ɡoʊ",
+			"gb": "ɡəʊ"
+		}],
+		"ko-repr": "가다"
 	}]
 },{
 	"setence_number": 39,
 	"sentence": "The boy runs fast.",
 	"ko-repr": "그 소년은 빨리 달린다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "boy",
+		"pronunciations": [{
+			"us": "bɔɪ",
+			"gb": "bɔɪ"
+		}],
+		"ko-repr": "소년, 남자아이"
 	}]
 },{
 	"setence_number": 40,
 	"sentence": "The girl is happy.",
 	"ko-repr": "그 소녀는 행복하다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "girl",
+		"pronunciations": [{
+			"us": "ɡɜːrl",
+			"gb": "ɡɜːl"
+		}],
+		"ko-repr": "소녀, 여자아이"
 	}]
 },{
 	"setence_number": 41,
 	"sentence": "She is my friend.",
 	"ko-repr": "그녀는 내 친구이다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
-	}]
+        "word": "friend",
+        "pronunciations": [{
+            "us": "frɛnd",
+            "gb": "frɛnd"
+        }],
+        "ko-repr": "친구"
+    }]
 },{
 	"setence_number": 42,
 	"sentence": "This is my house.",
 	"ko-repr": "여기는 내 집이다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
-	}]
+        "word": "house",
+        "pronunciations": [{
+            "us": "haʊs",
+            "gb": "haʊs"
+        }],
+        "ko-repr": "집"
+    }]
 },{
 	"setence_number": 43,
 	"sentence": "I go to school every day.",
 	"ko-repr": "나는 매일 학교에 간다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
-	}]
+        "word": "school",
+        "pronunciations": [{
+            "us": "skuːl",
+            "gb": "skuːl"
+        }],
+        "ko-repr": "학교"
+    }]
 },{
 	"setence_number": 44,
 	"sentence": "We eat lunch together.",
 	"ko-repr": "우리는 함께 점심을 먹는다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
-	}]
+        "word": "eat",
+        "pronunciations": [{
+            "us": "iːt",
+            "gb": "iːt"
+        }],
+        "ko-repr": "먹다"
+    }]
 },{
 	"setence_number": 45,
 	"sentence": "The dog is sleeping on the couch.",
 	"ko-repr": "그 개는 소파에서 자고 있다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
-	}]
+        "word": "sleep",
+        "pronunciations": [{
+            "us": "sliːp",
+            "gb": "sliːp"
+        }],
+        "ko-repr": "잠자다"
+    }, {
+        "word": "couch",
+        "pronunciations": [{
+            "us": "kaʊtʃ",
+            "gb": "kaʊtʃ"
+        }],
+        "ko-repr": "소파"
+    }]
 },{
 	"setence_number": 46,
 	"sentence": "I am first in line.",
 	"ko-repr": "나는 첫 번째 줄이다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "first",
+		"pronunciations": [{
+			"us": "fɜːrst",
+			"gb": "fɜːst"
+		}],
+		"ko-repr": "첫 번째"
 	}]
 },{
 	"setence_number": 47,
 	"sentence": "This is the last piece of cake.",
 	"ko-repr": "이것은 마지막 케이크 조각이다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "last",
+		"pronunciations": [{
+			"us": "læst",
+			"gb": "lɑːst"
+		}],
+		"ko-repr": "마지막, 지난"
 	}]
 },{
 	"setence_number": 48,
 	"sentence": "I am here.",
 	"ko-repr": "나는 여기 있다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "here",
+		"pronunciations": [{
+			"us": "hɪr",
+			"gb": "hɪə"
+		}],
+		"ko-repr": "여기"
 	}]
 },{
 	"setence_number": 49,
 	"sentence": "There is a park near my house.",
 	"ko-repr": "내 집 근처에 공원이 있다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "there",
+		"pronunciations": [{
+			"us": "ðɛr",
+			"gb": "ðeə"
+		}],
+		"ko-repr": "거기에, 거기"
 	}]
 },{
 	"setence_number": 50,
 	"sentence": "They are my friends.",
 	"ko-repr": "그들은 내 친구이다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
-	}]
+        "word": "they",
+        "pronunciations": [{
+            "us": "ðeɪ",
+            "gb": "ðeɪ"
+        }],
+        "ko-repr": "그들, 그 사람들"
+    }]
 },{
 	"setence_number": 51,
 	"sentence": "The cat is in the box.",
 	"ko-repr": "고양이가 상자 안에 있다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "in",
+		"pronunciations": [{
+			"us": "ɪn",
+			"gb": "ɪn"
+		}],
+		"ko-repr": "~안에, ~에서"
 	}]
 },{
 	"setence_number": 52,
 	"sentence": "The book is on the table.",
 	"ko-repr": "그 책은 탁자 위에 있다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "on",
+		"pronunciations": [{
+			"us": "ɑːn",
+			"gb": "ɒn"
+		}],
+		"ko-repr": "~위에, ~에"
 	}]
 },{
 	"setence_number": 53,
 	"sentence": "I am at home.",
 	"ko-repr": "나는 집에 있다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "at",
+		"pronunciations": [{
+			"us": "æt",
+			"gb": "æt"
+		}],
+		"ko-repr": "~에, ~에서"
 	}]
 },{
 	"setence_number": 54,
 	"sentence": "I drink a lot of water every day.",
 	"ko-repr": "나는 매일 물을 많이 마신다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
-	}]
+        "word": "lot",
+        "pronunciations": [{
+            "us": "lɑːt",
+            "gb": "lɒt"
+        }],
+        "ko-repr": "많음"
+    }]
 },{
 	"setence_number": 55,
 	"sentence": "He climbed up the ladder.",
 	"ko-repr": "그는 사다리를 올라갔다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "up",
+		"pronunciations": [{
+			"us": "ʌp",
+			"gb": "ʌp"
+		}],
+		"ko-repr": "위로, 위쪽에"
 	}]
 },{
 	"setence_number": 56,
 	"sentence": "Please turn off the lights.",
 	"ko-repr": "불 좀 꺼주세요.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "off",
+		"pronunciations": [{
+			"us": "ɔːf",
+			"gb": "ɒf"
+		}],
+		"ko-repr": "~에서 떨어져, 꺼져"
 	}]
 },{
 	"setence_number": 57,
 	"sentence": "I have a pen and a book.",
 	"ko-repr": "나는 펜과 책이 있다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "and",
+		"pronunciations": [{
+			"us": "ænd, ən(d)",
+			"gb": "ænd, ən(d)"
+		}],
+		"ko-repr": "그리고"
 	}]
 },{
 	"setence_number": 58,
 	"sentence": "This gift is for you.",
 	"ko-repr": "이 선물은 당신을 위한 거예요.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "for",
+		"pronunciations": [{
+			"us": "fɔːr",
+			"gb": "fɔː"
+		}],
+		"ko-repr": "~을 위하여, ~동안"
 	}]
 },{
 	"setence_number": 59,
 	"sentence": "Please come here.",
 	"ko-repr": "여기로 와 주세요.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
-	}]
+        "word": "come",
+        "pronunciations": [{
+            "us": "kʌm",
+            "gb": "kʌm"
+        }],
+        "ko-repr": "오다"
+    }]
 },{
 	"setence_number": 60,
 	"sentence": "I want a cup of tea.",
 	"ko-repr": "차 한 잔 마시고 싶어요.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "want",
+		"pronunciations": [{
+			"us": "wɑːnt",
+			"gb": "wɒnt"
+		}],
+		"ko-repr": "원하다"
 	}]
 },{
 	"setence_number": 61,
 	"sentence": "I drink water.",
 	"ko-repr": "전 물을 마셔요.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
-	}]
+        "word": "water",
+        "pronunciations": [{
+            "us": "ˈwɔːtər",
+            "gb": "ˈwɔːtə"
+        }],
+        "ko-repr": "물"
+    }]
 },{
 	"setence_number": 62,
 	"sentence": "I get a new book.",
 	"ko-repr": "나는 새 책을 받았다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "new",
+		"pronunciations": [{
+			"us": "nuː",
+			"gb": "njuː"
+		}],
+		"ko-repr": "새로운"
 	}]
 },{
 	"setence_number": 63,
 	"sentence": "The day is sunny.",
 	"ko-repr": "날이 맑다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "day",
+		"pronunciations": [{
+			"us": "deɪ",
+			"gb": "deɪ"
+		}],
+		"ko-repr": "하루, 날"
 	}]
 },{
 	"setence_number": 64,
 	"sentence": "The night is quiet.",
 	"ko-repr": "밤이 고요하다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
-	}]
+        "word": "night",
+        "pronunciations": [{
+            "us": "naɪt",
+            "gb": "naɪt"
+        }],
+        "ko-repr": "밤"
+    }]
 },{
 	"setence_number": 65,
 	"sentence": "Today is a beautiful day.",
 	"ko-repr": "오늘은 날씨가 정말 좋다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
-	}]
+        "word": "today",
+        "pronunciations": [{
+            "us": "təˈdeɪ",
+            "gb": "təˈdeɪ"
+        }],
+        "ko-repr": "오늘"
+    }}]
 },{
 	"setence_number": 66,
 	"sentence": "The woman is reading a book.",
 	"ko-repr": "그녀는 책을 읽고 있었다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
-	}]
+        "word": "woman",
+        "pronunciations": [{
+            "us": "ˈwʊmən",
+            "gb": "ˈwʊmən"
+        }],
+        "ko-repr": "여자"
+    }]
 },{
 	"setence_number": 67,
 	"sentence": "We have a meeting tomorrow.",
 	"ko-repr": "우리는 내일 회의가 있다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
-	}]
+        "word": "tomorrow",
+        "pronunciations": [{
+            "us": "təˈmɑːroʊ",
+            "gb": "təˈmɒrəʊ"
+        }],
+        "ko-repr": "내일"
+    }]
 },{
 	"setence_number": 68,
 	"sentence": "The sun is shining brightly today.",
 	"ko-repr": "오늘은 해가 밝게 빛나고 있다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
-	}]
+        "word": "sun",
+        "pronunciations": [{
+            "us": "sʌn",
+            "gb": "sʌn"
+        }],
+        "ko-repr": "태양"
+    }]
 },{
 	"setence_number": 69,
 	"sentence": "It will rain later.",
 	"ko-repr": "나중에 비가 올 것이다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
-	}]
+        "word": "later",
+        "pronunciations": [{
+            "us": "ˈleɪtər",
+            "gb": "ˈleɪtə"
+        }],
+        "ko-repr": "나중에"
+    }]
 },{
 	"setence_number": 70,
 	"sentence": "The food tastes bad.",
 	"ko-repr": "그 음식은 맛이 없다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
-	}]
+        "word": "bad",
+        "pronunciations": [{
+            "us": "bæd",
+            "gb": "bæd"
+        }],
+        "ko-repr": "나쁜"
+    }]
 },{
 	"setence_number": 71,
 	"sentence": "The house is big.",
 	"ko-repr": "집이 크다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
-	}]
+        "word": "big",
+        "pronunciations": [{
+            "us": "bɪɡ",
+            "gb": "bɪɡ"
+        }],
+        "ko-repr": "큰"
+    }]
 },{
 	"setence_number": 72,
 	"sentence": "I am going to the party with my friends.",
 	"ko-repr": "친구들과 파티에 갈거다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "with",
+		"pronunciations": [{
+			"us": "wɪð, wɪθ",
+			"gb": "wɪð, wɪθ"
+		}],
+		"ko-repr": "~와 함께"
 	}]
 },{
 	"setence_number": 73,
 	"sentence": "I am from Korea.",
 	"ko-repr": "저는 한국에서 왔어요.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "from",
+		"pronunciations": [{
+			"us": "frʌm, frəm",
+			"gb": "frɒm, frəm"
+		}],
+		"ko-repr": "~로부터, ~에서"
 	}]
 },{
 	"setence_number": 74,
 	"sentence": "Do you want tea or coffee?",
 	"ko-repr": "차 마실래? 커피 마실래?",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "or",
+		"pronunciations": [{
+			"us": "ɔːr",
+			"gb": "ɔː"
+		}],
+		"ko-repr": "또는, ~이나"
 	}]
 },{
 	"setence_number": 75,
 	"sentence": "All the students are here.",
 	"ko-repr": "모든 학생들이 여기 있어요.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "all",
+		"pronunciations": [{
+			"us": "ɔːl",
+			"gb": "ɔːl"
+		}],
+		"ko-repr": "모든, 전부"
 	}]
 },{
 	"setence_number": 76,
 	"sentence": "We ate lunch after class.",
 	"ko-repr": "저희는 수업 후에 점심을 먹었어요.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "after",
+		"pronunciations": [{
+			"us": "ˈæftər",
+			"gb": "ˈɑːftə"
+		}],
+		"ko-repr": "~후에"
 	}]
 },{
 	"setence_number": 77,
 	"sentence": "I bought a new car.",
 	"ko-repr": "나는 새 차를 샀다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "new",
+		"pronunciations": [{
+			"us": "nuː",
+			"gb": "njuː"
+		}],
+		"ko-repr": "새로운"
 	}]
 },{
 	"setence_number": 78,
 	"sentence": "I can swim.",
 	"ko-repr": "나는 수영을 할 수 있다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "can",
+		"pronunciations": [{
+			"us": "kæn",
+			"gb": "kæn"
+		}],
+		"ko-repr": "~할 수 있다"
 	}]
 },{
 	"setence_number": 79,
 	"sentence": "We go out for a walk.",
 	"ko-repr": "우리는 산책하러 나갔다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "out",
+		"pronunciations": [{
+			"us": "aʊt",
+			"gb": "aʊt"
+		}],
+		"ko-repr": "밖에, 밖으로"
 	}]
 },{
 	"setence_number": 80,
 	"sentence": "What time does the movie start?",
 	"ko-repr": "영화 몇 시에 시작해?",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "time",
+		"pronunciations": [{
+			"us": "taɪm",
+			"gb": "taɪm"
+		}],
+		"ko-repr": "시간"
 	}]
 },{
 	"setence_number": 81,
 	"sentence": "I am busy now.",
 	"ko-repr": "나 지금 바빠.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "now",
+		"pronunciations": [{
+			"us": "naʊ",
+			"gb": "naʊ"
+		}],
+		"ko-repr": "지금"
 	}]
 },{
 	"setence_number": 82,
 	"sentence": "Do you have any money?",
 	"ko-repr": "너 돈 좀 있니?",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "any",
+		"pronunciations": [{
+			"us": "ˈɛni",
+			"gb": "ˈɛni"
+		}],
+		"ko-repr": "어떤, 아무"
 	}]
 },{
 	"setence_number": 83,
 	"sentence": "He walks down the hill.",
 	"ko-repr": "그가 언덕 아래로 걸어 내려간다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "down",
+		"pronunciations": [{
+			"us": "daʊn",
+			"gb": "daʊn"
+		}],
+		"ko-repr": "아래로"
 	}]
 },{
 	"setence_number": 84,
 	"sentence": "I have to work tomorrow.",
 	"ko-repr": "나는 내일 출근해야해.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "work",
+		"pronunciations": [{
+			"us": "wɜːrk",
+			"gb": "wɜːk"
+		}],
+		"ko-repr": "일하다"
 	}]
 },{
 	"setence_number": 85,
 	"sentence": "The store is open now.",
 	"ko-repr": "가게는 지금 열려 있어.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "open",
+		"pronunciations": [{
+			"us": "ˈoʊpən",
+			"gb": "ˈəʊpən"
+		}],
+		"ko-repr": "열다, 열린"
 	}]
 },{
 	"setence_number": 86,
 	"sentence": "The weather is very cold today.",
 	"ko-repr": "오늘 날씨가 매우 춥네.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "very",
+		"pronunciations": [{
+			"us": "ˈvɛri",
+			"gb": "ˈvɛri"
+		}],
+		"ko-repr": "매우"
 	}]
 },{
 	"setence_number": 87,
 	"sentence": "I think this is a good idea.",
 	"ko-repr": "나는 이게 좋은 생각이라고 생각해.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "think",
+		"pronunciations": [{
+			"us": "θɪŋk",
+			"gb": "θɪŋk"
+		}],
+		"ko-repr": "생각하다"
 	}]
 },{
 	"setence_number": 88,
 	"sentence": "Open the window for some fresh air.",
 	"ko-repr": "신선한 공기를 위해 창문을 열어.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "window",
+		"pronunciations": [{
+			"us": "ˈwɪndoʊ",
+			"gb": "ˈwɪndəʊ"
+		}],
+		"ko-repr": "창문"
 	}]
 },{
 	"setence_number": 89,
 	"sentence": "You are right about that.",
 	"ko-repr": "그건 너가 맞아.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "right",
+		"pronunciations": [{
+			"us": "raɪt",
+			"gb": "raɪt"
+		}],
+		"ko-repr": "오른쪽, 옳은"
 	}]
 },{
 	"setence_number": 90,
 	"sentence": "She came back home.",
 	"ko-repr": "그녀가 집에 돌아왓다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "back",
+		"pronunciations": [{
+			"us": "bæk",
+			"gb": "bæk"
+		}],
+		"ko-repr": "뒤, 돌아가다"
 	}]
 },{
 	"setence_number": 91,
 	"sentence": "There are many people in the room.",
 	"ko-repr": "방에 사람들이 많다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "people",
+		"pronunciations": [{
+			"us": "ˈpiːpl",
+			"gb": "ˈpiːpl"
+		}],
+		"ko-repr": "사람들"
 	}]
 },{
 	"setence_number": 92,
 	"sentence": "I make a sandwich.",
 	"ko-repr": "나는 샌드위치를 만든다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "make",
+		"pronunciations": [{
+			"us": "meɪk",
+			"gb": "meɪk"
+		}],
+		"ko-repr": "만들다"
 	}]
 },{
 	"setence_number": 93,
 	"sentence": "I want a cup of tea.",
 	"ko-repr": "나는 차 한 잔을 원한다.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "want",
+		"pronunciations": [{
+			"us": "wɑːnt",
+			"gb": "wɒnt"
+		}],
+		"ko-repr": "원하다"
 	}]
 },{
 	"setence_number": 94,
 	"sentence": "Wash your hands before dinner.",
 	"ko-repr": "저녁 먹기 전에 너의 손을 씻어라.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "before",
+		"pronunciations": [{
+			"us": "bɪˈfɔːr",
+			"gb": "bɪˈfɔː"
+		}],
+		"ko-repr": "~전에"
 	}]
 },{
 	"setence_number": 95,
 	"sentence": "I really like this song.",
 	"ko-repr": "나는 이 노래가 정말 좋아.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "really",
+		"pronunciations": [{
+			"us": "ˈriːəli, ˈrɪəli",
+			"gb": "ˈrɪəli"
+		}],
+		"ko-repr": "정말로, 실제로"
 	}]
 },{
 	"setence_number": 96,
 	"sentence": "What did you say?",
 	"ko-repr": "뭐라고 했어?",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "say",
+		"pronunciations": [{
+			"us": "seɪ",
+			"gb": "seɪ"
+		}],
+		"ko-repr": "말하다"
 	}]
 },{
 	"setence_number": 97,
-	"sentence": "The day is sunny.",
-	"ko-repr": "날씨가 화창해",
-	"words": [{
-		"word": "",
-		"ko-repr": ""
-	}]
-},{
-	"setence_number": 98,
 	"sentence": "The road is long and winding.",
 	"ko-repr": "그 길은 길고 구불구불해.",
 	"words": [{
-		"word": "",
-		"ko-repr": ""
+		"word": "long",
+		"pronunciations": [{
+			"us": "lɔːŋ",
+			"gb": "lɒŋ"
+		}],
+		"ko-repr": "긴, 오랫동안"
 	}]
 }]
