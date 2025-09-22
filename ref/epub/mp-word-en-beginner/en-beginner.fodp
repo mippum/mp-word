@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:rpt="http://openoffice.org/2005/report" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:css3t="http://www.w3.org/TR/css3-text/" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0" xmlns:smil="urn:oasis:names:tc:opendocument:xmlns:smil-compatible:1.0" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xmlns:officeooo="http://openoffice.org/2009/office" office:version="1.4" office:mimetype="application/vnd.oasis.opendocument.presentation">
- <office:meta><meta:creation-date>2025-06-29T14:07:05.545349700</meta:creation-date><meta:generator>LibreOffice/25.2.5.2$Windows_X86_64 LibreOffice_project/03d19516eb2e1dd5d4ccd751a0d6f35f35e08022</meta:generator><dc:date>2025-09-21T16:05:45.059699600</dc:date><meta:editing-duration>P1DT6H21S</meta:editing-duration><meta:editing-cycles>32</meta:editing-cycles><meta:print-date>2025-08-06T03:25:24.644677800</meta:print-date><meta:printed-by>PDF 파일</meta:printed-by><meta:document-statistic meta:object-count="47"/></office:meta>
+ <office:meta><meta:creation-date>2025-06-29T14:07:05.545349700</meta:creation-date><meta:generator>LibreOffice/25.8.1.1$Windows_X86_64 LibreOffice_project/54047653041915e595ad4e45cccea684809c77b5</meta:generator><dc:date>2025-09-22T17:14:41.975577100</dc:date><meta:editing-duration>P1DT6H2M51S</meta:editing-duration><meta:editing-cycles>33</meta:editing-cycles><meta:print-date>2025-08-06T03:25:24.644677800</meta:print-date><meta:printed-by>PDF 파일</meta:printed-by><meta:document-statistic meta:object-count="48"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="VisibleAreaTop" config:type="int">-2327</config:config-item>
-   <config:config-item config:name="VisibleAreaLeft" config:type="int">-7872</config:config-item>
+   <config:config-item config:name="VisibleAreaTop" config:type="int">-1312</config:config-item>
+   <config:config-item config:name="VisibleAreaLeft" config:type="int">-9971</config:config-item>
    <config:config-item config:name="VisibleAreaWidth" config:type="int">21971</config:config-item>
    <config:config-item config:name="VisibleAreaHeight" config:type="int">19382</config:config-item>
    <config:config-item-map-indexed config:name="Views">
@@ -29,16 +29,16 @@
      <config:config-item config:name="NoColors" config:type="boolean">true</config:config-item>
      <config:config-item config:name="RulerIsVisible" config:type="boolean">false</config:config-item>
      <config:config-item config:name="PageKind" config:type="short">0</config:config-item>
-     <config:config-item config:name="SelectedPage" config:type="short">4</config:config-item>
+     <config:config-item config:name="SelectedPage" config:type="short">7</config:config-item>
      <config:config-item config:name="IsLayerMode" config:type="boolean">false</config:config-item>
      <config:config-item config:name="IsDoubleClickTextEdit" config:type="boolean">true</config:config-item>
      <config:config-item config:name="IsClickChangeRotation" config:type="boolean">true</config:config-item>
      <config:config-item config:name="SlidesPerRow" config:type="short">4</config:config-item>
      <config:config-item config:name="EditMode" config:type="int">0</config:config-item>
-     <config:config-item config:name="VisibleAreaTop" config:type="int">-2327</config:config-item>
-     <config:config-item config:name="VisibleAreaLeft" config:type="int">-7872</config:config-item>
-     <config:config-item config:name="VisibleAreaWidth" config:type="int">21972</config:config-item>
-     <config:config-item config:name="VisibleAreaHeight" config:type="int">19383</config:config-item>
+     <config:config-item config:name="VisibleAreaTop" config:type="int">-1312</config:config-item>
+     <config:config-item config:name="VisibleAreaLeft" config:type="int">-9971</config:config-item>
+     <config:config-item config:name="VisibleAreaWidth" config:type="int">30417</config:config-item>
+     <config:config-item config:name="VisibleAreaHeight" config:type="int">19375</config:config-item>
      <config:config-item config:name="GridCoarseWidth" config:type="int">2000</config:config-item>
      <config:config-item config:name="GridCoarseHeight" config:type="int">2000</config:config-item>
      <config:config-item config:name="GridFineWidth" config:type="int">500</config:config-item>
@@ -54,6 +54,7 @@
      <config:config-item config:name="LegacySingleLineFontwork" config:type="boolean">false</config:config-item>
      <config:config-item config:name="ConnectorUseSnapRect" config:type="boolean">false</config:config-item>
      <config:config-item config:name="IgnoreBreakAfterMultilineField" config:type="boolean">false</config:config-item>
+     <config:config-item config:name="UseTrailingEmptyLinesInLayout" config:type="boolean">false</config:config-item>
     </config:config-item-map-entry>
    </config:config-item-map-indexed>
   </config:config-item-set>
@@ -76,8 +77,8 @@
    </config:config-item-map-indexed>
    <config:config-item config:name="DefaultTabStop" config:type="int">1250</config:config-item>
    <config:config-item config:name="ImagePreferredDPI" config:type="int">0</config:config-item>
-   <config:config-item config:name="PrinterName" config:type="string">Brother HL-L2335D series</config:config-item>
-   <config:config-item config:name="PrinterSetup" config:type="base64Binary">sA7+/0Jyb3RoZXIgSEwtTDIzMzVEIHNlcmllcwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQnJvdGhlciBITC1MMjMzNUQgc2VyaWVzAAAAAAAAAAAWAAEAgg0AAAAAAAAEAAhSAAAEdAAAM1ROVwAAAAAKAEIAcgBvAHQAaABlAHIAIABIAEwALQBMADIAMwAzADUARAAgAHMAZQByAGkAZQBzAAAAAAAAAAAAAAAAAAAAAAABBAkB3ACcDA+TAQABAAkAmgs0CGQAAQAHAFgCAQABAFgCAQAAAEEANAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALsm7TgAAAAAAAAAAAAAAgAAAAAAAAAAAAAA9gT6AgAA9gT6AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAQAAAAAAAQAAAAAAAAYAAAAHAAcAAAAAAAEAAAAAAAAAAgAAAAIBAAEAAQUAAAAAAAIBAAACAAAABwAAAAAAAAAAGQAA5AwAAAAAAAC4CwAAcBcAAAAAAADcBQAAWAIAAAAAAAAAAAAAAAAAAP7/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA3DAAA2gwAABAnAAAQJwAAECcAABAnAACgCgAAwgYAALgGAAAsBAAAQAEAANIAAAAYAAAAAAAQJxAnECcAABAnAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAACAAAAAAAAAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAQABAAUBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////2QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzMzMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgQAAABEUvNXQtMwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzMzMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgQAAABEUvNXQtMwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzMzMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgQAAABEUvNXQtMwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAAkAZAAAAAAAAAAAAPoC9gQDAQAAAAAAAAEAAQAAAAAAAAAAAAAAAgABAAEAAQAAAAABAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkAAAA9f///wAAAAAAAAAAAAAAAAAAAAAAAAABAAAAABS81dC0zAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////AAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBCAABATAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEAAAIAAAACAAAAAQABABAnAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAARU5HTElTSAAAAAAAAAAAAA0AAAAAAAAAAAAAAAAAAAAAAAAAUFJJVgH/SEwtTDIzMzVEIHNlcmllcwAAAAAAAAAAAD8AAAAAAAAAAAAAAAAhAAAAAAD0AQAAAAAAAAAA/wEAAIkQAACJEAAAiRAAAIkQAACJEAAAiRAAAIkQAACJEAAAAAAAAAAAAAAAAAAAAAsAAAAAECe1AwAAVQBTAEUAUgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARABFAFMASwBUAE8AUAAtAEkARABSAEcASgBMAEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAGQAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAABEAEUAUwBLAFQATwBQAC0ASQBEAFIARwBKAEwATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASAENPTVBBVF9EVVBMRVhfTU9ERQ8ARHVwbGV4TW9kZTo6T2ZmDABQUklOVEVSX05BTUUYAEJyb3RoZXIgSEwtTDIzMzVEIHNlcmllcwsARFJJVkVSX05BTUUYAEJyb3RoZXIgSEwtTDIzMzVEIHNlcmllcw==</config:config-item>
+   <config:config-item config:name="PrinterName" config:type="string">Hancom PDF</config:config-item>
+   <config:config-item config:name="PrinterSetup" config:type="base64Binary">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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIAQ09NUEFUX0RVUExFWF9NT0RFDwBEdXBsZXhNb2RlOjpPZmYMAFBSSU5URVJfTkFNRQoASGFuY29tIFBERgsARFJJVkVSX05BTUUKAEhhbmNvbSBQREY=</config:config-item>
    <config:config-item config:name="IsPrintHandout" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrinterPaperFromSetup" config:type="boolean">false</config:config-item>
    <config:config-item config:name="IsPrintPageName" config:type="boolean">false</config:config-item>
@@ -130,17 +131,13 @@
   <style:font-face style:name="Helvetica Neue" svg:font-family="&apos;Helvetica Neue&apos;" style:font-pitch="variable"/>
   <style:font-face style:name="HelveticaNeue" svg:font-family="HelveticaNeue"/>
   <style:font-face style:name="Liberation Sans" svg:font-family="&apos;Liberation Sans&apos;" style:font-family-generic="roman" style:font-pitch="variable"/>
-  <style:font-face style:name="NanumPen" svg:font-family="NanumPen"/>
+  <style:font-face style:name="Lucida Sans" svg:font-family="&apos;Lucida Sans&apos;" style:font-family-generic="system" style:font-pitch="variable"/>
   <style:font-face style:name="Noto Sans" svg:font-family="&apos;Noto Sans&apos;" style:font-family-generic="roman" style:font-pitch="variable"/>
   <style:font-face style:name="Tahoma" svg:font-family="Tahoma" style:font-family-generic="system" style:font-pitch="variable"/>
-  <style:font-face style:name="TimesNewRomanPSMT" svg:font-family="TimesNewRomanPSMT" style:font-family-generic="roman"/>
-  <style:font-face style:name="나눔고딕" svg:font-family="나눔고딕" style:font-family-generic="modern" style:font-pitch="variable"/>
-  <style:font-face style:name="나눔고딕1" svg:font-family="나눔고딕" style:font-family-generic="roman" style:font-pitch="variable"/>
+  <style:font-face style:name="나눔고딕" svg:font-family="나눔고딕" style:font-family-generic="roman" style:font-pitch="variable"/>
+  <style:font-face style:name="나눔고딕1" svg:font-family="나눔고딕" style:font-family-generic="modern" style:font-pitch="variable"/>
   <style:font-face style:name="나눔고딕2" svg:font-family="나눔고딕" style:font-family-generic="system" style:font-pitch="variable"/>
-  <style:font-face style:name="나눔손글씨 붓" svg:font-family="&apos;나눔손글씨 붓&apos;" style:font-family-generic="script" style:font-pitch="variable"/>
   <style:font-face style:name="나눔손글씨 장미체" svg:font-family="&apos;나눔손글씨 장미체&apos;" style:font-pitch="variable"/>
-  <style:font-face style:name="나눔손글씨 펜" svg:font-family="&apos;나눔손글씨 펜&apos;" style:font-pitch="variable"/>
-  <style:font-face style:name="나눔손글씨 펜1" svg:font-family="&apos;나눔손글씨 펜&apos;" style:font-family-generic="script" style:font-pitch="variable"/>
  </office:font-face-decls>
  <office:styles>
   <draw:gradient draw:name="노란색으로_20_채움" draw:display-name="노란색으로 채움" draw:style="linear" draw:start-color="#ffde59" draw:end-color="#b47804" draw:start-intensity="100%" draw:end-intensity="100%" draw:angle="30deg" draw:border="0%">
@@ -167,10 +164,10 @@
   <draw:marker draw:name="Arrow" svg:viewBox="0 0 20 30" svg:d="M10 0l-10 30h20z"/>
   <style:default-style style:family="graphic">
    <style:graphic-properties svg:stroke-color="#3465a4" draw:fill-color="#729fcf" fo:wrap-option="no-wrap" style:writing-mode="lr-tb"/>
-   <style:paragraph-properties style:text-autospace="none" style:punctuation-wrap="simple" style:line-break="strict" loext:tab-stop-distance="0cm" style:font-independent-line-spacing="false">
+   <style:paragraph-properties style:text-autospace="none" style:punctuation-wrap="simple" style:line-break="strict" loext:tab-stop-distance="0cm" style:writing-mode="lr-tb" style:font-independent-line-spacing="false">
     <style:tab-stops/>
    </style:paragraph-properties>
-   <style:text-properties style:use-window-font-color="true" loext:opacity="0%" style:font-name="나눔고딕1" fo:font-size="24pt" fo:language="en" fo:country="US" style:font-name-asian="나눔고딕2" style:font-size-asian="24pt" style:language-asian="ko" style:country-asian="KR" style:font-name-complex="Tahoma" style:font-size-complex="24pt" style:language-complex="hi" style:country-complex="IN"/>
+   <style:text-properties style:use-window-font-color="true" loext:opacity="0%" style:font-name="나눔고딕" fo:font-size="24pt" fo:language="en" fo:country="US" style:font-name-asian="나눔고딕2" style:font-size-asian="24pt" style:language-asian="ko" style:country-asian="KR" style:font-name-complex="Tahoma" style:font-size-complex="24pt" style:language-complex="hi" style:country-complex="IN"/>
   </style:default-style>
   <style:style style:name="standard" style:family="graphic">
    <style:graphic-properties draw:stroke="solid" svg:stroke-width="0cm" svg:stroke-color="#3465a4" draw:marker-start-width="0.2cm" draw:marker-start-center="false" draw:marker-end-width="0.2cm" draw:marker-end-center="false" draw:fill="solid" draw:fill-color="#729fcf" draw:textarea-horizontal-align="justify" fo:padding-top="0.125cm" fo:padding-bottom="0.125cm" fo:padding-left="0.25cm" fo:padding-right="0.25cm" fo:wrap-option="wrap" draw:shadow="hidden" draw:shadow-offset-x="0.2cm" draw:shadow-offset-y="0.2cm" draw:shadow-color="#808080">
@@ -218,7 +215,7 @@
     </text:list-style>
    </style:graphic-properties>
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" fo:line-height="100%" fo:text-indent="0cm"/>
-   <style:text-properties fo:font-variant="normal" fo:text-transform="none" style:use-window-font-color="true" loext:opacity="0%" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="나눔고딕1" fo:font-family="나눔고딕" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="18pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="normal" style:letter-kerning="true" style:font-name-asian="나눔고딕2" style:font-family-asian="나눔고딕" style:font-family-generic-asian="system" style:font-pitch-asian="variable" style:font-size-asian="18pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-name-complex="Arial" style:font-family-complex="Arial" style:font-family-generic-complex="system" style:font-pitch-complex="variable" style:font-size-complex="18pt" style:font-style-complex="normal" style:font-weight-complex="normal" style:text-emphasize="none" style:font-relief="none" style:text-overline-style="none" style:text-overline-color="font-color"/>
+   <style:text-properties fo:font-variant="normal" fo:text-transform="none" style:use-window-font-color="true" loext:opacity="0%" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="나눔고딕" fo:font-family="나눔고딕" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="18pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="normal" style:letter-kerning="true" style:font-name-asian="나눔고딕2" style:font-family-asian="나눔고딕" style:font-family-generic-asian="system" style:font-pitch-asian="variable" style:font-size-asian="18pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-name-complex="Arial" style:font-family-complex="Arial" style:font-family-generic-complex="system" style:font-pitch-complex="variable" style:font-size-complex="18pt" style:font-style-complex="normal" style:font-weight-complex="normal" style:text-emphasize="none" style:font-relief="none" style:text-overline-style="none" style:text-overline-color="font-color"/>
   </style:style>
   <style:style style:name="objectwithoutfill" style:family="graphic" style:parent-style-name="standard">
    <style:graphic-properties draw:fill="none"/>
@@ -326,7 +323,7 @@
   <style:style style:name="기본값-notes" style:family="presentation">
    <style:graphic-properties draw:stroke="none" draw:fill="none"/>
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="-0.6cm"/>
-   <style:text-properties fo:font-variant="normal" fo:text-transform="none" style:use-window-font-color="true" loext:opacity="0%" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="나눔고딕1" fo:font-family="나눔고딕" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="20pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="normal" style:letter-kerning="true" fo:background-color="transparent" style:font-name-asian="나눔고딕2" style:font-family-asian="나눔고딕" style:font-family-generic-asian="system" style:font-pitch-asian="variable" style:font-size-asian="20pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-name-complex="Arial" style:font-family-complex="Arial" style:font-family-generic-complex="system" style:font-pitch-complex="variable" style:font-size-complex="20pt" style:font-style-complex="normal" style:font-weight-complex="normal" style:text-emphasize="none" style:font-relief="none" style:text-overline-style="none" style:text-overline-color="font-color"/>
+   <style:text-properties fo:font-variant="normal" fo:text-transform="none" style:use-window-font-color="true" loext:opacity="0%" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="나눔고딕" fo:font-family="나눔고딕" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="20pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="normal" style:letter-kerning="true" fo:background-color="transparent" style:font-name-asian="나눔고딕2" style:font-family-asian="나눔고딕" style:font-family-generic-asian="system" style:font-pitch-asian="variable" style:font-size-asian="20pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-name-complex="Arial" style:font-family-complex="Arial" style:font-family-generic-complex="system" style:font-pitch-complex="variable" style:font-size-complex="20pt" style:font-style-complex="normal" style:font-weight-complex="normal" style:text-emphasize="none" style:font-relief="none" style:text-overline-style="none" style:text-overline-color="font-color"/>
   </style:style>
   <style:style style:name="기본값-outline1" style:family="presentation">
    <style:graphic-properties draw:stroke="none" draw:fill="none" draw:auto-grow-height="false" draw:fit-to-size="false" style:shrink-to-fit="true">
@@ -374,7 +371,7 @@
     </text:list-style>
    </style:graphic-properties>
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0.468cm" fo:margin-bottom="0cm" fo:text-indent="0cm"/>
-   <style:text-properties fo:font-variant="normal" fo:text-transform="none" style:use-window-font-color="true" loext:opacity="0%" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="나눔고딕1" fo:font-family="나눔고딕" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="30pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="normal" style:letter-kerning="true" fo:background-color="transparent" style:font-name-asian="나눔고딕2" style:font-family-asian="나눔고딕" style:font-family-generic-asian="system" style:font-pitch-asian="variable" style:font-size-asian="32pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-name-complex="Arial" style:font-family-complex="Arial" style:font-family-generic-complex="system" style:font-pitch-complex="variable" style:font-size-complex="32pt" style:font-style-complex="normal" style:font-weight-complex="normal" style:text-emphasize="none" style:font-relief="none" style:text-overline-style="none" style:text-overline-color="font-color"/>
+   <style:text-properties fo:font-variant="normal" fo:text-transform="none" style:use-window-font-color="true" loext:opacity="0%" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="나눔고딕" fo:font-family="나눔고딕" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="30pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="normal" style:letter-kerning="true" fo:background-color="transparent" style:font-name-asian="나눔고딕2" style:font-family-asian="나눔고딕" style:font-family-generic-asian="system" style:font-pitch-asian="variable" style:font-size-asian="32pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-name-complex="Arial" style:font-family-complex="Arial" style:font-family-generic-complex="system" style:font-pitch-complex="variable" style:font-size-complex="32pt" style:font-style-complex="normal" style:font-weight-complex="normal" style:text-emphasize="none" style:font-relief="none" style:text-overline-style="none" style:text-overline-color="font-color"/>
   </style:style>
   <style:style style:name="기본값-outline2" style:family="presentation" style:parent-style-name="기본값-outline1">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0.375cm" fo:margin-bottom="0cm" fo:text-indent="0cm"/>
@@ -454,7 +451,7 @@
     </text:list-style>
    </style:graphic-properties>
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-align="center" fo:text-indent="0cm"/>
-   <style:text-properties fo:font-variant="normal" fo:text-transform="none" style:use-window-font-color="true" loext:opacity="0%" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="나눔고딕1" fo:font-family="나눔고딕" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="32pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="normal" style:letter-kerning="true" fo:background-color="transparent" style:font-name-asian="나눔고딕2" style:font-family-asian="나눔고딕" style:font-family-generic-asian="system" style:font-pitch-asian="variable" style:font-size-asian="32pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-name-complex="Arial" style:font-family-complex="Arial" style:font-family-generic-complex="system" style:font-pitch-complex="variable" style:font-size-complex="32pt" style:font-style-complex="normal" style:font-weight-complex="normal" style:text-emphasize="none" style:font-relief="none" style:text-overline-style="none" style:text-overline-color="font-color"/>
+   <style:text-properties fo:font-variant="normal" fo:text-transform="none" style:use-window-font-color="true" loext:opacity="0%" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="나눔고딕" fo:font-family="나눔고딕" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="32pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="normal" style:letter-kerning="true" fo:background-color="transparent" style:font-name-asian="나눔고딕2" style:font-family-asian="나눔고딕" style:font-family-generic-asian="system" style:font-pitch-asian="variable" style:font-size-asian="32pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-name-complex="Arial" style:font-family-complex="Arial" style:font-family-generic-complex="system" style:font-pitch-complex="variable" style:font-size-complex="32pt" style:font-style-complex="normal" style:font-weight-complex="normal" style:text-emphasize="none" style:font-relief="none" style:text-overline-style="none" style:text-overline-color="font-color"/>
   </style:style>
   <style:style style:name="기본값-title" style:family="presentation">
    <style:graphic-properties draw:stroke="none" draw:fill="none" draw:textarea-vertical-align="middle">
@@ -502,7 +499,7 @@
     </text:list-style>
    </style:graphic-properties>
    <style:paragraph-properties fo:text-align="center"/>
-   <style:text-properties fo:font-variant="normal" fo:text-transform="none" style:use-window-font-color="true" loext:opacity="0%" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="나눔고딕1" fo:font-family="나눔고딕" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="41.2999992370606pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="normal" style:letter-kerning="true" fo:background-color="transparent" style:font-name-asian="나눔고딕2" style:font-family-asian="나눔고딕" style:font-family-generic-asian="system" style:font-pitch-asian="variable" style:font-size-asian="44pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-name-complex="Arial" style:font-family-complex="Arial" style:font-family-generic-complex="system" style:font-pitch-complex="variable" style:font-size-complex="44pt" style:font-style-complex="normal" style:font-weight-complex="normal" style:text-emphasize="none" style:font-relief="none" style:text-overline-style="none" style:text-overline-color="font-color"/>
+   <style:text-properties fo:font-variant="normal" fo:text-transform="none" style:use-window-font-color="true" loext:opacity="0%" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="나눔고딕" fo:font-family="나눔고딕" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="41.2999992370606pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="normal" style:letter-kerning="true" fo:background-color="transparent" style:font-name-asian="나눔고딕2" style:font-family-asian="나눔고딕" style:font-family-generic-asian="system" style:font-pitch-asian="variable" style:font-size-asian="44pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-name-complex="Arial" style:font-family-complex="Arial" style:font-family-generic-complex="system" style:font-pitch-complex="variable" style:font-size-complex="44pt" style:font-style-complex="normal" style:font-weight-complex="normal" style:text-emphasize="none" style:font-relief="none" style:text-overline-style="none" style:text-overline-color="font-color"/>
   </style:style>
   <style:presentation-page-layout style:name="AL0T26">
    <presentation:placeholder presentation:object="handout" svg:x="2.058cm" svg:y="1.743cm" svg:width="10.556cm" svg:height="-0.231cm"/>
@@ -556,7 +553,7 @@
    <style:paragraph-properties style:writing-mode="lr-tb"/>
   </style:style>
   <style:style style:name="gr7" style:family="graphic" style:parent-style-name="standard">
-   <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:textarea-horizontal-align="left" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.733cm" fo:min-width="3.458cm" loext:decorative="false"/>
+   <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:textarea-horizontal-align="left" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.733cm" fo:min-width="3.829cm" loext:decorative="false"/>
    <style:paragraph-properties style:writing-mode="lr-tb"/>
   </style:style>
   <style:style style:name="gr8" style:family="graphic" style:parent-style-name="standard" style:list-style-name="L1">
@@ -568,11 +565,15 @@
    <style:paragraph-properties style:writing-mode="lr-tb"/>
   </style:style>
   <style:style style:name="gr10" style:family="graphic" style:parent-style-name="standard">
-   <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:textarea-horizontal-align="left" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.747cm" fo:min-width="1.964cm" loext:decorative="false"/>
+   <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:textarea-horizontal-align="left" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.747cm" fo:min-width="2cm" loext:decorative="false"/>
    <style:paragraph-properties style:writing-mode="lr-tb"/>
   </style:style>
   <style:style style:name="gr11" style:family="graphic" style:parent-style-name="objectwithoutfill">
    <style:graphic-properties svg:stroke-width="0.081cm" svg:stroke-color="#b4c7dc" draw:marker-start-width="0.322cm" draw:marker-end-width="0.322cm" draw:fill="none" draw:textarea-vertical-align="middle" fo:padding-top="0.166cm" fo:padding-bottom="0.166cm" fo:padding-left="0.291cm" fo:padding-right="0.291cm" loext:decorative="false"/>
+  </style:style>
+  <style:style style:name="gr12" style:family="graphic" style:parent-style-name="standard">
+   <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:textarea-horizontal-align="left" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.747cm" fo:min-width="1.964cm" loext:decorative="false"/>
+   <style:paragraph-properties style:writing-mode="lr-tb"/>
   </style:style>
   <style:style style:name="pr1" style:family="presentation" style:parent-style-name="기본값-backgroundobjects">
    <style:graphic-properties draw:stroke="none" draw:fill="none" draw:fill-color="#ffffff" draw:auto-grow-height="false" fo:min-height="1.086cm" loext:decorative="false"/>
@@ -633,7 +634,7 @@
   <style:style style:name="P11" style:family="paragraph">
    <loext:graphic-properties draw:fill="none"/>
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" fo:line-height="150%" fo:text-indent="0cm"/>
-   <style:text-properties fo:color="#707070" loext:opacity="100%" style:font-name="나눔고딕" fo:font-size="11pt" style:font-name-asian="나눔고딕" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
+   <style:text-properties fo:color="#707070" loext:opacity="100%" style:font-name="나눔고딕1" fo:font-size="11pt" style:font-name-asian="나눔고딕1" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
   </style:style>
   <style:style style:name="P12" style:family="paragraph">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0.1cm" fo:margin-bottom="0.1cm" fo:line-height="115%" fo:text-align="start" fo:text-indent="0cm"/>
@@ -641,11 +642,10 @@
   <style:style style:name="P13" style:family="paragraph">
    <loext:graphic-properties draw:fill="none"/>
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0.1cm" fo:margin-bottom="0.1cm" fo:line-height="115%" fo:text-align="start" fo:text-indent="0cm"/>
-   <style:text-properties fo:font-variant="normal" fo:text-transform="none" style:use-window-font-color="true" loext:opacity="0%" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="나눔고딕" fo:font-size="20pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="normal" style:letter-kerning="true" style:font-name-asian="나눔고딕" style:font-size-asian="20pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-name-complex="Arial" style:font-size-complex="20pt" style:font-style-complex="normal" style:font-weight-complex="normal" style:text-emphasize="none" style:font-relief="none" style:text-overline-style="none" style:text-overline-color="font-color"/>
+   <style:text-properties fo:font-variant="normal" fo:text-transform="none" style:use-window-font-color="true" loext:opacity="0%" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="나눔고딕1" fo:font-size="20pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="normal" style:letter-kerning="true" style:font-name-asian="나눔고딕1" style:font-size-asian="20pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-name-complex="Arial" style:font-size-complex="20pt" style:font-style-complex="normal" style:font-weight-complex="normal" style:text-emphasize="none" style:font-relief="none" style:text-overline-style="none" style:text-overline-color="font-color"/>
   </style:style>
   <style:style style:name="P14" style:family="paragraph">
    <style:paragraph-properties fo:margin-top="0.42cm" fo:margin-bottom="0.35cm" fo:line-height="150%"/>
-   <style:text-properties fo:font-size="10pt" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
   </style:style>
   <style:style style:name="P15" style:family="paragraph">
    <loext:graphic-properties draw:fill="none" draw:fill-color="#ffffff"/>
@@ -653,11 +653,20 @@
    <style:text-properties fo:color="#000000" loext:opacity="100%" style:font-name="Helvetica Neue" fo:font-size="10pt" style:font-name-asian="HelveticaNeue" style:font-size-asian="10pt" style:font-name-complex="HelveticaNeue" style:font-size-complex="10pt"/>
   </style:style>
   <style:style style:name="P16" style:family="paragraph">
-   <style:text-properties fo:color="#729fcf" loext:opacity="100%"/>
+   <style:paragraph-properties fo:text-align="justify"/>
   </style:style>
   <style:style style:name="P17" style:family="paragraph">
    <loext:graphic-properties draw:fill="none" draw:fill-color="#ffffff"/>
+   <style:paragraph-properties fo:text-align="justify"/>
    <style:text-properties fo:color="#729fcf" loext:opacity="100%" style:font-name="Helvetica Neue" fo:font-size="12pt" style:font-name-asian="나눔손글씨 장미체" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
+  </style:style>
+  <style:style style:name="P18" style:family="paragraph">
+   <style:paragraph-properties fo:margin-top="0.42cm" fo:margin-bottom="0.35cm" fo:line-height="150%"/>
+   <style:text-properties fo:font-size="10pt"/>
+  </style:style>
+  <style:style style:name="P19" style:family="paragraph">
+   <style:paragraph-properties fo:text-align="justify"/>
+   <style:text-properties fo:font-size="12pt"/>
   </style:style>
   <style:style style:name="T1" style:family="text">
    <style:text-properties fo:font-size="14pt" style:font-size-asian="14pt" style:font-size-complex="14pt"/>
@@ -666,10 +675,10 @@
    <style:text-properties fo:color="#666666" loext:opacity="100%" style:font-name="나눔손글씨 장미체" style:font-name-asian="나눔손글씨 장미체"/>
   </style:style>
   <style:style style:name="T3" style:family="text">
-   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#707070" loext:opacity="100%" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="나눔고딕" fo:font-size="11pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="normal" style:letter-kerning="true" style:font-name-asian="나눔고딕" style:font-size-asian="11pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-name-complex="Arial" style:font-size-complex="11pt" style:font-style-complex="normal" style:font-weight-complex="normal" style:text-emphasize="none" style:font-relief="none" style:text-overline-style="none" style:text-overline-color="font-color"/>
+   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#707070" loext:opacity="100%" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="나눔고딕1" fo:font-size="11pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="normal" style:letter-kerning="true" style:font-name-asian="나눔고딕1" style:font-size-asian="11pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-name-complex="Arial" style:font-size-complex="11pt" style:font-style-complex="normal" style:font-weight-complex="normal" style:text-emphasize="none" style:font-relief="none" style:text-overline-style="none" style:text-overline-color="font-color"/>
   </style:style>
   <style:style style:name="T4" style:family="text">
-   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#707070" loext:opacity="100%" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="나눔고딕" fo:font-size="8pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="normal" style:letter-kerning="true" style:font-name-asian="나눔고딕" style:font-size-asian="8pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-name-complex="Arial" style:font-size-complex="8pt" style:font-style-complex="normal" style:font-weight-complex="normal" style:text-emphasize="none" style:font-relief="none" style:text-overline-style="none" style:text-overline-color="font-color"/>
+   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#707070" loext:opacity="100%" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="나눔고딕1" fo:font-size="8pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="normal" style:letter-kerning="true" style:font-name-asian="나눔고딕1" style:font-size-asian="8pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-name-complex="Arial" style:font-size-complex="8pt" style:font-style-complex="normal" style:font-weight-complex="normal" style:text-emphasize="none" style:font-relief="none" style:text-overline-style="none" style:text-overline-color="font-color"/>
   </style:style>
   <style:style style:name="T5" style:family="text">
    <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#666666" loext:opacity="100%" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Helvetica Neue" fo:font-size="14pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="normal" style:letter-kerning="true" style:font-name-asian="나눔손글씨 장미체" style:font-size-asian="14pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-name-complex="HelveticaNeue" style:font-size-complex="14pt" style:font-style-complex="normal" style:font-weight-complex="normal" style:text-emphasize="none" style:font-relief="none" style:text-overline-style="none" style:text-overline-color="font-color"/>
@@ -884,7 +893,6 @@
      <draw:enhanced-geometry svg:viewBox="0 0 21600 21600" draw:type="rectangle" draw:enhanced-path="M 0 0 L 21600 0 21600 21600 0 21600 0 0 Z N"/>
     </draw:custom-shape>
     <presentation:notes draw:style-name="dp2">
-     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
      <draw:page-thumbnail draw:style-name="gr3" draw:layer="layout" svg:width="19.798cm" svg:height="11.136cm" svg:x="0.6cm" svg:y="2.257cm" draw:page-number="2" presentation:class="page"/>
      <draw:frame presentation:style-name="pr4" draw:text-style-name="P7" draw:layer="layout" svg:width="16.799cm" svg:height="13.364cm" svg:x="2.1cm" svg:y="14.107cm" presentation:class="notes" presentation:placeholder="true">
       <draw:text-box/>
@@ -936,12 +944,12 @@
       <text:p text:style-name="P14"><text:span text:style-name="T5">Hello! I’m Jina.</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr10" draw:text-style-name="P17" draw:layer="layout" svg:width="2.464cm" svg:height="0.997cm" svg:x="8.336cm" svg:y="0.717cm">
+    <draw:frame draw:style-name="gr10" draw:text-style-name="P17" draw:layer="layout" svg:width="2.548cm" svg:height="0.997cm" svg:x="7.6cm" svg:y="0.717cm">
      <draw:text-box>
-      <text:p text:style-name="P16"><text:span text:style-name="T6">Phase 001</text:span></text:p>
+      <text:p text:style-name="P16"><text:span text:style-name="T6">1st sentence</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:line draw:style-name="gr11" draw:text-style-name="P8" draw:layer="layout" svg:x1="7.3cm" svg:y1="1cm" svg:x2="8.4cm" svg:y2="1cm">
+    <draw:line draw:style-name="gr11" draw:text-style-name="P8" draw:layer="layout" svg:x1="6.5cm" svg:y1="1cm" svg:x2="7.6cm" svg:y2="1cm">
      <text:p/>
     </draw:line>
     <presentation:notes draw:style-name="dp2">
@@ -953,8 +961,7 @@
    </draw:page>
    <draw:page draw:name="page6" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <presentation:notes draw:style-name="dp3">
-     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
+    <presentation:notes draw:style-name="dp2">
      <draw:page-thumbnail draw:style-name="gr3" draw:layer="layout" svg:width="19.798cm" svg:height="11.136cm" svg:x="0.6cm" svg:y="2.257cm" draw:page-number="6" presentation:class="page"/>
      <draw:frame presentation:style-name="pr4" draw:text-style-name="P7" draw:layer="layout" svg:width="16.799cm" svg:height="13.364cm" svg:x="2.1cm" svg:y="14.107cm" presentation:class="notes" presentation:placeholder="true">
       <draw:text-box/>
@@ -963,12 +970,17 @@
    </draw:page>
    <draw:page draw:name="page7" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr10" draw:text-style-name="P17" draw:layer="layout" svg:width="2.464cm" svg:height="0.997cm" svg:x="8.316cm" svg:y="0.718cm">
+    <draw:frame draw:style-name="gr9" draw:text-style-name="P15" draw:layer="layout" svg:width="7.233cm" svg:height="3.8cm" svg:x="3cm" svg:y="4.5cm">
      <draw:text-box>
-      <text:p text:style-name="P16"><text:span text:style-name="T6">Phase 002</text:span></text:p>
+      <text:p text:style-name="P18"><text:span text:style-name="T5">Hello! I’m Jina.</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:line draw:style-name="gr11" draw:text-style-name="P8" draw:layer="layout" svg:x1="7.28cm" svg:y1="1.001cm" svg:x2="8.38cm" svg:y2="1.001cm">
+    <draw:frame draw:style-name="gr12" draw:text-style-name="P17" draw:layer="layout" svg:width="2.988cm" svg:height="0.997cm" svg:x="7.536cm" svg:y="0.717cm">
+     <draw:text-box>
+      <text:p text:style-name="P19"><text:span text:style-name="T6">100th sentence</text:span></text:p>
+     </draw:text-box>
+    </draw:frame>
+    <draw:line draw:style-name="gr11" draw:text-style-name="P8" draw:layer="layout" svg:x1="6.5cm" svg:y1="1cm" svg:x2="7.6cm" svg:y2="1cm">
      <text:p/>
     </draw:line>
     <presentation:notes draw:style-name="dp3">
@@ -981,8 +993,7 @@
    </draw:page>
    <draw:page draw:name="page8" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <presentation:notes draw:style-name="dp3">
-     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
+    <presentation:notes draw:style-name="dp2">
      <draw:page-thumbnail draw:style-name="gr3" draw:layer="layout" svg:width="19.798cm" svg:height="11.136cm" svg:x="0.6cm" svg:y="2.257cm" draw:page-number="8" presentation:class="page"/>
      <draw:frame presentation:style-name="pr4" draw:text-style-name="P7" draw:layer="layout" svg:width="16.799cm" svg:height="13.364cm" svg:x="2.1cm" svg:y="14.107cm" presentation:class="notes" presentation:placeholder="true">
       <draw:text-box/>
