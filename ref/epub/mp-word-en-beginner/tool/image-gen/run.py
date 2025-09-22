@@ -151,7 +151,7 @@ sentence_concepts = [{
     "concept": "a dog curled up, sleeping on a sofa"
 }, {
     "sentence": "I am first in line.",
-    "concept": "a person standing at the front of a line of people"
+    "concept": "a little tall man standing at the front of a one line of ten people"
 }, {
     "sentence": "This is the last piece of cake.",
     "concept": "a plate with one small piece of cake left"
@@ -163,7 +163,7 @@ sentence_concepts = [{
     "concept": "a house with a nearby park with trees and grass"
 }, {
     "sentence": "They are my friends.",
-    "concept": "a group of people smiling together"
+    "concept": "a group of people(five people) smiling together"
 }, {
     "sentence": "The cat is in the box.",
     "concept": "a cat sitting inside an open box"
@@ -181,7 +181,7 @@ sentence_concepts = [{
     "concept": "a person climbing a tall ladder"
 }, {
     "sentence": "Please turn off the lights.",
-    "concept": "a hand switching off a light bulb"
+    "concept": "A boy in bed points to a ceiling light and asks his mother, who is at the switch next to the door, for a favor."
 }, {
     "sentence": "I have a pen and a book.",
     "concept": "a pen and a book placed together"
@@ -217,7 +217,7 @@ sentence_concepts = [{
     "concept": "people sitting at a table discussing something"
 }, {
     "sentence": "The sun is shining brightly today.",
-    "concept": "a big shining sun in a clear sky"
+    "concept": "a big shining sun in a clear sky and some cloud, some trees"
 }, {
     "sentence": "It will rain later.",
     "concept": "dark clouds with raindrops starting to fall"
@@ -232,7 +232,7 @@ sentence_concepts = [{
     "concept": "a group of people walking together with balloons or music notes"
 }, {
     "sentence": "I am from Korea.",
-    "concept": "a person pointing to Korea on a simple world map"
+    "concept": "a person pointing to a region of korea on a simple korea map"
 }, {
     "sentence": "Do you want tea or coffee?",
     "concept": "a cup of tea and a cup of coffee side by side"
@@ -253,7 +253,7 @@ sentence_concepts = [{
     "concept": "two people walking together outdoors on a path"
 }, {
     "sentence": "What time does the movie start?",
-    "concept": "a clock and a film reel or cinema screen"
+    "concept": "In a movie theater, a man points to his watch and asks a woman a question."
 }, {
     "sentence": "I am busy now.",
     "concept": "a person surrounded by papers or working at a desk"
@@ -265,7 +265,7 @@ sentence_concepts = [{
     "concept": "a person walking downhill on a slope"
 }, {
     "sentence": "I have to work tomorrow.",
-    "concept": "a calendar with tomorrow marked and a person at a desk"
+    "concept": "a person working at a desk"
 }, {
     "sentence": "The store is open now.",
     "concept": "a shop with an 'open' sign on the door (without text)"
@@ -280,13 +280,13 @@ sentence_concepts = [{
     "concept": "a hand pushing open a window with breeze coming in"
 }, {
     "sentence": "You are right about that.",
-    "concept": "a person nodding and pointing a finger upward"
+    "concept": "A man smiles and gives an OK sign."
 }, {
     "sentence": "She came back home.",
     "concept": "a person arriving at a house with a welcoming gesture"
 }, {
     "sentence": "There are many people in the room.",
-    "concept": "a crowded room with many people standing together"
+    "concept": "a crowded small room with 20 people standing together"
 }, {
     "sentence": "I make a sandwich.",
     "concept": "a person placing ingredients between slices of bread"
@@ -295,7 +295,7 @@ sentence_concepts = [{
     "concept": "a steaming teacup placed on a saucer"
 }, {
     "sentence": "Wash your hands before dinner.",
-    "concept": "hands under running water at a sink"
+    "concept": "hands under running water at a sink in the toilet"
 }, {
     "sentence": "I really like this song.",
     "concept": "a person listening to music with headphones and smiling"
@@ -305,7 +305,7 @@ sentence_concepts = [{
 }, {
     "sentence": "The road is long and winding.",
     "concept": "a long winding road stretching into the distance"
-  }]
+}]
 
 
 # Windows 예약어 목록
