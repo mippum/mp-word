@@ -14,7 +14,8 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"C:\Users\wogud\.gcloud\greenyan
 
 client = genai.Client(api_key=GOOGLE_API_KEY)
 
-sentence_concepts = [{
+sentence_concepts = [
+    # {
 #    "sentence": "Hello! I am Jina.",
 #    "concept": "a friendly greeting from a woman, waving and smiling."
 # }, {
@@ -132,180 +133,181 @@ sentence_concepts = [{
 #    "sentence": "The boy runs fast.",
 #    "concept": "a boy running quickly with motion lines"
 # }, {
-    "sentence": "The girl is happy.",
-    "concept": "a smiling girl with cheerful expression"
-}, {
-    "sentence": "She is my friend.",
-    "concept": "two people standing together, smiling warmly"
-}, {
-    "sentence": "This is my house.",
-    "concept": "a small simple house, someone pointing at it"
-}, {
-    "sentence": "I go to school every day.",
-    "concept": "a child walking with a backpack toward a school building"
-}, {
-    "sentence": "We eat lunch together.",
-    "concept": "two or more people sitting at a table sharing food"
-}, {
-    "sentence": "The dog is sleeping on the couch.",
-    "concept": "a dog curled up, sleeping on a sofa"
-}, {
-    "sentence": "I am first in line.",
-    "concept": "a little tall man standing at the front of a one line of ten people"
-}, {
-    "sentence": "This is the last piece of cake.",
-    "concept": "a plate with one small piece of cake left"
-}, {
-    "sentence": "I am here.",
-    "concept": "a person raising a hand to show presence"
-}, {
-    "sentence": "There is a park near my house.",
-    "concept": "a house with a nearby park with trees and grass"
-}, {
-    "sentence": "They are my friends.",
-    "concept": "a group of people(five people) smiling together"
-}, {
-    "sentence": "The cat is in the box.",
-    "concept": "a cat sitting inside an open box"
-}, {
-    "sentence": "The book is on the table.",
-    "concept": "a single book resting on a table"
-}, {
-    "sentence": "I am at home.",
-    "concept": "a person inside a simple house"
-}, {
-    "sentence": "I drink a lot of water every day.",
-    "concept": "a person holding a glass of water, drinking"
-}, {
-    "sentence": "He climbed up the ladder.",
-    "concept": "a person climbing a tall ladder"
-}, {
-    "sentence": "Please turn off the lights.",
-    "concept": "A boy in bed points to a ceiling light and asks his mother, who is at the switch next to the door, for a favor."
-}, {
-    "sentence": "I have a pen and a book.",
-    "concept": "a pen and a book placed together"
-}, {
-    "sentence": "This gift is for you.",
-    "concept": "a person offering a wrapped gift box to another"
-}, {
-    "sentence": "Please come here.",
-    "concept": "a person beckoning with one hand"
-}, {
-    "sentence": "I want a cup of tea.",
-    "concept": "a steaming cup of tea on a saucer"
-}, {
-    "sentence": "I drink water.",
-    "concept": "a person drinking from a glass of water"
-}, {
-    "sentence": "I get a new book.",
-    "concept": "a person receiving a book with a smile"
-}, {
-    "sentence": "The day is sunny.",
-    "concept": "a bright sun shining in the sky"
-}, {
-    "sentence": "The night is quiet.",
-    "concept": "a calm night sky with stars and a moon"
-}, {
-    "sentence": "Today is a beautiful day.",
-    "concept": "a sunny sky, flowers, and happy atmosphere"
-}, {
-    "sentence": "The woman is reading a book.",
-    "concept": "a woman sitting and reading a book"
-}, {
-    "sentence": "We have a meeting tomorrow.",
-    "concept": "people sitting at a table discussing something"
-}, {
-    "sentence": "The sun is shining brightly today.",
-    "concept": "a big shining sun in a clear sky and some cloud, some trees"
-}, {
-    "sentence": "It will rain later.",
-    "concept": "dark clouds with raindrops starting to fall"
-}, {
-    "sentence": "The food tastes bad.",
-    "concept": "a person tasting food with a displeased face"
-}, {
-    "sentence": "The house is big.",
-    "concept": "a large house with many windows"
-}, {
-    "sentence": "I am going to the party with my friends.",
-    "concept": "a group of people walking together with balloons or music notes"
-}, {
-    "sentence": "I am from Korea.",
-    "concept": "a person pointing to a region of korea on a simple korea map"
-}, {
-    "sentence": "Do you want tea or coffee?",
-    "concept": "a cup of tea and a cup of coffee side by side"
-}, {
-    "sentence": "All the students are here.",
-    "concept": "a group of students sitting together in a classroom"
-  }, {
-    "sentence": "We ate lunch after class.",
-    "concept": "students sitting at a table eating lunch together"
-}, {
-    "sentence": "I bought a new car.",
-    "concept": "a person happily standing next to a shiny car"
-}, {
-    "sentence": "I can swim.",
-    "concept": "a person swimming in water with arms outstretched"
-}, {
-    "sentence": "We go out for a walk.",
-    "concept": "two people walking together outdoors on a path"
-}, {
-    "sentence": "What time does the movie start?",
-    "concept": "In a movie theater, a man points to his watch and asks a woman a question."
-}, {
-    "sentence": "I am busy now.",
-    "concept": "a person surrounded by papers or working at a desk"
-}, {
-    "sentence": "Do you have any money?",
-    "concept": "a hand holding coins or a wallet"
-}, {
-    "sentence": "He walks down the hill.",
-    "concept": "a person walking downhill on a slope"
-}, {
-    "sentence": "I have to work tomorrow.",
-    "concept": "a person working at a desk"
-}, {
-    "sentence": "The store is open now.",
-    "concept": "a shop with an 'open' sign on the door (without text)"
-}, {
-    "sentence": "The weather is very cold today.",
-    "concept": "a person shivering in the snow, wearing a scarf"
-}, {
-    "sentence": "I think this is a good idea.",
-    "concept": "a person with a lightbulb over their head, smiling"
-}, {
-    "sentence": "Open the window for some fresh air.",
-    "concept": "a hand pushing open a window with breeze coming in"
-}, {
-    "sentence": "You are right about that.",
-    "concept": "A man smiles and gives an OK sign."
-}, {
-    "sentence": "She came back home.",
-    "concept": "a person arriving at a house with a welcoming gesture"
-}, {
-    "sentence": "There are many people in the room.",
-    "concept": "a crowded small room with 20 people standing together"
-}, {
-    "sentence": "I make a sandwich.",
-    "concept": "a person placing ingredients between slices of bread"
-}, {
-    "sentence": "I want a cup of tea.",
-    "concept": "a steaming teacup placed on a saucer"
-}, {
-    "sentence": "Wash your hands before dinner.",
-    "concept": "hands under running water at a sink in the toilet"
-}, {
-    "sentence": "I really like this song.",
-    "concept": "a person listening to music with headphones and smiling"
-}, {
-    "sentence": "What did you say?",
-    "concept": "a person cupping their ear, asking for clarification"
-}, {
-    "sentence": "The road is long and winding.",
-    "concept": "a long winding road stretching into the distance"
-}]
+#     "sentence": "The girl is happy.",
+#     "concept": "a smiling girl with cheerful expression"
+# }, {
+#     "sentence": "She is my friend.",
+#     "concept": "two people standing together, smiling warmly"
+# }, {
+#     "sentence": "This is my house.",
+#     "concept": "a small simple house, someone pointing at it"
+# }, {
+#     "sentence": "I go to school every day.",
+#     "concept": "a child walking with a backpack toward a school building"
+# }, {
+#     "sentence": "We eat lunch together.",
+#     "concept": "two or more people sitting at a table sharing food"
+# }, {
+#     "sentence": "The dog is sleeping on the couch.",
+#     "concept": "a dog curled up, sleeping on a sofa"
+# }, {
+#     "sentence": "I am first in line.",
+#     "concept": "a little tall man standing at the front of a one line of ten people"
+# }, {
+#     "sentence": "This is the last piece of cake.",
+#     "concept": "a plate with one small piece of cake left"
+# }, {
+#     "sentence": "I am here.",
+#     "concept": "a person raising a hand to show presence"
+# }, {
+#     "sentence": "There is a park near my house.",
+#     "concept": "a house with a nearby park with trees and grass"
+# }, {
+#     "sentence": "They are my friends.",
+#     "concept": "a group of people(five people) smiling together"
+# }, {
+#     "sentence": "The cat is in the box.",
+#     "concept": "a cat sitting inside an open box"
+# }, {
+#     "sentence": "The book is on the table.",
+#     "concept": "a single book resting on a table"
+# }, {
+#     "sentence": "I am at home.",
+#     "concept": "a person inside a simple house"
+# }, {
+#     "sentence": "I drink a lot of water every day.",
+#     "concept": "a person holding a glass of water, drinking"
+# }, {
+#     "sentence": "He climbed up the ladder.",
+#     "concept": "a person climbing a tall ladder"
+# }, {
+#     "sentence": "Please turn off the lights.",
+#     "concept": "A boy in bed points to a ceiling light and asks his mother, who is at the switch next to the door, for a favor."
+# }, {
+#     "sentence": "I have a pen and a book.",
+#     "concept": "a pen and a book placed together"
+# }, {
+#     "sentence": "This gift is for you.",
+#     "concept": "a person offering a wrapped gift box to another"
+# }, {
+#     "sentence": "Please come here.",
+#     "concept": "a person beckoning with one hand"
+# }, {
+#     "sentence": "I want a cup of tea.",
+#     "concept": "a steaming cup of tea on a saucer"
+# }, {
+#     "sentence": "I drink water.",
+#     "concept": "a person drinking from a glass of water"
+# }, {
+#     "sentence": "I get a new book.",
+#     "concept": "a person receiving a book with a smile"
+# }, {
+#     "sentence": "The day is sunny.",
+#     "concept": "a bright sun shining in the sky"
+# }, {
+#     "sentence": "The night is quiet.",
+#     "concept": "a calm night sky with stars and a moon"
+# }, {
+#     "sentence": "Today is a beautiful day.",
+#     "concept": "a sunny sky, flowers, and happy atmosphere"
+# }, {
+#     "sentence": "The woman is reading a book.",
+#     "concept": "a woman sitting and reading a book"
+# }, {
+#     "sentence": "We have a meeting tomorrow.",
+#     "concept": "people sitting at a table discussing something"
+# }, {
+#     "sentence": "The sun is shining brightly today.",
+#     "concept": "a big shining sun in a clear sky and some cloud, some trees"
+# }, {
+#     "sentence": "It will rain later.",
+#     "concept": "dark clouds with raindrops starting to fall"
+# }, {
+#     "sentence": "The food tastes bad.",
+#     "concept": "a person tasting food with a displeased face"
+# }, {
+#     "sentence": "The house is big.",
+#     "concept": "a large house with many windows"
+# }, {
+#     "sentence": "I am going to the party with my friends.",
+#     "concept": "a group of people walking together with balloons or music notes"
+# }, {
+#     "sentence": "I am from Korea.",
+#     "concept": "a person pointing to a region of korea on a simple korea map"
+# }, {
+#     "sentence": "Do you want tea or coffee?",
+#     "concept": "a cup of tea and a cup of coffee side by side"
+# }, {
+#     "sentence": "All the students are here.",
+#     "concept": "a group of students sitting together in a classroom"
+#   }, {
+#     "sentence": "We ate lunch after class.",
+#     "concept": "students sitting at a table eating lunch together"
+# }, {
+#     "sentence": "I bought a new car.",
+#     "concept": "a person happily standing next to a shiny car"
+# }, {
+#     "sentence": "I can swim.",
+#     "concept": "a person swimming in water with arms outstretched"
+# }, {
+#     "sentence": "We go out for a walk.",
+#     "concept": "two people walking together outdoors on a path"
+# }, {
+#     "sentence": "What time does the movie start?",
+#     "concept": "In a movie theater, a man points to his watch and asks a woman a question."
+# }, {
+#     "sentence": "I am busy now.",
+#     "concept": "a person surrounded by papers or working at a desk"
+# }, {
+#     "sentence": "Do you have any money?",
+#     "concept": "a hand holding coins or a wallet"
+# }, {
+#     "sentence": "He walks down the hill.",
+#     "concept": "a person walking downhill on a slope"
+# }, {
+#     "sentence": "I have to work tomorrow.",
+#     "concept": "a person working at a desk"
+# }, {
+#     "sentence": "The store is open now.",
+#     "concept": "a shop with an 'open' sign on the door (without text)"
+# }, {
+#     "sentence": "The weather is very cold today.",
+#     "concept": "a person shivering in the snow, wearing a scarf"
+# }, {
+#     "sentence": "I think this is a good idea.",
+#     "concept": "a person with a lightbulb over their head, smiling"
+# }, {
+#     "sentence": "Open the window for some fresh air.",
+#     "concept": "a hand pushing open a window with breeze coming in"
+# }, {
+#     "sentence": "You are right about that.",
+#     "concept": "A man smiles and gives an OK sign."
+# }, {
+#     "sentence": "She came back home.",
+#     "concept": "a person arriving at a house with a welcoming gesture"
+# }, {
+#     "sentence": "There are many people in the room.",
+#     "concept": "a crowded small room with 20 people standing together"
+# }, {
+#     "sentence": "I make a sandwich.",
+#     "concept": "a person placing ingredients between slices of bread"
+# }, {
+#     "sentence": "I want a cup of tea.",
+#     "concept": "a steaming teacup placed on a saucer"
+# }, {
+#     "sentence": "Wash your hands before dinner.",
+#     "concept": "hands under running water at a sink in the toilet"
+# }, {
+#     "sentence": "I really like this song.",
+#     "concept": "a person listening to music with headphones and smiling"
+# }, {
+#     "sentence": "What did you say?",
+#     "concept": "a person cupping their ear, asking for clarification"
+# }, {
+#     "sentence": "The road is long and winding.",
+#     "concept": "a long winding road stretching into the distance"
+# }
+]
 
 
 # Windows 예약어 목록
