@@ -3,13 +3,24 @@
 	"ko-repr": "안녕! 나는 지나야.",
 	"words": [{
 		"word": "hello",
-		"pronunciation": "helóu, hə-, hélou",
+		"pronunciations": [{
+			"us": "helóu, hə-, hélou",
+			"gb": "helóu, hə-, hélou"
+		}],
 		"ko-repr": "안녕 / 안녕하세요"
 	}, {
 		"word": "i",
+		"pronunciations": [{
+			"us": "ai",
+			"gb": "ai"
+		}],
 		"ko-repr": "나"
 	}, {
 		"word": "am",
+		"pronunciations": [{
+			"us": "əm, (strong) æm",
+			"gb": "əm, (strong) æm"
+		}],
 		"ko-repr": "동사 am은 be 동사의 한 형태. 주어가 1인칭 단수(I)일 때 현재 시제일 때 사용\nbe 동사\n - ~이다 (정체, 성질, 상태)\n - ~에 있다 (장소, 위치)\n - ~하고 있다 (진행형 만들 때 조동사 역할)\nam 이외에도 are(2인칭 단수, 복수), is(3인칭 단수) 가 있고, 시제(과거, 현재, 미래)에 따라 형태가 변화한다."
 	}]
 },{
@@ -23,107 +34,240 @@
 	}]
 },{
 	"sentence": "Nice to meet you.",
-	"words": []
+	"words": [{
+		"word": "nice",
+		"ko-repr": ""
+	}, {
+		"word": "to",
+		"ko-repr": ""
+	}, {
+		"word": "meet",
+		"ko-repr": ""
+	}{
+		"word": "you",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "What is your name?",
-	"words": []
+	"words": [{
+		"word": "what",
+		"ko-repr": ""
+	}, {
+		"word": "is",
+		"ko-repr": ""
+	}, {
+		"word": "your",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "Hi! I'm Tom.",
-	"words": []
+	"words": [{
+		"word": "hi",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "Nice to meet you, too.",
 	"words": [{
-		"word": "too"
+		"word": "too",
+		"ko-repo": ""
 	}]
 },{
 	"sentence": "Good morning!",
-	"words": []
+	"words": [{
+		"word": "good",
+		"ko-repr": ""
+	}, {
+		"word": "morning",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "How are you?",
-	"words": []
+	"words": [{
+		"word": "how",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "I am fine.",
-	"words": []
+	"words": [{
+		"word": "fine",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "See you later!",
-	"words": []
+	"words": [{
+		"word": "see",
+		"ko-repr": ""
+	}, {
+		"word": "later",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "Goodbye!",
-	"words": []
+	"words": [{
+		"word": "goodbye",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "What is this?",
-	"words": []
+	"words": [{
+		"word": "this",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "It is a book.",
 	"words": [{
+		"word": "it",
+		"ko-repr": ""
+	}, {
 		"word": "a",
 		"ko-repr": "아직 특정하지 않은, \"어떤 하나\"라는 뜻을 나타낼 때 씁니다.\na book, a car, a university / an apple, an egg, an hour"
+	}, {
+		"word": "book",
+		"ko-repr": "책"
 	}]
 },{
 	"sentence": "What is that?",
-	"words": []
+	"words": [{
+		"word": "that",
+		"ko-repr": ""
+	}]
 },{
-	"sentence": "It's a pencel.",
-	"words": []
+	"sentence": "It's a pencil.",
+	"words": [{
+		"word": "pencil",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "Do you have a dog?",
-	"words": []
+	"words": [{
+		"word": "do",
+		"ko-repr": ""
+	}, {
+		"word": "have",
+		"ko-repr": ""
+	}, {
+		"word": "dog",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "I have a lot of dogs.",
-	"words": []
+	"words": [{
+		"word": "lot",
+		"ko-repr": ""
+	}, {
+		"word": "of",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "How many do you have?",
-	"words": []
+	"words": [{
+		"word": "many",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "Five dogs.",
-	"words": []
+	"words": [{
+		"word": "five",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "Do you have a dog too?",
 	"words": []
 },{
 	"sentence": "No, I have a cat.",
-	"words": []
+	"words": [{
+		"word": "no",
+		"ko-repr": ""
+	}, {
+		"word": "cat",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "What color is it?",
-	"words": []
+	"words": [{
+		"word": "color",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "It's black.",
-	"words": []
+	"words": [{
+		"word": "",
+		"ko-repr": ""
+	}]
 },{
-	"sentence": "Do you like pizza??",
+	"sentence": "Do you like pizza?",
 	"ko-repr": "너는 피자를 좋아하니?",
-	"words": []
+	"words": [{
+		"word": "",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "No, I do not like it.",
-	"words": []
+	"words": [{
+		"word": "",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "Do you like hamburgers?",
-	"words": []
+	"words": [{
+		"word": "hamburger",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "No, I don't like it.",
-	"words": []
+	"words": [{
+		"word": "",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "What's your favorite food?",
-	"words": []
+	"words": [{
+		"word": "favorite",
+		"ko-repr": ""
+	}, {
+		"word": "food",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "I like bananas.",
-	"words": []
+	"words": [{
+		"word": "banana",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "Do you like sports?",
-	"words": []
+	"words": [{
+		"word": "sport",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "Yes, I do.",
-	"words": []
+	"words": [{
+		"word": "",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "What kind of sport do you like?",
-	"words": []
+	"words": [{
+		"word": "kind",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "I like basketball.",
-	"words": []
+	"words": [{
+		"word": "basketball",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "",
-	"words": []
+	"words": [{
+		"word": "",
+		"ko-repr": ""
+	}]
 },{
 	"sentence": "",
-	"words": []
+	"words": [{
+		"word": "",
+		"ko-repr": ""
+	}]
 }]
