@@ -20,15 +20,15 @@ def to_word_removed(origin_filename):
     for filename in os.listdir('img/divide'):
         file_path = os.path.join('img/divide', filename)
         divided_img = cv2.imread(file_path)
-        set_image_named(divided_img, 'img/word_named')
-    #
+        set_image_named(divided_img, 'img/word_named') # 그림에 있는 문자로 파일명 정함
+
     if os.path.exists('img/word_removed'):
         shutil.rmtree('img/word_removed')
     os.makedirs('img/word_removed', exist_ok=True)
     for filename in os.listdir('img/word_named'):
         file_path = os.path.join('img/word_named', filename)
         divided_img = cv2.imread(file_path)
-        remove_word.run(divided_img, filename.replace('.png', ''), 'img/word_removed')
+        remove_word.run(divided_img, filename.replace('.png', ''), 'img/word_removed') # 그림에 있는 문자로 제거
 
 def after_word_removed():
     if os.path.exists('img/remove_white_background'):
@@ -50,7 +50,7 @@ def run(origin_filename):
     print(f'with_word_image convert {origin_filename}')
 
     to_word_removed(origin_filename)
-    after_word_removed()
+    after_word_removed() # word_removed 에 이미지 넣은 상태에서는 이것만 실행
     # img/word_removed 에서 ocr 에러 있는지 확인하고, 있으면 그림 수정 후 after_word_removed 만 다시 실행
 
 if __name__ == '__main__':
