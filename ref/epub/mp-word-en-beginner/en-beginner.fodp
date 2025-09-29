@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:rpt="http://openoffice.org/2005/report" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:css3t="http://www.w3.org/TR/css3-text/" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0" xmlns:smil="urn:oasis:names:tc:opendocument:xmlns:smil-compatible:1.0" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xmlns:officeooo="http://openoffice.org/2009/office" office:version="1.4" office:mimetype="application/vnd.oasis.opendocument.presentation">
- <office:meta><meta:creation-date>2025-06-29T14:07:05.545349700</meta:creation-date><meta:generator>LibreOffice/25.8.1.1$Windows_X86_64 LibreOffice_project/54047653041915e595ad4e45cccea684809c77b5</meta:generator><dc:date>2025-09-29T19:30:53.719841900</dc:date><meta:editing-duration>P2DT15H6M53S</meta:editing-duration><meta:editing-cycles>109</meta:editing-cycles><meta:print-date>2025-08-06T03:25:24.644677800</meta:print-date><meta:printed-by>PDF 파일</meta:printed-by><meta:document-statistic meta:object-count="1997"/></office:meta>
+ <office:meta><meta:creation-date>2025-06-29T14:07:05.545349700</meta:creation-date><meta:generator>LibreOffice/25.8.1.1$Windows_X86_64 LibreOffice_project/54047653041915e595ad4e45cccea684809c77b5</meta:generator><dc:date>2025-09-29T19:39:24.131660000</dc:date><meta:editing-duration>P2DT15H15M20S</meta:editing-duration><meta:editing-cycles>114</meta:editing-cycles><meta:print-date>2025-08-06T03:25:24.644677800</meta:print-date><meta:printed-by>PDF 파일</meta:printed-by><meta:document-statistic meta:object-count="1997"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="VisibleAreaTop" config:type="int">-709</config:config-item>
-   <config:config-item config:name="VisibleAreaLeft" config:type="int">-927</config:config-item>
+   <config:config-item config:name="VisibleAreaTop" config:type="int">-4798</config:config-item>
+   <config:config-item config:name="VisibleAreaLeft" config:type="int">-2575</config:config-item>
    <config:config-item config:name="VisibleAreaWidth" config:type="int">12885</config:config-item>
    <config:config-item config:name="VisibleAreaHeight" config:type="int">22939</config:config-item>
    <config:config-item-map-indexed config:name="Views">
@@ -29,14 +29,14 @@
      <config:config-item config:name="NoColors" config:type="boolean">true</config:config-item>
      <config:config-item config:name="RulerIsVisible" config:type="boolean">false</config:config-item>
      <config:config-item config:name="PageKind" config:type="short">0</config:config-item>
-     <config:config-item config:name="SelectedPage" config:type="short">115</config:config-item>
+     <config:config-item config:name="SelectedPage" config:type="short">139</config:config-item>
      <config:config-item config:name="IsLayerMode" config:type="boolean">false</config:config-item>
      <config:config-item config:name="IsDoubleClickTextEdit" config:type="boolean">true</config:config-item>
      <config:config-item config:name="IsClickChangeRotation" config:type="boolean">true</config:config-item>
      <config:config-item config:name="SlidesPerRow" config:type="short">4</config:config-item>
      <config:config-item config:name="EditMode" config:type="int">0</config:config-item>
      <config:config-item config:name="VisibleAreaTop" config:type="int">-4798</config:config-item>
-     <config:config-item config:name="VisibleAreaLeft" config:type="int">-2963</config:config-item>
+     <config:config-item config:name="VisibleAreaLeft" config:type="int">-2575</config:config-item>
      <config:config-item config:name="VisibleAreaWidth" config:type="int">15488</config:config-item>
      <config:config-item config:name="VisibleAreaHeight" config:type="int">26953</config:config-item>
      <config:config-item config:name="GridCoarseWidth" config:type="int">2000</config:config-item>
@@ -956,24 +956,24 @@
    <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:textarea-horizontal-align="left" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.941cm" fo:min-width="1.863cm" loext:decorative="false"/>
    <style:paragraph-properties style:writing-mode="lr-tb"/>
   </style:style>
-  <style:style style:name="gr110" style:family="graphic" style:parent-style-name="standard" style:list-style-name="L1">
+  <style:style style:name="gr110" style:family="graphic" style:parent-style-name="standard">
+   <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:auto-grow-height="true" draw:auto-grow-width="false" fo:min-height="2.65cm" loext:decorative="false"/>
+   <style:paragraph-properties style:writing-mode="lr-tb"/>
+  </style:style>
+  <style:style style:name="gr111" style:family="graphic" style:parent-style-name="standard" style:list-style-name="L1">
    <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:auto-grow-height="true" draw:auto-grow-width="false" fo:min-height="0.941cm" loext:decorative="false"/>
    <style:paragraph-properties style:writing-mode="lr-tb"/>
   </style:style>
-  <style:style style:name="gr111" style:family="graphic" style:parent-style-name="standard">
+  <style:style style:name="gr112" style:family="graphic" style:parent-style-name="standard">
    <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:textarea-horizontal-align="left" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.941cm" fo:min-width="2.162cm" loext:decorative="false"/>
    <style:paragraph-properties style:writing-mode="lr-tb"/>
   </style:style>
-  <style:style style:name="gr112" style:family="graphic" style:parent-style-name="standard" style:list-style-name="L1">
+  <style:style style:name="gr113" style:family="graphic" style:parent-style-name="standard" style:list-style-name="L1">
    <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:auto-grow-height="true" draw:auto-grow-width="false" fo:min-height="0.941cm" loext:decorative="false"/>
    <style:paragraph-properties style:writing-mode="lr-tb"/>
   </style:style>
-  <style:style style:name="gr113" style:family="graphic" style:parent-style-name="standard">
-   <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:textarea-horizontal-align="left" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.941cm" fo:min-width="1.449cm" loext:decorative="false"/>
-   <style:paragraph-properties style:writing-mode="lr-tb"/>
-  </style:style>
   <style:style style:name="gr114" style:family="graphic" style:parent-style-name="standard">
-   <style:graphic-properties draw:stroke="none" draw:fill="none" fo:min-height="1.703cm" loext:decorative="false"/>
+   <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:textarea-horizontal-align="left" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.941cm" fo:min-width="1.449cm" loext:decorative="false"/>
    <style:paragraph-properties style:writing-mode="lr-tb"/>
   </style:style>
   <style:style style:name="gr115" style:family="graphic" style:parent-style-name="standard">
@@ -989,30 +989,38 @@
    <style:paragraph-properties style:writing-mode="lr-tb"/>
   </style:style>
   <style:style style:name="gr118" style:family="graphic" style:parent-style-name="standard">
-   <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:textarea-horizontal-align="left" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.941cm" fo:min-width="3.834cm" loext:decorative="false"/>
+   <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:auto-grow-height="true" draw:auto-grow-width="false" fo:min-height="2.85cm" loext:decorative="false"/>
    <style:paragraph-properties style:writing-mode="lr-tb"/>
   </style:style>
   <style:style style:name="gr119" style:family="graphic" style:parent-style-name="standard">
-   <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:textarea-horizontal-align="left" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.941cm" fo:min-width="1.349cm" loext:decorative="false"/>
+   <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:textarea-horizontal-align="left" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.941cm" fo:min-width="3.834cm" loext:decorative="false"/>
    <style:paragraph-properties style:writing-mode="lr-tb"/>
   </style:style>
   <style:style style:name="gr120" style:family="graphic" style:parent-style-name="standard">
-   <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:textarea-horizontal-align="left" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.941cm" fo:min-width="1.944cm" loext:decorative="false"/>
+   <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:textarea-horizontal-align="left" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.941cm" fo:min-width="1.349cm" loext:decorative="false"/>
    <style:paragraph-properties style:writing-mode="lr-tb"/>
   </style:style>
   <style:style style:name="gr121" style:family="graphic" style:parent-style-name="standard">
-   <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:textarea-horizontal-align="left" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.941cm" fo:min-width="1.67cm" loext:decorative="false"/>
+   <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:textarea-horizontal-align="left" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.941cm" fo:min-width="1.944cm" loext:decorative="false"/>
    <style:paragraph-properties style:writing-mode="lr-tb"/>
   </style:style>
   <style:style style:name="gr122" style:family="graphic" style:parent-style-name="standard">
-   <style:graphic-properties draw:stroke="none" draw:fill="none" fo:min-height="2.554cm" loext:decorative="false"/>
+   <style:graphic-properties draw:stroke="none" draw:fill="none" fo:min-height="1.703cm" loext:decorative="false"/>
    <style:paragraph-properties style:writing-mode="lr-tb"/>
   </style:style>
   <style:style style:name="gr123" style:family="graphic" style:parent-style-name="standard">
-   <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:textarea-horizontal-align="left" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.941cm" fo:min-width="1.838cm" loext:decorative="false"/>
+   <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:textarea-horizontal-align="left" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.941cm" fo:min-width="1.67cm" loext:decorative="false"/>
    <style:paragraph-properties style:writing-mode="lr-tb"/>
   </style:style>
   <style:style style:name="gr124" style:family="graphic" style:parent-style-name="standard">
+   <style:graphic-properties draw:stroke="none" draw:fill="none" fo:min-height="2.554cm" loext:decorative="false"/>
+   <style:paragraph-properties style:writing-mode="lr-tb"/>
+  </style:style>
+  <style:style style:name="gr125" style:family="graphic" style:parent-style-name="standard">
+   <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:textarea-horizontal-align="left" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.941cm" fo:min-width="1.838cm" loext:decorative="false"/>
+   <style:paragraph-properties style:writing-mode="lr-tb"/>
+  </style:style>
+  <style:style style:name="gr126" style:family="graphic" style:parent-style-name="standard">
    <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:auto-grow-height="true" draw:auto-grow-width="false" fo:min-height="0.941cm" loext:decorative="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm">
      <style:column style:rel-width="65535*" fo:start-indent="0cm" fo:end-indent="0cm"/>
@@ -1020,7 +1028,7 @@
    </style:graphic-properties>
    <style:paragraph-properties style:writing-mode="lr-tb"/>
   </style:style>
-  <style:style style:name="gr125" style:family="graphic" style:parent-style-name="standard">
+  <style:style style:name="gr127" style:family="graphic" style:parent-style-name="standard">
    <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:auto-grow-height="true" draw:auto-grow-width="false" fo:min-height="2.821cm" loext:decorative="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm">
      <style:column style:rel-width="65535*" fo:start-indent="0cm" fo:end-indent="0cm"/>
@@ -1028,11 +1036,11 @@
    </style:graphic-properties>
    <style:paragraph-properties style:writing-mode="lr-tb"/>
   </style:style>
-  <style:style style:name="gr126" style:family="graphic" style:parent-style-name="standard">
+  <style:style style:name="gr128" style:family="graphic" style:parent-style-name="standard">
    <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:textarea-horizontal-align="left" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.733cm" fo:min-width="1.196cm" loext:decorative="false"/>
    <style:paragraph-properties style:writing-mode="lr-tb"/>
   </style:style>
-  <style:style style:name="gr127" style:family="graphic" style:parent-style-name="standard">
+  <style:style style:name="gr129" style:family="graphic" style:parent-style-name="standard">
    <style:graphic-properties draw:stroke="none" svg:stroke-color="#000000" draw:fill="none" draw:fill-color="#ffffff" draw:textarea-horizontal-align="left" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.733cm" fo:min-width="0.599cm" loext:decorative="false"/>
    <style:paragraph-properties style:writing-mode="lr-tb"/>
   </style:style>
@@ -1406,27 +1414,28 @@
    <style:text-properties style:font-name="Noto Sans CJK KR Bold" fo:font-size="18pt" style:font-name-asian="Noto Sans"/>
   </style:style>
   <style:style style:name="P82" style:family="paragraph">
-   <loext:graphic-properties draw:fill="none"/>
-   <style:text-properties fo:font-size="18pt"/>
+   <loext:graphic-properties draw:fill="none" draw:fill-color="#ffffff"/>
+   <style:paragraph-properties fo:text-align="center"/>
+   <style:text-properties fo:color="#999999" loext:opacity="100%" style:font-name="Noto Sans CJK KR DemiLight" fo:font-size="10pt" style:font-name-asian="Noto Sans CJK KR DemiLight" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
   </style:style>
   <style:style style:name="P83" style:family="paragraph">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0.3cm"/>
   </style:style>
   <style:style style:name="P84" style:family="paragraph">
-   <loext:graphic-properties draw:fill="none"/>
-   <style:text-properties fo:font-size="14pt" style:font-size-asian="14pt" style:font-size-complex="14pt"/>
-  </style:style>
-  <style:style style:name="P85" style:family="paragraph">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0.42cm" fo:margin-bottom="0.35cm" fo:line-height="100%" fo:text-align="start" fo:text-indent="0.3cm"/>
   </style:style>
-  <style:style style:name="P86" style:family="paragraph">
+  <style:style style:name="P85" style:family="paragraph">
    <loext:graphic-properties draw:fill="none" draw:fill-color="#ffffff"/>
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0.42cm" fo:margin-bottom="0.35cm" fo:line-height="100%" fo:text-align="start" fo:text-indent="0.3cm"/>
    <style:text-properties style:font-name="Noto Sans CJK KR Bold" fo:font-size="18pt" style:font-name-asian="Noto Sans"/>
   </style:style>
-  <style:style style:name="P87" style:family="paragraph">
+  <style:style style:name="P86" style:family="paragraph">
    <loext:graphic-properties draw:fill="none" draw:fill-color="#ffffff"/>
    <style:text-properties style:font-name="Noto Sans CJK KR Bold" fo:font-size="18pt" style:font-name-asian="Noto Sans" style:font-size-asian="18pt" style:font-size-complex="18pt"/>
+  </style:style>
+  <style:style style:name="P87" style:family="paragraph">
+   <loext:graphic-properties draw:fill="none"/>
+   <style:text-properties fo:font-size="18pt"/>
   </style:style>
   <style:style style:name="P88" style:family="paragraph">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0.42cm" fo:margin-bottom="0.35cm" fo:text-indent="0.3cm"/>
@@ -73432,36 +73441,36 @@
    </draw:page>
    <draw:page draw:name="page118" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P56" draw:layer="layout" svg:width="10.5cm" svg:height="1cm" svg:x="0cm" svg:y="13.2cm">
      <draw:text-box>
-      <text:p><text:span text:style-name="T1">난 펜과 책이 있어</text:span><text:span text:style-name="T1">.</text:span></text:p>
+      <text:p text:style-name="P15"><text:span text:style-name="T1">난 펜과 책이 있어</text:span><text:span text:style-name="T1">.</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr69" draw:text-style-name="P74" draw:layer="layout" svg:width="3cm" svg:height="1.102cm" svg:x="3.6cm" svg:y="9.4cm">
+    <draw:frame draw:style-name="gr69" draw:text-style-name="P75" draw:layer="layout" svg:width="10.5cm" svg:height="1.102cm" svg:x="0cm" svg:y="9.7cm">
      <draw:text-box>
-      <text:p><text:span text:style-name="T25">그리고</text:span></text:p>
+      <text:p text:style-name="P15"><text:span text:style-name="T25">그리고</text:span></text:p>
      </draw:text-box>
     </draw:frame>
     <draw:line draw:style-name="gr27" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="11.4cm" svg:x2="9.5cm" svg:y2="11.4cm">
      <text:p/>
     </draw:line>
-    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="2.4cm" svg:x2="9.5cm" svg:y2="2.4cm">
+    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="2.9cm" svg:x2="9.5cm" svg:y2="2.9cm">
      <text:p/>
     </draw:line>
-    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="8.5cm" svg:x2="9.5cm" svg:y2="8.5cm">
+    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="9.1cm" svg:x2="9.5cm" svg:y2="9.1cm">
      <text:p/>
     </draw:line>
-    <draw:frame draw:style-name="gr25" draw:text-style-name="P33" draw:layer="layout" svg:width="4.5cm" svg:height="0.772cm" svg:x="3.9cm" svg:y="1.3cm">
+    <draw:frame draw:style-name="gr25" draw:text-style-name="P82" draw:layer="layout" svg:width="10.5cm" svg:height="0.772cm" svg:x="0cm" svg:y="1.5cm">
      <draw:text-box>
-      <text:p><text:span text:style-name="T18">[ænd, ən(d)]</text:span></text:p>
+      <text:p text:style-name="P15"><text:span text:style-name="T18">[ænd, ən(d)]</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr104" draw:text-style-name="P31" draw:layer="layout" svg:width="2.019cm" svg:height="1.191cm" svg:x="4.23cm" svg:y="0.31cm">
+    <draw:frame draw:style-name="gr104" draw:text-style-name="P31" draw:layer="layout" svg:width="2.019cm" svg:height="1.191cm" svg:x="4.23cm" svg:y="0.51cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T17">AND</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr105" draw:text-style-name="P67" draw:layer="layout" svg:width="9.915cm" svg:height="4.445cm" svg:x="0.385cm" svg:y="3.7cm">
+    <draw:frame draw:style-name="gr105" draw:text-style-name="P67" draw:layer="layout" svg:width="9.915cm" svg:height="4.445cm" svg:x="0.385cm" svg:y="4.3cm">
      <draw:text-box>
       <text:p text:style-name="P83"><text:span text:style-name="T26">And is a word used to join two or more ideas together. For example, &apos;I like apples and bananas&apos; means you like both. It makes sentences longer and connects thoughts smoothly.</text:span></text:p>
      </draw:text-box>
@@ -73471,7 +73480,7 @@
       <text:p text:style-name="P15"><text:span text:style-name="T19">I have a pen and a book.</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr71" draw:text-style-name="P68" draw:layer="layout" svg:width="3cm" svg:height="0.653cm" svg:x="0cm" svg:y="2.947cm">
+    <draw:frame draw:style-name="gr71" draw:text-style-name="P68" draw:layer="layout" svg:width="3cm" svg:height="0.653cm" svg:x="0cm" svg:y="3.547cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T27">(</text:span><text:span text:style-name="T27">영영사전</text:span><text:span text:style-name="T27">) </text:span><text:span text:style-name="T27">뜻</text:span></text:p>
      </draw:text-box>
@@ -74473,36 +74482,36 @@
    </draw:page>
    <draw:page draw:name="page120" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr33" draw:text-style-name="P84" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr33" draw:text-style-name="P69" draw:layer="layout" svg:width="10.5cm" svg:height="1.395cm" svg:x="0cm" svg:y="13.2cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T1">이 선물은 당신을 위한 거예요</text:span><text:span text:style-name="T1">. </text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T1">이 선물은 당신을 위한 거예요</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr69" draw:text-style-name="P74" draw:layer="layout" svg:width="3cm" svg:height="1.102cm" svg:x="3.6cm" svg:y="9.4cm">
+    <draw:frame draw:style-name="gr69" draw:text-style-name="P75" draw:layer="layout" svg:width="10.5cm" svg:height="1.102cm" svg:x="0cm" svg:y="9.6cm">
      <draw:text-box>
-      <text:p><text:span text:style-name="T25">그리</text:span></text:p>
+      <text:p text:style-name="P15"><text:span text:style-name="T25">그리</text:span></text:p>
      </draw:text-box>
     </draw:frame>
     <draw:line draw:style-name="gr27" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="11.4cm" svg:x2="9.5cm" svg:y2="11.4cm">
      <text:p/>
     </draw:line>
-    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="2.4cm" svg:x2="9.5cm" svg:y2="2.4cm">
+    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="2.7cm" svg:x2="9.5cm" svg:y2="2.7cm">
      <text:p/>
     </draw:line>
-    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="8.5cm" svg:x2="9.5cm" svg:y2="8.5cm">
+    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="8.9cm" svg:x2="9.5cm" svg:y2="8.9cm">
      <text:p/>
     </draw:line>
-    <draw:frame draw:style-name="gr25" draw:text-style-name="P33" draw:layer="layout" svg:width="4.5cm" svg:height="0.772cm" svg:x="3.9cm" svg:y="1.3cm">
+    <draw:frame draw:style-name="gr25" draw:text-style-name="P66" draw:layer="layout" svg:width="10.5cm" svg:height="0.772cm" svg:x="0cm" svg:y="1.5cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T18">[fɔːr]</text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T18">[fɔːr]</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr70" draw:text-style-name="P31" draw:layer="layout" svg:width="1.838cm" svg:height="1.191cm" svg:x="4.23cm" svg:y="0.31cm">
+    <draw:frame draw:style-name="gr70" draw:text-style-name="P31" draw:layer="layout" svg:width="1.838cm" svg:height="1.191cm" svg:x="4.23cm" svg:y="0.51cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T17">FOR</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr3" draw:text-style-name="P67" draw:layer="layout" svg:width="9.915cm" svg:height="4cm" svg:x="0.385cm" svg:y="3.7cm">
+    <draw:frame draw:style-name="gr3" draw:text-style-name="P67" draw:layer="layout" svg:width="9.915cm" svg:height="4cm" svg:x="0.385cm" svg:y="4.2cm">
      <draw:text-box>
       <text:p text:style-name="P57"><text:span text:style-name="T26">For is a word that shows purpose, reason, or benefit. For example, &apos;This gift is for you&apos; means the gift is meant to be yours. It also explains time, like &apos;for two hours&apos;. </text:span></text:p>
      </draw:text-box>
@@ -74512,7 +74521,7 @@
       <text:p text:style-name="P40"><text:span text:style-name="T20">This gift is for you. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr71" draw:text-style-name="P68" draw:layer="layout" svg:width="3cm" svg:height="0.653cm" svg:x="0cm" svg:y="2.947cm">
+    <draw:frame draw:style-name="gr71" draw:text-style-name="P68" draw:layer="layout" svg:width="3cm" svg:height="0.653cm" svg:x="0cm" svg:y="3.447cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T27">(</text:span><text:span text:style-name="T27">영영사전</text:span><text:span text:style-name="T27">) </text:span><text:span text:style-name="T27">뜻</text:span></text:p>
      </draw:text-box>
@@ -75109,36 +75118,36 @@
    </draw:page>
    <draw:page draw:name="page122" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P52" draw:layer="layout" svg:width="10.5cm" svg:height="1cm" svg:x="0cm" svg:y="13.2cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T1">여기로 와 주세요</text:span><text:span text:style-name="T1">. </text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T1">여기로 와 주세요</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr69" draw:text-style-name="P74" draw:layer="layout" svg:width="3cm" svg:height="1.102cm" svg:x="3.6cm" svg:y="9.4cm">
+    <draw:frame draw:style-name="gr69" draw:text-style-name="P65" draw:layer="layout" svg:width="10.5cm" svg:height="1.102cm" svg:x="0cm" svg:y="9.6cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T25">오다 </text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T25">오다 </text:span></text:p>
      </draw:text-box>
     </draw:frame>
     <draw:line draw:style-name="gr27" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="11.4cm" svg:x2="9.5cm" svg:y2="11.4cm">
      <text:p/>
     </draw:line>
-    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="2.4cm" svg:x2="9.5cm" svg:y2="2.4cm">
+    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="3cm" svg:x2="9.5cm" svg:y2="3cm">
      <text:p/>
     </draw:line>
-    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="8.5cm" svg:x2="9.5cm" svg:y2="8.5cm">
+    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="9.1cm" svg:x2="9.5cm" svg:y2="9.1cm">
      <text:p/>
     </draw:line>
-    <draw:frame draw:style-name="gr25" draw:text-style-name="P33" draw:layer="layout" svg:width="4.5cm" svg:height="0.772cm" svg:x="3.9cm" svg:y="1.3cm">
+    <draw:frame draw:style-name="gr25" draw:text-style-name="P66" draw:layer="layout" svg:width="10.5cm" svg:height="0.772cm" svg:x="0cm" svg:y="1.7cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T18">[kʌm]</text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T18">[kʌm]</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr107" draw:text-style-name="P31" draw:layer="layout" svg:width="2.316cm" svg:height="1.191cm" svg:x="4.23cm" svg:y="0.31cm">
+    <draw:frame draw:style-name="gr107" draw:text-style-name="P31" draw:layer="layout" svg:width="2.316cm" svg:height="1.191cm" svg:x="4.13cm" svg:y="0.71cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T17">COME</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr3" draw:text-style-name="P67" draw:layer="layout" svg:width="9.915cm" svg:height="4cm" svg:x="0.385cm" svg:y="3.7cm">
+    <draw:frame draw:style-name="gr3" draw:text-style-name="P67" draw:layer="layout" svg:width="9.915cm" svg:height="4cm" svg:x="0.385cm" svg:y="4.5cm">
      <draw:text-box>
       <text:p text:style-name="P57"><text:span text:style-name="T26">Come means to move closer to the speaker or a place. For example, &apos;Please come here&apos; means move to where I am. It often shows movement toward someone. </text:span></text:p>
      </draw:text-box>
@@ -75148,7 +75157,7 @@
       <text:p text:style-name="P40"><text:span text:style-name="T20">Please come here. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr71" draw:text-style-name="P68" draw:layer="layout" svg:width="3cm" svg:height="0.653cm" svg:x="0cm" svg:y="2.947cm">
+    <draw:frame draw:style-name="gr71" draw:text-style-name="P68" draw:layer="layout" svg:width="3cm" svg:height="0.653cm" svg:x="0cm" svg:y="3.747cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T27">(</text:span><text:span text:style-name="T27">영영사전</text:span><text:span text:style-name="T27">) </text:span><text:span text:style-name="T27">뜻</text:span></text:p>
      </draw:text-box>
@@ -76027,46 +76036,46 @@
    </draw:page>
    <draw:page draw:name="page124" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr33" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr78" draw:text-style-name="P52" draw:layer="layout" svg:width="10.5cm" svg:height="0.823cm" svg:x="0cm" svg:y="13.2cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T1">차 한 잔 마시고 싶어요</text:span><text:span text:style-name="T1">. </text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T1">차 한 잔 마시고 싶어요</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr69" draw:text-style-name="P74" draw:layer="layout" svg:width="3cm" svg:height="1.102cm" svg:x="3.6cm" svg:y="9.4cm">
+    <draw:frame draw:style-name="gr69" draw:text-style-name="P65" draw:layer="layout" svg:width="10.5cm" svg:height="1.102cm" svg:x="0cm" svg:y="9.4cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T25">원하다 </text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T25">원하다 </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:line draw:style-name="gr27" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="11.4cm" svg:x2="9.5cm" svg:y2="11.4cm">
+    <draw:line draw:style-name="gr27" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="11.6cm" svg:x2="9.5cm" svg:y2="11.6cm">
      <text:p/>
     </draw:line>
-    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="2.4cm" svg:x2="9.5cm" svg:y2="2.4cm">
+    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="3.3cm" svg:x2="9.5cm" svg:y2="3.3cm">
      <text:p/>
     </draw:line>
-    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="8.5cm" svg:x2="9.5cm" svg:y2="8.5cm">
+    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="8.7cm" svg:x2="9.5cm" svg:y2="8.7cm">
      <text:p/>
     </draw:line>
-    <draw:frame draw:style-name="gr25" draw:text-style-name="P33" draw:layer="layout" svg:width="4.5cm" svg:height="0.772cm" svg:x="3.9cm" svg:y="1.3cm">
+    <draw:frame draw:style-name="gr25" draw:text-style-name="P66" draw:layer="layout" svg:width="10.5cm" svg:height="0.772cm" svg:x="0cm" svg:y="1.7cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T18">[wɑːnt]</text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T18">[wɑːnt]</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr109" draw:text-style-name="P31" draw:layer="layout" svg:width="2.363cm" svg:height="1.191cm" svg:x="4.23cm" svg:y="0.31cm">
+    <draw:frame draw:style-name="gr109" draw:text-style-name="P31" draw:layer="layout" svg:width="2.363cm" svg:height="1.191cm" svg:x="4.23cm" svg:y="0.71cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T17">WANT</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr3" draw:text-style-name="P67" draw:layer="layout" svg:width="9.915cm" svg:height="4cm" svg:x="0.385cm" svg:y="3.7cm">
+    <draw:frame draw:style-name="gr110" draw:text-style-name="P70" draw:layer="layout" svg:width="9.915cm" svg:height="3.183cm" svg:x="0.385cm" svg:y="4.6cm">
      <draw:text-box>
       <text:p text:style-name="P57"><text:span text:style-name="T26">Want means to wish for something or feel a need. For example, &apos;I want pizza&apos; means you feel like eating pizza. It shows desire or preference. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr110" draw:text-style-name="P53" draw:layer="layout" svg:width="10.5cm" svg:height="1.191cm" svg:x="0cm" svg:y="11.901cm">
+    <draw:frame draw:style-name="gr111" draw:text-style-name="P53" draw:layer="layout" svg:width="10.5cm" svg:height="1.191cm" svg:x="0cm" svg:y="12.001cm">
      <draw:text-box>
       <text:p text:style-name="P40"><text:span text:style-name="T20">I want a cup of tea. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr71" draw:text-style-name="P68" draw:layer="layout" svg:width="3cm" svg:height="0.653cm" svg:x="0cm" svg:y="2.947cm">
+    <draw:frame draw:style-name="gr71" draw:text-style-name="P68" draw:layer="layout" svg:width="3cm" svg:height="0.653cm" svg:x="0cm" svg:y="3.847cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T27">(</text:span><text:span text:style-name="T27">영영사전</text:span><text:span text:style-name="T27">) </text:span><text:span text:style-name="T27">뜻</text:span></text:p>
      </draw:text-box>
@@ -76743,46 +76752,46 @@
    </draw:page>
    <draw:page draw:name="page126" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P52" draw:layer="layout" svg:width="10.5cm" svg:height="1cm" svg:x="0cm" svg:y="13.2cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T1">전 물을 마셔요</text:span><text:span text:style-name="T1">. </text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T1">전 물을 마셔요</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr69" draw:text-style-name="P74" draw:layer="layout" svg:width="3cm" svg:height="1.102cm" svg:x="3.6cm" svg:y="9.4cm">
+    <draw:frame draw:style-name="gr69" draw:text-style-name="P65" draw:layer="layout" svg:width="10.5cm" svg:height="1.102cm" svg:x="0cm" svg:y="9.7cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T25">물 </text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T25">물 </text:span></text:p>
      </draw:text-box>
     </draw:frame>
     <draw:line draw:style-name="gr27" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="11.4cm" svg:x2="9.5cm" svg:y2="11.4cm">
      <text:p/>
     </draw:line>
-    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="2.4cm" svg:x2="9.5cm" svg:y2="2.4cm">
+    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="2.8cm" svg:x2="9.5cm" svg:y2="2.8cm">
      <text:p/>
     </draw:line>
-    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="8.5cm" svg:x2="9.5cm" svg:y2="8.5cm">
+    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="8.9cm" svg:x2="9.5cm" svg:y2="8.9cm">
      <text:p/>
     </draw:line>
-    <draw:frame draw:style-name="gr25" draw:text-style-name="P33" draw:layer="layout" svg:width="4.5cm" svg:height="0.772cm" svg:x="3.9cm" svg:y="1.3cm">
+    <draw:frame draw:style-name="gr25" draw:text-style-name="P66" draw:layer="layout" svg:width="10.5cm" svg:height="0.772cm" svg:x="0cm" svg:y="1.5cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T18">[ˈwɔːtər]</text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T18">[ˈwɔːtər]</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr111" draw:text-style-name="P31" draw:layer="layout" svg:width="2.662cm" svg:height="1.191cm" svg:x="4.23cm" svg:y="0.31cm">
+    <draw:frame draw:style-name="gr112" draw:text-style-name="P31" draw:layer="layout" svg:width="2.662cm" svg:height="1.191cm" svg:x="4.03cm" svg:y="0.51cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T17">WATER</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr3" draw:text-style-name="P67" draw:layer="layout" svg:width="9.915cm" svg:height="4cm" svg:x="0.385cm" svg:y="3.7cm">
+    <draw:frame draw:style-name="gr3" draw:text-style-name="P67" draw:layer="layout" svg:width="9.915cm" svg:height="4cm" svg:x="0.385cm" svg:y="4.3cm">
      <draw:text-box>
       <text:p text:style-name="P57"><text:span text:style-name="T26">Water is a clear liquid that people, animals, and plants need to survive. We drink it, cook with it, and use it every day. For example, &apos;I drink water when I am thirsty.&apos; </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr112" draw:text-style-name="P53" draw:layer="layout" svg:width="10.5cm" svg:height="1.191cm" svg:x="0cm" svg:y="11.901cm">
+    <draw:frame draw:style-name="gr113" draw:text-style-name="P53" draw:layer="layout" svg:width="10.5cm" svg:height="1.191cm" svg:x="0cm" svg:y="12.001cm">
      <draw:text-box>
       <text:p text:style-name="P40"><text:span text:style-name="T20">I drink water. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr71" draw:text-style-name="P68" draw:layer="layout" svg:width="3cm" svg:height="0.653cm" svg:x="0cm" svg:y="2.947cm">
+    <draw:frame draw:style-name="gr71" draw:text-style-name="P68" draw:layer="layout" svg:width="3cm" svg:height="0.653cm" svg:x="0cm" svg:y="3.547cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T27">(</text:span><text:span text:style-name="T27">영영사전</text:span><text:span text:style-name="T27">) </text:span><text:span text:style-name="T27">뜻</text:span></text:p>
      </draw:text-box>
@@ -79142,36 +79151,36 @@
    </draw:page>
    <draw:page draw:name="page128" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr33" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr78" draw:text-style-name="P52" draw:layer="layout" svg:width="10.5cm" svg:height="0.823cm" svg:x="0cm" svg:y="13.2cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T1">나는 새 책을 받았다</text:span><text:span text:style-name="T1">. </text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T1">나는 새 책을 받았다</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr69" draw:text-style-name="P74" draw:layer="layout" svg:width="3cm" svg:height="1.102cm" svg:x="3.6cm" svg:y="9.4cm">
+    <draw:frame draw:style-name="gr69" draw:text-style-name="P65" draw:layer="layout" svg:width="10.5cm" svg:height="1.102cm" svg:x="0cm" svg:y="9.8cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T25">새로운 </text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T25">새로운 </text:span></text:p>
      </draw:text-box>
     </draw:frame>
     <draw:line draw:style-name="gr27" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="11.4cm" svg:x2="9.5cm" svg:y2="11.4cm">
      <text:p/>
     </draw:line>
-    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="2.4cm" svg:x2="9.5cm" svg:y2="2.4cm">
+    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="2.3cm" svg:x2="9.5cm" svg:y2="2.3cm">
      <text:p/>
     </draw:line>
-    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="8.5cm" svg:x2="9.5cm" svg:y2="8.5cm">
+    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="9.4cm" svg:x2="9.5cm" svg:y2="9.4cm">
      <text:p/>
     </draw:line>
-    <draw:frame draw:style-name="gr25" draw:text-style-name="P33" draw:layer="layout" svg:width="4.5cm" svg:height="0.772cm" svg:x="3.9cm" svg:y="1.3cm">
+    <draw:frame draw:style-name="gr25" draw:text-style-name="P66" draw:layer="layout" svg:width="10.5cm" svg:height="0.772cm" svg:x="0cm" svg:y="1.3cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T18">[nuː]</text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T18">[nuː]</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr113" draw:text-style-name="P31" draw:layer="layout" svg:width="1.949cm" svg:height="1.191cm" svg:x="4.23cm" svg:y="0.31cm">
+    <draw:frame draw:style-name="gr114" draw:text-style-name="P31" draw:layer="layout" svg:width="1.949cm" svg:height="1.191cm" svg:x="4.23cm" svg:y="0.31cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T17">NEW</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr80" draw:text-style-name="P67" draw:layer="layout" svg:width="9.915cm" svg:height="5.382cm" svg:x="0.385cm" svg:y="3.7cm">
+    <draw:frame draw:style-name="gr80" draw:text-style-name="P67" draw:layer="layout" svg:width="9.915cm" svg:height="5.382cm" svg:x="0.385cm" svg:y="3.6cm">
      <draw:text-box>
       <text:p text:style-name="P57"><text:span text:style-name="T26">New means something that has just been made, bought, or discovered. It is the opposite of old. People use it to describe clothes, ideas, or experiences. New things often feel fresh and exciting. Example: &apos;She bought a new phone yesterday.&apos; </text:span></text:p>
      </draw:text-box>
@@ -79181,7 +79190,7 @@
       <text:p text:style-name="P40"><text:span text:style-name="T20">I get a new book. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr71" draw:text-style-name="P68" draw:layer="layout" svg:width="3cm" svg:height="0.653cm" svg:x="0cm" svg:y="2.947cm">
+    <draw:frame draw:style-name="gr71" draw:text-style-name="P68" draw:layer="layout" svg:width="3cm" svg:height="0.653cm" svg:x="0cm" svg:y="2.847cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T27">(</text:span><text:span text:style-name="T27">영영사전</text:span><text:span text:style-name="T27">) </text:span><text:span text:style-name="T27">뜻</text:span></text:p>
      </draw:text-box>
@@ -79842,46 +79851,46 @@
    </draw:page>
    <draw:page draw:name="page130" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P52" draw:layer="layout" svg:width="10.5cm" svg:height="1cm" svg:x="0cm" svg:y="13.2cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T1">날이 맑다</text:span><text:span text:style-name="T1">. </text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T1">날이 맑다</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr114" draw:text-style-name="P74" draw:layer="layout" svg:width="3cm" svg:height="1.953cm" svg:x="3.6cm" svg:y="9.4cm">
+    <draw:frame draw:style-name="gr72" draw:text-style-name="P65" draw:layer="layout" svg:width="10.5cm" svg:height="1.102cm" svg:x="0cm" svg:y="9.9cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T25">하루</text:span><text:span text:style-name="T25">, </text:span><text:span text:style-name="T25">날 </text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T25">하루</text:span><text:span text:style-name="T25">, </text:span><text:span text:style-name="T25">날 </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:line draw:style-name="gr27" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="11.4cm" svg:x2="9.5cm" svg:y2="11.4cm">
+    <draw:line draw:style-name="gr27" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="11.6cm" svg:x2="9.5cm" svg:y2="11.6cm">
      <text:p/>
     </draw:line>
-    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="2.4cm" svg:x2="9.5cm" svg:y2="2.4cm">
+    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="2.7cm" svg:x2="9.5cm" svg:y2="2.7cm">
      <text:p/>
     </draw:line>
-    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="8.5cm" svg:x2="9.5cm" svg:y2="8.5cm">
+    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="9.2cm" svg:x2="9.5cm" svg:y2="9.2cm">
      <text:p/>
     </draw:line>
-    <draw:frame draw:style-name="gr25" draw:text-style-name="P33" draw:layer="layout" svg:width="4.5cm" svg:height="0.772cm" svg:x="3.9cm" svg:y="1.3cm">
+    <draw:frame draw:style-name="gr25" draw:text-style-name="P66" draw:layer="layout" svg:width="10.5cm" svg:height="0.772cm" svg:x="0cm" svg:y="1.5cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T18">[deɪ]</text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T18">[deɪ]</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr70" draw:text-style-name="P31" draw:layer="layout" svg:width="1.838cm" svg:height="1.191cm" svg:x="4.23cm" svg:y="0.31cm">
+    <draw:frame draw:style-name="gr70" draw:text-style-name="P31" draw:layer="layout" svg:width="1.838cm" svg:height="1.191cm" svg:x="4.43cm" svg:y="0.51cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T17">DAY</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr90" draw:text-style-name="P67" draw:layer="layout" svg:width="9.915cm" svg:height="4.649cm" svg:x="0.385cm" svg:y="3.7cm">
+    <draw:frame draw:style-name="gr90" draw:text-style-name="P67" draw:layer="layout" svg:width="9.915cm" svg:height="4.649cm" svg:x="0.385cm" svg:y="4.1cm">
      <draw:text-box>
       <text:p text:style-name="P57"><text:span text:style-name="T26">Day is the time from morning until night. It also means a full 24 hours. People talk about special days, like birthdays or holidays. Example: &apos;It was a sunny day.&apos; Days mark the passing of time. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr35" draw:text-style-name="P53" draw:layer="layout" svg:width="10.5cm" svg:height="1.191cm" svg:x="0cm" svg:y="11.901cm">
+    <draw:frame draw:style-name="gr35" draw:text-style-name="P53" draw:layer="layout" svg:width="10.5cm" svg:height="1.191cm" svg:x="0cm" svg:y="12.101cm">
      <draw:text-box>
       <text:p text:style-name="P40"><text:span text:style-name="T20">The day is sunny. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr71" draw:text-style-name="P68" draw:layer="layout" svg:width="3cm" svg:height="0.653cm" svg:x="0cm" svg:y="2.947cm">
+    <draw:frame draw:style-name="gr71" draw:text-style-name="P68" draw:layer="layout" svg:width="3cm" svg:height="0.653cm" svg:x="0cm" svg:y="3.347cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T27">(</text:span><text:span text:style-name="T27">영영사전</text:span><text:span text:style-name="T27">) </text:span><text:span text:style-name="T27">뜻</text:span></text:p>
      </draw:text-box>
@@ -80590,36 +80599,36 @@
    </draw:page>
    <draw:page draw:name="page132" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P52" draw:layer="layout" svg:width="10.5cm" svg:height="1cm" svg:x="0cm" svg:y="13.2cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T1">밤이 고요하다</text:span><text:span text:style-name="T1">. </text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T1">밤이 고요하다</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr69" draw:text-style-name="P74" draw:layer="layout" svg:width="3cm" svg:height="1.102cm" svg:x="3.6cm" svg:y="9.4cm">
+    <draw:frame draw:style-name="gr69" draw:text-style-name="P65" draw:layer="layout" svg:width="10.5cm" svg:height="1.102cm" svg:x="0cm" svg:y="9.4cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T25">밤 </text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T25">밤 </text:span></text:p>
      </draw:text-box>
     </draw:frame>
     <draw:line draw:style-name="gr27" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="11.4cm" svg:x2="9.5cm" svg:y2="11.4cm">
      <text:p/>
     </draw:line>
-    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="2.4cm" svg:x2="9.5cm" svg:y2="2.4cm">
+    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="3cm" svg:x2="9.5cm" svg:y2="3cm">
      <text:p/>
     </draw:line>
-    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="8.5cm" svg:x2="9.5cm" svg:y2="8.5cm">
+    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="9cm" svg:x2="9.5cm" svg:y2="9cm">
      <text:p/>
     </draw:line>
-    <draw:frame draw:style-name="gr25" draw:text-style-name="P33" draw:layer="layout" svg:width="4.5cm" svg:height="0.772cm" svg:x="3.9cm" svg:y="1.3cm">
+    <draw:frame draw:style-name="gr25" draw:text-style-name="P66" draw:layer="layout" svg:width="10.5cm" svg:height="0.772cm" svg:x="0cm" svg:y="1.6cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T18">[naɪt]</text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T18">[naɪt]</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr115" draw:text-style-name="P31" draw:layer="layout" svg:width="2.52cm" svg:height="1.191cm" svg:x="4.23cm" svg:y="0.31cm">
+    <draw:frame draw:style-name="gr115" draw:text-style-name="P31" draw:layer="layout" svg:width="2.52cm" svg:height="1.191cm" svg:x="4.03cm" svg:y="0.61cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T17">NIGHT</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr3" draw:text-style-name="P67" draw:layer="layout" svg:width="9.915cm" svg:height="4cm" svg:x="0.385cm" svg:y="3.7cm">
+    <draw:frame draw:style-name="gr84" draw:text-style-name="P70" draw:layer="layout" svg:width="9.915cm" svg:height="3.183cm" svg:x="0.385cm" svg:y="4.7cm">
      <draw:text-box>
       <text:p text:style-name="P57"><text:span text:style-name="T26">Night is the time when it is dark outside and people usually sleep. It comes after evening and before morning. For example, &apos;The stars shine at night.&apos; </text:span></text:p>
      </draw:text-box>
@@ -80629,7 +80638,7 @@
       <text:p text:style-name="P40"><text:span text:style-name="T20">The night is quiet. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr71" draw:text-style-name="P68" draw:layer="layout" svg:width="3cm" svg:height="0.653cm" svg:x="0cm" svg:y="2.947cm">
+    <draw:frame draw:style-name="gr71" draw:text-style-name="P68" draw:layer="layout" svg:width="3cm" svg:height="0.653cm" svg:x="0cm" svg:y="3.947cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T27">(</text:span><text:span text:style-name="T27">영영사전</text:span><text:span text:style-name="T27">) </text:span><text:span text:style-name="T27">뜻</text:span></text:p>
      </draw:text-box>
@@ -83725,36 +83734,36 @@
    </draw:page>
    <draw:page draw:name="page134" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr33" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr33" draw:text-style-name="P52" draw:layer="layout" svg:width="10.5cm" svg:height="1.395cm" svg:x="0cm" svg:y="13.2cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T1">오늘은 날씨가 정말 좋다</text:span><text:span text:style-name="T1">. </text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T1">오늘은 날씨가 정말 좋다</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr69" draw:text-style-name="P74" draw:layer="layout" svg:width="3cm" svg:height="1.102cm" svg:x="3.6cm" svg:y="9.4cm">
+    <draw:frame draw:style-name="gr69" draw:text-style-name="P65" draw:layer="layout" svg:width="10.5cm" svg:height="1.102cm" svg:x="0cm" svg:y="9.6cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T25">오늘 </text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T25">오늘 </text:span></text:p>
      </draw:text-box>
     </draw:frame>
     <draw:line draw:style-name="gr27" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="11.4cm" svg:x2="9.5cm" svg:y2="11.4cm">
      <text:p/>
     </draw:line>
-    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="2.4cm" svg:x2="9.5cm" svg:y2="2.4cm">
+    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="3.3cm" svg:x2="9.5cm" svg:y2="3.3cm">
      <text:p/>
     </draw:line>
-    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="8.5cm" svg:x2="9.5cm" svg:y2="8.5cm">
+    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="8.9cm" svg:x2="9.5cm" svg:y2="8.9cm">
      <text:p/>
     </draw:line>
-    <draw:frame draw:style-name="gr25" draw:text-style-name="P33" draw:layer="layout" svg:width="4.5cm" svg:height="0.772cm" svg:x="3.9cm" svg:y="1.3cm">
+    <draw:frame draw:style-name="gr25" draw:text-style-name="P66" draw:layer="layout" svg:width="10.5cm" svg:height="0.772cm" svg:x="0cm" svg:y="1.8cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T18">[təˈdeɪ]</text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T18">[təˈdeɪ]</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr116" draw:text-style-name="P31" draw:layer="layout" svg:width="2.578cm" svg:height="1.191cm" svg:x="4.23cm" svg:y="0.31cm">
+    <draw:frame draw:style-name="gr116" draw:text-style-name="P31" draw:layer="layout" svg:width="2.578cm" svg:height="1.191cm" svg:x="3.93cm" svg:y="0.81cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T17">TODAY</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr3" draw:text-style-name="P67" draw:layer="layout" svg:width="9.915cm" svg:height="4cm" svg:x="0.385cm" svg:y="3.7cm">
+    <draw:frame draw:style-name="gr84" draw:text-style-name="P70" draw:layer="layout" svg:width="9.915cm" svg:height="3.183cm" svg:x="0.385cm" svg:y="5cm">
      <draw:text-box>
       <text:p text:style-name="P57"><text:span text:style-name="T26">Today means the day that is happening right now. It is between yesterday and tomorrow. For example, &apos;Today is my birthday.&apos; </text:span></text:p>
      </draw:text-box>
@@ -83764,7 +83773,7 @@
       <text:p text:style-name="P40"><text:span text:style-name="T20">Today is a beautiful day. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr71" draw:text-style-name="P68" draw:layer="layout" svg:width="3cm" svg:height="0.653cm" svg:x="0cm" svg:y="2.947cm">
+    <draw:frame draw:style-name="gr71" draw:text-style-name="P68" draw:layer="layout" svg:width="3cm" svg:height="0.653cm" svg:x="0cm" svg:y="4.247cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T27">(</text:span><text:span text:style-name="T27">영영사전</text:span><text:span text:style-name="T27">) </text:span><text:span text:style-name="T27">뜻</text:span></text:p>
      </draw:text-box>
@@ -84635,46 +84644,46 @@
    </draw:page>
    <draw:page draw:name="page136" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr33" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr78" draw:text-style-name="P52" draw:layer="layout" svg:width="10.5cm" svg:height="0.823cm" svg:x="0cm" svg:y="13.2cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T1">그녀는 책을 읽고 있었다</text:span><text:span text:style-name="T1">. </text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T1">그녀는 책을 읽고 있었다</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr69" draw:text-style-name="P74" draw:layer="layout" svg:width="3cm" svg:height="1.102cm" svg:x="3.6cm" svg:y="9.4cm">
+    <draw:frame draw:style-name="gr69" draw:text-style-name="P65" draw:layer="layout" svg:width="10.5cm" svg:height="1.102cm" svg:x="0cm" svg:y="9.7cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T25">여자 </text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T25">여자 </text:span></text:p>
      </draw:text-box>
     </draw:frame>
     <draw:line draw:style-name="gr27" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="11.4cm" svg:x2="9.5cm" svg:y2="11.4cm">
      <text:p/>
     </draw:line>
-    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="2.4cm" svg:x2="9.5cm" svg:y2="2.4cm">
+    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="3.1cm" svg:x2="9.5cm" svg:y2="3.1cm">
      <text:p/>
     </draw:line>
-    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="8.5cm" svg:x2="9.5cm" svg:y2="8.5cm">
+    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="9cm" svg:x2="9.5cm" svg:y2="9cm">
      <text:p/>
     </draw:line>
-    <draw:frame draw:style-name="gr25" draw:text-style-name="P33" draw:layer="layout" svg:width="4.5cm" svg:height="0.772cm" svg:x="3.9cm" svg:y="1.3cm">
+    <draw:frame draw:style-name="gr25" draw:text-style-name="P66" draw:layer="layout" svg:width="10.5cm" svg:height="0.772cm" svg:x="0cm" svg:y="1.6cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T18">[ˈwʊmən]</text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T18">[ˈwʊmən]</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr117" draw:text-style-name="P31" draw:layer="layout" svg:width="2.995cm" svg:height="1.191cm" svg:x="4.23cm" svg:y="0.31cm">
+    <draw:frame draw:style-name="gr117" draw:text-style-name="P31" draw:layer="layout" svg:width="2.995cm" svg:height="1.191cm" svg:x="3.83cm" svg:y="0.61cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T17">WOMAN</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr3" draw:text-style-name="P67" draw:layer="layout" svg:width="9.915cm" svg:height="4cm" svg:x="0.385cm" svg:y="3.7cm">
+    <draw:frame draw:style-name="gr118" draw:text-style-name="P70" draw:layer="layout" svg:width="9.915cm" svg:height="3.183cm" svg:x="0.385cm" svg:y="4.8cm">
      <draw:text-box>
       <text:p text:style-name="P57"><text:span text:style-name="T26">A woman is an adult female human. Women are often daughters, sisters, mothers, or workers in society. For example, &apos;The woman is a teacher.&apos; </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr93" draw:text-style-name="P86" draw:layer="layout" svg:width="10.5cm" svg:height="1.299cm" svg:x="0cm" svg:y="11.901cm">
+    <draw:frame draw:style-name="gr93" draw:text-style-name="P85" draw:layer="layout" svg:width="10.5cm" svg:height="1.299cm" svg:x="0cm" svg:y="11.901cm">
      <draw:text-box>
-      <text:p text:style-name="P85"><text:span text:style-name="T20">The woman is reading a book. </text:span></text:p>
+      <text:p text:style-name="P84"><text:span text:style-name="T20">The woman is reading a book. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr71" draw:text-style-name="P68" draw:layer="layout" svg:width="3cm" svg:height="0.653cm" svg:x="0cm" svg:y="2.947cm">
+    <draw:frame draw:style-name="gr71" draw:text-style-name="P68" draw:layer="layout" svg:width="3cm" svg:height="0.653cm" svg:x="0cm" svg:y="4.047cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T27">(</text:span><text:span text:style-name="T27">영영사전</text:span><text:span text:style-name="T27">) </text:span><text:span text:style-name="T27">뜻</text:span></text:p>
      </draw:text-box>
@@ -84713,7 +84722,7 @@
       <text:p text:style-name="P76"><text:span text:style-name="T20">We have a meeting tomorrow. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr41" draw:text-style-name="P87" draw:layer="layout" svg:width="3.9cm" svg:height="2.757cm" svg:x="6.3cm" svg:y="9.109cm">
+    <draw:frame draw:style-name="gr41" draw:text-style-name="P86" draw:layer="layout" svg:width="3.9cm" svg:height="2.757cm" svg:x="6.3cm" svg:y="9.109cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T23">tomorrow</text:span></text:p>
      </draw:text-box>
@@ -87809,36 +87818,36 @@
    </draw:page>
    <draw:page draw:name="page138" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr33" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr61" draw:text-style-name="P52" draw:layer="layout" svg:width="10.5cm" svg:height="0.823cm" svg:x="0cm" svg:y="13.2cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T1">우리는 내일 회의가 있다</text:span><text:span text:style-name="T1">. </text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T1">우리는 내일 회의가 있다</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr69" draw:text-style-name="P74" draw:layer="layout" svg:width="3cm" svg:height="1.102cm" svg:x="3.6cm" svg:y="9.4cm">
+    <draw:frame draw:style-name="gr69" draw:text-style-name="P65" draw:layer="layout" svg:width="10.5cm" svg:height="1.102cm" svg:x="0cm" svg:y="9.6cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T25">내일 </text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T25">내일 </text:span></text:p>
      </draw:text-box>
     </draw:frame>
     <draw:line draw:style-name="gr43" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.3cm" svg:y1="11.4cm" svg:x2="9.6cm" svg:y2="11.4cm">
      <text:p/>
     </draw:line>
-    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="2.4cm" svg:x2="9.5cm" svg:y2="2.4cm">
+    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="4.4cm" svg:x2="9.5cm" svg:y2="4.4cm">
      <text:p/>
     </draw:line>
-    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="8.5cm" svg:x2="9.5cm" svg:y2="8.5cm">
+    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="8.9cm" svg:x2="9.5cm" svg:y2="8.9cm">
      <text:p/>
     </draw:line>
-    <draw:frame draw:style-name="gr25" draw:text-style-name="P33" draw:layer="layout" svg:width="4.5cm" svg:height="0.772cm" svg:x="3.9cm" svg:y="1.3cm">
+    <draw:frame draw:style-name="gr25" draw:text-style-name="P66" draw:layer="layout" svg:width="10.5cm" svg:height="0.772cm" svg:x="0cm" svg:y="2.3cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T18">[təˈmɑːroʊ]</text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T18">[təˈmɑːroʊ]</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr118" draw:text-style-name="P31" draw:layer="layout" svg:width="4.334cm" svg:height="1.191cm" svg:x="4.23cm" svg:y="0.31cm">
+    <draw:frame draw:style-name="gr119" draw:text-style-name="P31" draw:layer="layout" svg:width="4.334cm" svg:height="1.191cm" svg:x="3.23cm" svg:y="1.31cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T17">TOMORROW</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr3" draw:text-style-name="P67" draw:layer="layout" svg:width="9.915cm" svg:height="4cm" svg:x="0.385cm" svg:y="3.7cm">
+    <draw:frame draw:style-name="gr82" draw:text-style-name="P70" draw:layer="layout" svg:width="9.915cm" svg:height="2.45cm" svg:x="0.385cm" svg:y="5.7cm">
      <draw:text-box>
       <text:p text:style-name="P57"><text:span text:style-name="T26">Tomorrow is the day after today. It has not happened yet. For example, &apos;Tomorrow we will go to the park.&apos; </text:span></text:p>
      </draw:text-box>
@@ -87848,7 +87857,7 @@
       <text:p text:style-name="P60"><text:span text:style-name="T20">We have a meeting tomorrow. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr71" draw:text-style-name="P68" draw:layer="layout" svg:width="3cm" svg:height="0.653cm" svg:x="0cm" svg:y="2.947cm">
+    <draw:frame draw:style-name="gr71" draw:text-style-name="P68" draw:layer="layout" svg:width="3cm" svg:height="0.653cm" svg:x="0cm" svg:y="4.947cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T27">(</text:span><text:span text:style-name="T27">영영사전</text:span><text:span text:style-name="T27">) </text:span><text:span text:style-name="T27">뜻</text:span></text:p>
      </draw:text-box>
@@ -89152,46 +89161,46 @@
    </draw:page>
    <draw:page draw:name="page140" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr33" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.5cm">
+    <draw:frame draw:style-name="gr87" draw:text-style-name="P52" draw:layer="layout" svg:width="10.5cm" svg:height="0.823cm" svg:x="0cm" svg:y="13.7cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T1">오늘은 해가 밝게 빛나고 있다</text:span><text:span text:style-name="T1">. </text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T1">오늘은 해가 밝게 빛나고 있다</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr69" draw:text-style-name="P74" draw:layer="layout" svg:width="3cm" svg:height="1.102cm" svg:x="3.6cm" svg:y="9.4cm">
+    <draw:frame draw:style-name="gr69" draw:text-style-name="P65" draw:layer="layout" svg:width="10.5cm" svg:height="1.102cm" svg:x="0cm" svg:y="9.1cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T25">태양 </text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T25">태양 </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:line draw:style-name="gr27" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="11.4cm" svg:x2="9.5cm" svg:y2="11.4cm">
+    <draw:line draw:style-name="gr27" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="10.9cm" svg:x2="9.5cm" svg:y2="10.9cm">
      <text:p/>
     </draw:line>
-    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="2.4cm" svg:x2="9.5cm" svg:y2="2.4cm">
+    <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="3.2cm" svg:x2="9.5cm" svg:y2="3.2cm">
      <text:p/>
     </draw:line>
     <draw:line draw:style-name="gr23" draw:text-style-name="P30" draw:layer="layout" svg:x1="1.2cm" svg:y1="8.5cm" svg:x2="9.5cm" svg:y2="8.5cm">
      <text:p/>
     </draw:line>
-    <draw:frame draw:style-name="gr25" draw:text-style-name="P33" draw:layer="layout" svg:width="4.5cm" svg:height="0.772cm" svg:x="3.9cm" svg:y="1.3cm">
+    <draw:frame draw:style-name="gr25" draw:text-style-name="P66" draw:layer="layout" svg:width="10.5cm" svg:height="0.772cm" svg:x="0cm" svg:y="1.8cm">
      <draw:text-box>
-      <text:p text:style-name="P32"><text:span text:style-name="T18">[sʌn] </text:span></text:p>
+      <text:p text:style-name="P35"><text:span text:style-name="T18">[sʌn] </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr119" draw:text-style-name="P31" draw:layer="layout" svg:width="1.849cm" svg:height="1.191cm" svg:x="4.23cm" svg:y="0.31cm">
+    <draw:frame draw:style-name="gr120" draw:text-style-name="P31" draw:layer="layout" svg:width="1.849cm" svg:height="1.191cm" svg:x="4.23cm" svg:y="0.81cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T17">SUN</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr3" draw:text-style-name="P67" draw:layer="layout" svg:width="9.915cm" svg:height="4cm" svg:x="0.385cm" svg:y="3.7cm">
+    <draw:frame draw:style-name="gr84" draw:text-style-name="P70" draw:layer="layout" svg:width="9.915cm" svg:height="3.183cm" svg:x="0.385cm" svg:y="4.8cm">
      <draw:text-box>
       <text:p text:style-name="P57"><text:span text:style-name="T26">The sun is a big star that gives light and heat to Earth. It rises in the morning and sets in the evening. For example, &apos;The sun is bright today.&apos; </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr34" draw:text-style-name="P61" draw:layer="layout" svg:width="10.5cm" svg:height="2.131cm" svg:x="0.2cm" svg:y="11.601cm">
+    <draw:frame draw:style-name="gr34" draw:text-style-name="P61" draw:layer="layout" svg:width="10.5cm" svg:height="2.131cm" svg:x="0.2cm" svg:y="11.301cm">
      <draw:text-box>
       <text:p text:style-name="P60"><text:span text:style-name="T20">The sun is shining brightly today. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr71" draw:text-style-name="P68" draw:layer="layout" svg:width="3cm" svg:height="0.653cm" svg:x="0cm" svg:y="2.947cm">
+    <draw:frame draw:style-name="gr71" draw:text-style-name="P68" draw:layer="layout" svg:width="3cm" svg:height="0.653cm" svg:x="0cm" svg:y="4.047cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T27">(</text:span><text:span text:style-name="T27">영영사전</text:span><text:span text:style-name="T27">) </text:span><text:span text:style-name="T27">뜻</text:span></text:p>
      </draw:text-box>
@@ -92384,7 +92393,7 @@
    </draw:page>
    <draw:page draw:name="page142" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr33" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr33" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
      <draw:text-box>
       <text:p text:style-name="P32"><text:span text:style-name="T1">나중에 비가 올 것이다</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
@@ -92408,7 +92417,7 @@
       <text:p text:style-name="P32"><text:span text:style-name="T18">[ˈleɪtər]</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr120" draw:text-style-name="P31" draw:layer="layout" svg:width="2.444cm" svg:height="1.191cm" svg:x="4.23cm" svg:y="0.31cm">
+    <draw:frame draw:style-name="gr121" draw:text-style-name="P31" draw:layer="layout" svg:width="2.444cm" svg:height="1.191cm" svg:x="4.23cm" svg:y="0.31cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T17">LATER</text:span></text:p>
      </draw:text-box>
@@ -93524,7 +93533,7 @@
    </draw:page>
    <draw:page draw:name="page144" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr33" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr33" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
      <draw:text-box>
       <text:p text:style-name="P32"><text:span text:style-name="T1">그 음식은 맛이 없다</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
@@ -97307,7 +97316,7 @@
    </draw:page>
    <draw:page draw:name="page146" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1cm" svg:x="3cm" svg:y="13.2cm">
      <draw:text-box>
       <text:p text:style-name="P32"><text:span text:style-name="T1">그 집은 크다</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
@@ -98495,12 +98504,12 @@
    </draw:page>
    <draw:page draw:name="page148" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr33" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.5cm">
+    <draw:frame draw:style-name="gr33" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.5cm">
      <draw:text-box>
       <text:p text:style-name="P32"><text:span text:style-name="T1">친구들과 파티에 갈거다</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr114" draw:text-style-name="P74" draw:layer="layout" svg:width="3cm" svg:height="1.953cm" svg:x="3.6cm" svg:y="9.4cm">
+    <draw:frame draw:style-name="gr122" draw:text-style-name="P74" draw:layer="layout" svg:width="3cm" svg:height="1.953cm" svg:x="3.6cm" svg:y="9.4cm">
      <draw:text-box>
       <text:p text:style-name="P32"><text:span text:style-name="T25">~</text:span><text:span text:style-name="T25">와 함께 </text:span></text:p>
      </draw:text-box>
@@ -98519,7 +98528,7 @@
       <text:p text:style-name="P32"><text:span text:style-name="T18">[wɪð, wɪθ]</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr121" draw:text-style-name="P31" draw:layer="layout" svg:width="2.17cm" svg:height="1.191cm" svg:x="4.23cm" svg:y="0.31cm">
+    <draw:frame draw:style-name="gr123" draw:text-style-name="P31" draw:layer="layout" svg:width="2.17cm" svg:height="1.191cm" svg:x="4.23cm" svg:y="0.31cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T17">WITH</text:span></text:p>
      </draw:text-box>
@@ -101441,12 +101450,12 @@
    </draw:page>
    <draw:page draw:name="page150" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr33" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr33" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
      <draw:text-box>
       <text:p text:style-name="P32"><text:span text:style-name="T1">저는 한국에서 왔어요</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr122" draw:text-style-name="P74" draw:layer="layout" svg:width="3cm" svg:height="2.804cm" svg:x="3.6cm" svg:y="9.4cm">
+    <draw:frame draw:style-name="gr124" draw:text-style-name="P74" draw:layer="layout" svg:width="3cm" svg:height="2.804cm" svg:x="3.6cm" svg:y="9.4cm">
      <draw:text-box>
       <text:p text:style-name="P32"><text:span text:style-name="T25">~</text:span><text:span text:style-name="T25">로부터</text:span><text:span text:style-name="T25">, ~</text:span><text:span text:style-name="T25">에서 </text:span></text:p>
      </draw:text-box>
@@ -101465,7 +101474,7 @@
       <text:p text:style-name="P32"><text:span text:style-name="T18">[frʌm, frəm]</text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr123" draw:text-style-name="P31" draw:layer="layout" svg:width="2.338cm" svg:height="1.191cm" svg:x="4.23cm" svg:y="0.31cm">
+    <draw:frame draw:style-name="gr125" draw:text-style-name="P31" draw:layer="layout" svg:width="2.338cm" svg:height="1.191cm" svg:x="4.23cm" svg:y="0.31cm">
      <draw:text-box>
       <text:p><text:span text:style-name="T17">FROM</text:span></text:p>
      </draw:text-box>
@@ -103316,7 +103325,7 @@
    </draw:page>
    <draw:page draw:name="page152" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
      <draw:text-box>
       <text:p text:style-name="P49"><text:span text:style-name="T1">차 마실래</text:span><text:span text:style-name="T1">? </text:span><text:span text:style-name="T1">커피 마실래</text:span><text:span text:style-name="T1">? </text:span></text:p>
      </draw:text-box>
@@ -105448,7 +105457,7 @@
    </draw:page>
    <draw:page draw:name="page154" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
      <draw:text-box>
       <text:p text:style-name="P49"><text:span text:style-name="T1">모든 학생들이 여기 있어요</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
@@ -109334,7 +109343,7 @@
    </draw:page>
    <draw:page draw:name="page156" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
      <draw:text-box>
       <text:p text:style-name="P49"><text:span text:style-name="T1">저희는 수업 후에 점심을 먹었어요</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
@@ -111126,7 +111135,7 @@
    </draw:page>
    <draw:page draw:name="page158" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1cm" svg:x="3cm" svg:y="13.2cm">
      <draw:text-box>
       <text:p text:style-name="P49"><text:span text:style-name="T1">나는 새 차를 샀다</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
@@ -113523,7 +113532,7 @@
    </draw:page>
    <draw:page draw:name="page160" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
      <draw:text-box>
       <text:p text:style-name="P49"><text:span text:style-name="T1">나는 수영을 할 수 있다</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
@@ -113557,7 +113566,7 @@
       <text:p text:style-name="P88"><text:span text:style-name="T26">Can is a word that shows ability or possibility. When you say &apos;I can swim,&apos; it means you know how to do it. It is also used to ask permission, like &apos;Can I go outside?&apos; Can is very common in everyday speech. Example: &apos;He can play the guitar very well.&apos; </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr124" draw:text-style-name="P53" draw:layer="layout" svg:width="10.5cm" svg:height="1.191cm" svg:x="0cm" svg:y="11.901cm">
+    <draw:frame draw:style-name="gr126" draw:text-style-name="P53" draw:layer="layout" svg:width="10.5cm" svg:height="1.191cm" svg:x="0cm" svg:y="11.901cm">
      <draw:text-box>
       <text:p text:style-name="P40"><text:span text:style-name="T20">I can swim. </text:span></text:p>
      </draw:text-box>
@@ -115533,7 +115542,7 @@
    </draw:page>
    <draw:page draw:name="page162" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
      <draw:text-box>
       <text:p text:style-name="P49"><text:span text:style-name="T1">우리는 산책하러 나갔다</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
@@ -115567,7 +115576,7 @@
       <text:p text:style-name="P88"><text:span text:style-name="T26">Out means moving from the inside to the outside. It can describe leaving a house, room, or container. People use it in many phrases, like &apos;go out,&apos; &apos;take out,&apos; or &apos;run out.&apos; It can also mean not available, like &apos;out of stock.&apos; Example: &apos;She went out to meet her friends.&apos; </text:span></text:p>
      </draw:text-box>
     </draw:frame>
-    <draw:frame draw:style-name="gr124" draw:text-style-name="P53" draw:layer="layout" svg:width="10.5cm" svg:height="1.191cm" svg:x="0cm" svg:y="11.901cm">
+    <draw:frame draw:style-name="gr126" draw:text-style-name="P53" draw:layer="layout" svg:width="10.5cm" svg:height="1.191cm" svg:x="0cm" svg:y="11.901cm">
      <draw:text-box>
       <text:p text:style-name="P40"><text:span text:style-name="T20">We go out for a walk. </text:span></text:p>
      </draw:text-box>
@@ -117342,7 +117351,7 @@
    </draw:page>
    <draw:page draw:name="page164" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.5cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.5cm">
      <draw:text-box>
       <text:p text:style-name="P49"><text:span text:style-name="T1">영화 몇 시에 시작해</text:span><text:span text:style-name="T1">? </text:span></text:p>
      </draw:text-box>
@@ -119271,7 +119280,7 @@
    </draw:page>
    <draw:page draw:name="page166" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1cm" svg:x="3cm" svg:y="13.2cm">
      <draw:text-box>
       <text:p text:style-name="P49"><text:span text:style-name="T1">나 지금 바빠</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
@@ -122405,7 +122414,7 @@
    </draw:page>
    <draw:page draw:name="page168" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1cm" svg:x="3cm" svg:y="13.2cm">
      <draw:text-box>
       <text:p text:style-name="P49"><text:span text:style-name="T1">너 돈 좀 있니</text:span><text:span text:style-name="T1">? </text:span></text:p>
      </draw:text-box>
@@ -122928,7 +122937,7 @@
    </draw:page>
    <draw:page draw:name="page170" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
      <draw:text-box>
       <text:p text:style-name="P49"><text:span text:style-name="T1">그가 언덕 아래로 걸어 내려간다</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
@@ -124141,7 +124150,7 @@
    </draw:page>
    <draw:page draw:name="page172" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
      <draw:text-box>
       <text:p text:style-name="P49"><text:span text:style-name="T1">나는 내일 출근해야해</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
@@ -125733,7 +125742,7 @@
    </draw:page>
    <draw:page draw:name="page174" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
      <draw:text-box>
       <text:p text:style-name="P49"><text:span text:style-name="T1">가게는 지금 열려 있어</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
@@ -128948,7 +128957,7 @@
    </draw:page>
    <draw:page draw:name="page176" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
      <draw:text-box>
       <text:p text:style-name="P49"><text:span text:style-name="T1">오늘 날씨가 매우 춥네</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
@@ -129447,7 +129456,7 @@
    </draw:page>
    <draw:page draw:name="page178" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
      <draw:text-box>
       <text:p text:style-name="P49"><text:span text:style-name="T1">나는 이게 좋은 생각이라고 생각해</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
@@ -129520,7 +129529,7 @@
       <draw:handle draw:handle-switched="true" draw:handle-range-x-minimum="0" draw:handle-range-x-maximum="10800" draw:handle-position="$0 top" draw:handle-position-x="$0" draw:handle-position-y="top"/>
      </draw:enhanced-geometry>
     </draw:custom-shape>
-    <draw:frame draw:style-name="gr125" draw:text-style-name="P77" draw:layer="layout" svg:width="10.5cm" svg:height="3.071cm" svg:x="0.3cm" svg:y="3.5cm">
+    <draw:frame draw:style-name="gr127" draw:text-style-name="P77" draw:layer="layout" svg:width="10.5cm" svg:height="3.071cm" svg:x="0.3cm" svg:y="3.5cm">
      <draw:text-box>
       <text:p text:style-name="P76"><text:span text:style-name="T20">Open the window for some fresh air. </text:span></text:p>
      </draw:text-box>
@@ -130126,7 +130135,7 @@
    </draw:page>
    <draw:page draw:name="page180" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.385cm" svg:x="3cm" svg:y="13.7cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1.385cm" svg:x="3cm" svg:y="13.7cm">
      <draw:text-box>
       <text:p text:style-name="P49"><text:span text:style-name="T1">신선한 공기를 위해 창문을 열어</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
@@ -131179,7 +131188,7 @@
    </draw:page>
    <draw:page draw:name="page182" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1cm" svg:x="3cm" svg:y="13.2cm">
      <draw:text-box>
       <text:p text:style-name="P49"><text:span text:style-name="T1">그건 너가 맞아</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
@@ -131644,7 +131653,7 @@
    </draw:page>
    <draw:page draw:name="page184" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
      <draw:text-box>
       <text:p text:style-name="P49"><text:span text:style-name="T1">그녀가 집에 돌아왔다</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
@@ -135007,7 +135016,7 @@
    </draw:page>
    <draw:page draw:name="page186" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.6cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.6cm">
      <draw:text-box>
       <text:p text:style-name="P49"><text:span text:style-name="T1">방에 사람들이 많다</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
@@ -135913,7 +135922,7 @@
    </draw:page>
    <draw:page draw:name="page188" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
      <draw:text-box>
       <text:p text:style-name="P49"><text:span text:style-name="T1">나는 샌드위치를 만든다</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
@@ -138789,7 +138798,7 @@
    </draw:page>
    <draw:page draw:name="page190" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.5cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.5cm">
      <draw:text-box>
       <text:p text:style-name="P49"><text:span text:style-name="T1">저녁 먹기 전에 너의 손을 씻어라</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
@@ -141007,7 +141016,7 @@
    </draw:page>
    <draw:page draw:name="page192" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.2cm">
      <draw:text-box>
       <text:p text:style-name="P49"><text:span text:style-name="T1">나는 이 노래가 정말 좋아</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
@@ -141880,7 +141889,7 @@
    </draw:page>
    <draw:page draw:name="page194" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1cm" svg:x="3cm" svg:y="13.2cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1cm" svg:x="3cm" svg:y="13.2cm">
      <draw:text-box>
       <text:p text:style-name="P49"><text:span text:style-name="T1">뭐라고 했어</text:span><text:span text:style-name="T1">? </text:span></text:p>
      </draw:text-box>
@@ -143545,7 +143554,7 @@
    </draw:page>
    <draw:page draw:name="page196" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr58" draw:text-style-name="P82" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.6cm">
+    <draw:frame draw:style-name="gr58" draw:text-style-name="P87" draw:layer="layout" svg:width="4.6cm" svg:height="1.395cm" svg:x="3cm" svg:y="13.6cm">
      <draw:text-box>
       <text:p text:style-name="P49"><text:span text:style-name="T1">그 길은 길고 구불구불해</text:span><text:span text:style-name="T1">. </text:span></text:p>
      </draw:text-box>
@@ -143598,7 +143607,7 @@
    </draw:page>
    <draw:page draw:name="page197" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr126" draw:text-style-name="P7" draw:layer="layout" svg:width="1.696cm" svg:height="0.983cm" svg:x="4cm" svg:y="7cm">
+    <draw:frame draw:style-name="gr128" draw:text-style-name="P7" draw:layer="layout" svg:width="1.696cm" svg:height="0.983cm" svg:x="4cm" svg:y="7cm">
      <draw:text-box>
       <text:p>끝전</text:p>
      </draw:text-box>
@@ -143612,7 +143621,7 @@
    </draw:page>
    <draw:page draw:name="page198" draw:style-name="dp3" draw:master-page-name="기본값">
     <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
-    <draw:frame draw:style-name="gr127" draw:text-style-name="P7" draw:layer="layout" svg:width="1.099cm" svg:height="0.983cm" svg:x="4cm" svg:y="7.001cm">
+    <draw:frame draw:style-name="gr129" draw:text-style-name="P7" draw:layer="layout" svg:width="1.099cm" svg:height="0.983cm" svg:x="4cm" svg:y="7.001cm">
      <draw:text-box>
       <text:p>끝</text:p>
      </draw:text-box>
