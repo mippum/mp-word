@@ -331,7 +331,7 @@
 			"us": "noʊ",
 			"gb": "nəʊ"
 		}],
-		"ko-repr": "아니오; ~이 없는"
+		"ko-repr": "아니오 / ~이 없는"
 	}, {
 		"word": "cat",
 		"pronunciations": [{
@@ -374,7 +374,7 @@
 			"us": "laɪk",
 			"gb": "laɪk"
 		}],
-		"ko-repr": "좋아하다; ~처럼"
+		"ko-repr": "좋아하다 / ~처럼"
 	}, {
 		"word": "pizza",
 		"pronunciations": [{
@@ -463,7 +463,7 @@
 			"us": "kaind",
 			"gb": "kaind"
 		}],
-		"ko-repr": "종류; 친절한 (문맥에 따라 다르게 쓰임)"
+		"ko-repr": "종류 / 친절한 (문맥에 따라 다르게 쓰임)"
 	}]
 },{
 	"setence_number": 33,
@@ -499,7 +499,7 @@
 			"us": "hiː",
 			"gb": "hiː"
 		}],
-		"ko-repr": "그(남자)"
+		"ko-repr": "그 / 그 남자"
 	}]
 },{
 	"setence_number": 36,
