@@ -153,7 +153,7 @@
 },{
 	"setence_number": 9,
 	"sentence": "I am fine.",
-	"ko-repr": "잘 지내.",
+	"ko-repr": "잘 지내고 있어.",
 	"words": [{
 		"word": "fine",
 		"pronunciations": [{
@@ -191,7 +191,7 @@
             "us": "ˌɡʊdˈbaɪ",
             "gb": "ˌɡʊdˈbaɪ"
         }],
-        "ko-repr": "안녕히 가세요 / 계세요"
+        "ko-repr": "안녕히 가세요 / 안녕히 계세요"
     }]
 },{
 	"setence_number": 12,
@@ -1173,7 +1173,7 @@
 },{
 	"setence_number": 90,
 	"sentence": "She came back home.",
-	"ko-repr": "그녀가 집에 돌아왓다.",
+	"ko-repr": "그녀가 집에 돌아왔다.",
 	"words": [{
 		"word": "back",
 		"pronunciations": [{
