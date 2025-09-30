@@ -1,37 +1,72 @@
 # epub
 
-
+- 단어 45개, 96 페이지
+- 단어 53개, 112 페이지
+- 단어 61개, 128 페이지
+- 단어 69개, 144 페이지
 
 난이도
 
 
-- 📘 기초 단계
-    - Beginner : 완전 초급자용
+- 📘 기초 단계(Foundation, 약 1600개)
+    - Entry
+        - 단어 45개
+    - Introductory
+        - 단어 53개
+    - Beginner 1 : 완전 초급자용
+        - 70개 넣을 수 있는지 확인 필요(60g 모조지. 70g 모조지. 갱지 확인)
         - mpfpm 900 이상
         - 단어 약 100 개
-    - Basic : 가장 기본적인 수준
+    - Beginner 2 : 완전 초급자용
+        - mpfpm 900 이상
+        - 단어 약 100 개
+    - Beginner 3 : 완전 초급자용
+        - mpfpm 900 이상
+        - 단어 약 100 개
+    - Essential 1 : 가장 기본적인 수준
+    - Essential 2 : 가장 기본적인 수준
+    - Essential 3 : 가장 기본적인 수준
         - mpfpm 400 이상 900 미만
         - 단어 약 150 개
-    - Foundational(Foundation) : 기초를 다지는 수준
+    - Foundational 1 : 기초를 다지는 수준
+    - Foundational 2 : 기초를 다지는 수준
+    - Foundational 3 : 기초를 다지는 수준
         - mpfpm 250 이상 400 미만
         - 단어 약 200 개
-    - Essential : 꼭 필요한 기본 지식만 담은
+    - Basic 1 : 꼭 필요한 기본 지식만 담은
+    - Basic 2 : 꼭 필요한 기본 지식만 담은
+    - Basic 3 : 꼭 필요한 기본 지식만 담은
         - mpfpm 200 이상 250 미만
         - 단어 약 150 개
-    - Elementary : 기초 수준
+    - Elementary 1 : 기초 수준
+    - Elementary 2 : 기초 수준
+    - Elementary 3 : 기초 수준
         - mpfpm 200 이상 140 미만
         - 단어 약 200 개
-- 📗 중간 단계
-    - Pre-Intermediate : 초급과 중급 사이
+    - Standard 1
+    - Standard 2
+    - Standard 3
+        - 
+        - 
+- 📗 중간 단계 (Intermediate, 4500개. 128개씩 35권)
+    - Pre-Intermediate 1 : 초급과 중급 사이
+    - Pre-Intermediate 2 : 초급과 중급 사이
+    - Pre-Intermediate 3 : 초급과 중급 사이
         - mpfpm 50 이상 140 미만
         - 단어 약 1000 개
     - Intermediate : 중급, 어느 정도 실력이 쌓인 단계
         - mpfpm 15 이상 50 미만
         - 단어 약 2500 개
-    - Upper-Intermediate : 중급에서 상급으로 가는 단계
+    - Intermediate : 중급에서 상급으로 가는 단계
         - mpfpm 10 이상 15 미만
         - 단어 약 1000 개
-- 📙 고급 단계
+- 📙 고급 단계 (Mastery)
+    - Pre-Comprehensive
+    - Comprehensive
+    - Upper-Comprehensive
+    - Pre-Advanced : 고급 수준
+        - mpfpm 이상 미만
+        - 단어 약 개
     - Advanced : 고급 수준
         - mpfpm 이상 미만
         - 단어 약 개

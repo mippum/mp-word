@@ -1,7 +1,7 @@
 import fitz  # PyMuPDF
 from math import ceil
 
-# 총 페이지 수는 16의 배수 이어야 함. 144 페이지 추천
+# 총 페이지 수는 16의 배수 이어야 함. 최대 144 페이지. 96 페이지 추천.
 
 # def booklet_order(pages):
 #     # 총 페이지 n
