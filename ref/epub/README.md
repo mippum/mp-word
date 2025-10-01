@@ -11,8 +11,10 @@
 - 📘 기초 단계(Foundation, 약 1600개)
     - Entry
         - 단어 45개
+        - mpfpm 927.83 이상
     - Introductory
-        - 단어 53개
+        - 단어 61개
+        - mpfpm 799.292 이상
     - Beginner 1 : 완전 초급자용
         - 70개 넣을 수 있는지 확인 필요(60g 모조지. 70g 모조지. 갱지 확인)
         - mpfpm 900 이상
