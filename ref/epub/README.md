@@ -17,39 +17,60 @@
         - mpfpm 799.292 이상
     - Beginner 1 : 완전 초급자용
         - 70개 넣을 수 있는지 확인 필요(60g 모조지. 70g 모조지. 갱지 확인)
-        - mpfpm 900 이상
-        - 단어 약 100 개
+        - mpfpm 630.374 이상
+        - 단어 69개
     - Beginner 2 : 완전 초급자용
-        - mpfpm 900 이상
-        - 단어 약 100 개
+        - mpfpm 466.573 이상
+        - 단어 69개
     - Beginner 3 : 완전 초급자용
-        - mpfpm 900 이상
-        - 단어 약 100 개
+        - mpfpm  이상
+        - 단어 69개
     - Essential 1 : 가장 기본적인 수준
+        - mpfpm  이상
+        - 단어 69개
     - Essential 2 : 가장 기본적인 수준
+        - mpfpm  이상
+        - 단어 69개
     - Essential 3 : 가장 기본적인 수준
-        - mpfpm 400 이상 900 미만
-        - 단어 약 150 개
+        - mpfpm  이상
+        - 단어 69개
     - Foundational 1 : 기초를 다지는 수준
+        - mpfpm  이상
+        - 단어 69개
     - Foundational 2 : 기초를 다지는 수준
+        - mpfpm  이상
+        - 단어 69개
     - Foundational 3 : 기초를 다지는 수준
-        - mpfpm 250 이상 400 미만
-        - 단어 약 200 개
+        - mpfpm  이상
+        - 단어 69개
     - Basic 1 : 꼭 필요한 기본 지식만 담은
+        - mpfpm  이상
+        - 단어 69개
     - Basic 2 : 꼭 필요한 기본 지식만 담은
+        - mpfpm  이상
+        - 단어 69개
     - Basic 3 : 꼭 필요한 기본 지식만 담은
-        - mpfpm 200 이상 250 미만
-        - 단어 약 150 개
+        - mpfpm  이상
+        - 단어 69개
     - Elementary 1 : 기초 수준
+        - mpfpm  이상
+        - 단어 69개
     - Elementary 2 : 기초 수준
+        - mpfpm  이상
+        - 단어 69개
     - Elementary 3 : 기초 수준
-        - mpfpm 200 이상 140 미만
-        - 단어 약 200 개
+        - mpfpm  이상
+        - 단어 69개
     - Standard 1
+        - mpfpm  이상
+        - 단어 69개
     - Standard 2
+        - mpfpm  이상
+        - 단어 69개
     - Standard 3
-        - 
-        - 
+        - mpfpm  이상
+        - 단어 69개
+
 - 📗 중간 단계 (Intermediate, 4500개. 128개씩 35권)
     - Pre-Intermediate 1 : 초급과 중급 사이
     - Pre-Intermediate 2 : 초급과 중급 사이

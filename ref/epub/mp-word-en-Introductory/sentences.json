@@ -1,0 +1,71 @@
+[{
+	"setence_number": 1,
+	"sentence": "I am tired, but I will help.",
+	"ko-repr": "피곤하지만 도와줄게.",
+	"words": [{
+		"word": "but"
+	}]
+}, {
+	"setence_number": 1,
+	"sentence": "I know the answer.",
+	"ko-repr": "답을 알아요.",
+	"words": [{
+		"word": "know"
+	}]
+}, {
+	"setence_number": 1,
+	"sentence": "This year is good.",
+	"ko-repr": "올해는 좋아요.",
+	"words": [{
+		"word": "year"
+	}]
+}, {
+	"setence_number": 1,
+	"sentence": "That guy is nice.",
+	"ko-repr": "그 남자 착해요.",
+	"words": [{
+		"word": "guy"
+	}]
+}, {
+	"setence_number": 1,
+	"sentence": "I was hungry, so I ate.",
+	"ko-repr": "배가 고파서 먹었어요.",
+	"words": [{
+		"word": "so"
+	}]
+}, {
+	"setence_number": 1,
+	"sentence": "I like the other book.",
+	"ko-repr": "다른 책이 좋아요.",
+	"words": [{
+		"word": "other"
+	}]
+}, {
+	"setence_number": 1,
+	"sentence": "The dog is little.",
+	"ko-repr": "개가 작아요.",
+	"words": [{
+		"word": "little"
+	}]
+}, {
+	"setence_number": 1,
+	"sentence": "We went to the market.",
+	"ko-repr": "우리는 시장에 갔어요.",
+	"words": [{
+		"word": "market"
+	}]
+}, {
+	"setence_number": 1,
+	"sentence": "My grandfather is old.",
+	"ko-repr": "우리 할아버지는 연세가 많으세요.",
+	"words": [{
+		"word": "old"
+	}]
+}, {
+	"setence_number": 1,
+	"sentence": "The cat is under the table.",
+	"ko-repr": "고양이가 탁자 밑에 있어요.",
+	"words": [{
+		"word": "under"
+	}]
+}]

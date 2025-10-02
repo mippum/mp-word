@@ -1,0 +1,42 @@
+[
+  {
+    "sentence": "I am tired, but I will help.",
+    "concept": "a tired person with drooping eyes still offering a helping hand"
+  },
+  {
+    "sentence": "I know the answer.",
+    "concept": "a person raising their hand confidently with a lightbulb overhead"
+  },
+  {
+    "sentence": "This year is good.",
+    "concept": "a calendar with happy symbols like sunshine or flowers"
+  },
+  {
+    "sentence": "That guy is nice.",
+    "concept": "a smiling person offering a friendly gesture like a handshake"
+  },
+  {
+    "sentence": "I was hungry, so I ate.",
+    "concept": "a person sitting at a table eating food with a satisfied face"
+  },
+  {
+    "sentence": "I like the other book.",
+    "concept": "a person pointing to one book among two, showing preference"
+  },
+  {
+    "sentence": "The dog is little.",
+    "concept": "a small dog sitting next to a much larger object for scale"
+  },
+  {
+    "sentence": "We went to the market.",
+    "concept": "people walking past stalls of fruits and vegetables"
+  },
+  {
+    "sentence": "My grandfather is old.",
+    "concept": "an elderly man with a cane and kind expression"
+  },
+  {
+    "sentence": "The cat is under the table.",
+    "concept": "a cat crouching beneath a table"
+  }
+]
