@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:rpt="http://openoffice.org/2005/report" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:css3t="http://www.w3.org/TR/css3-text/" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0" office:version="1.4" office:mimetype="application/vnd.oasis.opendocument.spreadsheet">
- <office:meta><dc:date>2025-10-02T13:33:41.967058000</dc:date><meta:editing-duration>PT6H25M20S</meta:editing-duration><meta:editing-cycles>22</meta:editing-cycles><meta:generator>LibreOffice/25.2.5.2$Windows_X86_64 LibreOffice_project/03d19516eb2e1dd5d4ccd751a0d6f35f35e08022</meta:generator><meta:document-statistic meta:table-count="1" meta:cell-count="754" meta:object-count="0"/></office:meta>
+ <office:meta><dc:date>2025-10-02T15:36:46.258923000</dc:date><meta:editing-duration>PT7H51M12S</meta:editing-duration><meta:editing-cycles>23</meta:editing-cycles><meta:generator>LibreOffice/25.2.5.2$Windows_X86_64 LibreOffice_project/03d19516eb2e1dd5d4ccd751a0d6f35f35e08022</meta:generator><meta:document-statistic meta:table-count="1" meta:cell-count="754" meta:object-count="0"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
    <config:config-item config:name="VisibleAreaTop" config:type="int">0</config:config-item>
    <config:config-item config:name="VisibleAreaLeft" config:type="int">0</config:config-item>
-   <config:config-item config:name="VisibleAreaWidth" config:type="int">44293</config:config-item>
-   <config:config-item config:name="VisibleAreaHeight" config:type="int">50006</config:config-item>
+   <config:config-item config:name="VisibleAreaWidth" config:type="int">41356</config:config-item>
+   <config:config-item config:name="VisibleAreaHeight" config:type="int">50031</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view1</config:config-item>
      <config:config-item-map-named config:name="Tables">
       <config:config-item-map-entry config:name="레벨별단어분리">
-       <config:config-item config:name="CursorPositionX" config:type="int">12</config:config-item>
-       <config:config-item config:name="CursorPositionY" config:type="int">63</config:config-item>
+       <config:config-item config:name="CursorPositionX" config:type="int">13</config:config-item>
+       <config:config-item config:name="CursorPositionY" config:type="int">58</config:config-item>
        <config:config-item config:name="ActiveSplitRange" config:type="short">2</config:config-item>
-       <config:config-item config:name="PositionLeft" config:type="int">0</config:config-item>
+       <config:config-item config:name="PositionLeft" config:type="int">2</config:config-item>
        <config:config-item config:name="PositionRight" config:type="int">0</config:config-item>
        <config:config-item config:name="PositionTop" config:type="int">0</config:config-item>
-       <config:config-item config:name="PositionBottom" config:type="int">0</config:config-item>
+       <config:config-item config:name="PositionBottom" config:type="int">21</config:config-item>
        <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
-       <config:config-item config:name="ZoomValue" config:type="int">95</config:config-item>
+       <config:config-item config:name="ZoomValue" config:type="int">110</config:config-item>
        <config:config-item config:name="PageViewZoomValue" config:type="int">60</config:config-item>
        <config:config-item config:name="ShowGrid" config:type="boolean">true</config:config-item>
        <config:config-item config:name="AnchoredTextOverflowLegacy" config:type="boolean">false</config:config-item>
@@ -31,9 +31,9 @@
       </config:config-item-map-entry>
      </config:config-item-map-named>
      <config:config-item config:name="ActiveTable" config:type="string">레벨별단어분리</config:config-item>
-     <config:config-item config:name="HorizontalScrollbarWidth" config:type="int">2860</config:config-item>
+     <config:config-item config:name="HorizontalScrollbarWidth" config:type="int">2222</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
-     <config:config-item config:name="ZoomValue" config:type="int">95</config:config-item>
+     <config:config-item config:name="ZoomValue" config:type="int">110</config:config-item>
      <config:config-item config:name="PageViewZoomValue" config:type="int">60</config:config-item>
      <config:config-item config:name="ShowPageBreakPreview" config:type="boolean">false</config:config-item>
      <config:config-item config:name="ShowZeroValues" config:type="boolean">true</config:config-item>
@@ -787,7 +787,7 @@
    <style:table-column-properties fo:break-before="auto" style:column-width="2.498cm"/>
   </style:style>
   <style:style style:name="co9" style:family="table-column">
-   <style:table-column-properties fo:break-before="auto" style:column-width="11.301cm"/>
+   <style:table-column-properties fo:break-before="auto" style:column-width="8.364cm"/>
   </style:style>
   <style:style style:name="ro1" style:family="table-row">
    <style:table-row-properties style:row-height="0.637cm" fo:break-before="auto" style:use-optimal-row-height="true"/>
@@ -799,7 +799,7 @@
    <style:table-row-properties style:row-height="0.469cm" fo:break-before="auto" style:use-optimal-row-height="false"/>
   </style:style>
   <style:style style:name="ro4" style:family="table-row">
-   <style:table-row-properties style:row-height="0.603cm" fo:break-before="auto" style:use-optimal-row-height="true"/>
+   <style:table-row-properties style:row-height="0.616cm" fo:break-before="auto" style:use-optimal-row-height="true"/>
   </style:style>
   <style:style style:name="ta1" style:family="table" style:master-page-name="Default">
    <style:table-properties table:display="true" style:writing-mode="lr-tb"/>
@@ -950,8 +950,9 @@
     <table:table-column table:style-name="co8" table:default-cell-style-name="Default"/>
     <table:table-column table:style-name="co7" table:default-cell-style-name="Default"/>
     <table:table-column table:style-name="co7" table:default-cell-style-name="ce4"/>
+    <table:table-column table:style-name="co7" table:default-cell-style-name="Default"/>
     <table:table-column table:style-name="co9" table:default-cell-style-name="Default"/>
-    <table:table-column table:style-name="co7" table:number-columns-repeated="2" table:default-cell-style-name="Default"/>
+    <table:table-column table:style-name="co7" table:default-cell-style-name="Default"/>
     <table:table-row table:style-name="ro1">
      <table:table-cell table:style-name="ce1" office:value-type="string" calcext:value-type="string">
       <text:p>단어</text:p>
@@ -988,13 +989,13 @@
       <text:p>문장번호</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
+      <text:p>index</text:p>
+     </table:table-cell>
+     <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>문장</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>page</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="string" calcext:value-type="string">
-      <text:p>index</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -1030,14 +1031,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i46</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="1" calcext:value-type="float">
+      <text:p>1</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>I am first in line.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="5" calcext:value-type="float">
       <text:p>5</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="1" calcext:value-type="float">
-      <text:p>1</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -1073,14 +1074,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i47</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="2" calcext:value-type="float">
+      <text:p>2</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>This is the last piece of cake.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="7" calcext:value-type="float">
       <text:p>7</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="2" calcext:value-type="float">
-      <text:p>2</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -1116,14 +1117,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i48</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="3" calcext:value-type="float">
+      <text:p>3</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>I am here.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="9" calcext:value-type="float">
       <text:p>9</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="3" calcext:value-type="float">
-      <text:p>3</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro1">
@@ -1157,14 +1158,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i97</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="4" calcext:value-type="float">
+      <text:p>4</text:p>
+     </table:table-cell>
      <table:table-cell table:style-name="ce30" office:value-type="string" calcext:value-type="string">
       <text:p>I am tired, but I will help. </text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="11" calcext:value-type="float">
       <text:p>11</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="4" calcext:value-type="float">
-      <text:p>4</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -1200,14 +1201,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i49</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="5" calcext:value-type="float">
+      <text:p>5</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>There is a park near my house.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="13" calcext:value-type="float">
       <text:p>13</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="5" calcext:value-type="float">
-      <text:p>5</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -1243,14 +1244,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i50</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="6" calcext:value-type="float">
+      <text:p>6</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>They are my friends.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="15" calcext:value-type="float">
       <text:p>15</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="6" calcext:value-type="float">
-      <text:p>6</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -1284,14 +1285,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i51</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="7" calcext:value-type="float">
+      <text:p>7</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>The cat is in the box.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="17" calcext:value-type="float">
       <text:p>17</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="7" calcext:value-type="float">
-      <text:p>7</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -1327,14 +1328,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i52</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="8" calcext:value-type="float">
+      <text:p>8</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>The book is on the table.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="19" calcext:value-type="float">
       <text:p>19</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="8" calcext:value-type="float">
-      <text:p>8</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro3">
@@ -1357,14 +1358,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i53</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="9" calcext:value-type="float">
+      <text:p>9</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>I am at home.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="21" calcext:value-type="float">
       <text:p>21</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="9" calcext:value-type="float">
-      <text:p>9</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -1387,14 +1388,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i54</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="10" calcext:value-type="float">
+      <text:p>10</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>I drink a lot of water every day.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="23" calcext:value-type="float">
       <text:p>23</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="10" calcext:value-type="float">
-      <text:p>10</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -1417,14 +1418,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i55</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="11" calcext:value-type="float">
+      <text:p>11</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>He climbed up the ladder.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="25" calcext:value-type="float">
       <text:p>25</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="11" calcext:value-type="float">
-      <text:p>11</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -1447,14 +1448,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i56</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="12" calcext:value-type="float">
+      <text:p>12</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>Please turn off the lights.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="27" calcext:value-type="float">
       <text:p>27</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="12" calcext:value-type="float">
-      <text:p>12</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro1">
@@ -1492,14 +1493,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i57</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="13" calcext:value-type="float">
+      <text:p>13</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>I have a pen and a book.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="29" calcext:value-type="float">
       <text:p>29</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="13" calcext:value-type="float">
-      <text:p>13</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -1537,14 +1538,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i58</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="14" calcext:value-type="float">
+      <text:p>14</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>This gift is for you.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="31" calcext:value-type="float">
       <text:p>31</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="14" calcext:value-type="float">
-      <text:p>14</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -1582,14 +1583,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i59</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="15" calcext:value-type="float">
+      <text:p>15</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>Please come here.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="33" calcext:value-type="float">
       <text:p>33</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="15" calcext:value-type="float">
-      <text:p>15</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -1627,14 +1628,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i60</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="16" calcext:value-type="float">
+      <text:p>16</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>I want a cup of tea.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="35" calcext:value-type="float">
       <text:p>35</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="16" calcext:value-type="float">
-      <text:p>16</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -1672,14 +1673,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i61</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="17" calcext:value-type="float">
+      <text:p>17</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>I drink water.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="37" calcext:value-type="float">
       <text:p>37</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="17" calcext:value-type="float">
-      <text:p>17</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -1717,14 +1718,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i62</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="18" calcext:value-type="float">
+      <text:p>18</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>I get a new book.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="39" calcext:value-type="float">
       <text:p>39</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="18" calcext:value-type="float">
-      <text:p>18</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -1762,14 +1763,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i63</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="19" calcext:value-type="float">
+      <text:p>19</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>The day is sunny.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="41" calcext:value-type="float">
       <text:p>41</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="19" calcext:value-type="float">
-      <text:p>19</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -1793,14 +1794,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i64</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="20" calcext:value-type="float">
+      <text:p>20</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>The night is quiet.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="43" calcext:value-type="float">
       <text:p>43</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="20" calcext:value-type="float">
-      <text:p>20</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -1824,14 +1825,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i65</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="21" calcext:value-type="float">
+      <text:p>21</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>Today is a beautiful day.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="45" calcext:value-type="float">
       <text:p>45</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="21" calcext:value-type="float">
-      <text:p>21</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -1855,14 +1856,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i66</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="22" calcext:value-type="float">
+      <text:p>22</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>The woman is reading a book.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="47" calcext:value-type="float">
       <text:p>47</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="22" calcext:value-type="float">
-      <text:p>22</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -1886,14 +1887,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i67</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="23" calcext:value-type="float">
+      <text:p>23</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>We have a meeting tomorrow.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="49" calcext:value-type="float">
       <text:p>49</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="23" calcext:value-type="float">
-      <text:p>23</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -1917,14 +1918,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i68</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="24" calcext:value-type="float">
+      <text:p>24</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>The sun is shining brightly today.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="51" calcext:value-type="float">
       <text:p>51</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="24" calcext:value-type="float">
-      <text:p>24</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -1948,14 +1949,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i69</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="25" calcext:value-type="float">
+      <text:p>25</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>It will rain later.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="53" calcext:value-type="float">
       <text:p>53</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="25" calcext:value-type="float">
-      <text:p>25</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -1979,14 +1980,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i70</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="26" calcext:value-type="float">
+      <text:p>26</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>The food tastes bad.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="55" calcext:value-type="float">
       <text:p>55</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="26" calcext:value-type="float">
-      <text:p>26</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -2010,14 +2011,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i71</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="27" calcext:value-type="float">
+      <text:p>27</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>The house is big.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="57" calcext:value-type="float">
       <text:p>57</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="27" calcext:value-type="float">
-      <text:p>27</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -2041,14 +2042,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i72</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="28" calcext:value-type="float">
+      <text:p>28</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>I am going to the party with my friends.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="59" calcext:value-type="float">
       <text:p>59</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="28" calcext:value-type="float">
-      <text:p>28</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -2072,14 +2073,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i73</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="29" calcext:value-type="float">
+      <text:p>29</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>I am from Korea.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="61" calcext:value-type="float">
       <text:p>61</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="29" calcext:value-type="float">
-      <text:p>29</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -2103,14 +2104,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i74</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="30" calcext:value-type="float">
+      <text:p>30</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>Do you want tea or coffee?</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="63" calcext:value-type="float">
       <text:p>63</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="30" calcext:value-type="float">
-      <text:p>30</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -2132,14 +2133,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i75</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="31" calcext:value-type="float">
+      <text:p>31</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>All the students are here.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="65" calcext:value-type="float">
       <text:p>65</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="31" calcext:value-type="float">
-      <text:p>31</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -2163,14 +2164,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i76</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="32" calcext:value-type="float">
+      <text:p>32</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>We ate lunch after class.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="67" calcext:value-type="float">
       <text:p>67</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="32" calcext:value-type="float">
-      <text:p>32</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -2194,14 +2195,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i77</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="33" calcext:value-type="float">
+      <text:p>33</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>I bought a new car.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="69" calcext:value-type="float">
       <text:p>69</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="33" calcext:value-type="float">
-      <text:p>33</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -2225,14 +2226,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i78</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="34" calcext:value-type="float">
+      <text:p>34</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>I can swim.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="71" calcext:value-type="float">
       <text:p>71</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="34" calcext:value-type="float">
-      <text:p>34</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -2256,14 +2257,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i79</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="35" calcext:value-type="float">
+      <text:p>35</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>We go out for a walk.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="73" calcext:value-type="float">
       <text:p>73</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="35" calcext:value-type="float">
-      <text:p>35</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -2287,14 +2288,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i80</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="36" calcext:value-type="float">
+      <text:p>36</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>What time does the movie start?</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="75" calcext:value-type="float">
       <text:p>75</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="36" calcext:value-type="float">
-      <text:p>36</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -2318,14 +2319,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i81</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="37" calcext:value-type="float">
+      <text:p>37</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>I am busy now.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="77" calcext:value-type="float">
       <text:p>77</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="37" calcext:value-type="float">
-      <text:p>37</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -2349,14 +2350,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i82</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="38" calcext:value-type="float">
+      <text:p>38</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>Do you have any money?</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="79" calcext:value-type="float">
       <text:p>79</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="38" calcext:value-type="float">
-      <text:p>38</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -2380,14 +2381,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i83</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="39" calcext:value-type="float">
+      <text:p>39</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>He walks down the hill.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="81" calcext:value-type="float">
       <text:p>81</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="39" calcext:value-type="float">
-      <text:p>39</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -2411,14 +2412,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i84</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="40" calcext:value-type="float">
+      <text:p>40</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>I have to work tomorrow.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="83" calcext:value-type="float">
       <text:p>83</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="40" calcext:value-type="float">
-      <text:p>40</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -2442,14 +2443,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i85</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="41" calcext:value-type="float">
+      <text:p>41</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>The store is open now.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="85" calcext:value-type="float">
       <text:p>85</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="41" calcext:value-type="float">
-      <text:p>41</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro4">
@@ -2473,14 +2474,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i86</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="42" calcext:value-type="float">
+      <text:p>42</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>The weather is very cold today.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="87" calcext:value-type="float">
       <text:p>87</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="42" calcext:value-type="float">
-      <text:p>42</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro4">
@@ -2504,14 +2505,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i87</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="43" calcext:value-type="float">
+      <text:p>43</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>I think this is a good idea.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="89" calcext:value-type="float">
       <text:p>89</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="43" calcext:value-type="float">
-      <text:p>43</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -2535,14 +2536,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i88</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="44" calcext:value-type="float">
+      <text:p>44</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>Open the window for some fresh air.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="91" calcext:value-type="float">
       <text:p>91</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="44" calcext:value-type="float">
-      <text:p>44</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -2566,14 +2567,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i89</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="45" calcext:value-type="float">
+      <text:p>45</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>You are right about that.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="93" calcext:value-type="float">
       <text:p>93</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="45" calcext:value-type="float">
-      <text:p>45</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -2597,14 +2598,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i90</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="46" calcext:value-type="float">
+      <text:p>46</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>She came back home.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="95" calcext:value-type="float">
       <text:p>95</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="46" calcext:value-type="float">
-      <text:p>46</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -2628,14 +2629,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i91</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="47" calcext:value-type="float">
+      <text:p>47</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>There are many people in the room.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="97" calcext:value-type="float">
       <text:p>97</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="47" calcext:value-type="float">
-      <text:p>47</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -2659,14 +2660,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i92</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="48" calcext:value-type="float">
+      <text:p>48</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>I make a sandwich.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="99" calcext:value-type="float">
       <text:p>99</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="48" calcext:value-type="float">
-      <text:p>48</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -2690,14 +2691,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i93</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="49" calcext:value-type="float">
+      <text:p>49</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>Wash your hands before dinner.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="101" calcext:value-type="float">
       <text:p>101</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="49" calcext:value-type="float">
-      <text:p>49</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -2721,14 +2722,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i94</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="50" calcext:value-type="float">
+      <text:p>50</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>I really like this song.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="103" calcext:value-type="float">
       <text:p>103</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="50" calcext:value-type="float">
-      <text:p>50</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -2752,14 +2753,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i95</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="51" calcext:value-type="float">
+      <text:p>51</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>What did you say?</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="105" calcext:value-type="float">
       <text:p>105</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="51" calcext:value-type="float">
-      <text:p>51</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -2783,14 +2784,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i96</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="52" calcext:value-type="float">
+      <text:p>52</text:p>
+     </table:table-cell>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>The road is long and winding.</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="107" calcext:value-type="float">
       <text:p>107</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="52" calcext:value-type="float">
-      <text:p>52</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro1">
@@ -2814,14 +2815,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i98</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="53" calcext:value-type="float">
+      <text:p>53</text:p>
+     </table:table-cell>
      <table:table-cell table:style-name="ce30" office:value-type="string" calcext:value-type="string">
       <text:p>I know the answer. </text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="109" calcext:value-type="float">
       <text:p>109</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="53" calcext:value-type="float">
-      <text:p>53</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro1">
@@ -2845,14 +2846,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i99</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="54" calcext:value-type="float">
+      <text:p>54</text:p>
+     </table:table-cell>
      <table:table-cell table:style-name="ce30" office:value-type="string" calcext:value-type="string">
       <text:p>This year is good. </text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="111" calcext:value-type="float">
       <text:p>111</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="54" calcext:value-type="float">
-      <text:p>54</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro1">
@@ -2876,14 +2877,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i100</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="55" calcext:value-type="float">
+      <text:p>55</text:p>
+     </table:table-cell>
      <table:table-cell table:style-name="ce30" office:value-type="string" calcext:value-type="string">
       <text:p>That guy is nice. </text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="113" calcext:value-type="float">
       <text:p>113</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="55" calcext:value-type="float">
-      <text:p>55</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro1">
@@ -2907,14 +2908,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i101</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="56" calcext:value-type="float">
+      <text:p>56</text:p>
+     </table:table-cell>
      <table:table-cell table:style-name="ce30" office:value-type="string" calcext:value-type="string">
       <text:p>I was hungry, so I ate. </text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="115" calcext:value-type="float">
       <text:p>115</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="56" calcext:value-type="float">
-      <text:p>56</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro1">
@@ -2938,14 +2939,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i102</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="57" calcext:value-type="float">
+      <text:p>57</text:p>
+     </table:table-cell>
      <table:table-cell table:style-name="ce30" office:value-type="string" calcext:value-type="string">
       <text:p>I like the other book. </text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="117" calcext:value-type="float">
       <text:p>117</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="57" calcext:value-type="float">
-      <text:p>57</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro1">
@@ -2969,14 +2970,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i103</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="58" calcext:value-type="float">
+      <text:p>58</text:p>
+     </table:table-cell>
      <table:table-cell table:style-name="ce30" office:value-type="string" calcext:value-type="string">
       <text:p>That guy is nice. </text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="119" calcext:value-type="float">
       <text:p>119</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="58" calcext:value-type="float">
-      <text:p>58</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro1">
@@ -3000,14 +3001,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i104</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="59" calcext:value-type="float">
+      <text:p>59</text:p>
+     </table:table-cell>
      <table:table-cell table:style-name="ce30" office:value-type="string" calcext:value-type="string">
       <text:p>We went to the market. </text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="121" calcext:value-type="float">
       <text:p>121</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="59" calcext:value-type="float">
-      <text:p>59</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro1">
@@ -3031,14 +3032,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i105</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="60" calcext:value-type="float">
+      <text:p>60</text:p>
+     </table:table-cell>
      <table:table-cell table:style-name="ce30" office:value-type="string" calcext:value-type="string">
       <text:p>My great-grandfather is old. </text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="123" calcext:value-type="float">
       <text:p>123</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="60" calcext:value-type="float">
-      <text:p>60</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro1">
@@ -3062,14 +3063,14 @@
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>i106</text:p>
      </table:table-cell>
+     <table:table-cell office:value-type="float" office:value="61" calcext:value-type="float">
+      <text:p>61</text:p>
+     </table:table-cell>
      <table:table-cell table:style-name="ce30" office:value-type="string" calcext:value-type="string">
       <text:p>The cat is under the table. </text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="125" calcext:value-type="float">
       <text:p>125</text:p>
-     </table:table-cell>
-     <table:table-cell office:value-type="float" office:value="61" calcext:value-type="float">
-      <text:p>61</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="ro2">
@@ -3089,14 +3090,13 @@
      <table:table-cell table:style-name="ce11" office:value-type="string" calcext:value-type="string">
       <text:p>Introductory</text:p>
      </table:table-cell>
-     <table:table-cell table:number-columns-repeated="2"/>
+     <table:table-cell table:number-columns-repeated="3"/>
      <table:table-cell office:value-type="string" calcext:value-type="string">
       <text:p>끝페이지</text:p>
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="127" calcext:value-type="float">
       <text:p>127</text:p>
      </table:table-cell>
-     <table:table-cell/>
     </table:table-row>
     <table:table-row table:style-name="ro2">
      <table:table-cell table:number-columns-repeated="5"/>
