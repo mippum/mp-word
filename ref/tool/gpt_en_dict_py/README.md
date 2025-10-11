@@ -43,5 +43,5 @@ limit 1000;
 
 빈줄을 복사했을 때, 내용 없애는 powershell 명령어
 ```sh 
-if ((Get-Clipboard) -match '^\s*$') { Set-Clipboard -Value "" }
+if ((Get-Clipboard -Raw) -eq "`r`n" -or (Get-Clipboard -Raw) -eq "`n") { Set-Clipboard -Value ([string]"") }
 ```
