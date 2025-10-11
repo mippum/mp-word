@@ -19,6 +19,8 @@ def run():
         t_str = make_sql(f'gpt_gen/{str(i).zfill(2)}.json')
         sql_str += t_str
 
+    with open('create.sql', 'w', encoding='utf-8') as f:
+        f.write(sql_str)
     pyperclip.copy(sql_str)
 
 if __name__ == '__main__':
