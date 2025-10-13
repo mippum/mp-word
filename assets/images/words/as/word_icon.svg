@@ -1,17 +1,4 @@
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
- "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="104.000000pt" height="54.000000pt" viewBox="0 0 104.000000 54.000000"
- preserveAspectRatio="xMidYMid meet">
-<metadata>
-Created by potrace 1.16, written by Peter Selinger 2001-2019
-</metadata>
-<g transform="translate(0.000000,54.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
-<path d="M3 524 c-3 -8 -2 -19 3 -24 14 -13 1013 -15 1026 -2 8 8 7 16 -2 27
--11 13 -75 15 -517 15 -448 0 -504 -2 -510 -16z"/>
-<path d="M4 35 c-3 -8 -3 -19 1 -25 4 -7 171 -10 516 -10 458 0 510 2 516 16
-3 9 0 20 -8 25 -8 5 -240 9 -517 9 -430 0 -503 -2 -508 -15z"/>
-</g>
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="532">
+<path style="stroke:#000000; fill:none;" d="M19 27C33.7991 23.4766 50.8362 25 66 25C90.7227 25 115.391 24.3824 140 24.9854C210.862 26.7217 282.027 25 353 25C472.609 25 592.323 27.4199 712 25.9962C760.588 25.4181 809.44 26.5739 858 25.9962C904.214 25.4464 950.894 24.3611 997 28M20 509L91 508L263 508L752 509L924 509L1000 508"/>
 </svg>
