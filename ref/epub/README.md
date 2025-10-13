@@ -83,6 +83,7 @@
     - Intermediate : 중급에서 상급으로 가는 단계
         - mpfpm 10 이상 15 미만
         - 단어 약 1000 개
+    - Upper-Intermediate
 - 📙 고급 단계 (Mastery)
     - Pre-Comprehensive
     - Comprehensive
@@ -96,12 +97,20 @@
     - Upper-Advanced : 고급 중에서도 더 높은 단계
         - mpfpm 이상 미만
         - 단어 약 개
+    - Pre-Proficient : 숙달된, 능숙한
+        -
     - Proficient : 숙달된, 능숙한
         - mpfpm 이상 미만
         - 단어 약 개
+    - Upper-Proficient : 숙달된, 능숙한
+        -
+    - Pre-Expert : 숙달된, 능숙한
+        -
     - Expert : 전문가 수준
         - mpfpm 이상 미만
         - 단어 약 개
+    - Upper-Expert
+        -
 - 📕 (특수 표현)
     - Introductory : 입문용, 처음 접하는 사람을 위한
     - Core : 핵심적인 내용 위주
