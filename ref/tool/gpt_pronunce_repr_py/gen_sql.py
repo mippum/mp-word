@@ -8,12 +8,12 @@ def make_sql(json_file_name):
         gens = json.load(f)
     for gen in gens:
         word = gen['word'].replace("'", "''")
-        us_prounce = gen['pronunciations'][0]['us'].replace("'", "''")
+        us_prounce = gen['pronunciations']['us'].replace("'", "''")
         sql = f"INSERT IGNORE INTO pronunciations(id, word, language, pronunciation) value (uuid_v7(), '{word}', 'us', '{us_prounce}');"
         print(sql)
         sql_str += sql + ('\n'
                           '')
-        gb_pronunce = gen['pronunciations'][0]['gb'].replace("'", "''")
+        gb_pronunce = gen['pronunciations']['gb'].replace("'", "''")
         sql = f"INSERT IGNORE INTO pronunciations(id, word, language, pronunciation) value (uuid_v7(), '{word}', 'gb', '{gb_pronunce}');"
         print(sql)
         sql_str += sql + '\n'
@@ -32,7 +32,7 @@ def run():
         t_str = make_sql(f'gpt_gen/{str(i).zfill(2)}.json')
         sql_str += t_str
 
-    with open('create16.sql', 'w', encoding='utf-8') as f:
+    with open('create.sql', 'w', encoding='utf-8') as f:
         f.write(sql_str)
 
     pyperclip.copy(sql_str)
