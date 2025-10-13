@@ -1,4 +1,5 @@
 import os
+import shutil
 import subprocess
 import cairosvg
 from PIL import Image, ImageChops, ImageOps
@@ -34,20 +35,49 @@ def convert_png_to_bmp():
 def convert_from_svg_to_png():
     cairosvg.svg2png(url='word_icon.svg', write_to='output.png', dpi=300)
 
-def just_line():
+def change_line_width():
     svg = open("word_icon.svg").read()
-    svg = svg.replace('fill="black"', 'fill="none" stroke="black" stroke-width="1"')
-    open("word_icon_line.svg", "w").write(svg)
+    # svg = svg.replace('fill="black"', 'fill="none" stroke="black" stroke-width="1"')
+    svg = svg.replace('stroke:#000000; fill:none;', 'stroke:#000000; stroke-width:3.0; fill:none;')
+    open("output.svg", "w").write(svg)
 
+def convert_from_png_to_ppm():
+    subprocess.run(['magick', 'output.png', '-flatten', '-resize', '1024x1024', '-monochrome', '-depth', '8',
+                    '-colorspace', 'Gray', '-type', 'Grayscale', '-compress', 'None', 'output.ppm'])
+
+def convert_from_ppm_to_line_svg():
+    subprocess.run(['autotrace', 'output.ppm', '--centerline', '--output-format', 'svg', '--output-file', 'output.svg'])
+
+path = '/Users/kei/github/mp-word/assets/images/words'
+
+def copy_from_assets(word):
+    '/github/mp-word/'
+    shutil.copy(path + '/' + word + '/word_icon.svg', 'word_icon.svg')
+
+def copy_to_assets(word):
+    shutil.copy('output.svg', path + '/' + word + '/word_icon.svg')
 def main():
-    # convert_from_svg_to_png()
-    # convert_png_to_bmp()
-    # run_potrace()
-    just_line()
+
+    words = [f for f in os.listdir(path) if os.path.isdir(os.path.join(path, f))]
+    # words = ['she', 'he']
+    # words = ['a']
+
+    # for word in words:
+    #     print(word)
+    #     copy_from_assets(word)
+    #     convert_from_svg_to_png()
+    #     convert_from_png_to_ppm()
+    #     convert_from_ppm_to_line_svg()
+    #     copy_to_assets(word)
+
+    # for word in words:
+    #     print(word)
+    #     copy_from_assets(word)
+    #     change_line_width()
+    #     copy_to_assets(word)
+
+    pass
 
 
-# magick input.png -flatten -resize 1024x1024 -monochrome -depth 8 -colorspace Gray -type Grayscale -compress None input.ppm
-# magick output.png -flatten -resize 1024x1024 -monochrome -depth 8 -colorspace Gray -type Grayscale -compress None output.ppm
-# autotrace input.ppm --centerline --output-format svg --output-file output.svg
 if __name__ == '__main__':
     main()
