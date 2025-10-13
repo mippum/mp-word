@@ -1,4 +1,4 @@
 <?xml version="1.0" standalone="yes"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="678" height="1024">
-<path style="stroke:#000000; fill:none;" d="M341 379C334.541 455.795 341.227 534.137 343.135 611C343.465 624.285 341.009 637.683 341 651"/>
+<path style="stroke:#000000; stroke-width:3.0; fill:none;" d="M341 379C334.541 455.795 341.227 534.137 343.135 611C343.465 624.285 341.009 637.683 341 651"/>
 </svg>
