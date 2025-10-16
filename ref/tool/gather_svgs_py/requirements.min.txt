@@ -1,0 +1,6 @@
+opencv-python
+numpy
+pytesseract
+pillow
+cairosvg
+pycairo
