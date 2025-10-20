@@ -3,7 +3,7 @@ import subprocess
 
 def run_potrace(filepath, word, out_path):
     os.makedirs(f'{out_path}/{word}', exist_ok=True)
-    subprocess.run(["potrace", filepath, "-s", "-o", f"{out_path}/{word}/word_icon.svg"])
+    subprocess.run(["potrace", filepath, "-s", "-o", f"{out_path}/{word}/word_shape_icon.svg"])
     print(f'potrace {filepath}, {word}, {out_path}')
 
 if __name__=='__main__':
