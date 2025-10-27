@@ -148,12 +148,12 @@
 			"us": "hau",
 			"gb": "hau"
 		}],
-		"ko-repr": "어떻게, 어떻게 지내니?"
+		"ko-repr": "어떻게, 얼마나"
 	}]
 },{
 	"setence_number": 9,
 	"sentence": "I am fine.",
-	"ko-repr": "잘 지내.",
+	"ko-repr": "잘 지내고 있어.",
 	"words": [{
 		"word": "fine",
 		"pronunciations": [{
@@ -191,7 +191,7 @@
             "us": "ˌɡʊdˈbaɪ",
             "gb": "ˌɡʊdˈbaɪ"
         }],
-        "ko-repr": "안녕히 가세요 / 계세요"
+        "ko-repr": "안녕히 가세요 / 안녕히 계세요"
     }]
 },{
 	"setence_number": 12,
@@ -331,7 +331,7 @@
 			"us": "noʊ",
 			"gb": "nəʊ"
 		}],
-		"ko-repr": "아니오; ~이 없는"
+		"ko-repr": "아니오 / ~이 없는"
 	}, {
 		"word": "cat",
 		"pronunciations": [{
@@ -374,7 +374,7 @@
 			"us": "laɪk",
 			"gb": "laɪk"
 		}],
-		"ko-repr": "좋아하다; ~처럼"
+		"ko-repr": "좋아하다 / ~처럼"
 	}, {
 		"word": "pizza",
 		"pronunciations": [{
@@ -463,7 +463,7 @@
 			"us": "kaind",
 			"gb": "kaind"
 		}],
-		"ko-repr": "종류; 친절한 (문맥에 따라 다르게 쓰임)"
+		"ko-repr": "종류 / 친절한 (문맥에 따라 다르게 쓰임)"
 	}]
 },{
 	"setence_number": 33,
@@ -499,7 +499,7 @@
 			"us": "hiː",
 			"gb": "hiː"
 		}],
-		"ko-repr": "그(남자)"
+		"ko-repr": "그 / 그 남자"
 	}]
 },{
 	"setence_number": 36,
@@ -1173,7 +1173,7 @@
 },{
 	"setence_number": 90,
 	"sentence": "She came back home.",
-	"ko-repr": "그녀가 집에 돌아왓다.",
+	"ko-repr": "그녀가 집에 돌아왔다.",
 	"words": [{
 		"word": "back",
 		"pronunciations": [{
@@ -1208,18 +1208,6 @@
 	}]
 },{
 	"setence_number": 93,
-	"sentence": "I want a cup of tea.",
-	"ko-repr": "나는 차 한 잔을 원한다.",
-	"words": [{
-		"word": "want",
-		"pronunciations": [{
-			"us": "wɑːnt",
-			"gb": "wɒnt"
-		}],
-		"ko-repr": "원하다"
-	}]
-},{
-	"setence_number": 94,
 	"sentence": "Wash your hands before dinner.",
 	"ko-repr": "저녁 먹기 전에 너의 손을 씻어라.",
 	"words": [{
@@ -1231,7 +1219,7 @@
 		"ko-repr": "~전에"
 	}]
 },{
-	"setence_number": 95,
+	"setence_number": 94,
 	"sentence": "I really like this song.",
 	"ko-repr": "나는 이 노래가 정말 좋아.",
 	"words": [{
@@ -1243,7 +1231,7 @@
 		"ko-repr": "정말로, 실제로"
 	}]
 },{
-	"setence_number": 96,
+	"setence_number": 95,
 	"sentence": "What did you say?",
 	"ko-repr": "뭐라고 했어?",
 	"words": [{
@@ -1255,7 +1243,7 @@
 		"ko-repr": "말하다"
 	}]
 },{
-	"setence_number": 97,
+	"setence_number": 96,
 	"sentence": "The road is long and winding.",
 	"ko-repr": "그 길은 길고 구불구불해.",
 	"words": [{

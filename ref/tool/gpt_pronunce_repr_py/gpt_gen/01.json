@@ -1,0 +1,40 @@
+{
+	"word": "hello",
+	"pronunciations": [{
+		"us": "helóu, hə-, hélou",
+		"gb": "helóu, hə-, hélou"
+	}],
+	"ko-repr": "안녕 / 안녕하세요 (상대방에게 인사할 때 쓰는 표현)"
+},
+{
+	"word": "my",
+	"pronunciations": [{
+		"us": "mai",
+		"gb": "mai"
+	}],
+	"ko-repr": "나의, 내 것 (소유를 나타내는 말)"
+},
+{
+	"word": "name",
+	"pronunciations": [{
+		"us": "neim",
+		"gb": "neim"
+	}],
+	"ko-repr": "이름"
+},
+{
+	"word": "nice",
+	"pronunciations": [{
+		"us": "nais",
+		"gb": "nais"
+	}],
+	"ko-repr": "좋은, 멋진, 친절한"
+},
+{
+	"word": "meet",
+	"pronunciations": [{
+		"us": "miːt",
+		"gb": "miːt"
+	}],
+	"ko-repr": "만나다"
+}

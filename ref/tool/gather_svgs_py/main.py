@@ -1,0 +1,96 @@
+import os
+import shutil
+import copy
+
+import cv2
+from PIL import Image
+
+# from divide.run import divide_img
+# from ocr_recong import remove_word
+# from remove_white_background.run import remove_background
+# from to_svg.potrace_with_command import run_potrace
+# from word_named.run import set_image_named
+
+# def to_word_removed(origin_filename):
+#     img = cv2.imread(f'img/origin/{origin_filename}')
+#     divide_img(img, 'img/divide')
+#
+#     if os.path.exists('img/word_named'):
+#         shutil.rmtree('img/word_named')
+#     os.makedirs('img/word_named', exist_ok=True)
+#     for filename in os.listdir('img/divide'):
+#         file_path = os.path.join('img/divide', filename)
+#         divided_img = cv2.imread(file_path)
+#         set_image_named(divided_img, 'img/word_named') # 그림에 있는 문자로 파일명 정함
+#
+#     if os.path.exists('img/word_removed'):
+#         shutil.rmtree('img/word_removed')
+#     os.makedirs('img/word_removed', exist_ok=True)
+#     for filename in os.listdir('img/word_named'):
+#         file_path = os.path.join('img/word_named', filename)
+#         divided_img = cv2.imread(file_path)
+#         remove_word.run(divided_img, filename.replace('.png', ''), 'img/word_removed') # 그림에 있는 문자로 제거
+#
+# def after_word_removed():
+#     if os.path.exists('img/remove_white_background'):
+#         shutil.rmtree('img/remove_white_background')
+#     os.makedirs('img/remove_white_background', exist_ok=True)
+#     for filename in os.listdir('img/word_removed'):
+#         file_path = os.path.join('img/word_removed', filename)
+#         word_removed_img = Image.open(file_path)
+#         remove_background(word_removed_img, filename.replace('.png', ''), 'img/remove_white_background')
+#
+#     if os.path.exists('img/to_svg'):
+#         shutil.rmtree('img/to_svg')
+#     os.makedirs('img/to_svg', exist_ok=True)
+#     for filename in os.listdir('img/remove_white_background'):
+#         file_path = os.path.join('img/remove_white_background', filename)
+#         run_potrace(file_path, filename.replace('.bmp', ''), 'img/to_svg')
+#
+#
+# def print_hi(name):
+#     # 스크립트를 디버그하려면 하단 코드 줄의 중단점을 사용합니다.
+#     print(f'Hi, {name}')  # 중단점을 전환하려면 Ctrl+F8을(를) 누릅니다.
+
+words_path = r'C:\Users\sojun\github\mp-word\assets\images\words'
+old_words_path = r'C:\Users\sojun\github\mp-word\assets\images\old_words'
+
+def copy_from_assets():
+    # for dir in os.listdir(words_path):
+    #     try:
+    #         shutil.copy(words_path + '\\' + dir + '\\word_icon.svg', f'new\\{dir}.svg')
+    #     except:
+    #         print(dir)
+    # for dir in os.listdir(old_words_path):
+    #     shutil.copy(old_words_path + '\\' + dir + '\\word_icon.svg', f'origin\\{dir}.svg')
+    pass
+
+def copy_to_assets():
+
+    # for filename in os.listdir('origin'):
+    #     try:
+    #         name = filename.split('.')[0]
+    #         shutil.copy('origin\\'+filename, words_path + '\\' + name + '\\word_shape_icon.svg')
+    #     except:
+    #         print(filename)
+
+    # for filename in os.listdir('new'):
+    #     try:
+    #         name = filename.split('.')[0]
+    #         shutil.copy('new\\'+filename, words_path + '\\' + name + '\\word_line_icon.svg')
+    #     except:
+    #         print(filename)
+
+    #
+    # for filename in os.listdir('new'):
+    #     try:
+    #         name = filename.split('.')[0]
+    #         shutil.copy('new\\'+filename, words_path + '\\' + name + '\\word_icon.svg')
+    #     except:
+    #         print(filename)
+    pass
+
+if __name__ == '__main__':
+    # copy_from_assets()
+    copy_to_assets()
+

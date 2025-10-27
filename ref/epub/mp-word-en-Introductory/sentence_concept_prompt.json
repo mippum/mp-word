@@ -1,0 +1,42 @@
+[
+  {
+    "sentence": "I am tired, but I will help.",
+    "concept": "a tired person with drooping eyes still offering a helping hand"
+  },
+  {
+    "sentence": "I know the answer.",
+    "concept": "a person raising their hand confidently with a lightbulb overhead"
+  },
+  {
+    "sentence": "This year is good.",
+    "concept": "A large Christmas tree stands between buildings on a tree-lined street, with the words "New Anniversary" written on it. A person stands in front of it, arms raised high, looking up at the tree. Fireworks explode in the night sky."
+  },
+  {
+    "sentence": "That guy is nice.",
+    "concept": "Two women are conversing with bright faces. One woman is imagining a smiling person she met yesterday, making a friendly gesture like a handshake.(comic imagination speech bubble)"
+  },
+  {
+    "sentence": "I was hungry, so I ate.",
+    "concept": "a person sitting at a table eating food with a satisfied face"
+  },
+  {
+    "sentence": "I like the other book.",
+    "concept": "One person holds a book in one hand and shakes his head, indicating dislike. He then points to another book on the shelf."
+  },
+  {
+    "sentence": "The dog is little.",
+    "concept": "a small dog sitting next to a much larger object for scale"
+  },
+  {
+    "sentence": "We went to the market.",
+    "concept": "people walking past stalls of fruits and vegetables"
+  },
+  {
+    "sentence": "My great-grandfather is old.",
+    "concept": "an elderly man with a cane and kind expression"
+  },
+  {
+    "sentence": "The cat is under the table.",
+    "concept": "a cat crouching beneath a table"
+  }
+]
