@@ -5,31 +5,6 @@
 영단어는 문장으로 익히는 것이 가장 좋은 방법이라고 합니다. 단어 하나만 외우면, 문장에서 어떻게 쓰이는지 알기 어렵기 때문입니다. 예를 들어, Apple - 사과 이렇게 외우는 것보다 "I have an apple(나는 사과 한 개를 가지고 있다)." 문장 안에서 apple을 배우는 것이 훨씬 자연스럽고 오래 기억에 남습니다.  
 이 책은 그런 원리를 바탕으로, 단어보다 문장을 먼저 제시하는 학습 방식을 채택했습니다. 처음에는 모르는 단어가 나와서 낯설게 느껴질 수 있습니다. 그래서 각 문장에는 단어의 의미를 유추할 수 있도록 그림과 함께 설명을 넣었습니다. 그다음 장에서는 해당 단어의 뜻과 해석을 확인하며, 자신의 추론이 맞았는지 확인할 수 있습니다.  
 
-|카테고리(영)|카테고리(한)|상세(영)|상세(한)|
-|---|---|---|---|
-|Foundation|초급|Entry|입문|
-|Foundation|초급|Introductory|소개|
-|Foundation|초급|Beginner|초심자|
-|Foundation|초급|Essential|필수|
-|Foundation|초급|Foundational|기본|
-|Foundation|초급|Basic|근본|
-|Foundation|초급|Elementary|초보|
-|Intermediate|중급|Core|핵심|
-|Intermediate|중급|common|공통|
-|Intermediate|중급|Standard|표준|
-|Intermediate|중급|ordinary|통상|
-|Intermediate|중급|usual|보통|
-|Intermediate|중급|prevalent|일반|
-|Intermediate|중급|Comprehensive|종합|
-|Intermediate|중급|Extensive|포괄|
-|Mastery|고급|Special|스페셜|
-|Mastery|고급|Advanced|진보|
-|Mastery|고급|Intensive|심화|
-|Mastery|고급|Proficient|숙달|
-|Mastery|고급|Profound|해박|
-|Mastery|고급|Professional|프로|
-|Mastery|고급|Expert|전문가|
-
     • Foundation (초급)
     • Intermediate (중급)
     • Mastery (고급)
@@ -50,10 +25,16 @@ Entry(입문) → Introductory(소개) → Beginner(초심자) → Essential(필
   - 영영 뜻을 통한 독해 능력 향상
   - 영영사전 뜻 듣기는 처음엔 어려울 수 있어요. 이해가 잘 안되도 꾸준히 듣다보면 어느 순간 들리기 시작할 때가 올거에요. 
 
+## How to use
+교보 eBook 의 음성지원 기능을 이용하면, 등하교나 출퇴근 등 눈을 쓰기 어려운 시간에도 효율적으로 공부할 수 있습니다.
+또한 이 책은 "듣기" 학습을 적극적으로 활용할 수 있도록 제작되었습니다. 교보문고 앱의 "듣기" 기능을 통해 책을 보지 않고도 학습할 수 있으며, 외워질 때까지 여러번 반복 하기에도 좋습니다.
+지금 시작합니다.
 ## Afterword(마치며)
-영단어는 문장으로 익히는 것이 가장 좋은 방법이라고 합니다. 단어 하나만 외우면, 문장에서 어떻게 쓰이는지 알기 어렵기 때문입니다. 예를 들어, Apple - 사과 이렇게 외우는 것보다 "I have an apple(나는 사과 한 개를 가지고 있다)." 문장 안에서 apple을 배우는 것이 훨씬 자연스럽고 오래 기억에 남습니다.
-이 책은 그런 원리를 바탕으로, 단어보다 문장을 먼저 제시하는 학습 방식을 채택했습니다. 처음에는 모르는 단어가 나와서 낯설게 느껴질 수 있습니다. 그래서 각 문장에는 단어의 의미를 유추할 수 있도록 그림과 함께 설명을 넣었습니다. 그다음 장에서는 해당 단어의 뜻과 해석을 확인하며, 자신의 추론이 맞았는지 확인할 수 있습니다. 
-뒤로 갈수록 영영사전 설명이 추가됩니다. 기초 단계에서는 다소 어려울 수 있지만, 처음에는 가볍게 읽어보세요. 
+단어를 외우는 것은 어려운 일입니다. 미쁨 영단어는 가장 효율적이고 정석적인 방법으로 쉽게 외울 수 있도록 고안하였습니다. 단어의 순서는 가장 많이 사용하는 단어를 기준으로 난이도를 평가하여 순서 조정을 하였습니다.
+언어를 처음 배우는 아기들은 포토 카드를 많이 사용합니다. 이 책에서 그림을 삽입한 이유도 그림으로 단어가 연상될 수 있도록 하기 위함입니다.
+영영 사전 뜻이 등장하는 부분은 당황하셨을 것이라 생각합니다. 더하기도 배우기 전에 곱하기를 하라는 느낌을 받으셨을 것입니다. 사전은 영영 사전으로 보라는 말을 들어보셨을 것입니다. 하지만 직접 영영 사전을 열어보면, 기본 단어도 모르는데 읽어도 어떤 뜻인지 이해하기 어렵다는 생각이 듭니다. 언어는 준비가 되지 않았는데 당황스럽게 마주해야하는 경우가 많습니다. 미국 드라마를 보든, 해외를 나가게 되든 마찬가지 입니다. 이것은 처음엔 당황스럽지만 여러번 반복함으로써 익숙해질 수 있습니다. 다음 단계부터는 영영 사전 뜻이 지속적으로 나옵니다. 단어의 뜻을 이해함과 동시에 독해 능력도 늘 수 있기를 바랍니다.
+
+이후 시리즈는 다음과 같이 구성되어 있습니다.
 
 - 마치며 추가 고려
   - 단어를 외우는 것은 어려운 일이다.
@@ -64,6 +45,8 @@ Entry(입문) → Introductory(소개) → Beginner(초심자) → Essential(필
     - 단어는 문장으로 학습하는 것이 좋다고 합니다.
     - 예문은 물론 그림으로 먼저 유추하고
     - 듣기 기능으로 반복 학습 할 수 있습니다.
+
+
 
 
 - 단어 45개, 96 페이지
@@ -87,3 +70,28 @@ Entry(입문) → Introductory(소개) → Beginner(초심자) → Essential(필
 - 
 - 앱에서 듣기를 활용하면 문장과 뜻을 읽어주며
 - 듣는 것만으로 문장을 이용한 학습이 가능합니다.
+
+
+|카테고리(영)|카테고리(한)|상세(영)|상세(한)|
+|---|---|---|---|
+|Foundation|초급|Entry|입문|
+|Foundation|초급|Introductory|소개|
+|Foundation|초급|Beginner|초심자|
+|Foundation|초급|Basic|기초|
+|Foundation|초급|Essential|필수|
+|Foundation|초급|Core|핵심|
+|Foundation|초급|Elementary|초보|
+|Intermediate|중급|Common|공통|
+|Intermediate|중급|Standard|표준|
+|Intermediate|중급|Ordinary|통상|
+|Intermediate|중급|Usual|보통|
+|Intermediate|중급|Frequent|일반|
+|Intermediate|중급|Comprehensive|종합|
+|Intermediate|중급|Extensive|포괄|
+|Mastery|고급|Special|특화|
+|Mastery|고급|Advanced|진보|
+|Mastery|고급|Intensive|심화|
+|Mastery|고급|Proficient|숙달|
+|Mastery|고급|Profound|해박|
+|Mastery|고급|Academic|학문|
+|Mastery|고급|Expert|전문|
