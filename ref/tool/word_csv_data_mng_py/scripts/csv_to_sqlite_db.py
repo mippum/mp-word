@@ -39,8 +39,13 @@ def infer_sqlite_type(series: pd.Series) -> str:
         return "BLOB"
     return "TEXT"
 
-
-def csv_to_sqlite(csv_path: str, db_path: str, table_name: str = None, pk: str = None):
+def csv_to_sqlite(
+    csv_path: str,
+    db_path: str,
+    table_name: str = None,
+    pk: str = None,
+    null_as_empty: bool = False
+):
     csv_path = Path(csv_path)
     db_path = Path(db_path)
 
@@ -51,7 +56,7 @@ def csv_to_sqlite(csv_path: str, db_path: str, table_name: str = None, pk: str =
         table_name = csv_path.stem
 
     print(f"Loading CSV: {csv_path}")
-    df = pd.read_csv(csv_path)
+    df = pd.read_csv(csv_path, keep_default_na=null_as_empty)
 
     if df.empty:
         raise ValueError("CSV is empty.")
