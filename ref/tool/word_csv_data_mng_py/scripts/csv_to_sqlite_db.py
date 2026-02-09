@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 import sys
 import sqlite3
 import pandas as pd
@@ -13,9 +14,7 @@ def is_binary_16(series: pd.Series) -> bool:
     non_null = series.dropna()
     if non_null.empty:
         return False
-
     for x in non_null:
-        print(x)
         if len(x) != 36:
             return False
         if x[8] != '-':
@@ -90,6 +89,34 @@ def csv_to_sqlite(csv_path: str, db_path: str, table_name: str = None, pk: str =
     print("Inserting rows...")
     cursor.executemany(insert_sql, df.itertuples(index=False, name=None))
 
+
+    # ---------- updated_at 트리거 ----------
+    has_updated_at = False
+    for col in df.columns:
+        if col == "updated_at":
+            has_updated_at = True
+
+    if has_updated_at:
+        trigger_name = f"{table_name}_set_updated_at"
+
+        cursor.execute(f'DROP TRIGGER IF EXISTS "{trigger_name}"')
+
+        trigger_sql = f"""
+        CREATE TRIGGER "{trigger_name}"
+        AFTER UPDATE ON "{table_name}"
+        FOR EACH ROW
+        WHEN OLD.updated_at = NEW.updated_at
+        BEGIN
+            UPDATE "{table_name}"
+            SET updated_at = CURRENT_TIMESTAMP
+            WHERE rowid = NEW.rowid;
+        END;
+        """
+
+        print(trigger_sql)
+        print("Creating updated_at trigger...")
+        cursor.execute(trigger_sql)
+
     conn.commit()
     conn.close()
 
@@ -98,9 +125,12 @@ def csv_to_sqlite(csv_path: str, db_path: str, table_name: str = None, pk: str =
 
 if __name__ == "__main__":
 
-    csv_file = r'..\source\words.csv'
-    db_file = r'..\work\word.db'
-    table = 'words'
-    primary_key = 'id'
+    csv_to_sqlite(os.path.join('..', 'source', 'words.csv'),
+                  os.path.join('..', 'work', 'word.db'),
+                  'words',
+                  'id')
 
-    csv_to_sqlite(csv_file, db_file, table, primary_key)
+    csv_to_sqlite(os.path.join('..', 'source', 'en_long_meanings.csv'),
+                  os.path.join('..', 'work', 'word.db'),
+                  'en_long_meanings',
+                  'id')
