@@ -14,7 +14,7 @@ def copy_from_greenydot():
 
     with open(r'..\source\word_svgs.csv', mode='w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
-        writer.writerow(['id', 'word_id', 'word', 'svg'])
+        writer.writerow(['id', 'word_id', 'word', 'mode', 'svg'])
 
     for word_id in word_ids:
         words = [
@@ -31,7 +31,7 @@ def copy_from_greenydot():
 
         with open(r'..\source\word_svgs.csv', mode='a', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
-            writer.writerow([str(uuid6.uuid7()), word_id, word, svg_file])
+            writer.writerow([str(uuid6.uuid7()), word_id, word, 'repr', svg_file])
 
 
 
