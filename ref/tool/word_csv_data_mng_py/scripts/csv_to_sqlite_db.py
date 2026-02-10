@@ -154,3 +154,8 @@ if __name__ == "__main__":
                   os.path.join('..', 'work', 'word.db'),
                   'word_mpfpm',
                   'id')
+
+    csv_to_sqlite(os.path.join('..', 'source', 'word_svgs.csv'),
+                  os.path.join('..', 'work', 'word.db'),
+                  'word_svgs',
+                  'id')
