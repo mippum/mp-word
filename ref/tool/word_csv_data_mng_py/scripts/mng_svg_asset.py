@@ -1,23 +1,37 @@
 import os
-import csv
-import uuid6
-import shutil
+from pathlib import Path
+import sqlite3
+import pandas as pd
 
-# greenydot_word_path = r'C:\Users\USER\github\greenydot_flight_api\flight-app\public\static\mp-word\words'
 asset_path = r'C:\Users\wogud\github\mp-word\assets\images\words'
 
 
-# def copy_from_greenydot():
-#     pass
+def copy_sqlitedb_to_asset():
+    db_path = Path(os.path.join('..', 'work', 'word.db'))
+    table_name = 'word_svgs'
+
+    conn = sqlite3.connect(db_path)
+
+    query = f'SELECT * FROM "{table_name}";'
+    print("Executing:", query)
+
+    df = pd.read_sql_query(query, conn)
+
+    for value in df.values:
+        word = value[2]
+        xml = value[4]
+
+        if not os.path.exists(os.path.join(asset_path, '_' + word)):
+            os.makedirs(os.path.join(asset_path, '_' + word))
+
+        xml_filename = os.path.join(asset_path, '_' + word, 'word_icon.svg')
+        with open(xml_filename, mode='w', newline='', encoding='utf-8') as f:
+            f.write(xml)
+
+    conn.close()
 
 def run():
-
-    for word_folder_name in os.listdir(asset_path):
-
-        # word = word_folder_name[1:]
-
-        if os.path.exists(os.path.join(asset_path, word_folder_name, 'word_shape_icon.svg')):
-            os.remove(os.path.join(asset_path, word_folder_name, 'word_shape_icon.svg'))
+    copy_sqlitedb_to_asset()
 
 if __name__ == '__main__':
     run()

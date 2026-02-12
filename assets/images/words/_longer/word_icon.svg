@@ -1,17 +1,4 @@
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
- "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="201.000000pt" height="70.000000pt" viewBox="0 0 201.000000 70.000000"
- preserveAspectRatio="xMidYMid meet">
-<metadata>
-Created by potrace 1.16, written by Peter Selinger 2001-2019
-</metadata>
-<g transform="translate(0.000000,70.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
-<path d="M1650 682 c0 -9 63 -80 140 -157 77 -77 140 -142 140 -145 0 -3 -429
--4 -954 -2 -828 2 -955 0 -966 -12 -6 -9 -9 -20 -5 -26 4 -7 311 -10 968 -10
-l962 0 -143 -143 c-134 -134 -157 -166 -131 -183 15 -9 349 325 349 349 0 24
--318 347 -341 347 -12 0 -19 -7 -19 -18z"/>
-</g>
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="357">
+<path style="stroke:#000000; stroke-width:3.0; fill:none;" d="M850 9C858.603 19.5576 869.164 28.3671 878.576 38.1698C905.362 66.0707 932.719 93.5876 959.999 121C974.382 135.453 998.609 155.433 998.683 178C998.756 200.255 976.4 214.378 963.17 229C926.509 269.517 885.773 306.532 848 346M997 173C990.064 178.009 981.184 177 973 177L925 177L736 177L12 177"/>
 </svg>
