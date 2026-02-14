@@ -71,32 +71,32 @@ def db_to_csv(
 
 if __name__ == "__main__":
 
-    db_to_csv(os.path.join('..', 'work', 'word.db'),
-              'words',
-              os.path.join('..', 'source', 'words.csv'),
-              'id')
+    # db_to_csv(os.path.join('..', 'work', 'word.db'),
+    #           'words',
+    #           os.path.join('..', 'source', 'words.csv'),
+    #           'id')
+    #
+    # db_to_csv(os.path.join('..', 'work', 'word.db'),
+    #           'en_long_meanings',
+    #           os.path.join('..', 'source', 'en_long_meanings.csv'),
+    #           'id')
+    #
+    # db_to_csv(os.path.join('..', 'work', 'word.db'),
+    #           'sentences',
+    #           os.path.join('..', 'source', 'sentences.csv'),
+    #           'id')
+    #
+    # db_to_csv(os.path.join('..', 'work', 'word.db'),
+    #           'simple_definitions',
+    #           os.path.join('..', 'source', 'simple_definitions.csv'),
+    #           'id')
+    #
+    # db_to_csv(os.path.join('..', 'work', 'word.db'),
+    #           'word_mpfpm',
+    #           os.path.join('..', 'source', 'word_mpfpm.csv'),
+    #           'id')
 
     db_to_csv(os.path.join('..', 'work', 'word.db'),
-              'en_long_meanings',
-              os.path.join('..', 'source', 'en_long_meanings.csv'),
-              'id')
-
-    db_to_csv(os.path.join('..', 'work', 'word.db'),
-              'sentences',
-              os.path.join('..', 'source', 'sentences.csv'),
-              'id')
-
-    db_to_csv(os.path.join('..', 'work', 'word.db'),
-              'simple_definitions',
-              os.path.join('..', 'source', 'simple_definitions.csv'),
-              'id')
-
-    db_to_csv(os.path.join('..', 'work', 'word.db'),
-              'word_mpfpm',
-              os.path.join('..', 'source', 'word_mpfpm.csv'),
-              'id')
-
-    db_to_csv(os.path.join('..', 'work', 'word.db'),
-              'word_svgs',
-              os.path.join('..', 'source', 'word_svgs.csv'),
+              'pronunciations',
+              os.path.join('..', 'source', 'pronunciations.csv'),
               'id')
