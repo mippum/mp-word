@@ -2,7 +2,8 @@ import os
 import csv
 import uuid6
 
-greenydot_word_path = r'C:\Users\USER\github\greenydot_flight_api\flight-app\public\static\mp-word\words'
+# greenydot_word_path = r'C:\Users\USER\github\greenydot_flight_api\flight-app\public\static\mp-word\words'
+greenydot_word_path = r'C:\Users\wogud\github\greenydot_flight_api\flight-app\public\static\mp-word\words'
 
 def copy_from_greenydot():
     word_ids = [
@@ -23,6 +24,8 @@ def copy_from_greenydot():
         word = words[0]
         try:
             svg_file_path = f'{greenydot_word_path}\\{word_id}\\_{word}\\word_icon.svg'
+            if not os.path.exists(svg_file_path):
+                svg_file_path = f'{greenydot_word_path}\\{word_id}\\_{word}\\word_shape_icon.svg'
             with open(svg_file_path, mode='r', encoding='utf-8') as f:
                 svg_file = f.read()
         except:

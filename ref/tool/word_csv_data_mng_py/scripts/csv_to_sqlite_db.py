@@ -129,6 +129,7 @@ def csv_to_sqlite(
 
 
 if __name__ == "__main__":
+    pass
 
     # csv_to_sqlite(os.path.join('..', 'source', 'words.csv'),
     #               os.path.join('..', 'work', 'word.db'),
@@ -155,12 +156,12 @@ if __name__ == "__main__":
     #               'word_mpfpm',
     #               'id')
     #
-    # csv_to_sqlite(os.path.join('..', 'source', 'word_svgs.csv'),
-    #               os.path.join('..', 'work', 'word.db'),
-    #               'word_svgs',
-    #               'id')
-
-    csv_to_sqlite(os.path.join('..', 'source', 'pronunciations.csv'),
+    csv_to_sqlite(os.path.join('..', 'source', 'word_svgs.csv'),
                   os.path.join('..', 'work', 'word.db'),
-                  'pronunciations',
+                  'word_svgs',
                   'id')
+
+    # csv_to_sqlite(os.path.join('..', 'source', 'pronunciations.csv'),
+    #               os.path.join('..', 'work', 'word.db'),
+    #               'pronunciations',
+    #               'id')
