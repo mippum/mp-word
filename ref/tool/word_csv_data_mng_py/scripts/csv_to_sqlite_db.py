@@ -156,12 +156,17 @@ if __name__ == "__main__":
     #               'word_mpfpm',
     #               'id')
     #
-    csv_to_sqlite(os.path.join('..', 'source', 'word_svgs.csv'),
-                  os.path.join('..', 'work', 'word.db'),
-                  'word_svgs',
-                  'id')
-
+    # csv_to_sqlite(os.path.join('..', 'source', 'word_svgs.csv'),
+    #               os.path.join('..', 'work', 'word.db'),
+    #               'word_svgs',
+    #               'id')
+    #
     # csv_to_sqlite(os.path.join('..', 'source', 'pronunciations.csv'),
     #               os.path.join('..', 'work', 'word.db'),
     #               'pronunciations',
+    #               'id')
+
+    # csv_to_sqlite(os.path.join('..', 'source', 'word_by_books.csv'),
+    #               os.path.join('..', 'work', 'word.db'),
+    #               'word_by_books',
     #               'id')

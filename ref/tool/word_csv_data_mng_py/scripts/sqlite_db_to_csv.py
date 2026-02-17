@@ -70,6 +70,7 @@ def db_to_csv(
 
 
 if __name__ == "__main__":
+    pass
 
     # db_to_csv(os.path.join('..', 'work', 'word.db'),
     #           'words',
@@ -96,7 +97,12 @@ if __name__ == "__main__":
     #           os.path.join('..', 'source', 'word_mpfpm.csv'),
     #           'id')
 
-    db_to_csv(os.path.join('..', 'work', 'word.db'),
-              'pronunciations',
-              os.path.join('..', 'source', 'pronunciations.csv'),
-              'id')
+    # db_to_csv(os.path.join('..', 'work', 'word.db'),
+    #           'pronunciations',
+    #           os.path.join('..', 'source', 'pronunciations.csv'),
+    #           'id')
+
+    # db_to_csv(os.path.join('..', 'work', 'word.db'),
+    #           'word_by_books',
+    #           os.path.join('..', 'source', 'word_by_books.csv'),
+    #           'id')
