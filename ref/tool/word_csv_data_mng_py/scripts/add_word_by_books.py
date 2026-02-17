@@ -6,7 +6,7 @@ import uuid6
 
 from repository.word_repository import WordRepository
 
-BOOK_PRE_NAME = 'Foundation Introductory'
+BOOK_PRE_NAME = 'Foundation Beginner'
 
 word_repository = WordRepository()
 
@@ -26,8 +26,8 @@ def run():
         with open(os.path.join('..', 'source', 'word_by_books.csv'), mode='a', newline='', encoding='utf-8') as file:
             writer = csv.writer(file)
             word_id = word_repository.read_word_id(word)
-            writer.writerow([str(uuid6.uuid7()), word_id, word, f'{BOOK_PRE_NAME}', word_order])
-            # writer.writerow([str(uuid6.uuid7()), word_id, word, f'{BOOK_PRE_NAME} {order_spell[int(book_number)-1]}', word_order])
+            # writer.writerow([str(uuid6.uuid7()), word_id, word, f'{BOOK_PRE_NAME}', word_order])
+            writer.writerow([str(uuid6.uuid7()), word_id, word, f'{BOOK_PRE_NAME} {order_spell[int(book_number)-1]}', word_order])
 
 order_spell = [
     'First',
