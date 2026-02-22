@@ -44,12 +44,12 @@ def after_word_removed():
     os.makedirs('img/to_svg', exist_ok=True)
     for filename in os.listdir('img/remove_white_background'):
         file_path = os.path.join('img/remove_white_background', filename)
-        run_potrace(file_path, filename.replace('.bmp', ''), 'img/to_svg')
+        run_potrace(file_path, '_' + filename.replace('.bmp', ''), 'img/to_svg')
 
 def run(origin_filename):
     print(f'with_word_image convert {origin_filename}')
 
-    to_word_removed(origin_filename)
+    # to_word_removed(origin_filename)
     after_word_removed() # word_removed 에 이미지 넣은 상태에서는 이것만 실행
     # img/word_removed 에서 ocr 에러 있는지 확인하고, 있으면 그림 수정 후 after_word_removed 만 다시 실행
 
