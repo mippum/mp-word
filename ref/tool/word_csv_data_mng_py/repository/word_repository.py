@@ -91,6 +91,18 @@ class WordRepository:
         # print(f'{cursor.rowcount}')
         return
 
+    def create_svg(self, svg_id, word_id, word, svg):
+        cursor = self.conn.cursor()
+        sql = f"""
+            INSERT INTO word_svgs (id, word_id, word, mode, svg) VALUES
+            ('{svg_id}', '{word_id}', '{word}', 'repr', '{svg}');
+        """
+        # print(f"sql: {sql.strip()}")
+        cursor.execute(sql)
+        self.conn.commit()
+        # print(f'{cursor.rowcount}')
+        return
+
 
 if __name__ == '__main__':
 

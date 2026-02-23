@@ -92,10 +92,10 @@ if __name__ == "__main__":
     #           'word_mpfpm',
     #           os.path.join('..', 'source', 'word_mpfpm.csv'),
     #           'id')
-    db_to_csv(os.path.join('..', 'work', 'word.db'),
-              'word_svgs',
-              os.path.join('..', 'source', 'word_svgs.csv'),
-              'id')
+    # db_to_csv(os.path.join('..', 'work', 'word.db'),
+    #           'word_svgs',
+    #           os.path.join('..', 'source', 'word_svgs.csv'),
+    #           'id')
     # db_to_csv(os.path.join('..', 'work', 'word.db'),
     #           'pronunciations',
     #           os.path.join('..', 'source', 'pronunciations.csv'),

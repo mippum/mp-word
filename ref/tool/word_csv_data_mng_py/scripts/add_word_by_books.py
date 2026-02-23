@@ -16,7 +16,7 @@ def run():
     word_base_rows = []
     with open(csv_path, mode='r', newline='', encoding='utf-8') as file:
         reader = csv.reader(file)
-        next(reader)
+        # next(reader)
         for row in reader:
             word_base_rows.append(row)
 

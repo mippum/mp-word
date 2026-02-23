@@ -113,9 +113,19 @@ def modify_asset_to_sqlitedb():
         # print(word)
         svg_id = word_repository.read_repr_svg_id_by_word(word)
         if svg_id is None:
-            # print(f'no svg word: {word}')
             print(f'{word}')
             continue
+            # word_id = word_repository.read_word_id(word)
+            # if word_id is None:
+            #     print(f'{word}')
+            #     continue
+
+            # svg_id = str(uuid6.uuid7())
+            # svg_file_path = os.path.join(asset_path, '_' + word, 'word_icon.svg')
+            # with open(svg_file_path, mode='r', encoding='utf-8') as f:
+            #     svg = f.read()
+            # word_repository.create_svg(svg_id, word_id, word, svg)
+
         svg_file_path = os.path.join(asset_path, '_' + word, 'word_icon.svg')
         with open(svg_file_path, mode='r', encoding='utf-8') as f:
             svg = f.read()
