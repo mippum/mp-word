@@ -75,6 +75,22 @@ class WordRepository:
             SELECT pronunciation FROM pronunciations WHERE language='gb' and word_id = '{word_id}';
         """)
 
+    def read_repr_svg_id_by_word(self, word):
+        return self._fetch_one(f"""
+            SELECT id FROM word_svgs WHERE mode='repr' and word = '{word}';
+        """)
+
+    def update_svg(self, svg_id, svg):
+        cursor = self.conn.cursor()
+        sql = f"""
+            UPDATE word_svgs SET svg = '{svg}' WHERE id = '{svg_id}';
+        """
+        # print(f"sql: {sql.strip()}")
+        cursor.execute(sql)
+        self.conn.commit()
+        # print(f'{cursor.rowcount}')
+        return
+
 
 if __name__ == '__main__':
 

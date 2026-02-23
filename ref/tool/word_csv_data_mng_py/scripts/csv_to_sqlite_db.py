@@ -135,37 +135,30 @@ if __name__ == "__main__":
     #               os.path.join('..', 'work', 'word.db'),
     #               'words',
     #               'id')
-    #
     # csv_to_sqlite(os.path.join('..', 'source', 'en_long_meanings.csv'),
     #               os.path.join('..', 'work', 'word.db'),
     #               'en_long_meanings',
     #               'id')
-    #
     # csv_to_sqlite(os.path.join('..', 'source', 'sentences.csv'),
     #               os.path.join('..', 'work', 'word.db'),
     #               'sentences',
     #               'id')
-    #
     # csv_to_sqlite(os.path.join('..', 'source', 'simple_definitions.csv'),
     #               os.path.join('..', 'work', 'word.db'),
     #               'simple_definitions',
     #               'id')
-    #
     # csv_to_sqlite(os.path.join('..', 'source', 'word_mpfpm.csv'),
     #               os.path.join('..', 'work', 'word.db'),
     #               'word_mpfpm',
     #               'id')
-    #
     # csv_to_sqlite(os.path.join('..', 'source', 'word_svgs.csv'),
     #               os.path.join('..', 'work', 'word.db'),
     #               'word_svgs',
     #               'id')
-    #
     # csv_to_sqlite(os.path.join('..', 'source', 'pronunciations.csv'),
     #               os.path.join('..', 'work', 'word.db'),
     #               'pronunciations',
     #               'id')
-
     # csv_to_sqlite(os.path.join('..', 'source', 'word_by_books.csv'),
     #               os.path.join('..', 'work', 'word.db'),
     #               'word_by_books',

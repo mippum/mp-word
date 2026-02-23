@@ -76,32 +76,30 @@ if __name__ == "__main__":
     #           'words',
     #           os.path.join('..', 'source', 'words.csv'),
     #           'id')
-    #
     # db_to_csv(os.path.join('..', 'work', 'word.db'),
     #           'en_long_meanings',
     #           os.path.join('..', 'source', 'en_long_meanings.csv'),
     #           'id')
-    #
     # db_to_csv(os.path.join('..', 'work', 'word.db'),
     #           'sentences',
     #           os.path.join('..', 'source', 'sentences.csv'),
     #           'id')
-    #
     # db_to_csv(os.path.join('..', 'work', 'word.db'),
     #           'simple_definitions',
     #           os.path.join('..', 'source', 'simple_definitions.csv'),
     #           'id')
-    #
     # db_to_csv(os.path.join('..', 'work', 'word.db'),
     #           'word_mpfpm',
     #           os.path.join('..', 'source', 'word_mpfpm.csv'),
     #           'id')
-
+    db_to_csv(os.path.join('..', 'work', 'word.db'),
+              'word_svgs',
+              os.path.join('..', 'source', 'word_svgs.csv'),
+              'id')
     # db_to_csv(os.path.join('..', 'work', 'word.db'),
     #           'pronunciations',
     #           os.path.join('..', 'source', 'pronunciations.csv'),
     #           'id')
-
     # db_to_csv(os.path.join('..', 'work', 'word.db'),
     #           'word_by_books',
     #           os.path.join('..', 'source', 'word_by_books.csv'),
