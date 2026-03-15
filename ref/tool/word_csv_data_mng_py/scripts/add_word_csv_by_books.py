@@ -6,7 +6,7 @@ import uuid6
 
 from repository.word_repository import WordRepository
 
-BOOK_PRE_NAME = 'Foundation Core'
+BOOK_PRE_NAME = 'Foundation Elementary'
 
 word_repository = WordRepository()
 
