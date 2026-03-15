@@ -103,6 +103,23 @@ class WordRepository:
         # print(f'{cursor.rowcount}')
         return
 
+    def read_en_long_meaning_id_from_word(self, word):
+        self._fetch_one(f"""
+            SELECT id FROM en_long_meanings WHERE word = '{word}';
+        """)
+
+    def create_en_long_meaning(self, id, word_id, word, meaning):
+        cursor = self.conn.cursor()
+        sql = f"""
+                    INSERT INTO en_long_meanings (id, word_id, word, meaning) VALUES
+                    ('{id}', '{word_id}', '{word}', '{meaning.replace("'", "''")}');
+                """
+        # print(f"sql: {sql.strip()}")
+        cursor.execute(sql)
+        self.conn.commit()
+        # print(f'{cursor.rowcount}')
+        return
+
 
 if __name__ == '__main__':
 
