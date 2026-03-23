@@ -23,7 +23,7 @@ id,word_id,word,sentence,ko_translation
 0199de3f-d540-70d4-47e7-aeb4773abd04,01992797-02ef-70a8-af74-34abbcab25b8,trade,They trade goods.,그들은 물건을 거래해요.
 0199de3f-d668-70c1-dd0c-a5168246d866,01992798-a6a3-70e4-e6d3-6ca4f0c302bf,browser,Open it in your browser.,브라우저에서 열어 보세요.
 0199de3f-d712-7034-ff60-e351edac98f4,0199277e-fb60-7093-f922-c15f9ae7b2c7,am,I am happy.,나는 행복해.
-0199de3f-d74b-70fa-0940-24f766184926,01992796-0e5c-7070-ab08-28b1fde06763,lady,The lady smiled at me.,아줌마가 나에게 미소를 지었어요.
+0199de3f-d74b-70fa-0940-24f766184926,01992796-0e5c-7070-ab08-28b1fde06763,lady,The lady smiled at me.,숙녀가 나에게 미소를 지었어요.
 0199de3f-d7eb-70ba-c3a2-e17ed6b3fcd6,0199277f-6521-70d2-bf46-20cfadf3baca,net,The fish is in the net.,물고기가 그물에 걸렸다.
 0199de3f-d852-70f8-0841-2f283aaaa642,01992797-43b2-707f-ff82-8c3771907dc1,button,Press the red button.,빨간 버튼을 누르세요.
 0199de3f-d91e-703f-46a4-6301dd4ff4d9,0199277f-8594-709a-86d3-8d4ac910f69d,set,I set the table.,식탁을 차렸어요.
@@ -14650,7 +14650,7 @@ id,word_id,word,sentence,ko_translation
 0199de61-dcdf-702d-4f06-31e1d37efb70,0199279a-a3af-7092-a170-4e37292a5632,carolina,They spent their honeymoon in Carolina.,그들은 캐롤라이나에서 신혼여행을 보냈다.
 0199de61-dcf3-703d-e4bd-06e56b66c08d,0199bf5c-60f0-70db-a093-fc3514c8abff,kurosawa,Kurosawa’s films deeply influenced modern cinema.,구로사와의 영화는 현대 영화에 깊은 영향을 미쳤다.
 0199de61-dcfa-7080-dac2-3be4c21f5650,01992799-5d49-7010-2ba9-cbfc8ed16ba6,letdown,The ending was a real letdown after all the buildup.,모든 것이 쌓여가는 동안 결말은 정말 실망스러웠다.
-0199de61-dd01-708d-d581-07a1106beb54,0199279f-a993-70e3-bb01-d5253ab2ceef,motorcycle,He rode his motorcycle along the coast.,그는 해안을 따라 오토바이를 타고 갔어.
+0199de61-dd01-708d-d581-07a1106beb54,0199279f-a993-70e3-bb01-d5253ab2ceef,motorcycle,He rode his motorcycle along the coast.,그는 해안을 따라 오토바이를 타고 갔다.
 0199de61-dd0a-70e6-82d8-b3f9c2de14c8,0199bf5c-9264-702f-2634-934499343a84,moviemaking,Moviemaking requires both creativity and patience.,영화 제작에는 창의성과 인내심이 모두 필요하다.
 0199de61-dd10-70ac-0410-473226295b4d,0199279b-8f13-705b-31e7-eef1ecc82769,mythical,The dragon is a mythical creature.,용은 신화 속 생물이다.
 0199de61-dd16-7070-4b27-e0ef0961cad2,01992799-a946-7004-889d-7a8942aea11a,pollack,Jackson Pollack revolutionized abstract art.,잭슨 폴락은 추상 미술에 혁명을 일으켰다.
@@ -21038,7 +21038,7 @@ id,word_id,word,sentence,ko_translation
 0199de6d-78fe-703a-6549-416b5361eb74,0199bf5c-7475-7074-2c7f-f95ff0961ccc,loewi,Otto Loewi won a Nobel Prize for his work in neuroscience.,오토 뢰비는 신경과학 연구로 노벨상을 수상했습니다.
 0199de6d-7904-7082-3272-a4e0729ebdd9,019936fa-678c-7042-6840-096e0df4a045,lohan,Lindsay Lohan starred in several popular films as a teenager.,린지 로한은 십 대 시절 여러 인기 영화에 출연했습니다.
 0199de6d-790c-7006-96db-8404889f81a9,01992796-b135-70cf-2859-4757e05a229c,loony,He came up with a loony idea that surprisingly worked.,그는 놀랍게도 효과가 있었던 엉뚱한 아이디어를 생각해냈습니다.
-0199de6d-7913-70cc-009c-0e731511173f,01992796-b172-705e-32e1-ce6591a585ab,lorry,A lorry carried fresh produce to the city market.,트럭이 신선한 농산물을 시내 시장으로 실어 날랐어.
+0199de6d-7913-70cc-009c-0e731511173f,01992796-b172-705e-32e1-ce6591a585ab,lorry,A lorry carried fresh produce to the city market.,트럭이 신선한 농산물을 시내 시장으로 실어 날랐다.
 0199de6d-7932-70f6-1176-1c297ae716b8,0199279d-9919-7002-1359-86934fd02342,loudmouth,Nobody liked the loudmouth who interrupted every conversation.,모든 대화를 가로채는 시끄러운 사람을 아무도 좋아하지 않았습니다.
 0199de6d-7938-7058-8fc5-2a86200de244,0199bf5c-7eff-70f6-9712-95b5cad4c560,lowry,L. S. Lowry painted industrial scenes of Northern England.,L. S. 로리는 영국 북부의 산업 풍경을 그렸습니다.
 0199de6d-793f-70ad-97ec-d876c67e212e,019936dc-8639-70ba-825b-45458cebf710,lu,Professor Lu gave a lecture on quantum physics.,루 교수는 양자 물리학에 대한 강의를 했습니다.
@@ -25038,7 +25038,7 @@ id,word_id,word,sentence,ko_translation
 0199de6e-14cd-700a-f4a6-63fecbfe97f9,0199279f-fabc-7006-0814-4f4c93fb2ef4,reacquaint,I plan to reacquaint myself with painting this weekend.,이번 주말에 그림 그리기를 다시 시작할 계획입니다.
 0199de6e-14d4-7017-8b71-949323f56106,0199bf5d-0bbb-70bb-63c0-95a98fd26eaf,reb,The old soldier still called himself a proud Reb from the South.,늙은 군인은 여전히 자신을 남부 출신의 자랑스러운 레브라고 불렀습니다.
 0199e10e-ef12-70a7-5cd8-242e78d0a9de,01992798-2876-70ca-884c-e38e1bdf0992,soccer,Soccer is my favorite sport.,축구는 제가 가장 좋아하는 스포츠예요.
-0199e10f-0e5a-7059-24a9-e476a5d847db,01992799-13f8-7008-30db-b4f5ae859144,firstly,"Firstly, wash your hands before cooking.","'먼저, 요리하기 전에 손을 씻으세요.'"
+0199e10f-0e5a-7059-24a9-e476a5d847db,01992799-13f8-7008-30db-b4f5ae859144,firstly,"Firstly, wash your hands before cooking.","먼저, 요리하기 전에 손을 씻으세요."
 019a47a9-c492-7012-98c4-0ae7664b436e,0199277e-fa96-7083-0eba-7b3bb5d716ea,a,I see a cat.,고양이가 보입니다.
 019a47a9-c4c9-705c-868a-2105b98f9e69,01992796-44d5-70e6-3350-f6df7bc877ff,about,We talked about school.,우리는 학교에 대해 이야기했습니다.
 019a47a9-c512-7036-d481-09ac403d7283,01992796-44f0-7093-e3b5-e24dd95933f1,above,The plane is above us.,비행기가 우리 위에 있습니다.
@@ -25566,7 +25566,7 @@ id,word_id,word,sentence,ko_translation
 019a47aa-5df2-70f4-7366-a5052dd3987e,01992799-85ae-7053-f2c1-ef6738e4cc4f,nothing,There is nothing in the box.,상자 안에는 아무것도 없어.
 019a47aa-5e2f-70af-f1aa-7e7bea25fa74,0199279b-98c6-70d7-f02a-028ec0162fa8,November,My birthday is in November.,제 생일은 11월이에요.
 019a47aa-5e7f-7054-4b7b-883676ae0202,0199277f-6815-70f7-9813-96b8d4fd7658,now,I am busy now.,지금은 바빠요.
-019a47aa-5ec1-7002-071f-833581e7ff47,01992797-e4b9-70ad-1a7f-2b5d50796bb0,number,The number is ten.,숫자는 10개야.
+019a47aa-5ec1-7002-071f-833581e7ff47,01992797-e4b9-70ad-1a7f-2b5d50796bb0,number,The number is ten.,그 숫자는 10 이야.
 019a47aa-5efd-7067-2daf-e4695e9ffe1d,01992796-c39e-7029-6a98-b9d70aac3e32,nurse,The nurse helps the doctor.,간호사가 의사를 돕고 있어요.
 019a47aa-5f77-7010-1f6a-b755869e87c7,01992797-e55f-70a5-2df4-3c51e172969a,object,The object is small.,물건이 작아요.
 019a47aa-5fb1-7051-404b-b8ba782b6ea7,01992799-8986-705b-e771-833da892e2b4,October,We have a holiday in October.,10월에 휴일이에요.
