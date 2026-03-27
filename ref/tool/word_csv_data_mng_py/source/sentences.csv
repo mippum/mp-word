@@ -25161,7 +25161,7 @@ id,word_id,word,sentence,ko_translation
 019a47a9-e117-70e9-055e-c9d1bb36dfb7,0199277f-217c-7034-d89f-94086d07df44,can,I can swim.,나는 수영을 할 수 있다.
 019a47a9-e14c-70f5-a766-06ed91109bd9,01992797-4695-7005-6b0a-f29c3845ae9a,cannot,I cannot drive.,나는 운전을 할 수 없다.
 019a47a9-e184-706c-8f8b-098b9d6f5663,01992798-b165-7028-08b3-65e0356765c5,capital,Seoul is the capital of Korea.,서울은 한국의 수도이다.
-019a47a9-e1d0-70ec-7481-2742d76d9ecc,0199277f-221c-7013-ea59-00f4c708d1fd,car,The car is fast.,차는 빠르다.
+019a47a9-e1d0-70ec-7481-2742d76d9ecc,0199277f-221c-7013-ea59-00f4c708d1fd,car,The car is fast.,그 차는 빠르다.
 019a47a9-e239-7024-522f-f4383c83ddc9,01992780-02ab-70a4-d954-177a1e26668b,card,I wrote a card.,나는 카드를 썼다.
 019a47a9-e277-7055-4d86-b700de540c3e,01992797-48a2-701b-256b-a701145e9cf2,career,She wants a career in art.,그녀는 예술 분야에서 일하고 싶어 한다.
 019a47a9-e2b7-7015-ad25-b30d2cb50701,01992797-492c-7003-071d-790ac6bf6bda,carrot,The rabbit eats a carrot.,토끼는 당근을 먹는다.
@@ -25182,7 +25182,7 @@ id,word_id,word,sentence,ko_translation
 019a47a9-e69b-70c1-71f3-6e4c331bed53,0199279c-d23f-704f-f8ed-bbdd2213f8a1,chocolate,She loves chocolate.,그녀는 초콜릿을 좋아합니다.
 019a47a9-e6d6-70d8-41bb-e3419d4dac73,01992797-4eb3-705f-f5ac-7d6fb22fd499,choose,Please choose one pen.,펜 하나를 고르세요.
 019a47a9-e720-703d-d882-048fbf0e0801,01992797-4fc9-7055-1d95-9321ec385503,cinema,We went to the cinema.,우리는 영화관에 갔습니다.
-019a47a9-e754-70ed-a059-dc42b8d1ed31,01992780-102f-70ed-a885-9f8de4cc533a,city,The city is big.,도시는 큽니다.
+019a47a9-e754-70ed-a059-dc42b8d1ed31,01992780-102f-70ed-a885-9f8de4cc533a,city,The city is big.,그 도시는 크다.
 019a47a9-e789-702c-49ea-b8da1bfb96fd,01992796-638a-7094-fb2e-f23329358e26,class,Our class is fun.,우리 반은 재미있습니다.
 019a47a9-e7bd-7030-fb57-c2c6969e54cd,0199279c-d5eb-7061-238f-6035eaf50a55,classroom,The classroom is clean.,교실은 깨끗합니다.
 019a47a9-e82c-7003-aa47-672caad00fdd,01992796-63a9-70e3-82df-d89b80aee77b,clean,Please clean your desk.,책상을 치우세요.
@@ -25764,7 +25764,7 @@ id,word_id,word,sentence,ko_translation
 019a47aa-97b4-700a-8ea8-9e21c989550e,01992796-f449-70cd-f04a-a1498bdeb3e6,stand,Please stand up when the teacher enters.,선생님이 들어오시면 일어서세요.
 019a47aa-97f4-7045-332e-4df9f8ecb5c3,01992796-34ef-70f6-eab2-b98b8b17d1d0,star,The star shone brightly in the sky.,별이 하늘에 밝게 빛났어요.
 019a47aa-9831-70b3-36f4-23d5be38deaf,01992796-f470-70f6-2d01-7c6ba3eebff3,start,Let’s start the meeting now.,지금 회의를 시작하죠.
-019a47aa-985f-70d1-0abd-94ada73c3760,0199279e-4340-704a-90f0-033d2a1c0def,statement,His statement was clear and accurate.,그의 진술은 명확하고 정확했다.
+019a47aa-985f-70d1-0abd-94ada73c3760,0199279e-4340-704a-90f0-033d2a1c0def,statement,His statement was clear and accurate.,그의 진술은 명확하고 정확했습니다.
 019a47aa-989d-703c-0e8f-a383a6b69dee,0199279a-01a8-704e-4b8e-e7d9892314fb,station,I waited for the train at the station.,역에서 기차를 기다렸어요.
 019a47aa-98dc-70d1-4a02-2bd29b8ef931,01992796-34fa-7062-1d6c-c79fc603beac,stay,Please stay here until I come back.,제가 돌아올 때까지 여기 있어 주세요.
 019a47aa-9924-7009-9df7-fa00135fa313,01992796-f580-701e-2e8c-345f3e19c795,still,The water in the lake is still.,호수에 물이 고여 있어요.
