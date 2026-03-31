@@ -2,6 +2,8 @@ import sqlite3
 import os
 from pathlib import Path
 
+import datetime
+
 BASE_DIR = Path(__file__).resolve().parent
 
 class WordRepository:
@@ -111,8 +113,8 @@ class WordRepository:
     def create_en_long_meaning(self, id, word_id, word, meaning):
         cursor = self.conn.cursor()
         sql = f"""
-                    INSERT INTO en_long_meanings (id, word_id, word, meaning) VALUES
-                    ('{id}', '{word_id}', '{word}', '{meaning.replace("'", "''")}');
+                    INSERT INTO en_long_meanings (id, word_id, word, meaning, updated_at) VALUES
+                    ('{id}', '{word_id}', '{word}', '{meaning.replace("'", "''")}', '{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}');
                 """
         # print(f"sql: {sql.strip()}")
         cursor.execute(sql)
@@ -120,6 +122,23 @@ class WordRepository:
         # print(f'{cursor.rowcount}')
         return
 
+    def read_sentences_from_word(self, word):
+        self._fetch_one(f"""
+            SELECT id FROM sentences WHERE word = '{word}';
+        """)
+
+
+    def create_sentence(self, id, word_id, word, sentence, ko_translation):
+        cursor = self.conn.cursor()
+        sql = f"""
+                    INSERT INTO sentences (id, word_id, word, sentence, ko_translation) VALUES
+                    ('{id}', '{word_id}', '{word}', '{sentence.replace("'", "''")}', '{ko_translation.replace("'", "''")}');
+                """
+        # print(f"sql: {sql.strip()}")
+        cursor.execute(sql)
+        self.conn.commit()
+        # print(f'{cursor.rowcount}')
+        return
 
 if __name__ == '__main__':
 

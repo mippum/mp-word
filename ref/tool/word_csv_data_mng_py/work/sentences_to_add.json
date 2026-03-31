@@ -1,0 +1,32 @@
+[
+  {
+    "word": "enclose",
+    "sentence": "I enclose the document in the letter.",
+    "ko_translation": "편지에 서류를 동봉했습니다."
+  },
+    {
+    "word": "invoice",
+    "sentence": "I received an invoice today.",
+    "ko_translation": "오늘 청구서를 받았습니다."
+  },
+    {
+    "word": "warranty",
+    "sentence": "This phone has a warranty.",
+    "ko_translation": "이 휴대폰은 보증 기간이 남아 있습니다."
+  },
+    {
+    "word": "itinerary",
+    "sentence": "I made an itinerary for the trip.",
+    "ko_translation": "여행 일정을 짰습니다."
+  },
+    {
+    "word": "reservation",
+    "sentence": "I have a reservation at the hotel.",
+    "ko_translation": "호텔 예약을 마쳤습니다."
+  },
+    {
+    "word": "luggage",
+    "sentence": "My luggage is heavy.",
+    "ko_translation": "제 짐이 무겁습니다."
+  }
+]
