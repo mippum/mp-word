@@ -130,7 +130,10 @@ def modify_asset_to_sqlitedb():
         with open(svg_file_path, mode='r', encoding='utf-8') as f:
             svg = f.read()
 
-        word_repository.update_svg(svg_id, svg)
+        db_svg = word_repository.read_word_svg_by_id(svg_id)
+        if svg != db_svg:
+            word_repository.update_svg(svg_id, svg)
+        pass
 
 def run():
     pass
