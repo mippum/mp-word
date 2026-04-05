@@ -41,6 +41,9 @@ class WordRepository:
     def read_word_svg(self, word_id):
         return self._fetch_one(f"""SELECT svg FROM word_svgs WHERE word_id = '{word_id}';""")
 
+    def read_word_svg_by_id(self, id):
+        return self._fetch_one(f"""SELECT svg FROM word_svgs WHERE id = '{id}';""")
+
     def read_simple_definition(self, word_id):
         return self._fetch_one(f"""
             SELECT definition FROM simple_definitions WHERE word_id = '{word_id}';
