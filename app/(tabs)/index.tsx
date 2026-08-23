@@ -9,12 +9,12 @@ import { getProgress } from '@/lib/progress';
 import { getSettings, setSettings } from '@/lib/settings';
 
 /**
- * 책장 — 레벨별로 묶은 권 목록. 누르면 그 책을 펼친다.
+ * 보기 탭 — 레벨별로 묶은 권 목록. 누르면 그 책을 펼친다.
  *
  * 44권이 한 번에 늘어서면 훑기 어려워서 레벨 머리글로 접었다 펼 수 있게 했다.
  * 접은 레벨은 설정(`collapsedLevels`)에 남아 다시 들어와도 유지된다.
  */
-export default function BookshelfScreen() {
+export default function BookListScreen() {
   const levels = useMemo(() => booksByLevel(), []);
   const [collapsed, setCollapsed] = useState<string[]>(() => getSettings().collapsedLevels);
 
