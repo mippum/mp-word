@@ -55,14 +55,24 @@ npm run export-books
 npm run web
 ```
 
-`npm run android`, `npm run ios`로 플랫폼을 지정해 실행할 수 있습니다.
+네이티브는 개발 빌드가 필요합니다 (아래 낭독 항목 참고).
+
+```bash
+npm run android
+```
 
 ### 낭독
 
-TTS는 `expo-speech`를 쓰고 **SSML은 사용하지 않습니다.** 교재 낭독 스크립트의
+TTS는 `react-native-tts`를 쓰고 **SSML은 사용하지 않습니다.** 교재 낭독 스크립트의
 `<break time='300ms'/>`는 발화 사이의 실제 대기로, `<say-as interpret-as='characters'>`는
-책 지면과 같은 `D. R. O. P.` 문자열로 대체합니다. 목소리와 빠르기는 기기의 시스템 음성
-설정을 따릅니다.
+책 지면과 같은 `D. R. O. P.` 문자열로 대체합니다.
+
+한국어 문장과 영어 문장을 각각 다른 목소리로 읽으며, 목소리는 설정 탭에서 언어별로 고를 수
+있습니다(기본값 자동). 빠르기와 음높이는 기기의 시스템 음성 설정을 따릅니다.
+
+> `react-native-tts`는 네이티브 모듈이라 **Expo Go에서는 동작하지 않습니다.**
+> `npm run android`(= `expo run:android`)로 개발 빌드를 실행하세요. 웹은 개발 확인용으로
+> 브라우저 음성으로 대체 동작합니다.
 
 ## 데이터 파이프라인
 

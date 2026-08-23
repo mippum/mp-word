@@ -154,3 +154,16 @@ export function jumpWord(book: Book, delta: number): void {
 export function playWord(book: Book, wordIndex: number): void {
   playBook(book, wordIndex);
 }
+
+/**
+ * 설정 화면 목소리 미리듣기.
+ * 재생은 전부 이 모듈을 거쳐야 하므로(전역 단일 재생) 여기서 진행 중 재생을 먼저 멈춘다.
+ */
+export async function previewVoice(lang: Utterance['lang'], voiceId: string | null): Promise<void> {
+  await stopPlayback();
+  try {
+    await tts.previewVoice(lang, voiceId);
+  } catch (e) {
+    emitError(e instanceof Error ? e.message : '미리듣기에 실패했습니다');
+  }
+}

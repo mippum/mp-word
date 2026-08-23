@@ -23,7 +23,7 @@
 
 - Expo `~54.0.8` / React Native `0.81.4` / React `19.1.0` / TypeScript `~5.9.2`
 - 라우팅: `expo-router` `~6.0.6` (파일 기반, `app/` 디렉터리)
-- TTS: `expo-speech` — SSML 을 쓰지 않는다 (2.1 참고)
+- TTS: `react-native-tts` — SSML 을 쓰지 않는다 (2.1 참고). **Expo Go 불가, 개발 빌드 필요**
 - 아이콘 렌더링: `react-native-svg`
 
 ### 구조
@@ -40,13 +40,18 @@ lib/
 ├── books.ts              ← 번들 책 데이터 로더 (assets/books/)
 ├── script.ts             ← ★ 낭독 대본 생성 — SSML 을 순수 텍스트 + 실제 쉼으로 대체
 ├── ordinal.ts            ← 'First' ~ 'Sixty-ninth' (낭독의 순번 안내)
-├── tts.ts                ← expo-speech 래퍼. 대본을 순차 재생, 발화 사이 실제 대기
+├── tts.ts                ← react-native-tts 래퍼. 순차 재생 + 발화 사이 실제 대기 + 목소리/엔진
+├── tts.web.ts            ← 웹 개발용 구현 (speechSynthesis). API 를 tts.ts 와 같게 유지할 것
+├── voiceNames.ts         ← Android 목소리 표시 이름 (id 해시 → 중성적인 이름 풀)
 ├── player.ts             ← 전역 단일 플레이어 (usePlayer 훅)
-└── progress.ts           ← 이어보기 위치 (네이티브 JSON 파일 / 웹 localStorage)
+├── settings.ts           ← 언어별 목소리 선택 (voiceKo / voiceEn)
+├── progress.ts           ← 이어보기 위치
+└── jsonStore.ts          ← settings/progress 공용 저장소 (네이티브 파일 / 웹 localStorage)
 
 components/
 ├── WordSpread.tsx        ← 단어 한 개의 지면
 ├── WordIcon.tsx          ← 단어 아이콘 SVG (테마 색으로 tint)
+├── VoicePicker.tsx       ← 언어별 목소리 선택 + 미리듣기
 └── PlaybackControls.tsx  ← 이전 / 재생·일시정지 / 다음
 ```
 
@@ -65,12 +70,16 @@ npm run export-books
 
 ### 실행
 
-```bash
-npm run web
-```
+`react-native-tts` 가 네이티브 모듈이라 **Expo Go 에서는 동작하지 않는다.** 개발 빌드로 실행한다.
 
 ```bash
 npm run android
+```
+
+웹은 개발 확인용이다 (`lib/tts.web.ts` 의 speechSynthesis 로 대체 동작).
+
+```bash
+npm run web
 ```
 
 > 테스트 러너는 아직 설정되어 있지 않습니다(`react-test-renderer`만 devDependency에 있고 `test` 스크립트 없음).
@@ -92,26 +101,45 @@ SSML 태그를 쓰지만, 앱은 태그 없는 순수 텍스트만 엔진에 넘
 낭독 순서(`lib/script.ts`)는 text.csv 의 슬롯 1~7 과 같다. 슬롯은 `Slot` 타입이 되어
 지면 하이라이트의 단위로도 쓰인다.
 
-설계는 **`I:\github\mp-pangaea\mobiles\listening-trainer`** 를 참고했다. 그쪽에서 가져온 원칙:
+TTS 구현은 **`I:\github\mp-pangaea\mobiles\listening-trainer`** 의 것을 그대로 옮겼다.
+
+가져온 것:
+
+| 항목 | 내용 |
+|---|---|
+| 엔진 | `react-native-tts`. expo-speech 와 달리 Android 엔진 목록·선택과 `setDefaultVoice` 를 지원한다 |
+| 언어별 목소리 | 설정의 `voiceKo` / `voiceEn` (null = 자동). iOS 는 발화별 `iosVoiceId`, Android 는 언어가 바뀔 때 `setDefaultVoice` / `setDefaultLanguage` |
+| iOS 영어 목소리 자동 선택 | `iosEnglishVoiceScore` — Eloquence·노벨티 계열을 걸러내고 premium/enhanced 를 우선 |
+| Android 목소리 이름 | `lib/voiceNames.ts` — id 해시로 중성적인 한국/영어 이름을 결정적으로 매핑 |
+| 엔진 동기화 | `syncSystemEngine()` — 시스템 설정에서 엔진을 바꾸고 돌아오면 `AppState` 로 감지해 재적용, 목소리 선택 초기화 |
+| 시스템 설정 열기 | `openSystemTtsSettings()` (Android `TTS_SETTINGS` 인텐트) |
+| 미리듣기 | `previewVoice()` — 한/영 샘플 문장. 영어 샘플은 미·영 발음이 갈리는 단어로 구성 |
+| 오디오 세션 | `setAudioModeAsync` — 백그라운드·화면 꺼짐·무음 스위치에서도 재생 유지 |
+| 웹 대체 구현 | `lib/tts.web.ts` (speechSynthesis) |
+
+지켜야 할 원칙 (그쪽 규칙 그대로):
 
 - **전역 단일 플레이어** — 화면은 `usePlayer()` 로 구독만 하고, `lib/tts.ts` 를 직접 부르지 않는다
-- **재생 파라미터 UI 를 두지 않는다** — 속도·음높이·목소리는 시스템 설정이 유일한 진실의 원천
-  (앱 설정과 곱해져 혼란스러워지는 것을 막는다)
-- **문장별 언어 전환** — 한/영이 섞이므로 발화마다 `en-US` / `ko-KR` 를 지정한다.
-  단, 여기서는 감지할 필요가 없다 — 대본을 만들 때 이미 언어를 알고 있다
+  (목소리 목록 조회는 예외). 미리듣기도 `player.previewVoice()` 를 거쳐 진행 중 재생을 먼저 멈춘다
+- **재생 속도·음높이 UI 를 두지 않는다** — 시스템 설정이 유일한 진실의 원천이다
+  (앱 값과 곱해지면 결과를 예측할 수 없다). 언어만 발화 단위로 전환한다
+- **`lib/tts.web.ts` 의 API 를 `lib/tts.ts` 와 같게 유지한다** (한쪽을 고치면 맞출 것)
 
-`listening-trainer` 와 다른 점:
+mp-word 에서 달라진 점:
 
-- TTS 엔진이 `react-native-tts` 가 아니라 **`expo-speech`** 다. 네이티브 모듈이 아니라
-  Expo Go 에서도 돌아가고 웹 구현이 딸려 온다. 대신 Android 엔진 선택은 못 한다
-- 자유 텍스트가 아니라 **정해진 대본**을 읽으므로 문장 분리(`splitSentences`)가 필요 없다
+- 자유 텍스트가 아니라 **정해진 대본**을 읽으므로 문장 분리(`splitSentences`)와 언어 감지
+  (`detectSentenceLanguage`)가 필요 없다 — `lib/script.ts` 가 발화마다 언어를 이미 정해 둔다
+- **iOS 도 순차 재생**한다. 그쪽은 큐에 한꺼번에 넣지만, 여기서는 발화 사이에 실제로 쉬어야 해서
+  (SSML break 대체) 한 발화씩 완료를 기다린다
+- 오프라인 엔진(Flite/케이브)은 옮기지 않았다 — WASM·녹음 유닛 등 별도 자산이 필요하다
 
 주의할 제약:
 
+- **Expo Go 에서 동작하지 않는다** — `react-native-tts` 가 네이티브 모듈이라 개발 빌드가 필요하다
 - **Android 는 일시정지를 지원하지 않는다** (`supportsPause === false`).
   멈추면 읽던 단어의 처음부터 다시 읽는다
 - 일시정지는 **발화 사이의 쉼 구간**에도 걸린다. `lib/tts.ts` 의 게이트가 이를 처리한다 —
-  엔진만 멈추면 쉼 타이머는 계속 돌아 다음 문장으로 넘어가 버리기 때문이다
+  엔진만 멈추면 쉼 타이머는 계속 돌아 다음 발화로 넘어가 버리기 때문이다
 
 ### 2.2 책 내용 — `mp-epub-foundation-words` 참고
 
