@@ -9,7 +9,10 @@ import { voicesForLanguage, type TtsVoice } from '@/lib/tts';
 
 type Lang = Utterance['lang'];
 
-const SETTING_KEY: Record<Lang, keyof AppSettings> = { ko: 'voiceKo', en: 'voiceEn' };
+/** 설정에서 목소리를 담는 키 — 숫자 항목(빠르기 등)과 섞이지 않게 좁혀 둔다 */
+type VoiceKey = Extract<keyof AppSettings, 'voiceKo' | 'voiceEn'>;
+
+const SETTING_KEY: Record<Lang, VoiceKey> = { ko: 'voiceKo', en: 'voiceEn' };
 
 /**
  * 언어별 목소리 선택. 항목을 누르면 선택과 동시에 그 목소리로 짧은 샘플을 들려준다.
@@ -74,7 +77,11 @@ export default function VoicePicker({
     ...(voices ?? []).map((v) => ({
       id: v.id,
       name: v.name,
-      note: [v.quality !== '기본' ? v.quality : '', v.network ? '인터넷 필요' : '']
+      note: [
+        v.offline ? '오프라인 · 저음질' : '',
+        v.quality !== '기본' ? v.quality : '',
+        v.network ? '인터넷 필요' : '',
+      ]
         .filter(Boolean)
         .join(' · '),
     })),

@@ -6,6 +6,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
 
+import { FliteSynthHost } from '@/components/FliteSynthHost';
 import { useColorScheme } from '@/components/useColorScheme';
 
 export {
@@ -53,6 +54,8 @@ function RootLayoutNav() {
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="book/[slug]" options={{ title: '' }} />
       </Stack>
+      {/* 오프라인 합성용 숨은 WebView — 앱 루트에 상주해야 한다 */}
+      <FliteSynthHost />
     </ThemeProvider>
   );
 }

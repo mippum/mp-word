@@ -47,8 +47,9 @@
 - [ ] 낭독 중 화면 꺼짐 방지 (`expo-keep-awake`)
 - [ ] 개발 빌드 확인 — `react-native-tts` 도입으로 Expo Go 가 불가하다.
       실기기에서 Android 목소리 선택 / 엔진 동기화 / iOS 일시정지 동작 검증 필요
-- [ ] 오프라인 TTS 엔진(Flite / 케이브) 이식 여부 결정 —
-      listening-trainer 에는 있으나 WASM·녹음 유닛 등 별도 자산이 필요해 이번에는 제외했다
+- [ ] 오프라인 엔진 실기기 검증 — Flite 는 웹(브라우저가 WASM 직접 실행)에서만 확인했다.
+      네이티브는 숨은 WebView 경로라 개발 빌드에서 별도 확인이 필요하다
+- [ ] 오프라인 엔진 자산 3.2MB(WASM)를 번들에 계속 둘지 검토
 - [ ] 삽화(PNG) 지면 반영 — 지금은 단어 아이콘 SVG 만 들어간다
 - [ ] 아이콘 없는 단어 26개 채우기 (`vagina`, `native`, `becoming`, `absolutely`, `modest` 등)
 - [ ] 아이콘 번들 용량(11.5MB) 줄이기 — potrace path 단순화 또는 원격 로딩 검토
@@ -69,6 +70,8 @@
 - [x] 앱 기본 구현 — 책장 / 책 보기 / 낭독 (SSML 없이 순수 텍스트 + 실제 쉼)
 - [x] TTS 를 listening-trainer 구성으로 이식 — react-native-tts, 언어별 목소리 선택,
       미리듣기, Android 엔진 동기화, 시스템 설정 열기, 오디오 세션, 웹 대체 구현
+- [x] 오프라인 엔진 이식 — Flite(영어/WASM), 숨은 WebView 합성 호스트, 빠르기·음높이 조절
+      (한국어 케이브는 도입했다가 제거 — 한국어는 시스템 TTS 로 읽는다)
 - [x] 책 데이터 내보내기 파이프라인 (`npm run export-books`)
 - [x] Expo 템플릿 화면 제거
 - [x] `ko_read_aloud` 컬럼 생성 및 정제 (괄호 제거, 아라비아 숫자 → 한글 발음)

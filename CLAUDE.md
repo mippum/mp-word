@@ -11,17 +11,26 @@
 
 ## 참고 저장소 (읽기 전용)
 
-앱 작업 전에 아래를 먼저 읽으세요. AGENTS.md 2.1 · 2.2절에 요약이 있습니다.
+앱 작업 전에 아래를 먼저 읽으세요. AGENTS.md 2.1 · 2.2 · 2.3절에 요약이 있습니다.
 
 - **TTS**: `I:\github\mp-pangaea\mobiles\listening-trainer` — 특히 `CLAUDE.md`, `lib/tts.ts`, `lib/sentences.ts`, `lib/player.ts`, `app/reading.tsx`
 - **책 내용**: `I:\github\mp-epub-foundation-words\ref\epub\mp-word-en-basic\yes24` — `en-basic-yes24-*.fodt` / `.pdf`
 
 두 저장소는 별개 프로젝트입니다. 참고만 하고 **경로를 코드에 하드코딩하지 마세요.**
 
+## ⛔ git 은 건드리지 말 것
+
+**git 은 사용자가 직접 다룹니다.** `git add` · `git rm`(`--cached` 포함) · `git commit` ·
+`git restore` · `git checkout` · `git reset` 등 **저장소 상태를 바꾸는 명령은 실행하지 마세요.**
+필요하면 명령을 알려주기만 하고, 실행은 사용자에게 맡기세요.
+
+파일을 지울 때도 `rm` 만 쓰고 인덱스는 그대로 둡니다.
+`git status` / `git diff` / `git log` 같은 조회 전용 명령은 써도 됩니다.
+
 ## Claude Code 사용 시 참고
 
 - **응답 언어**: 한국어
-- **커밋 메시지**: 기존 관례대로 한국어 `feat: ...` 형식. 커밋/푸시는 명시적으로 요청받았을 때만
+- **커밋 메시지**: 요청받으면 기존 관례대로 한국어 `feat: ...` 형식으로 **문구만** 제안 (직접 커밋 금지)
 - **셸**: Windows / PowerShell 기본. POSIX 스크립트가 필요하면 Bash 도구 사용
 - **파이썬 스크립트 실행**: 상대경로 의존성 때문에 반드시 `ref/tool/word_csv_data_mng_py/scripts/` 안에서 실행
 

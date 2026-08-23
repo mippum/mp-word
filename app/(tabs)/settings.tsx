@@ -2,9 +2,13 @@ import Constants from 'expo-constants';
 import { useCallback, useEffect, useState } from 'react';
 import { AppState, Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
+import Stepper from '@/components/Stepper';
 import { Text, useThemeColor } from '@/components/Themed';
 import VoicePicker from '@/components/VoicePicker';
+import { FLITE_VOICE_ID, FLITE_VOICE_NAME, isFliteVoiceId } from '@/lib/flite/voices';
 import { listBooks } from '@/lib/books';
+import { previewVoice } from '@/lib/player';
+import { getSettings, setSettings } from '@/lib/settings';
 import {
   engineKind,
   openSystemTtsSettings,
@@ -13,6 +17,11 @@ import {
   supportsVoiceSelection,
   syncSystemEngine,
 } from '@/lib/tts';
+
+/** 오프라인 엔진 조절 범위 (백분율) */
+const FLITE_MIN = 50;
+const FLITE_MAX = 200;
+const FLITE_STEP = 10;
 
 /**
  * 설정 — 언어별 목소리 선택 + 시스템 TTS 안내 + 앱 정보.
@@ -30,6 +39,13 @@ export default function SettingsScreen() {
   // 엔진이 바뀌면 목소리 목록도 바뀌므로 VoicePicker 를 다시 그리게 하는 카운터
   const [voiceListVersion, setVoiceListVersion] = useState(0);
   const [notice, setNotice] = useState<string | null>(null);
+
+  // 오프라인 목소리를 고른 경우에만 빠르기·음높이 조절을 노출한다 —
+  // 시스템 TTS 와 달리 앱이 합성을 직접 제어해 시스템 설정과 곱해지지 않기 때문이다
+  const [enVoice, setEnVoice] = useState<string | null>(() => getSettings().voiceEn);
+  const [fliteRate, setFliteRate] = useState(() => getSettings().fliteRate);
+  const [flitePitch, setFlitePitch] = useState(() => getSettings().flitePitch);
+  const fliteSelected = isFliteVoiceId(enVoice);
 
   /** 시스템 기본 엔진을 앱에 동기화한다 ("글자 읽어주기"에서 바꾸고 돌아온 경우 반영) */
   const syncEngines = useCallback(async () => {
@@ -92,6 +108,7 @@ export default function SettingsScreen() {
               label="영어 목소리"
               autoLabel="자동 (권장)"
               reloadKey={voiceListVersion}
+              onChange={setEnVoice}
             />
             <VoicePicker
               lang="ko"
@@ -99,6 +116,10 @@ export default function SettingsScreen() {
               autoLabel="시스템 기본"
               reloadKey={voiceListVersion}
             />
+            <Text style={[styles.note, { color: muted }]}>
+              영어 목록 맨 아래의 {FLITE_VOICE_NAME}은 인터넷도 시스템 TTS 도 없이 동작하는
+              오프라인 목소리입니다. 음질이 낮으니 최후의 보루로만 쓰세요.
+            </Text>
           </>
         ) : null}
 
@@ -139,6 +160,44 @@ export default function SettingsScreen() {
         ) : null}
       </View>
 
+      {fliteSelected ? (
+        <View style={[styles.card, { backgroundColor: card, borderColor: border }]}>
+          <Text style={styles.title}>{FLITE_VOICE_NAME} 음성 조절 (오프라인)</Text>
+          <Text style={[styles.label, { color: muted }]}>빠르기</Text>
+          <Stepper
+            label="빠르기"
+            value={fliteRate}
+            min={FLITE_MIN}
+            max={FLITE_MAX}
+            step={FLITE_STEP}
+            unit="%"
+            onChange={(next) => setFliteRate(setSettings({ fliteRate: next }).fliteRate)}
+          />
+          <Text style={[styles.label, { color: muted }]}>음높이</Text>
+          <Stepper
+            label="음높이"
+            value={flitePitch}
+            min={FLITE_MIN}
+            max={FLITE_MAX}
+            step={FLITE_STEP}
+            unit="%"
+            onChange={(next) => setFlitePitch(setSettings({ flitePitch: next }).flitePitch)}
+          />
+          <Pressable
+            onPress={() => void previewVoice('en', FLITE_VOICE_ID.slt)}
+            style={({ pressed }) => [
+              styles.button,
+              { borderColor: tint, opacity: pressed ? 0.6 : 1 },
+            ]}>
+            <Text style={[styles.buttonText, { color: tint }]}>이 설정으로 미리듣기</Text>
+          </Pressable>
+          <Text style={[styles.note, { color: muted }]}>
+            빠르기·음높이는 오프라인({FLITE_VOICE_NAME}) 재생에만 적용됩니다. 변경은 다음 재생부터
+            반영되며, 위 미리듣기로 지금 들어볼 수 있습니다.
+          </Text>
+        </View>
+      ) : null}
+
       <View style={[styles.card, { backgroundColor: card, borderColor: border }]}>
         <Text style={styles.title}>정보</Text>
         {info.map((row) => (
@@ -170,6 +229,11 @@ const styles = StyleSheet.create({
   note: {
     fontSize: 14,
     lineHeight: 21,
+  },
+  label: {
+    fontSize: 12,
+    letterSpacing: 1,
+    textTransform: 'uppercase',
   },
   notice: {
     fontSize: 13,

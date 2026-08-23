@@ -12,11 +12,20 @@ export type AppSettings = {
   voiceKo: string | null;
   /** 영어 문장에 쓸 목소리 id. null = 자동 */
   voiceEn: string | null;
+  /**
+   * 오프라인 엔진(Selton) 전용 재생 파라미터 (백분율).
+   * 시스템 TTS 와 달리 Flite 는 앱이 합성을 직접 제어하므로 시스템 설정과
+   * 곱해지지 않는다 — 그래서 여기서만 예외로 조절값을 둔다.
+   */
+  fliteRate: number;
+  flitePitch: number;
 };
 
 export const DEFAULT_SETTINGS: AppSettings = {
   voiceKo: null,
   voiceEn: null,
+  fliteRate: 100,
+  flitePitch: 100,
 };
 
 const store = createJsonStore<AppSettings>('settings.json', 'mp-word:settings', DEFAULT_SETTINGS);

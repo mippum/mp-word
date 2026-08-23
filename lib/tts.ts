@@ -18,6 +18,9 @@ import { setAudioModeAsync } from 'expo-audio';
 import { Linking, Platform } from 'react-native';
 import Tts from 'react-native-tts';
 
+import { flitePlayWav, fliteStopAudio } from './flite/audio.native';
+import { fliteSynthWav } from './flite/bridge.native';
+import { FLITE_VOICES, fliteVoiceKey } from './flite/voices';
 import type { Utterance } from './script';
 import { getSettings } from './settings';
 import { assignFriendlyNames } from './voiceNames';
@@ -143,6 +146,8 @@ export type TtsVoice = {
   quality: '프리미엄' | '향상' | '기본';
   /** 인터넷 연결이 필요한 목소리 (Android network 목소리) */
   network: boolean;
+  /** 앱에 번들된 오프라인 엔진(Flite) 목소리 — 시스템/인터넷 없이 동작 */
+  offline?: boolean;
 };
 
 function iosVoiceQuality(v: NativeVoice): TtsVoice['quality'] {
@@ -190,12 +195,17 @@ export async function voicesForLanguage(lang: Lang): Promise<TtsVoice[]> {
     network: !!v.networkConnectionRequired,
   }));
   const named = Platform.OS === 'android' ? assignFriendlyNames(mapped, lang) : mapped;
-  return named.sort(
+  const sorted = named.sort(
     (a, b) =>
       Number(a.network) - Number(b.network) ||
       QUALITY_RANK[b.quality] - QUALITY_RANK[a.quality] ||
       a.name.localeCompare(b.name)
   );
+  // 오프라인 항목(Selton)은 저음질이라 목록 **맨 아래**에 둔다 —
+  // 시스템 TTS 를 쓸 수 없을 때만 고르는 최후의 보루다 (인터넷 필요 목소리보다도 아래).
+  // 오프라인 엔진은 영어(Flite)뿐이라 한국어는 항상 시스템 TTS 로 읽는다.
+  if (lang === 'en') return [...sorted, ...FLITE_VOICES];
+  return sorted;
 }
 
 // ---------------------------------------------------------------------------
@@ -278,6 +288,39 @@ async function applyAndroidLanguage(lang: Lang): Promise<void> {
   }
 }
 
+/**
+ * 이번 재생의 오프라인 엔진 설정.
+ * 영어 목소리로 Selton(flite:)을 고르면 영어 발화만 오프라인 합성으로 읽고,
+ * 나머지(한국어 포함)는 시스템 TTS 로 읽는다.
+ */
+type OfflinePlan = {
+  fliteKey: ReturnType<typeof fliteVoiceKey>;
+  rate: number;
+  pitch: number;
+};
+
+function offlinePlan(): OfflinePlan {
+  const s = getSettings();
+  return {
+    fliteKey: fliteVoiceKey(s.voiceEn),
+    rate: (s.fliteRate ?? 100) / 100,
+    pitch: (s.flitePitch ?? 100) / 100,
+  };
+}
+
+/**
+ * 오프라인 엔진으로 발화 하나를 합성해 재생한다 (대상이 아니면 false).
+ * 합성은 숨은 WebView(Hermes 가 WASM 을 못 돌린다), 재생은 expo-audio 가 맡는다.
+ */
+async function speakOneOffline(utterance: Utterance, plan: OfflinePlan): Promise<boolean> {
+  if (utterance.lang === 'en' && plan.fliteKey) {
+    const { base64 } = await fliteSynthWav(plan.fliteKey, utterance.text, plan.rate, plan.pitch);
+    await flitePlayWav(base64);
+    return true;
+  }
+  return false;
+}
+
 /** 발화 하나 — 완료/취소 이벤트가 올 때까지 기다린다 */
 function speakOne(utterance: Utterance, iosVoice: string | null): Promise<'done' | 'stopped'> {
   return new Promise((resolve) => {
@@ -333,17 +376,29 @@ export async function speak(
   };
   if (generation !== mine) return;
 
+  const plan = offlinePlan();
+
   for (let index = start; index < utterances.length; index += 1) {
     await gate();
     if (generation !== mine) return;
 
     const utterance = utterances[index];
-    if (Platform.OS === 'android') await applyAndroidLanguage(utterance.lang);
-    if (generation !== mine) return;
-
     handlers.onUtterance?.(index);
-    const result = await speakOne(utterance, iosVoiceByLang[utterance.lang]);
-    if (generation !== mine || result === 'stopped') return;
+
+    try {
+      if (await speakOneOffline(utterance, plan)) {
+        if (generation !== mine) return;
+      } else {
+        if (Platform.OS === 'android') await applyAndroidLanguage(utterance.lang);
+        if (generation !== mine) return;
+        const result = await speakOne(utterance, iosVoiceByLang[utterance.lang]);
+        if (generation !== mine || result === 'stopped') return;
+      }
+    } catch (e) {
+      if (generation !== mine) return; // 중단으로 인한 오류는 무시
+      handlers.onError?.(e instanceof Error ? e.message : '재생 중 오류가 발생했습니다');
+      return;
+    }
 
     // SSML break 대신 실제로 쉰다 (마지막 발화 뒤에는 쉬지 않는다)
     if (utterance.pauseAfterMs > 0 && index < utterances.length - 1) {
@@ -361,6 +416,7 @@ export async function stop(): Promise<void> {
   // 게이트에 걸려 있던 루프도 깨워야 자기 세대가 아님을 보고 빠져나간다
   releaseGate();
   settle('stopped');
+  fliteStopAudio();
   try {
     await Tts.stop();
   } catch {
@@ -398,6 +454,19 @@ export async function previewVoice(lang: Lang, voiceId: string | null): Promise<
   await stop();
   const sample = PREVIEW_SAMPLES[lang];
 
+  // 오프라인 목소리 미리듣기 — 현재 설정의 빠르기/음높이를 반영해 조절 결과를 바로 들려준다
+  const settings = getSettings();
+  const fliteKey = fliteVoiceKey(voiceId);
+  if (fliteKey) {
+    const { base64 } = await fliteSynthWav(
+      fliteKey,
+      sample,
+      (settings.fliteRate ?? 100) / 100,
+      (settings.flitePitch ?? 100) / 100
+    );
+    await flitePlayWav(base64);
+    return;
+  }
   if (Platform.OS === 'android') {
     try {
       if (voiceId) await Tts.setDefaultVoice(voiceId);

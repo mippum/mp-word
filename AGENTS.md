@@ -43,8 +43,9 @@ lib/
 ├── tts.ts                ← react-native-tts 래퍼. 순차 재생 + 발화 사이 실제 대기 + 목소리/엔진
 ├── tts.web.ts            ← 웹 개발용 구현 (speechSynthesis). API 를 tts.ts 와 같게 유지할 것
 ├── voiceNames.ts         ← Android 목소리 표시 이름 (id 해시 → 중성적인 이름 풀)
+└── flite/                ← 오프라인 영어 엔진 (Flite/WASM) — 2.2 참고
 ├── player.ts             ← 전역 단일 플레이어 (usePlayer 훅)
-├── settings.ts           ← 언어별 목소리 선택 (voiceKo / voiceEn)
+├── settings.ts           ← 목소리 선택 (voiceKo/voiceEn) + 오프라인 엔진 조절값
 ├── progress.ts           ← 이어보기 위치
 └── jsonStore.ts          ← settings/progress 공용 저장소 (네이티브 파일 / 웹 localStorage)
 
@@ -52,6 +53,8 @@ components/
 ├── WordSpread.tsx        ← 단어 한 개의 지면
 ├── WordIcon.tsx          ← 단어 아이콘 SVG (테마 색으로 tint)
 ├── VoicePicker.tsx       ← 언어별 목소리 선택 + 미리듣기
+├── Stepper.tsx           ← −/+ 값 조절 (오프라인 엔진 빠르기·음높이)
+├── FliteSynthHost.tsx    ← 오프라인 합성용 숨은 WebView (웹은 null 스텁)
 └── PlaybackControls.tsx  ← 이전 / 재생·일시정지 / 다음
 ```
 
@@ -131,8 +134,6 @@ mp-word 에서 달라진 점:
   (`detectSentenceLanguage`)가 필요 없다 — `lib/script.ts` 가 발화마다 언어를 이미 정해 둔다
 - **iOS 도 순차 재생**한다. 그쪽은 큐에 한꺼번에 넣지만, 여기서는 발화 사이에 실제로 쉬어야 해서
   (SSML break 대체) 한 발화씩 완료를 기다린다
-- 오프라인 엔진(Flite/케이브)은 옮기지 않았다 — WASM·녹음 유닛 등 별도 자산이 필요하다
-
 주의할 제약:
 
 - **Expo Go 에서 동작하지 않는다** — `react-native-tts` 가 네이티브 모듈이라 개발 빌드가 필요하다
@@ -141,7 +142,35 @@ mp-word 에서 달라진 점:
 - 일시정지는 **발화 사이의 쉼 구간**에도 걸린다. `lib/tts.ts` 의 게이트가 이를 처리한다 —
   엔진만 멈추면 쉼 타이머는 계속 돌아 다음 발화로 넘어가 버리기 때문이다
 
-### 2.2 책 내용 — `mp-epub-foundation-words` 참고
+### 2.2 오프라인 엔진 (Flite)
+
+인터넷도 시스템 TTS 도 없이 동작하는 **최후의 보루**다. **영어 전용**이다 —
+한국어는 항상 시스템 TTS 로 읽는다.
+
+영어 목소리 목록 맨 아래에 `Selton`(`flite:cmu_us_slt`)으로 붙고, 저음질이라 인터넷 필요
+목소리보다도 아래에 둔다. 골랐을 때만 영어 발화를 이 엔진으로 읽고, 한국어 발화는 그대로
+시스템 TTS 가 읽는다 (한 재생 안에서 섞인다).
+
+**네이티브는 Hermes 가 WASM 을 못 돌린다.** 그래서 루트에 상주하는 숨은 WebView
+(`components/FliteSynthHost.native.tsx`)가 **합성만** 하고, 재생은 `lib/flite/audio.native.ts`
+가 expo-audio 로 한다 (WebView 재생은 화면이 꺼지면 멈추기 때문). 프로토콜은
+`lib/flite/bridge.native.ts` ↔ `webviewHtml.ts` — glue+wasm 을 청크로 주입하고 결과는 WAV base64.
+웹은 브라우저가 WASM 을 직접 돌린다 (`lib/flite/synth.web.ts`).
+
+시스템 TTS 와 달리 앱이 합성을 직접 제어해 시스템 설정과 곱해지지 않으므로,
+**Selton 을 고른 경우에만** 설정에 빠르기·음높이가 나타난다 (`fliteRate` / `flitePitch`, 백분율).
+
+주의:
+
+- `metro.config.js` 가 `assetExts` 에 `wasm` / `fliteglue` 를 추가한다. **이 파일을 지우면
+  번들이 깨진다.** 설정을 바꿨으면 Metro 를 재시작해야 반영된다
+- `react-native-webview` 도 네이티브 모듈이라 개발 빌드 재생성이 필요하다.
+  구 바이너리에서는 `FliteSynthHost` 가 null 을 렌더하고 오프라인 요청만 실패한다 (앱은 살아 있다)
+- 자산은 `assets/flite/` 의 `cmu_us_slt.wasm`(3.2MB) + `flite.fliteglue`(12KB)
+- 오프라인 한국어 엔진(케이브)은 도입했다가 제거했다. 되살릴 일이 있으면
+  listening-trainer 의 `lib/tts-ko/` 와 `assets/tts-ko/units.m4a` 를 참고할 것
+
+### 2.3 책 내용 — `mp-epub-foundation-words` 참고
 
 앱이 보여줄 **책의 실제 구성**은
 **`I:\github\mp-epub-foundation-words\ref\epub\mp-word-en-basic\yes24`** 를 참고합니다
@@ -301,19 +330,39 @@ cd ref/tool/word_csv_data_mng_py && python -c "import sqlite3;c=sqlite3.connect(
 
 ## 7. 작업 규칙
 
+### ⛔ git 은 건드리지 말 것
+
+**저장소의 git 은 전적으로 사용자가 직접 다룹니다.** 에이전트는 git 상태를 바꾸는 명령을
+**어떤 경우에도 실행하지 않습니다.** 요청받았다고 생각되더라도 실행하지 말고, 필요한 명령을
+알려만 주세요.
+
+금지 (예시이며 이것만은 아닙니다):
+
+```
+git add        git rm         git commit     git push
+git restore    git checkout   git reset      git revert
+git stash      git branch     git merge      git rebase
+git clean      git mv         git tag
+```
+
+`git rm --cached` 처럼 **작업 파일을 남기는 명령도 인덱스를 바꾸므로 금지**입니다.
+파일을 지워야 하면 `rm` 만 쓰고, 스테이징·커밋 반영은 사용자에게 맡기세요.
+
+조회 전용(`git status`, `git diff`, `git log`, `git show`, `git ls-tree`)은 작업 파악에 필요하면
+써도 됩니다 — 저장소를 바꾸지 않기 때문입니다.
+
 ### 하지 말 것
 
 - `ref/` 하위 **원본 코퍼스 수정** — 읽기 전용입니다
 - `.fodt` / `.fodp` 직접 편집
 - `work/word.db`를 정본처럼 취급하기 — 정본은 `source/*.csv`
-- 요청 없이 `git commit` / `git push`
 
 ### 할 것
 
 - 데이터 수정 후 `word_id` ↔ `word` 정합성 확인
 - 새 PK가 필요하면 `uuid6.uuid7()` 사용 (다른 UUID 버전 금지)
 - CSV는 UTF-8, `newline=''`로 열기 (기존 스크립트 관례)
-- 커밋 메시지는 기존 관례를 따라 한국어 `feat: ...` 형식
+- 커밋 메시지 제안이 필요하면 기존 관례대로 한국어 `feat: ...` 형식으로 **문구만** 제시
 
 ### 알려진 함정
 

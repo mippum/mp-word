@@ -4,6 +4,8 @@
  *
  * 배포 대상은 네이티브다. 여기서는 엔진 선택이 없고, 목소리 목록도 브라우저가 주는 대로 쓴다.
  */
+import { fliteSpeak, fliteStop, warmupFliteAudio } from './flite/synth.web';
+import { FLITE_VOICES, isFliteVoiceId } from './flite/voices';
 import type { Utterance } from './script';
 import { getSettings } from './settings';
 import type { SpeakHandlers, TtsEngine, TtsVoice } from './tts';
@@ -46,7 +48,7 @@ function browserVoices(): Promise<SpeechSynthesisVoice[]> {
 
 export async function voicesForLanguage(lang: Lang): Promise<TtsVoice[]> {
   const list = await browserVoices();
-  return list
+  const sorted = list
     .filter((v) => v.lang.toLowerCase().startsWith(lang))
     .map((v) => ({
       id: v.voiceURI,
@@ -56,6 +58,9 @@ export async function voicesForLanguage(lang: Lang): Promise<TtsVoice[]> {
       network: !v.localService,
     }))
     .sort((a, b) => Number(a.network) - Number(b.network) || a.name.localeCompare(b.name));
+  // 웹도 오프라인 엔진을 쓸 수 있다 (브라우저가 WASM 을 직접 돌린다)
+  if (lang === 'en') return [...sorted, ...FLITE_VOICES];
+  return sorted;
 }
 
 let generation = 0;
@@ -129,6 +134,11 @@ export async function speak(
     ko: settings.voiceKo,
     en: settings.voiceEn,
   };
+  const fliteEn = isFliteVoiceId(settings.voiceEn);
+  const rate = (settings.fliteRate ?? 100) / 100;
+  const pitch = (settings.flitePitch ?? 100) / 100;
+  // 오디오 컨텍스트는 재생 버튼 제스처가 살아 있는 동안 깨워 둬야 한다
+  if (fliteEn) warmupFliteAudio();
 
   for (let index = start; index < utterances.length; index += 1) {
     await gate();
@@ -136,8 +146,20 @@ export async function speak(
 
     const utterance = utterances[index];
     handlers.onUtterance?.(index);
-    const result = await speakOne(utterance, voiceByLang[utterance.lang]);
-    if (generation !== mine || result === 'stopped') return;
+
+    try {
+      if (utterance.lang === 'en' && fliteEn) {
+        await fliteSpeak(settings.voiceEn as string, utterance.text, rate, pitch);
+        if (generation !== mine) return;
+      } else {
+        const result = await speakOne(utterance, voiceByLang[utterance.lang]);
+        if (generation !== mine || result === 'stopped') return;
+      }
+    } catch (e) {
+      if (generation !== mine) return;
+      handlers.onError?.(e instanceof Error ? e.message : '재생 중 오류가 발생했습니다');
+      return;
+    }
 
     if (utterance.pauseAfterMs > 0 && index < utterances.length - 1) {
       await wait(utterance.pauseAfterMs);
@@ -152,6 +174,7 @@ export async function stop(): Promise<void> {
   generation += 1;
   clearPauseTimer();
   releaseGate();
+  fliteStop();
   synth()?.cancel();
 }
 
@@ -172,6 +195,17 @@ const PREVIEW_SAMPLES: Record<Lang, string> = {
 
 export async function previewVoice(lang: Lang, voiceId: string | null): Promise<void> {
   await stop();
+  const settings = getSettings();
+  if (isFliteVoiceId(voiceId)) {
+    warmupFliteAudio();
+    await fliteSpeak(
+      voiceId as string,
+      PREVIEW_SAMPLES.en,
+      (settings.fliteRate ?? 100) / 100,
+      (settings.flitePitch ?? 100) / 100
+    );
+    return;
+  }
   const s = synth();
   if (!s) return;
   const u = new SpeechSynthesisUtterance(PREVIEW_SAMPLES[lang]);
