@@ -329,7 +329,7 @@ id,word_id,word,sentence,ko_translation,ko_read_aloud
 0199de40-5200-70eb-24f6-620801f0ae96,0199279b-d4cc-70fb-0529-bf420d7b40cf,purchase,I made a purchase online.,온라인으로 구매했습니다.,온라인으로 구매했습니다.
 0199de40-5234-70e6-bcfc-b79ef2e08a14,01992796-f6a4-7021-c164-b24d6a2da3a9,stuff,Put your stuff in the bag.,짐을 가방에 넣으세요.,짐을 가방에 넣으세요.
 0199de40-52a3-70c4-9ab6-c1a3eebbe02e,01992796-3c6c-70b1-ea7d-b40d25957ba6,user,Each user has a password.,각 사용자는 비밀번호를 가지고 있습니다.,각 사용자는 비밀번호를 가지고 있습니다.
-0199de40-5341-70ea-7484-388e1de72e33,0199277f-65cf-701e-0de8-5f249993119f,nil,The score was two-nil.,점수는 2점 만점에 0점입니다.,점수는 이점 만점에 영점입니다.
+0199de40-5341-70ea-7484-388e1de72e33,0199277f-65cf-701e-0de8-5f249993119f,nil,The score was two-nil.,점수는 2대0이었다.,점수는 이대영이었다.
 0199de40-542b-7028-0fd0-e406701f4b1a,01992796-48ff-7087-19e8-3d79a6d4327f,alone,She lives alone.,그녀는 혼자 살아요.,그녀는 혼자 살아요.
 0199de40-5457-70a2-db64-64c9c16acfcf,01992796-41a9-70b6-5482-8e3f952c1e10,wish,I wish you luck.,행운을 빌어요.,행운을 빌어요.
 0199de40-548a-70a0-b094-d15c579f189b,0199279b-8c50-7006-fde3-75a3ce2037b4,multiple,She speaks multiple languages.,그녀는 여러 언어를 구사합니다.,그녀는 여러 언어를 구사합니다.
@@ -25531,7 +25531,7 @@ id,word_id,word,sentence,ko_translation,ko_read_aloud
 019a47aa-53ff-70b5-2bb8-174b342313f6,01992797-da63-7037-3565-5b99eed972b2,mother,My mother is kind.,어머니는 친절하세요.,어머니는 친절하세요.
 019a47aa-5457-7095-086b-feb695c92c82,0199279b-8a70-70b3-9f05-3c1fe620ef4a,mountain,We climbed the mountain.,우리는 산에 올랐어요.,우리는 산에 올랐어요.
 019a47aa-5497-7006-99ea-ca36adc1c07b,01992796-bd88-70df-d794-612aaeea86e4,mouse,The mouse ran away.,쥐가 도망갔어요.,쥐가 도망갔어요.
-019a47aa-5506-702a-6062-ccd5c867aa20,01992796-bd96-705a-35fa-43642bade05a,mouth,He opened his mouth.,쥐가 입을 열었어요.,쥐가 입을 열었어요.
+019a47aa-5506-702a-6062-ccd5c867aa20,01992796-bd96-705a-35fa-43642bade05a,mouth,He opened his mouth.,그가 입을 열었어요.,그가 입을 열었어요.
 019a47aa-5563-70a3-d025-4c0f64cac57d,01992796-19b3-7020-999e-49951091a585,move,Let’s move to the new house.,새 집으로 이사하자.,새 집으로 이사하자.
 019a47aa-55ab-7021-3192-46a876575296,01992796-bdc6-709d-e49c-642178f76c35,movie,We watch a movie tonight.,오늘 밤 영화를 보자.,오늘 밤 영화를 보자.
 019a47aa-55e5-70f6-0e63-c7b8473b50e0,01992796-19ea-706b-c38d-78b317597952,much,I don’t have much time.,시간이 별로 없어.,시간이 별로 없어.

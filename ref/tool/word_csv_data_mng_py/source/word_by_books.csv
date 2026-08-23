@@ -2779,7 +2779,7 @@ id,word_id,word,book_name,word_order
 019f8aa9-6e11-73e7-8be2-f2d966d0009b,01992797-57f5-705e-ba89-80e70255a434,couple,Foundation Essential Fourth,50
 019f8aa9-6e1f-7f72-83b4-cf8d645d68ea,01992796-2f3e-70cd-4907-464ba352b07b,send,Foundation Essential Fourth,51
 019f8aa9-6e2d-7a15-b83d-f3f1d2557539,0199279a-5926-70b5-568e-c737c11e5655,adjusted,Foundation Essential Fourth,52
-019f8aa9-6e3b-7b7f-9878-3aed6d30ff54,01992797-3049-7079-2966-81531fa2cb12,barrel,Foundation Essential Fourth,53
+019f8aa9-6e3b-7b7f-9878-3aed6d30ff54,01992797-3049-7079-2966-81531fa2cb12,begin,Foundation Essential Seventh,65
 019f8aa9-6e4a-7aad-8d32-2dfeb5079c2e,0199277f-0e7c-700d-36e8-e6c62d8f46b1,act,Foundation Essential Fourth,54
 019f8aa9-6e58-733c-8b62-475fdc33a5bc,019927a3-25e7-70b7-bc86-697f3db8df35,relationship,Foundation Essential Fourth,55
 019f8aa9-6e66-7da9-8a61-74602376bde8,0199279c-24b7-7033-a088-ca5b69fdb89f,starting,Foundation Essential Fourth,56
@@ -2998,7 +2998,7 @@ id,word_id,word,book_name,word_order
 019f8aa9-7bea-7695-8d52-3d944635c97e,0199277f-1eef-7081-ef27-f75ceb81c75e,bug,Foundation Essential Seventh,62
 019f8aa9-7bf9-77ab-ae14-527fda4fd06d,0199279c-cc8d-705e-218f-67577f75cda4,certainly,Foundation Essential Seventh,63
 019f8aa9-7c08-7031-b9e1-de3d1c5ddab0,0199279a-7b17-7014-6de6-396961ad3f34,balanced,Foundation Essential Seventh,64
-019f8aa9-7c19-7ad0-923a-19de976b6ade,01992796-5316-70f1-4a9e-3b4fd746dd7c,begin,Foundation Essential Seventh,65
+019f8aa9-7c19-7ad0-923a-19de976b6ade,01992796-5316-70f1-4a9e-3b4fd746dd7c,barrel,Foundation Essential Fourth,53
 019f8aa9-7c28-7e3e-8f9c-f3efb760cda7,0199279f-4a5b-70c9-5c73-2977dadab600,girlfriend,Foundation Essential Seventh,66
 019f8aa9-7c38-7892-947e-353d7e13f7f7,01992796-f3ee-7002-f4c0-e53b769eb6b1,stage,Foundation Essential Seventh,67
 019f8aa9-7c47-7192-9bd5-b0e39bc75112,01992799-0f75-70b1-ab45-57e574958e08,feeling,Foundation Essential Seventh,68
