@@ -1,20 +1,45 @@
+import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Link } from 'expo-router';
-import { useMemo } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { Pressable, SectionList, StyleSheet, View } from 'react-native';
 
 import { Text, useThemeColor } from '@/components/Themed';
 import { booksByLevel, type Book } from '@/lib/books';
 import { getProgress } from '@/lib/progress';
+import { getSettings, setSettings } from '@/lib/settings';
 
-/** 책장 — 레벨별로 묶은 권 목록. 누르면 그 책을 펼친다. */
+/**
+ * 책장 — 레벨별로 묶은 권 목록. 누르면 그 책을 펼친다.
+ *
+ * 44권이 한 번에 늘어서면 훑기 어려워서 레벨 머리글로 접었다 펼 수 있게 했다.
+ * 접은 레벨은 설정(`collapsedLevels`)에 남아 다시 들어와도 유지된다.
+ */
 export default function BookshelfScreen() {
-  const sections = useMemo(
-    () => booksByLevel().map(({ level, books }) => ({ title: level, data: books })),
-    []
-  );
+  const levels = useMemo(() => booksByLevel(), []);
+  const [collapsed, setCollapsed] = useState<string[]>(() => getSettings().collapsedLevels);
+
   const background = useThemeColor('background');
-  const muted = useThemeColor('muted');
-  const border = useThemeColor('border');
+
+  const toggle = useCallback((level: string) => {
+    setCollapsed((current) => {
+      const next = current.includes(level)
+        ? current.filter((name) => name !== level)
+        : [...current, level];
+      setSettings({ collapsedLevels: next });
+      return next;
+    });
+  }, []);
+
+  const sections = useMemo(
+    () =>
+      levels.map(({ level, books }) => ({
+        title: level,
+        count: books.length,
+        // 접힌 레벨은 항목을 비워 머리글만 남긴다
+        data: collapsed.includes(level) ? [] : books,
+      })),
+    [levels, collapsed]
+  );
 
   return (
     <SectionList
@@ -24,12 +49,48 @@ export default function BookshelfScreen() {
       keyExtractor={(book) => book.slug}
       stickySectionHeadersEnabled={false}
       renderSectionHeader={({ section }) => (
-        <Text style={[styles.level, { color: muted, borderColor: border }]}>
-          {section.title}
-        </Text>
+        <LevelHeader
+          level={section.title}
+          count={section.count}
+          collapsed={collapsed.includes(section.title)}
+          onPress={() => toggle(section.title)}
+        />
       )}
       renderItem={({ item }) => <BookRow book={item} />}
     />
+  );
+}
+
+function LevelHeader({
+  level,
+  count,
+  collapsed,
+  onPress,
+}: {
+  level: string;
+  count: number;
+  collapsed: boolean;
+  onPress: () => void;
+}) {
+  const muted = useThemeColor('muted');
+  const border = useThemeColor('border');
+
+  return (
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityState={{ expanded: !collapsed }}
+      accessibilityLabel={`${level} ${count}권 ${collapsed ? '펼치기' : '접기'}`}
+      style={({ pressed }) => [styles.header, { borderColor: border }, pressed && { opacity: 0.6 }]}>
+      <FontAwesome
+        name={collapsed ? 'chevron-right' : 'chevron-down'}
+        size={11}
+        color={muted}
+        style={styles.chevron}
+      />
+      <Text style={[styles.level, { color: muted }]}>{level}</Text>
+      <Text style={[styles.count, { color: muted }]}>{count}권</Text>
+    </Pressable>
   );
 }
 
@@ -65,16 +126,27 @@ function BookRow({ book }: { book: Book }) {
 const styles = StyleSheet.create({
   content: {
     padding: 16,
-    gap: 8,
+    paddingBottom: 24,
+  },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 14,
+    marginBottom: 10,
+    paddingBottom: 8,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+  },
+  chevron: {
+    width: 18,
   },
   level: {
+    flex: 1,
     fontSize: 13,
     letterSpacing: 1,
     textTransform: 'uppercase',
-    marginTop: 16,
-    marginBottom: 6,
-    paddingBottom: 6,
-    borderBottomWidth: StyleSheet.hairlineWidth,
+  },
+  count: {
+    fontSize: 12,
   },
   row: {
     flexDirection: 'row',

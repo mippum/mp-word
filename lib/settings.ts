@@ -11,6 +11,8 @@ import { createJsonStore } from './jsonStore';
 export type AppSettings = {
   /** 화면 모드 — 'system' 이면 기기 설정을 따른다 */
   themeMode: ThemeMode;
+  /** 책장에서 접어 둔 레벨 이름 (예: ['Core', 'Elementary']) */
+  collapsedLevels: string[];
   /** 한국어 문장에 쓸 목소리 id. null = 자동(시스템 기본) */
   voiceKo: string | null;
   /** 영어 문장에 쓸 목소리 id. null = 자동 */
@@ -26,6 +28,7 @@ export type AppSettings = {
 
 export const DEFAULT_SETTINGS: AppSettings = {
   themeMode: 'system',
+  collapsedLevels: [],
   voiceKo: null,
   voiceEn: null,
   fliteRate: 100,
