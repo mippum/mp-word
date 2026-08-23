@@ -36,15 +36,22 @@
 - [ ] 비정규화 `word` 컬럼 정합성 검사 스크립트 추가 — 모든 테이블에 대해 `word_id`가 가리키는 `words.word`와 일치하는지 확인
 - [ ] `source/` CSV export 시 `word` 컬럼을 JOIN으로 채우고 import 시에는 무시하도록 변경 검토
 
-### 앱
+### 앱 — 책 보고 듣기
 
-- [ ] Expo 템플릿 화면(`app/(tabs)/two.tsx`, `components/EditScreenInfo.tsx` 등) 제거
-- [ ] 앱에서 소비할 데이터 형식 결정 — 번들 SQLite / JSON / 원격 API 중 선택
-- [ ] 단어 카드 화면 (단어 · 발음 · 뜻 · 예문 · SVG 아이콘)
-- [ ] 교재(book) 단위 학습 플로우 — `word_by_books`의 `book_name` / `word_order` 기반
-- [ ] TTS 연동 — `text.csv`의 SSML 슬롯 구조 재사용
-- [ ] 학습 진도 로컬 저장
-- [ ] `npm test` 스크립트 설정 (`components/__tests__/StyledText-test.js`가 현재 실행되지 않음)
+기본 골격은 구현되어 있다 (책장 → 책 보기 → 낭독). 남은 것:
+
+- [ ] 반복 재생 옵션 (단어별 N회 / 권 전체 반복)
+- [ ] 슬롯 단위 이어보기 — 지금은 단어 단위로만 위치를 저장한다
+- [ ] 재생 속도 조절 여부 결정 — 지금은 시스템 설정을 따르지만, 학습 앱 특성상
+      느린 재생 요구가 있을 수 있다 (`expo-speech` 의 `rate` 로 가능)
+- [ ] 낭독 중 화면 꺼짐 방지 (`expo-keep-awake`)
+- [ ] 백그라운드 재생 — `expo-speech` 로는 어려우니 필요하면 오디오 세션 검토
+- [ ] 삽화(PNG) 지면 반영 — 지금은 단어 아이콘 SVG 만 들어간다
+- [ ] 아이콘 없는 단어 26개 채우기 (`vagina`, `native`, `becoming`, `absolutely`, `modest` 등)
+- [ ] 아이콘 번들 용량(11.5MB) 줄이기 — potrace path 단순화 또는 원격 로딩 검토
+- [ ] `npm test` 스크립트 설정 — 특히 `lib/script.ts` 의 대본 생성은 단위 테스트 가치가 크다
+- [ ] 책장 화면이 이어보기 위치 변경을 즉시 반영하도록 (`useFocusEffect` 등) —
+      지금은 화면이 마운트된 채로 돌아오면 갱신되지 않을 수 있다
 
 ### 콘텐츠 확장
 
@@ -56,6 +63,9 @@
 
 ## 완료
 
+- [x] 앱 기본 구현 — 책장 / 책 보기 / 낭독 (SSML 없이 순수 텍스트 + 실제 쉼)
+- [x] 책 데이터 내보내기 파이프라인 (`npm run export-books`)
+- [x] Expo 템플릿 화면 제거
 - [x] `ko_read_aloud` 컬럼 생성 및 정제 (괄호 제거, 아라비아 숫자 → 한글 발음)
 - [x] `word_by_books`에 에센셜 누락분 추가
 - [x] `word_csv_data_mng_py` 파이프라인 구축 (CSV ↔ SQLite 양방향)

@@ -1,10 +1,14 @@
 # mp-word (미쁨 영단어)
 
-영어 단어 학습 데이터베이스와, 이를 소비하는 모바일 앱 · 교재를 함께 관리하는 저장소입니다.
+**책을 보면서 듣는** 영어 단어 학습 앱과, 그 바탕이 되는 단어 데이터베이스를 함께 관리하는 저장소입니다.
+
+종이책·PDF로 내는 『미쁨 영단어』 교재와 같은 내용을, 앱에서는 지면을 보여주면서
+TTS로 낭독해 주고 지금 읽는 문장을 하이라이트하는 방식으로 따라갑니다.
+단어 퀴즈 앱이 아니라 **리더 + 플레이어**입니다.
 
 - 15만 개 규모의 단어 데이터베이스 (발음 · 빈도 · 영영 뜻풀이 · 예문 · 한글 번역 · 삽화 SVG)
-- CEFR 수준을 참고한 레벨별 교재 편성 (권당 69단어, 현재 44권)
-- Expo 기반 모바일 앱 (개발 초기 단계)
+- CEFR 수준을 참고한 레벨별 교재 편성 (권당 69단어, 현재 44권 3,004단어)
+- Expo 기반 모바일 앱 — 책장에서 권을 고르고, 지면을 넘기며 낭독을 듣는다
 
 ## 구성
 
@@ -16,17 +20,49 @@
 | `ref/epub/` | 교재 원고 (TOEIC MVP, Introductory, Beginner) |
 | `ref/` (그 외) | 원본 코퍼스 — NGSL, Oxford, Cambridge EVP, MDvoca, ncic_re_kr |
 
+## 책 한 권의 구성
+
+교재 한 권은 `word_by_books`의 `book_name` 하나이고, `word_order` 1~69가 지면 순서입니다.
+단어 한 개(펼침면)는 다음 요소로 구성됩니다.
+
+| 요소 | 예시 | 데이터 출처 |
+|---|---|---|
+| 예문 (영) + 순번 | `Don't drop the glass.` / `First Sentence.` | `sentences` |
+| 키워드 + 철자 | `drop` / `D. R. O. P.` | `words` |
+| 단어 아이콘 | (SVG) | `word_svgs` |
+| 삽화 | (PNG) | 이미지 생성 도구 |
+| 영영사전 뜻 | `'Drop' means to let something fall. …` | `en_long_meanings`, `simple_definitions` |
+| 한글 뜻 | `떨어지다 / 하락하다 / 방울` | `sentences`, 뜻 데이터 |
+| 한글 해석 | `유리잔 떨어뜨리지 마.` | `sentences.ko_translation` |
+
+낭독 스크립트는 `ref/epub/mp-word-toeic/mvp/text.csv`에 `<권>_<순번>_<슬롯>` 키로 정리되어
+있으며 `<break time='300ms'/>`, `<say-as interpret-as='characters'>` 같은 SSML 태그를 씁니다.
+
 ## 앱 실행
 
 ```bash
 npm install
 ```
 
+앱이 읽는 책 데이터(`assets/books/`)는 CSV에서 생성합니다. 생성물이라 저장소에 넣지 않으므로
+처음 한 번은 반드시 실행해야 합니다.
+
 ```bash
-npm start
+npm run export-books
 ```
 
-`npm run android`, `npm run ios`, `npm run web`으로 플랫폼을 지정해 실행할 수 있습니다.
+```bash
+npm run web
+```
+
+`npm run android`, `npm run ios`로 플랫폼을 지정해 실행할 수 있습니다.
+
+### 낭독
+
+TTS는 `expo-speech`를 쓰고 **SSML은 사용하지 않습니다.** 교재 낭독 스크립트의
+`<break time='300ms'/>`는 발화 사이의 실제 대기로, `<say-as interpret-as='characters'>`는
+책 지면과 같은 `D. R. O. P.` 문자열로 대체합니다. 목소리와 빠르기는 기기의 시스템 음성
+설정을 따릅니다.
 
 ## 데이터 파이프라인
 
@@ -59,7 +95,9 @@ cd ref/tool/word_csv_data_mng_py/scripts && python csv_to_sqlite_db.py
 
 `word_by_books.book_name`은 `Foundation <레벨> <서수>` 형식입니다 (예: `Foundation Essential Fourth`).
 
-`Entry` → `Introductory` → `Basic` → `Beginner` → `Elementary` → `Essential` → `Core`
+쉬운 순서(권별 평균 빈도 기준)는 다음과 같습니다.
+
+`Entry` → `Introductory` → `Beginner` → `Basic` → `Essential` → `Core` → `Elementary`
 
 참고한 CEFR 기준:
 
@@ -78,6 +116,13 @@ cd ref/tool/word_csv_data_mng_py/scripts && python csv_to_sqlite_db.py
 - [Cambridge – English Vocabulary Profile (EVP)](https://www.englishprofile.org/wordlists/evp)
 - Oxford corpus
 - [google 단어모음](https://github.com/first20hours/google-10000-english)
+
+## 관련 저장소
+
+| 저장소 | 역할 |
+|---|---|
+| `mp-epub-foundation-words` | Foundation 시리즈 교재 원고 (Entry ~ Core). **책 내용의 정본** |
+| `mp-pangaea/mobiles/listening-trainer` | 미쁨 듣기 트레이너. **TTS 구현의 참고 원본** (문장 낭독 · 하이라이트 · 플레이어 구조) |
 
 ## 문서
 

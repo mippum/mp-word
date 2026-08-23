@@ -15,25 +15,141 @@
 
 작업 요청이 들어오면 **어느 축인지 먼저 확인**하세요. 대부분의 요청은 `ref/` 쪽입니다.
 
-## 2. 앱 (루트)
+## 2. 앱 (루트) — 책을 보고 듣는 앱
+
+**이 앱의 형태: 교재(책)를 화면에 펼쳐 보면서 TTS 낭독을 듣는 앱입니다.**
+`ref/epub/`에서 만드는 종이책·PDF와 같은 내용을, 앱에서는 지면 하이라이트와
+낭독으로 따라가는 구조입니다. 단어 퀴즈 앱이 아니라 **리더 + 플레이어**입니다.
 
 - Expo `~54.0.8` / React Native `0.81.4` / React `19.1.0` / TypeScript `~5.9.2`
 - 라우팅: `expo-router` `~6.0.6` (파일 기반, `app/` 디렉터리)
-- 현재 `app/(tabs)/index.tsx`, `two.tsx`, `modal.tsx` 등 **Expo 기본 템플릿 그대로**입니다.
+- TTS: `expo-speech` — SSML 을 쓰지 않는다 (2.1 참고)
+- 아이콘 렌더링: `react-native-svg`
+
+### 구조
+
+```
+app/
+├── _layout.tsx           ← 루트 Stack
+├── (tabs)/
+│   ├── index.tsx         ← 책장 (레벨별 권 목록, 이어보기 표시)
+│   └── settings.tsx      ← 안내 + 정보
+└── book/[slug].tsx       ← 책 보기 + 듣기 (지면 넘기기, 하이라이트, 재생 컨트롤)
+
+lib/
+├── books.ts              ← 번들 책 데이터 로더 (assets/books/)
+├── script.ts             ← ★ 낭독 대본 생성 — SSML 을 순수 텍스트 + 실제 쉼으로 대체
+├── ordinal.ts            ← 'First' ~ 'Sixty-ninth' (낭독의 순번 안내)
+├── tts.ts                ← expo-speech 래퍼. 대본을 순차 재생, 발화 사이 실제 대기
+├── player.ts             ← 전역 단일 플레이어 (usePlayer 훅)
+└── progress.ts           ← 이어보기 위치 (네이티브 JSON 파일 / 웹 localStorage)
+
+components/
+├── WordSpread.tsx        ← 단어 한 개의 지면
+├── WordIcon.tsx          ← 단어 아이콘 SVG (테마 색으로 tint)
+└── PlaybackControls.tsx  ← 이전 / 재생·일시정지 / 다음
+```
+
+### 데이터
+
+앱은 `assets/books/` 를 번들로 읽는다. 이 폴더는 **생성물이라 git 에 넣지 않는다**.
 
 ```bash
-npm start
+npm run export-books
+```
+
+`ref/tool/word_csv_data_mng_py/scripts/export_book_json.py` 가 `source/*.csv` 에서
+`books.json`(2MB, 44권 3,004단어)과 `icons/<slug>.json`(합계 11.5MB)을 만든다.
+아이콘을 한 파일로 두면 앱이 통째로 파싱하므로 권별로 쪼개고, Metro 가 동적 require 를
+지원하지 않아 `icons/index.js` 정적 맵을 함께 생성한다.
+
+### 실행
+
+```bash
+npm run web
 ```
 
 ```bash
 npm run android
 ```
 
-```bash
-npm run web
+> 테스트 러너는 아직 설정되어 있지 않습니다(`react-test-renderer`만 devDependency에 있고 `test` 스크립트 없음).
+> `components/__tests__/StyledText-test.js`는 실행되지 않는 상태입니다.
+
+### 2.1 TTS — SSML 없이, `listening-trainer` 참고
+
+**앱은 SSML 을 쓰지 않는다.** 교재 낭독 스크립트(`ref/epub/mp-word-toeic/mvp/text.csv`)는
+SSML 태그를 쓰지만, 앱은 태그 없는 순수 텍스트만 엔진에 넘긴다. 태그는 이렇게 대체한다.
+
+| text.csv (SSML) | 앱 |
+|---|---|
+| `<break time='300ms'/>` | 발화 사이 `pauseAfterMs` — `lib/tts.ts` 가 실제로 그만큼 쉰다 |
+| `<say-as interpret-as='characters'>drop</say-as>` | `'D. R. O. P.'` 문자열 (`spelling_of()` 가 생성, **책 지면과 같은 표기**) |
+
+이렇게 하면 엔진마다 SSML 지원이 달라도 결과가 같고, 지면에 인쇄된 문자열을 그대로 읽으므로
+책과 앱의 내용이 어긋나지 않는다.
+
+낭독 순서(`lib/script.ts`)는 text.csv 의 슬롯 1~7 과 같다. 슬롯은 `Slot` 타입이 되어
+지면 하이라이트의 단위로도 쓰인다.
+
+설계는 **`I:\github\mp-pangaea\mobiles\listening-trainer`** 를 참고했다. 그쪽에서 가져온 원칙:
+
+- **전역 단일 플레이어** — 화면은 `usePlayer()` 로 구독만 하고, `lib/tts.ts` 를 직접 부르지 않는다
+- **재생 파라미터 UI 를 두지 않는다** — 속도·음높이·목소리는 시스템 설정이 유일한 진실의 원천
+  (앱 설정과 곱해져 혼란스러워지는 것을 막는다)
+- **문장별 언어 전환** — 한/영이 섞이므로 발화마다 `en-US` / `ko-KR` 를 지정한다.
+  단, 여기서는 감지할 필요가 없다 — 대본을 만들 때 이미 언어를 알고 있다
+
+`listening-trainer` 와 다른 점:
+
+- TTS 엔진이 `react-native-tts` 가 아니라 **`expo-speech`** 다. 네이티브 모듈이 아니라
+  Expo Go 에서도 돌아가고 웹 구현이 딸려 온다. 대신 Android 엔진 선택은 못 한다
+- 자유 텍스트가 아니라 **정해진 대본**을 읽으므로 문장 분리(`splitSentences`)가 필요 없다
+
+주의할 제약:
+
+- **Android 는 일시정지를 지원하지 않는다** (`supportsPause === false`).
+  멈추면 읽던 단어의 처음부터 다시 읽는다
+- 일시정지는 **발화 사이의 쉼 구간**에도 걸린다. `lib/tts.ts` 의 게이트가 이를 처리한다 —
+  엔진만 멈추면 쉼 타이머는 계속 돌아 다음 문장으로 넘어가 버리기 때문이다
+
+### 2.2 책 내용 — `mp-epub-foundation-words` 참고
+
+앱이 보여줄 **책의 실제 구성**은
+**`I:\github\mp-epub-foundation-words\ref\epub\mp-word-en-basic\yes24`** 를 참고합니다
+(`en-basic-yes24-1.fodt` ~ `-4.fodt` + 각 PDF).
+
+책 한 권 구성:
+
+```
+표지        Foundation Basic. / First. / 미쁨 영단어.
+Introduction   단어를 문장으로 익히는 이유
+How To Use     사용법
+단어 69개      아래 구조가 69번 반복
 ```
 
-> 테스트 러너는 아직 설정되어 있지 않습니다(`react-test-renderer`만 devDependency에 있고 `test` 스크립트 없음). `components/__tests__/StyledText-test.js`는 실행되지 않는 상태입니다.
+단어 한 개(펼침면) 구성 — `text.csv`의 `_1`~`_7` 슬롯과 1:1로 대응합니다:
+
+| 지면 요소 | 예시 | `text.csv` 슬롯 |
+|---|---|---|
+| 예문 (영) | `Don't drop the glass.` | `_1` |
+| 순번 안내 | `First Sentence.` | `_1` |
+| `Keyword` + 단어 | `drop` | `_2` |
+| 단어 아이콘 SVG | (potrace 산출물, `word_svgs`) | — |
+| 철자 | `D. R. O. P.` | `_2` (`say-as characters`) |
+| 삽화 PNG | (이미지 생성 도구 산출물) | — |
+| 영영사전 뜻 | `'Drop' means to let something fall. …` | `_3` |
+| 한글 뜻 | `떨어지다 / 하락하다 / 방울` | `_4` |
+| 한글 해석 | `유리잔 떨어뜨리지 마.` | `_5` |
+| 예문 (영) | `Don't drop the glass.` | `_6` |
+| 한글 해석 | `유리잔 떨어뜨리지 마.` | `_7` |
+
+이 데이터는 전부 `word.db`에 있습니다 — 단어(`words`), 아이콘(`word_svgs`),
+영영 뜻(`en_long_meanings` / `simple_definitions`), 예문·번역(`sentences`),
+권·순번(`word_by_books`). **즉 책 한 권은 `word_by_books`의 `book_name` 하나이고,
+`word_order` 1~69가 지면 순서입니다.**
+
+`mp-epub-foundation-words/ref/epub/README.md`에 레벨별 권수·단어 수·가격 기획이 있습니다.
 
 ## 3. 데이터 파이프라인 (`ref/tool/word_csv_data_mng_py`)
 
@@ -105,7 +221,8 @@ cd ref/tool/word_csv_data_mng_py && python -c "import sqlite3;c=sqlite3.connect(
 
 `word_by_books.book_name`은 `Foundation <레벨> <서수>` 형식입니다.
 
-- 레벨: `Entry` → `Introductory` → `Basic` → `Beginner` → `Elementary` → `Essential` → `Core`
+- 레벨(쉬운 순): `Entry` → `Introductory` → `Beginner` → `Basic` → `Essential` → `Core` → `Elementary`
+  (권별 평균 `mpfpm` 내림차순. `export_book_json.py` 가 데이터에서 이 순서를 계산한다)
 - 서수: `First`, `Second`, … (`add_word_csv_by_books.py`의 `order_spell` 리스트)
 - 권당 **69단어**가 기본 (`Entry` 45, `Introductory` 61은 예외)
 - 현재 44권
@@ -178,7 +295,17 @@ cd ref/tool/word_csv_data_mng_py && python -c "import sqlite3;c=sqlite3.connect(
 4. **`WordRepository`의 SQL이 f-string 문자열 결합** — 로컬 전용 도구라 현재는 허용되지만 신규 코드는 파라미터 바인딩을 쓰세요
 5. **줄바꿈** — 저장소가 LF/CRLF 혼용 경고를 냅니다. CSV 편집 시 전체 파일이 diff로 잡히지 않게 주의하세요
 
-## 8. 관련 문서
+## 8. 관련 저장소
+
+| 저장소 | 역할 | 이 저장소와의 관계 |
+|---|---|---|
+| `I:\github\mp-epub-foundation-words` | Foundation 시리즈 교재 원고 (Entry ~ Core) | **책 내용의 정본.** 앱이 보여줄 지면 구성의 기준 |
+| `I:\github\mp-pangaea\mobiles\listening-trainer` | 미쁨 듣기 트레이너 (Expo + react-native-tts) | **TTS 구현의 참고 원본.** 문장 낭독·하이라이트·플레이어 구조 |
+| `greenydot_flight_api` | 웹 정적 자산 호스팅 | `mng_svg_asset.py`가 여기서 SVG를 수집 |
+
+세 저장소는 별개로 관리됩니다. 참고는 하되 **경로를 코드에 하드코딩하지 마세요.**
+
+## 9. 관련 문서
 
 - [README.md](README.md) — 프로젝트 소개, 레벨 체계, 출처
 - [TODO.md](TODO.md) — 진행 중 작업과 백로그
