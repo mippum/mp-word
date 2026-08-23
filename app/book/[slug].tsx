@@ -5,7 +5,7 @@ import { FlatList, StyleSheet, useWindowDimensions, View, type ViewToken } from 
 import PlaybackControls from '@/components/PlaybackControls';
 import { Text, useThemeColor } from '@/components/Themed';
 import WordSpread from '@/components/WordSpread';
-import { getBook, iconsForBook, type BookWord } from '@/lib/books';
+import { displayName, getBook, iconsForBook, type BookWord } from '@/lib/books';
 import {
   pause,
   playWord,
@@ -123,7 +123,7 @@ export default function BookScreen() {
 
   return (
     <View style={[styles.screen, { backgroundColor: background }]}>
-      <Stack.Screen options={{ title: book.name }} />
+      <Stack.Screen options={{ title: displayName(book) }} />
 
       <FlatList
         ref={listRef}

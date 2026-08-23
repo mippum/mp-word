@@ -4,7 +4,7 @@ import { useMemo } from 'react';
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
 import { Text, useThemeColor } from '@/components/Themed';
-import { booksByLevel, getBook, listBooks } from '@/lib/books';
+import { booksByLevel, displayName, getBook, listBooks } from '@/lib/books';
 import { freeScopeLabel, PLAN, useSubscription } from '@/lib/subscription';
 
 /**
@@ -18,7 +18,10 @@ export default function MoreScreen() {
   const muted = useThemeColor('muted');
   const router = useRouter();
   const { subscribed } = useSubscription();
-  const freeScope = freeScopeLabel((slug) => getBook(slug)?.name ?? slug);
+  const freeScope = freeScopeLabel((slug) => {
+    const book = getBook(slug);
+    return book ? displayName(book) : slug;
+  });
 
   const books = listBooks();
   const levels = useMemo(() => booksByLevel(), []);

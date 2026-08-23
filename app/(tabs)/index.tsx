@@ -1,19 +1,23 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useRouter } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
-import { Pressable, SectionList, StyleSheet, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
+import BookCover from '@/components/BookCover';
 import { Text, useThemeColor } from '@/components/Themed';
-import { booksByLevel, type Book } from '@/lib/books';
+import { booksByLevel, displayName, volumeLabel, type Book } from '@/lib/books';
 import { getProgress } from '@/lib/progress';
 import { getSettings, setSettings } from '@/lib/settings';
 import { isFreeSample, useSubscription } from '@/lib/subscription';
 
 /**
- * 읽기 탭 — 레벨별로 묶은 권 목록. 누르면 그 책을 펼친다.
+ * 읽기 탭 — 레벨별 책장. 표지를 누르면 그 책을 펼친다.
  *
  * 44권이 한 번에 늘어서면 훑기 어려워서 레벨 머리글로 접었다 펼 수 있게 했다.
  * 접은 레벨은 설정(`collapsedLevels`)에 남아 다시 들어와도 유지된다.
+ *
+ * 목록이 아니라 표지를 늘어놓는 형태라 상태(잠김·읽던 위치)는 표지 위에 얹는다.
+ * 44권뿐이라 가상화 없이 통째로 그린다.
  */
 export default function BookListScreen() {
   const levels = useMemo(() => booksByLevel(), []);
@@ -32,53 +36,41 @@ export default function BookListScreen() {
     });
   }, []);
 
-  const sections = useMemo(
-    () =>
-      levels.map(({ level, series, books }) => ({
-        title: level,
-        // 머리글에는 시리즈까지 붙여 보여준다 ('FOUNDATION ENTRY')
-        display: series ? `${series} ${level}` : level,
-        count: books.length,
-        // 낱권 무료가 하나라도 있으면 레벨 자물쇠를 달지 않는다
-        locked: books.every((book) => !canOpenBook(book)),
-        // 접힌 레벨은 항목을 비워 머리글만 남긴다
-        data: collapsed.includes(level) ? [] : books,
-      })),
-    [levels, collapsed, canOpenBook]
-  );
-
   return (
-    <SectionList
-      style={{ backgroundColor: background }}
-      contentContainerStyle={styles.content}
-      sections={sections}
-      keyExtractor={(book) => book.slug}
-      stickySectionHeadersEnabled={false}
-      renderSectionHeader={({ section }) => (
-        <LevelHeader
-          title={section.display}
-          level={section.title}
-          count={section.count}
-          collapsed={collapsed.includes(section.title)}
-          locked={section.locked}
-          onPress={() => toggle(section.title)}
-        />
-      )}
-      renderItem={({ item }) => (
-        // '무료 공개' 표시는 구독 전에만 의미가 있다 (구독 중에는 이어보기를 보여준다)
-        <BookRow
-          book={item}
-          locked={!canOpenBook(item)}
-          freeSample={!subscribed && isFreeSample(item)}
-        />
-      )}
-    />
+    <ScrollView style={{ backgroundColor: background }} contentContainerStyle={styles.content}>
+      {levels.map(({ level, series, books }) => {
+        const isCollapsed = collapsed.includes(level);
+        return (
+          <View key={level}>
+            <LevelHeader
+              title={series ? `${series} ${level}` : level}
+              count={books.length}
+              collapsed={isCollapsed}
+              // 낱권 무료가 하나라도 있으면 레벨 자물쇠를 달지 않는다
+              locked={books.every((book) => !canOpenBook(book))}
+              onPress={() => toggle(level)}
+            />
+            {isCollapsed ? null : (
+              <View style={styles.shelf}>
+                {books.map((book) => (
+                  <BookTile
+                    key={book.slug}
+                    book={book}
+                    locked={!canOpenBook(book)}
+                    freeSample={!subscribed && isFreeSample(book)}
+                  />
+                ))}
+              </View>
+            )}
+          </View>
+        );
+      })}
+    </ScrollView>
   );
 }
 
 function LevelHeader({
   title,
-  level,
   count,
   collapsed,
   locked,
@@ -86,8 +78,6 @@ function LevelHeader({
 }: {
   /** 화면에 보이는 이름 ('Foundation Entry') */
   title: string;
-  /** 접힘 상태 저장에 쓰는 키 ('Entry') */
-  level: string;
   count: number;
   collapsed: boolean;
   locked: boolean;
@@ -118,7 +108,7 @@ function LevelHeader({
   );
 }
 
-function BookRow({
+function BookTile({
   book,
   locked,
   freeSample,
@@ -128,48 +118,34 @@ function BookRow({
   freeSample: boolean;
 }) {
   const router = useRouter();
-  const card = useThemeColor('card');
-  const border = useThemeColor('border');
   const muted = useThemeColor('muted');
-  const faint = useThemeColor('faint');
-  const accent = useThemeColor('accent');
 
   const progress = getProgress(book.slug);
   const read = progress && progress.wordIndex > 0 ? progress.wordIndex : 0;
 
-  // 잠긴 권은 목록에 남겨 두되(무엇이 있는지 보이도록) 누르면 구독 안내로 보낸다
+  // 잠긴 권도 책장에 남겨 두되(무엇이 있는지 보이도록) 누르면 구독 안내로 보낸다
   const open = () =>
     locked
       ? router.push({ pathname: '/subscribe', params: { level: book.level } })
       : router.push({ pathname: '/book/[slug]', params: { slug: book.slug } });
 
+  // 표지에는 권차만 보이므로 나머지 정보는 접근성 라벨이 실어 나른다
+  const state = locked
+    ? '잠김, 구독 안내 열기'
+    : freeSample
+      ? '무료 공개'
+      : read > 0
+        ? `${read + 1}번째부터 이어보기`
+        : '';
+
   return (
     <Pressable
       onPress={open}
       accessibilityRole="button"
-      accessibilityLabel={locked ? `${book.name} 잠김, 구독 안내 열기` : book.name}
-      style={({ pressed }) => [
-        styles.row,
-        { backgroundColor: card, borderColor: border, opacity: pressed ? 0.6 : 1 },
-      ]}>
-      <View style={styles.rowText}>
-        <Text style={[styles.bookName, locked && { color: faint }]}>{book.name}</Text>
-        <Text style={[styles.meta, { color: locked ? faint : muted }]}>
-          단어 {book.wordCount}개
-          {locked
-            ? ' · 구독 필요'
-            : freeSample
-              ? ' · 무료 공개'
-              : read > 0
-                ? ` · ${read + 1}번째부터 이어보기`
-                : ''}
-        </Text>
-      </View>
-      {locked ? (
-        <FontAwesome name="lock" size={14} color={faint} />
-      ) : read > 0 ? (
-        <View style={[styles.dot, { backgroundColor: accent }]} />
-      ) : null}
+      accessibilityLabel={`${displayName(book)} 단어 ${book.wordCount}개${state ? `, ${state}` : ''}`}
+      style={({ pressed }) => [styles.tile, pressed && { opacity: 0.6 }]}>
+      <BookCover volume={volumeLabel(book)} locked={locked} reading={read > 0} />
+      {freeSample ? <Text style={[styles.caption, { color: muted }]}>무료</Text> : null}
     </Pressable>
   );
 }
@@ -183,7 +159,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginTop: 14,
-    marginBottom: 10,
+    marginBottom: 12,
     paddingBottom: 8,
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
@@ -202,29 +178,17 @@ const styles = StyleSheet.create({
   count: {
     fontSize: 12,
   },
-  row: {
+  shelf: {
     flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 12,
+    marginBottom: 6,
+  },
+  tile: {
     alignItems: 'center',
-    borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 12,
-    paddingVertical: 14,
-    paddingHorizontal: 16,
-    marginBottom: 8,
+    gap: 3,
   },
-  rowText: {
-    flex: 1,
-    gap: 4,
-  },
-  bookName: {
-    fontSize: 17,
-    fontWeight: '600',
-  },
-  meta: {
-    fontSize: 13,
-  },
-  dot: {
-    width: 8,
-    height: 8,
-    borderRadius: 4,
+  caption: {
+    fontSize: 11,
   },
 });

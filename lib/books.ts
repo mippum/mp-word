@@ -7,6 +7,8 @@
  * 책 한 권 = word_by_books 의 book_name 하나, order 1..69 가 지면 순서다.
  */
 
+import { ordinalNumeral } from './ordinal';
+
 export type BookWord = {
   order: number;
   wordId: string;
@@ -76,6 +78,22 @@ export function booksByLevel(): { level: string; series: string; books: Book[] }
     const books = payload.books.filter((book) => book.level === level);
     return { level, series: books[0]?.series ?? '', books };
   });
+}
+
+/**
+ * 이 권이 레벨 안에서 몇 권째인지 짧은 표기로 ('1st'). 권차가 없는 책(Entry 등)은 null.
+ *
+ * 'Foundation Entry' 처럼 이름이 `시리즈 + 레벨` 로 끝나면 권차가 없는 단권이다.
+ */
+export function volumeLabel(book: Book): string | null {
+  if (book.name === `${book.series} ${book.level}`) return null;
+  return ordinalNumeral(book.volume);
+}
+
+/** 목록에 보이는 이름 — 서수를 숫자 표기로 ('Foundation Beginner 1st') */
+export function displayName(book: Book): string {
+  const volume = volumeLabel(book);
+  return volume ? `${book.series} ${book.level} ${volume}` : book.name;
 }
 
 const iconCache = new Map<string, Record<string, string>>();

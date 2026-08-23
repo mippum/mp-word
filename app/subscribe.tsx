@@ -3,7 +3,7 @@ import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
 import { Text, useThemeColor } from '@/components/Themed';
-import { getBook } from '@/lib/books';
+import { displayName, getBook } from '@/lib/books';
 import {
   devToggleSubscription,
   freeScopeLabel,
@@ -22,7 +22,10 @@ export default function SubscribeScreen() {
   const { level } = useLocalSearchParams<{ level?: string }>();
   const router = useRouter();
   const { subscribed, inGrace, expiresAt } = useSubscription();
-  const freeScope = freeScopeLabel((slug) => getBook(slug)?.name ?? slug);
+  const freeScope = freeScopeLabel((slug) => {
+    const book = getBook(slug);
+    return book ? displayName(book) : slug;
+  });
 
   const background = useThemeColor('background');
   const card = useThemeColor('card');
