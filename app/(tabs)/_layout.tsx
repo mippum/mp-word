@@ -31,7 +31,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: '보기',
+          title: '읽기',
           tabBarIcon: ({ color }) => <TabBarIcon name="book" color={color} />,
         }}
       />

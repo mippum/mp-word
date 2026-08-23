@@ -32,7 +32,7 @@
 app/
 ├── _layout.tsx           ← 루트 Stack
 ├── (tabs)/
-│   ├── index.tsx         ← 보기 (레벨별 권 목록, 접기·펼치기, 이어보기 표시)
+│   ├── index.tsx         ← 읽기 (레벨별 권 목록, 접기·펼치기, 이어보기 표시)
 │   ├── settings.tsx      ← 화면 모드 · 목소리 · 오프라인 엔진 조절
 │   └── more.tsx          ← 더보기 (구독 · 사용법 · 지면 보는 법 · 낭독 순서 · 레벨 · 수록)
 ├── book/[slug].tsx       ← 책 보기 + 듣기
@@ -183,7 +183,7 @@ mp-word 에서 달라진 점:
 그 노란색은 오직 "지금 낭독 중"만 뜻하므로, 다른 곳에 색을 더하면 신호가 약해진다.
 새 UI 를 만들 때 강조색이 필요하면 `accent`(무채색)를 쓰고 하이라이트를 전용하지 말 것.
 
-보기 탭의 권 목록은 레벨 머리글로 접었다 펼 수 있고, 접은 레벨은 `AppSettings.collapsedLevels` 에 남는다.
+읽기 탭의 권 목록은 레벨 머리글로 접었다 펼 수 있고, 접은 레벨은 `AppSettings.collapsedLevels` 에 남는다.
 
 화면 모드는 시스템 / 밝게 / 어둡게 3택이고 `lib/theme.tsx` 가 공급한다.
 설정은 `AppSettings.themeMode` 에 저장되며 `getSettings()` 가 동기라 첫 렌더부터 올바른
