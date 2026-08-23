@@ -33,7 +33,8 @@ app/
 ├── _layout.tsx           ← 루트 Stack
 ├── (tabs)/
 │   ├── index.tsx         ← 책장 (레벨별 권 목록, 접기·펼치기, 이어보기 표시)
-│   └── settings.tsx      ← 안내 + 정보
+│   ├── settings.tsx      ← 화면 모드 · 목소리 · 오프라인 엔진 조절
+│   └── more.tsx          ← 더보기 (사용법 · 지면 보는 법 · 낭독 순서 · 레벨 · 수록)
 └── book/[slug].tsx       ← 책 보기 + 듣기 (지면 넘기기, 하이라이트, 재생 컨트롤)
 
 lib/

@@ -36,6 +36,13 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="more"
+        options={{
+          title: '더보기',
+          tabBarIcon: ({ color }) => <TabBarIcon name="ellipsis-h" color={color} />,
+        }}
+      />
+      <Tabs.Screen
         name="settings"
         options={{
           title: '설정',

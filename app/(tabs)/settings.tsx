@@ -1,5 +1,4 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import Constants from 'expo-constants';
 import type React from 'react';
 import { useCallback, useEffect, useState } from 'react';
 import { AppState, Pressable, ScrollView, StyleSheet, View } from 'react-native';
@@ -9,7 +8,6 @@ import { Text, useThemeColor } from '@/components/Themed';
 import VoicePicker from '@/components/VoicePicker';
 import type { ThemeMode } from '@/constants/Colors';
 import { FLITE_VOICE_ID, FLITE_VOICE_NAME, isFliteVoiceId } from '@/lib/flite/voices';
-import { listBooks } from '@/lib/books';
 import { previewVoice } from '@/lib/player';
 import { getSettings, setSettings } from '@/lib/settings';
 import { useAppTheme } from '@/lib/theme';
@@ -86,15 +84,6 @@ export default function SettingsScreen() {
     });
     return () => sub.remove();
   }, [syncEngines]);
-
-  const books = listBooks();
-  const wordCount = books.reduce((sum, book) => sum + book.wordCount, 0);
-
-  const info: { label: string; value: string }[] = [
-    { label: '책', value: `${books.length}권` },
-    { label: '단어', value: `${wordCount.toLocaleString('ko-KR')}개` },
-    { label: '버전', value: Constants.expoConfig?.version ?? '-' },
-  ];
 
   return (
     <ScrollView style={{ backgroundColor: background }} contentContainerStyle={styles.content}>
@@ -245,15 +234,6 @@ export default function SettingsScreen() {
         </View>
       ) : null}
 
-      <View style={[styles.card, { backgroundColor: card, borderColor: border }]}>
-        <Text style={styles.title}>정보</Text>
-        {info.map((row) => (
-          <View key={row.label} style={styles.row}>
-            <Text style={[styles.note, { color: muted }]}>{row.label}</Text>
-            <Text style={styles.note}>{row.value}</Text>
-          </View>
-        ))}
-      </View>
     </ScrollView>
   );
 }
