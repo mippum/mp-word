@@ -34,8 +34,10 @@ export default function BookListScreen() {
 
   const sections = useMemo(
     () =>
-      levels.map(({ level, books }) => ({
+      levels.map(({ level, series, books }) => ({
         title: level,
+        // 머리글에는 시리즈까지 붙여 보여준다 ('FOUNDATION ENTRY')
+        display: series ? `${series} ${level}` : level,
         count: books.length,
         // 낱권 무료가 하나라도 있으면 레벨 자물쇠를 달지 않는다
         locked: books.every((book) => !canOpenBook(book)),
@@ -54,6 +56,7 @@ export default function BookListScreen() {
       stickySectionHeadersEnabled={false}
       renderSectionHeader={({ section }) => (
         <LevelHeader
+          title={section.display}
           level={section.title}
           count={section.count}
           collapsed={collapsed.includes(section.title)}
@@ -74,12 +77,16 @@ export default function BookListScreen() {
 }
 
 function LevelHeader({
+  title,
   level,
   count,
   collapsed,
   locked,
   onPress,
 }: {
+  /** 화면에 보이는 이름 ('Foundation Entry') */
+  title: string;
+  /** 접힘 상태 저장에 쓰는 키 ('Entry') */
   level: string;
   count: number;
   collapsed: boolean;
@@ -94,7 +101,7 @@ function LevelHeader({
       onPress={onPress}
       accessibilityRole="button"
       accessibilityState={{ expanded: !collapsed }}
-      accessibilityLabel={`${level} ${count}권 ${collapsed ? '펼치기' : '접기'}`}
+      accessibilityLabel={`${title} ${count}권 ${collapsed ? '펼치기' : '접기'}`}
       style={({ pressed }) => [styles.header, { borderColor: border }, pressed && { opacity: 0.6 }]}>
       <FontAwesome
         name={collapsed ? 'chevron-right' : 'chevron-down'}
@@ -102,7 +109,7 @@ function LevelHeader({
         color={muted}
         style={styles.chevron}
       />
-      <Text style={[styles.level, { color: muted }]}>{level}</Text>
+      <Text style={[styles.level, { color: muted }]}>{title}</Text>
       {locked ? (
         <FontAwesome name="lock" size={11} color={muted} style={styles.levelLock} />
       ) : null}

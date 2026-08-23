@@ -184,6 +184,8 @@ mp-word 에서 달라진 점:
 새 UI 를 만들 때 강조색이 필요하면 `accent`(무채색)를 쓰고 하이라이트를 전용하지 말 것.
 
 읽기 탭의 권 목록은 레벨 머리글로 접었다 펼 수 있고, 접은 레벨은 `AppSettings.collapsedLevels` 에 남는다.
+머리글에는 시리즈까지 붙여 보여주지만(`FOUNDATION ENTRY`), **저장 키는 레벨 이름(`Entry`)** 이다 —
+표시 이름을 키로 쓰면 시리즈가 늘어날 때 저장값이 깨진다. 시리즈는 `Book.series`(책 이름의 첫 낱말).
 
 화면 모드는 시스템 / 밝게 / 어둡게 3택이고 `lib/theme.tsx` 가 공급한다.
 설정은 `AppSettings.themeMode` 에 저장되며 `getSettings()` 가 동기라 첫 렌더부터 올바른

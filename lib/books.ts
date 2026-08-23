@@ -28,6 +28,8 @@ export type BookWord = {
 export type Book = {
   slug: string;
   name: string;
+  /** 시리즈 이름 — 책 이름의 첫 낱말 ('Foundation') */
+  series: string;
   /** 'Basic', 'Core' 등 — name 에서 'Foundation' 과 서수를 뺀 부분 */
   level: string;
   /** 레벨 안에서 몇 권째인지 (First = 1) */
@@ -69,11 +71,11 @@ export function getBook(slug: string): Book | undefined {
 }
 
 /** 레벨별로 묶은 목록 — 목록 화면의 섹션 구성용 */
-export function booksByLevel(): { level: string; books: Book[] }[] {
-  return payload.levels.map((level) => ({
-    level,
-    books: payload.books.filter((book) => book.level === level),
-  }));
+export function booksByLevel(): { level: string; series: string; books: Book[] }[] {
+  return payload.levels.map((level) => {
+    const books = payload.books.filter((book) => book.level === level);
+    return { level, series: books[0]?.series ?? '', books };
+  });
 }
 
 const iconCache = new Map<string, Record<string, string>>();

@@ -62,11 +62,12 @@ def slugify(book_name):
 
 
 def split_book_name(book_name):
-    """'Foundation Basic First' -> ('Basic', 1). 서수가 없으면 (레벨, 1)."""
+    """'Foundation Basic First' -> ('Foundation', 'Basic', 1). 서수가 없으면 권차 1."""
     parts = book_name.split()
+    series = parts[0] if parts else ''
     if len(parts) >= 3 and parts[-1] in ORDER_SPELL:
-        return ' '.join(parts[1:-1]), ORDER_SPELL.index(parts[-1]) + 1
-    return ' '.join(parts[1:]), 1
+        return series, ' '.join(parts[1:-1]), ORDER_SPELL.index(parts[-1]) + 1
+    return series, ' '.join(parts[1:]), 1
 
 
 def spelling_of(word):
@@ -107,7 +108,7 @@ def run(out_dir=DEFAULT_OUT_DIR, with_icons=True):
 
     for book_name, rows in grouped.items():
         rows.sort(key=lambda r: int(r['word_order']))
-        level, volume = split_book_name(book_name)
+        series, level, volume = split_book_name(book_name)
         slug = slugify(book_name)
         icons = {}
         words = []
@@ -159,6 +160,7 @@ def run(out_dir=DEFAULT_OUT_DIR, with_icons=True):
         books.append({
             'slug': slug,
             'name': book_name,
+            'series': series,
             'level': level,
             'volume': volume,
             'wordCount': len(words),
