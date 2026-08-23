@@ -24,9 +24,9 @@ export default function Stepper({
   unit?: string;
   onChange: (next: number) => void;
 }) {
-  const text = useThemeColor({}, 'text');
-  const border = useThemeColor({}, 'border');
-  const card = useThemeColor({}, 'card');
+  const text = useThemeColor('text');
+  const border = useThemeColor('border');
+  const card = useThemeColor('card');
 
   const atMin = value <= min;
   const atMax = value >= max;

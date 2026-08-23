@@ -34,11 +34,11 @@ export default function VoicePicker({
   const [voices, setVoices] = useState<TtsVoice[] | null>(null);
   const [selected, setSelected] = useState<string | null>(() => getSettings()[SETTING_KEY[lang]]);
 
-  const text = useThemeColor({}, 'text');
-  const muted = useThemeColor({}, 'muted');
-  const border = useThemeColor({}, 'border');
-  const tint = useThemeColor({}, 'tint');
-  const highlight = useThemeColor({}, 'highlight');
+  const text = useThemeColor('text');
+  const muted = useThemeColor('muted');
+  const border = useThemeColor('border');
+  const accent = useThemeColor('accent');
+  const background = useThemeColor('background');
 
   useEffect(() => {
     let alive = true;
@@ -91,7 +91,7 @@ export default function VoicePicker({
     <View style={styles.wrap}>
       <Text style={[styles.label, { color: muted }]}>{label}</Text>
       {voices === null ? (
-        <ActivityIndicator style={styles.loading} color={tint} />
+        <ActivityIndicator style={styles.loading} color={accent} />
       ) : (
         <View style={[styles.list, { borderColor: border }]}>
           {rows.map((row, index) => {
@@ -103,11 +103,12 @@ export default function VoicePicker({
                 style={({ pressed }) => [
                   styles.row,
                   index > 0 && { borderTopWidth: StyleSheet.hairlineWidth, borderColor: border },
-                  active && { backgroundColor: highlight },
+                  // 선택 표시는 무채색으로 — 노란 하이라이트는 "낭독 중" 전용이다
+                  active && { backgroundColor: background },
                   pressed && { opacity: 0.6 },
                 ]}>
                 <View style={styles.rowText}>
-                  <Text style={styles.name}>{row.name}</Text>
+                  <Text style={[styles.name, active && styles.nameActive]}>{row.name}</Text>
                   {row.note ? <Text style={[styles.note, { color: muted }]}>{row.note}</Text> : null}
                 </View>
                 {active ? <Text style={[styles.check, { color: text }]}>✓</Text> : null}
@@ -150,11 +151,14 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 15,
   },
+  nameActive: {
+    fontWeight: '600',
+  },
   note: {
     fontSize: 12,
   },
   check: {
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: '700',
   },
 });

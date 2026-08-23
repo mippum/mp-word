@@ -26,11 +26,11 @@ export default function PlaybackControls({
   onNext: () => void;
   onToggle: () => void;
 }) {
-  const tint = useThemeColor({}, 'tint');
-  const text = useThemeColor({}, 'text');
-  const muted = useThemeColor({}, 'muted');
-  const card = useThemeColor({}, 'card');
-  const border = useThemeColor({}, 'border');
+  const accent = useThemeColor('accent');
+  const text = useThemeColor('text');
+  const muted = useThemeColor('muted');
+  const card = useThemeColor('card');
+  const border = useThemeColor('border');
 
   const playing = status === 'playing';
   const icon = playing ? (canPause ? 'pause' : 'stop') : 'play';
@@ -48,7 +48,7 @@ export default function PlaybackControls({
       <Pressable
         onPress={onToggle}
         hitSlop={12}
-        style={({ pressed }) => [styles.main, { backgroundColor: tint, opacity: pressed ? 0.7 : 1 }]}>
+        style={({ pressed }) => [styles.main, { backgroundColor: accent, opacity: pressed ? 0.7 : 1 }]}>
         <FontAwesome name={icon} size={22} color="#fff" />
       </Pressable>
 

@@ -3,23 +3,28 @@ import { Tabs } from 'expo-router';
 import React from 'react';
 
 import { useClientOnlyValue } from '@/components/useClientOnlyValue';
-import { useColorScheme } from '@/components/useColorScheme';
-import Colors from '@/constants/Colors';
+import { usePalette } from '@/lib/theme';
 
 function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>['name'];
   color: string;
 }) {
-  return <FontAwesome size={26} style={{ marginBottom: -3 }} {...props} />;
+  return <FontAwesome size={24} style={{ marginBottom: -3 }} {...props} />;
 }
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
+  const palette = usePalette();
 
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        tabBarActiveTintColor: palette.tabIconSelected,
+        tabBarInactiveTintColor: palette.tabIconDefault,
+        tabBarStyle: { backgroundColor: palette.background, borderTopColor: palette.border },
+        headerStyle: { backgroundColor: palette.background },
+        headerTintColor: palette.text,
+        headerShadowVisible: false,
+        sceneStyle: { backgroundColor: palette.background },
         // 웹에서 헤더를 정적 렌더링하면 하이드레이션 오류가 나므로 클라이언트에서만 켠다
         headerShown: useClientOnlyValue(false, true),
       }}>

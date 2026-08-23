@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 import 'react-native-reanimated';
 
 import { FliteSynthHost } from '@/components/FliteSynthHost';
-import { useColorScheme } from '@/components/useColorScheme';
+import { AppThemeProvider, useAppTheme } from '@/lib/theme';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -42,14 +42,32 @@ export default function RootLayout() {
     return null;
   }
 
-  return <RootLayoutNav />;
+  return (
+    <AppThemeProvider>
+      <RootLayoutNav />
+    </AppThemeProvider>
+  );
 }
 
 function RootLayoutNav() {
-  const colorScheme = useColorScheme();
+  const { scheme, palette } = useAppTheme();
+
+  // 네비게이션 헤더·배경도 앱 팔레트를 따르게 한다 (기본 테마는 회색조가 달라 튄다)
+  const base = scheme === 'dark' ? DarkTheme : DefaultTheme;
+  const navTheme = {
+    ...base,
+    colors: {
+      ...base.colors,
+      background: palette.background,
+      card: palette.background,
+      text: palette.text,
+      border: palette.border,
+      primary: palette.accent,
+    },
+  };
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+    <ThemeProvider value={navTheme}>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="book/[slug]" options={{ title: '' }} />

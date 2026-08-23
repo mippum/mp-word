@@ -1,14 +1,23 @@
-import { StyleSheet, View } from 'react-native';
+import { useCallback, useEffect, useRef } from 'react';
+import { ScrollView, StyleSheet, View, type LayoutChangeEvent } from 'react-native';
 
-import WordIcon from '@/components/WordIcon';
 import { Text, useThemeColor } from '@/components/Themed';
+import WordIcon from '@/components/WordIcon';
 import type { BookWord } from '@/lib/books';
 import { ordinalWord } from '@/lib/ordinal';
 import type { Slot } from '@/lib/script';
 
 /**
- * 단어 한 개의 지면 — 종이책의 펼침면과 같은 순서로 배치한다.
- * 낭독 중인 슬롯에 하이라이트가 붙는다 (activeSlot).
+ * 단어 한 개의 지면.
+ *
+ * 출판된 전자책(`mp-word-en-beginner/yes24`)은 한 단어를 두 쪽에 나눠 싣지만,
+ * 앱은 **한 단어를 한 쪽**에 담고 세로로 스크롤한다 (종이와 달리 길이 제약이 없다).
+ * 요소 순서는 책과 같다:
+ *
+ *   순번 라벨 · 예문 · 키워드 카드(단어+발음+아이콘)
+ *   ─ 영영사전 뜻 ─ 한글 뜻 ─ 해석 + 예문
+ *
+ * 낭독 중인 슬롯에 하이라이트가 붙고, 화면 밖이면 그 자리로 스크롤한다.
  */
 export default function WordSpread({
   word,
@@ -19,131 +28,192 @@ export default function WordSpread({
   iconXml?: string;
   activeSlot: Slot | null;
 }) {
-  const text = useThemeColor({}, 'text');
-  const muted = useThemeColor({}, 'muted');
-  const card = useThemeColor({}, 'card');
-  const border = useThemeColor({}, 'border');
-  const highlight = useThemeColor({}, 'highlight');
+  const text = useThemeColor('text');
+  const muted = useThemeColor('muted');
+  const faint = useThemeColor('faint');
+  const rule = useThemeColor('rule');
+  const highlight = useThemeColor('highlight');
+
+  const scrollRef = useRef<ScrollView>(null);
+  /** 슬롯별 y 좌표 — 낭독이 화면 밖으로 내려가면 여기로 스크롤한다 */
+  const offsets = useRef<Partial<Record<Slot, number>>>({});
+
+  const measure = useCallback(
+    (slot: Slot) => (e: LayoutChangeEvent) => {
+      offsets.current[slot] = e.nativeEvent.layout.y;
+    },
+    []
+  );
+
+  useEffect(() => {
+    if (!activeSlot) return;
+    const y = offsets.current[activeSlot];
+    if (y == null) return;
+    scrollRef.current?.scrollTo({ y: Math.max(0, y - 90), animated: true });
+  }, [activeSlot]);
 
   const mark = (slot: Slot) => (activeSlot === slot ? { backgroundColor: highlight } : null);
 
   return (
-    <View style={[styles.page, { backgroundColor: card, borderColor: border }]}>
-      <Text style={[styles.ordinal, { color: muted }]}>{ordinalWord(word.order)} Sentence.</Text>
-
-      <View style={[styles.block, mark('sentence')]}>
-        <Text style={styles.sentence}>{word.sentence}</Text>
+    <ScrollView
+      ref={scrollRef}
+      style={styles.scroll}
+      contentContainerStyle={styles.content}
+      showsVerticalScrollIndicator={false}>
+      <View style={styles.ordinalRow}>
+        <View style={[styles.ordinalRule, { backgroundColor: rule }]} />
+        <Text style={[styles.ordinalLabel, { color: muted }]}>
+          {ordinalWord(word.order)} Sentence
+        </Text>
       </View>
 
-      <View style={styles.keywordRow}>
-        <WordIcon xml={iconXml} size={104} color={text} />
-        <View style={styles.keywordText}>
-          <Text style={[styles.keywordLabel, { color: muted }]}>Keyword</Text>
-          <View style={mark('keyword')}>
-            <Text style={styles.word}>{word.word}</Text>
-            <Text style={[styles.spelling, { color: muted }]}>{word.spelling}</Text>
-          </View>
-          {word.pronunciationUs ? (
-            <Text style={[styles.pron, { color: muted }]}>
-              US /{word.pronunciationUs}/{word.pronunciationGb ? `  ·  GB /${word.pronunciationGb}/` : ''}
-            </Text>
-          ) : null}
+      <View onLayout={measure('sentence')} style={styles.sentenceArea}>
+        <View style={[styles.sentenceBox, mark('sentence')]}>
+          <Text style={styles.sentence}>{word.sentence}</Text>
         </View>
       </View>
 
-      <View style={[styles.block, mark('meaningEn')]}>
-        <Text style={[styles.label, { color: muted }]}>영영사전 뜻</Text>
-        <Text style={styles.body}>{word.meaningEn}</Text>
+      <View
+        onLayout={measure('keyword')}
+        style={[styles.keywordCard, { borderColor: rule }, mark('keyword')]}>
+        <View style={styles.keywordText}>
+          <Text style={[styles.keywordLabel, { color: muted }]}>Keyword</Text>
+          <Text style={styles.keyword}>{word.word}</Text>
+          {word.pronunciationUs || word.pronunciationGb ? (
+            <Text style={[styles.pron, { color: muted }]}>
+              {word.pronunciationUs ? `US [${word.pronunciationUs}]` : ''}
+              {word.pronunciationUs && word.pronunciationGb ? '\n' : ''}
+              {word.pronunciationGb ? `UK [${word.pronunciationGb}]` : ''}
+            </Text>
+          ) : null}
+        </View>
+        <WordIcon xml={iconXml} size={88} color={text} />
       </View>
 
-      <View style={[styles.block, mark('meaningKo')]}>
+      <View style={[styles.divider, { backgroundColor: rule }]} />
+
+      <View onLayout={measure('meaningEn')}>
+        <Text style={[styles.caption, { color: faint }]}>(영영사전 뜻)</Text>
+        <View style={mark('meaningEn')}>
+          <Text style={styles.definition}>
+            {'   '}
+            {word.meaningEn}
+          </Text>
+        </View>
+      </View>
+
+      <View style={[styles.divider, { backgroundColor: rule }]} />
+
+      <View onLayout={measure('meaningKo')} style={mark('meaningKo')}>
         <Text style={styles.meaningKo}>{word.meaningKo}</Text>
       </View>
 
-      <View
-        style={[
-          styles.block,
-          styles.reading,
-          { borderColor: border },
-          mark('reading') ?? mark('sentenceEn') ?? mark('sentenceKo'),
-        ]}>
-        <Text style={styles.sentenceSmall}>{word.sentence}</Text>
-        <Text style={[styles.translation, { color: muted }]}>{word.sentenceKo}</Text>
+      <View style={[styles.divider, { backgroundColor: rule }]} />
+
+      <View onLayout={measure('reading')}>
+        <View style={mark('reading') ?? mark('sentenceKo')}>
+          <Text style={[styles.translation, { color: muted }]}>{word.sentenceKo}</Text>
+        </View>
+        <View style={mark('sentenceEn')}>
+          <Text style={styles.sentenceSmall}>{word.sentence}</Text>
+        </View>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  page: {
-    borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 16,
-    padding: 20,
-    gap: 18,
+  scroll: {
+    flex: 1,
   },
-  ordinal: {
-    fontSize: 13,
-    letterSpacing: 0.5,
+  content: {
+    paddingTop: 12,
+    paddingBottom: 28,
   },
-  block: {
-    borderRadius: 8,
-    paddingHorizontal: 6,
-    paddingVertical: 4,
-    gap: 6,
-  },
-  sentence: {
-    fontSize: 24,
-    lineHeight: 34,
-    fontWeight: '600',
-  },
-  keywordRow: {
+  ordinalRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 16,
+    justifyContent: 'flex-end',
+    gap: 12,
+  },
+  ordinalRule: {
+    width: 52,
+    height: 2,
+  },
+  ordinalLabel: {
+    fontSize: 13,
+  },
+  sentenceArea: {
+    marginTop: 34,
+    alignItems: 'center',
+  },
+  sentenceBox: {
+    borderRadius: 6,
+    paddingHorizontal: 6,
+    paddingVertical: 4,
+  },
+  sentence: {
+    fontSize: 25,
+    lineHeight: 35,
+    fontWeight: '700',
+    textAlign: 'center',
+  },
+  keywordCard: {
+    marginTop: 34,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 14,
+    borderWidth: 2,
+    borderRadius: 22,
+    paddingVertical: 18,
+    paddingHorizontal: 22,
   },
   keywordText: {
-    flex: 1,
+    flexShrink: 1,
     gap: 4,
   },
   keywordLabel: {
-    fontSize: 12,
-    letterSpacing: 1,
-    textTransform: 'uppercase',
+    fontSize: 15,
+    fontStyle: 'italic',
   },
-  word: {
-    fontSize: 32,
+  keyword: {
+    fontSize: 27,
     fontWeight: '700',
   },
-  spelling: {
-    fontSize: 15,
-    letterSpacing: 1,
-  },
   pron: {
-    fontSize: 14,
-  },
-  label: {
     fontSize: 12,
-    letterSpacing: 1,
-    textTransform: 'uppercase',
+    lineHeight: 17,
+    marginTop: 2,
   },
-  body: {
-    fontSize: 16,
+  divider: {
+    height: 1,
+    marginVertical: 18,
+  },
+  caption: {
+    fontSize: 13,
+    marginBottom: 8,
+  },
+  definition: {
+    fontSize: 15,
     lineHeight: 25,
+    textAlign: 'justify',
   },
   meaningKo: {
-    fontSize: 20,
-    fontWeight: '600',
+    fontSize: 23,
+    fontWeight: '700',
+    textAlign: 'center',
   },
-  reading: {
-    borderTopWidth: StyleSheet.hairlineWidth,
-    paddingTop: 14,
+  translation: {
+    fontSize: 15,
+    lineHeight: 24,
+    textAlign: 'center',
   },
   sentenceSmall: {
     fontSize: 17,
-    lineHeight: 26,
-  },
-  translation: {
-    fontSize: 16,
-    lineHeight: 25,
+    lineHeight: 27,
+    fontWeight: '700',
+    textAlign: 'center',
+    marginTop: 4,
   },
 });

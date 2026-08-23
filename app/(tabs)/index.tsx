@@ -12,9 +12,9 @@ export default function BookshelfScreen() {
     () => booksByLevel().map(({ level, books }) => ({ title: level, data: books })),
     []
   );
-  const background = useThemeColor({}, 'background');
-  const muted = useThemeColor({}, 'muted');
-  const border = useThemeColor({}, 'border');
+  const background = useThemeColor('background');
+  const muted = useThemeColor('muted');
+  const border = useThemeColor('border');
 
   return (
     <SectionList
@@ -34,10 +34,10 @@ export default function BookshelfScreen() {
 }
 
 function BookRow({ book }: { book: Book }) {
-  const card = useThemeColor({}, 'card');
-  const border = useThemeColor({}, 'border');
-  const muted = useThemeColor({}, 'muted');
-  const tint = useThemeColor({}, 'tint');
+  const card = useThemeColor('card');
+  const border = useThemeColor('border');
+  const muted = useThemeColor('muted');
+  const accent = useThemeColor('accent');
 
   const progress = getProgress(book.slug);
   const read = progress && progress.wordIndex > 0 ? progress.wordIndex : 0;
@@ -56,7 +56,7 @@ function BookRow({ book }: { book: Book }) {
             {read > 0 ? ` · ${read + 1}번째부터 이어보기` : ''}
           </Text>
         </View>
-        {read > 0 ? <View style={[styles.dot, { backgroundColor: tint }]} /> : null}
+        {read > 0 ? <View style={[styles.dot, { backgroundColor: accent }]} /> : null}
       </Pressable>
     </Link>
   );

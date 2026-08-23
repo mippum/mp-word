@@ -7,7 +7,6 @@ import { Text, useThemeColor } from '@/components/Themed';
 import WordSpread from '@/components/WordSpread';
 import { getBook, iconsForBook, type BookWord } from '@/lib/books';
 import {
-  jumpWord,
   pause,
   playWord,
   resume,
@@ -20,8 +19,12 @@ import { supportsPause } from '@/lib/tts';
 
 /**
  * 책 보기 + 듣기.
- * 지면을 좌우로 넘기면서 읽고, 재생하면 낭독을 따라 지면과 하이라이트가 움직인다.
+ *
+ * 종이책은 한 단어를 두 쪽에 싣지만 앱은 **한 단어가 한 쪽**이다 (WordSpread 안에서 세로 스크롤).
+ * 낭독이 다음 단어로 넘어가면 지면도 따라 넘어가고, 읽고 있는 자리에 하이라이트가 붙는다.
+ * 손으로 좌우로 넘길 수도 있다.
  */
+
 export default function BookScreen() {
   const { slug } = useLocalSearchParams<{ slug: string }>();
   const book = useMemo(() => (slug ? getBook(slug) : undefined), [slug]);
@@ -32,27 +35,33 @@ export default function BookScreen() {
   const isCurrent = player.slug === book?.slug;
 
   const listRef = useRef<FlatList<BookWord>>(null);
-  // 저장된 위치에서 시작 (첫 렌더에서 한 번만 읽는다)
-  const [page, setPage] = useState(() => (book ? resumeIndex(book.slug, book.words.length) : 0));
+  // 저장된 위치에서 시작한다 (첫 렌더에서 한 번만 읽는다)
+  const [wordIndex, setWordIndex] = useState(() =>
+    book ? resumeIndex(book.slug, book.words.length) : 0
+  );
   const [error, setError] = useState<string | null>(null);
-  // 낭독이 넘긴 페이지인지, 손으로 넘긴 페이지인지 구분한다
+  // 낭독이 넘긴 쪽인지, 손으로 넘긴 쪽인지 구분한다
   const scrollingTo = useRef<number | null>(null);
 
-  const background = useThemeColor({}, 'background');
-  const muted = useThemeColor({}, 'muted');
+  const background = useThemeColor('background');
+  const muted = useThemeColor('muted');
 
   useEffect(() => subscribeError(setError), []);
 
   // 화면을 벗어나면 재생을 멈춘다
   useEffect(() => () => void stopPlayback(), []);
 
+  const goTo = useCallback((index: number) => {
+    scrollingTo.current = index;
+    setWordIndex(index);
+    listRef.current?.scrollToIndex({ index, animated: true });
+  }, []);
+
   // 낭독이 다음 단어로 넘어가면 지면도 따라 넘긴다
   useEffect(() => {
-    if (!isCurrent || player.wordIndex < 0 || player.wordIndex === page) return;
-    scrollingTo.current = player.wordIndex;
-    setPage(player.wordIndex);
-    listRef.current?.scrollToIndex({ index: player.wordIndex, animated: true });
-  }, [isCurrent, player.wordIndex, page]);
+    if (!isCurrent || player.wordIndex < 0 || player.wordIndex === wordIndex) return;
+    goTo(player.wordIndex);
+  }, [isCurrent, player.wordIndex, wordIndex, goTo]);
 
   const onViewableItemsChanged = useRef(({ viewableItems }: { viewableItems: ViewToken[] }) => {
     const first = viewableItems[0]?.index;
@@ -61,24 +70,21 @@ export default function BookScreen() {
       scrollingTo.current = null;
       return;
     }
-    setPage(first);
+    setWordIndex(first);
   }).current;
 
   /** 재생 중이면 낭독 위치를 옮기고, 아니면 지면만 넘긴다 */
   const step = useCallback(
     (delta: number) => {
       if (!book) return;
+      const next = Math.max(0, Math.min(wordIndex + delta, book.words.length - 1));
       if (isCurrent && player.status === 'playing') {
-        jumpWord(book, delta);
+        playWord(book, next);
         return;
       }
-      const next = Math.max(0, Math.min(page + delta, book.words.length - 1));
-      if (next === page) return;
-      scrollingTo.current = next;
-      setPage(next);
-      listRef.current?.scrollToIndex({ index: next, animated: true });
+      if (next !== wordIndex) goTo(next);
     },
-    [book, isCurrent, page, player.status]
+    [book, isCurrent, player.status, wordIndex, goTo]
   );
 
   const onToggle = useCallback(() => {
@@ -91,14 +97,14 @@ export default function BookScreen() {
       resume(book);
       return;
     }
-    playWord(book, page);
-  }, [book, isCurrent, page, player.status]);
+    playWord(book, wordIndex);
+  }, [book, isCurrent, player.status, wordIndex]);
 
-  // 손으로 넘긴 페이지도 이어보기 위치로 남긴다
+  // 손으로 넘긴 위치도 이어보기로 남긴다 (단어 단위)
   useEffect(() => {
     if (!book || isCurrent) return;
-    setProgress(book.slug, page, book.words.length);
-  }, [book, isCurrent, page]);
+    setProgress(book.slug, wordIndex, book.words.length);
+  }, [book, isCurrent, wordIndex]);
 
   if (!book) {
     return (
@@ -115,11 +121,11 @@ export default function BookScreen() {
       <FlatList
         ref={listRef}
         data={book.words}
-        keyExtractor={(word) => word.wordId}
+        keyExtractor={(item) => item.wordId}
         horizontal
         pagingEnabled
         showsHorizontalScrollIndicator={false}
-        initialScrollIndex={page}
+        initialScrollIndex={wordIndex}
         getItemLayout={(_, index) => ({ length: width, offset: width * index, index })}
         onViewableItemsChanged={onViewableItemsChanged}
         viewabilityConfig={{ itemVisiblePercentThreshold: 60 }}
@@ -143,7 +149,7 @@ export default function BookScreen() {
       <PlaybackControls
         status={isCurrent ? player.status : 'idle'}
         canPause={supportsPause}
-        position={page + 1}
+        position={wordIndex + 1}
         total={book.words.length}
         onPrev={() => step(-1)}
         onNext={() => step(1)}
@@ -163,9 +169,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   page: {
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    justifyContent: 'center',
+    paddingHorizontal: 22,
+    paddingTop: 8,
+    paddingBottom: 4,
   },
   error: {
     textAlign: 'center',

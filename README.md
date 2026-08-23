@@ -20,6 +20,12 @@ TTS로 낭독해 주고 지금 읽는 문장을 하이라이트하는 방식으�
 | `ref/epub/` | 교재 원고 (TOEIC MVP, Introductory, Beginner) |
 | `ref/` (그 외) | 원본 코퍼스 — NGSL, Oxford, Cambridge EVP, MDvoca, ncic_re_kr |
 
+## 디자인
+
+출판된 전자책(`mp-word-en-beginner` 이상)의 지면을 그대로 옮겼습니다. 책은 한 단어를 두 쪽에
+싣지만 앱은 **한 단어를 한 쪽**에 담고 세로로 스크롤합니다. 색은 거의 무채색으로 두고 낭독 중인 부분만 노란색으로 표시합니다. 설정에서 화면 모드를
+시스템 / 밝게 / 어둡게 중에 고를 수 있습니다.
+
 ## 책 한 권의 구성
 
 교재 한 권은 `word_by_books`의 `book_name` 하나이고, `word_order` 1~69가 지면 순서입니다.

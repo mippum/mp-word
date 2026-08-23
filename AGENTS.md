@@ -43,6 +43,7 @@ lib/
 ├── tts.ts                ← react-native-tts 래퍼. 순차 재생 + 발화 사이 실제 대기 + 목소리/엔진
 ├── tts.web.ts            ← 웹 개발용 구현 (speechSynthesis). API 를 tts.ts 와 같게 유지할 것
 ├── voiceNames.ts         ← Android 목소리 표시 이름 (id 해시 → 중성적인 이름 풀)
+├── theme.tsx             ← 화면 모드(시스템/밝게/어둡게) + 팔레트 공급
 └── flite/                ← 오프라인 영어 엔진 (Flite/WASM) — 2.2 참고
 ├── player.ts             ← 전역 단일 플레이어 (usePlayer 훅)
 ├── settings.ts           ← 목소리 선택 (voiceKo/voiceEn) + 오프라인 엔진 조절값
@@ -50,7 +51,7 @@ lib/
 └── jsonStore.ts          ← settings/progress 공용 저장소 (네이티브 파일 / 웹 localStorage)
 
 components/
-├── WordSpread.tsx        ← 단어 한 개의 지면
+├── WordSpread.tsx        ← 단어 한 개의 지면 (한 쪽, 세로 스크롤)
 ├── WordIcon.tsx          ← 단어 아이콘 SVG (테마 색으로 tint)
 ├── VoicePicker.tsx       ← 언어별 목소리 선택 + 미리듣기
 ├── Stepper.tsx           ← −/+ 값 조절 (오프라인 엔진 빠르기·음높이)
@@ -170,6 +171,23 @@ mp-word 에서 달라진 점:
 - 오프라인 한국어 엔진(케이브)은 도입했다가 제거했다. 되살릴 일이 있으면
   listening-trainer 의 `lib/tts-ko/` 와 `assets/tts-ko/units.m4a` 를 참고할 것
 
+### 2.4 디자인 — "집중" 스킴
+
+팔레트는 `constants/Colors.ts` 한 곳에 있다 (`Palettes.light` / `Palettes.dark`).
+
+**거의 무채색으로 두고 채색은 하이라이트(`#ffe066` / 다크 `#6b5300`) 하나뿐이다.**
+그 노란색은 오직 "지금 낭독 중"만 뜻하므로, 다른 곳에 색을 더하면 신호가 약해진다.
+새 UI 를 만들 때 강조색이 필요하면 `accent`(무채색)를 쓰고 하이라이트를 전용하지 말 것.
+
+화면 모드는 시스템 / 밝게 / 어둡게 3택이고 `lib/theme.tsx` 가 공급한다.
+설정은 `AppSettings.themeMode` 에 저장되며 `getSettings()` 가 동기라 첫 렌더부터 올바른
+모드로 그린다 (모드가 늦게 적용돼 화면이 번쩍이는 것을 막는다).
+
+색은 `useThemeColor('text')` 처럼 팔레트 키로 꺼낸다. 하드코딩 금지 — 다크 모드에서 깨진다.
+
+> 출판된 전자책은 초록(`#77bc65`) 괘선을 쓴다. 이 스킴에서는 무채색(`rule`)으로 바꿨으니,
+> 책과 같은 초록으로 되돌리려면 `rule` / `accent` 값만 바꾸면 된다.
+
 ### 2.3 책 내용 — `mp-epub-foundation-words` 참고
 
 앱이 보여줄 **책의 실제 구성**은
@@ -200,6 +218,16 @@ How To Use     사용법
 | 한글 해석 | `유리잔 떨어뜨리지 마.` | `_5` |
 | 예문 (영) | `Don't drop the glass.` | `_6` |
 | 한글 해석 | `유리잔 떨어뜨리지 마.` | `_7` |
+
+**책은 한 단어를 두 쪽에 싣지만 앱은 한 쪽에 담는다** (`components/WordSpread.tsx`).
+종이와 달리 길이 제약이 없어 세로로 스크롤하면 되기 때문이다. 요소 순서는 책과 같다 —
+순번 라벨 · 예문 · 키워드 카드(단어+발음+아이콘) · 영영 뜻 · 한글 뜻 · 해석 + 예문.
+책 2쪽 머리의 대문자 표제는 키워드 카드와 겹치므로 빼고, 발음기호만 카드로 옮겼다.
+
+낭독 중인 슬롯이 화면 밖이면 그 자리로 세로 스크롤한다 (`onLayout` 으로 슬롯 y 를 재 둔다).
+
+지면 구성의 기준은 출판본 `mp-word-en-beginner/yes24` 의 PDF 다
+(`mp-word-en-entry` · `mp-word-en-Introductory` 두 레벨은 구성이 다르다).
 
 이 데이터는 전부 `word.db`에 있습니다 — 단어(`words`), 아이콘(`word_svgs`),
 영영 뜻(`en_long_meanings` / `simple_definitions`), 예문·번역(`sentences`),

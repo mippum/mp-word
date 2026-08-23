@@ -1,14 +1,18 @@
+import FontAwesome from '@expo/vector-icons/FontAwesome';
 import Constants from 'expo-constants';
+import type React from 'react';
 import { useCallback, useEffect, useState } from 'react';
-import { AppState, Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { AppState, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
 import Stepper from '@/components/Stepper';
 import { Text, useThemeColor } from '@/components/Themed';
 import VoicePicker from '@/components/VoicePicker';
+import type { ThemeMode } from '@/constants/Colors';
 import { FLITE_VOICE_ID, FLITE_VOICE_NAME, isFliteVoiceId } from '@/lib/flite/voices';
 import { listBooks } from '@/lib/books';
 import { previewVoice } from '@/lib/player';
 import { getSettings, setSettings } from '@/lib/settings';
+import { useAppTheme } from '@/lib/theme';
 import {
   engineKind,
   openSystemTtsSettings,
@@ -17,6 +21,16 @@ import {
   supportsVoiceSelection,
   syncSystemEngine,
 } from '@/lib/tts';
+
+const THEME_MODES: {
+  mode: ThemeMode;
+  label: string;
+  icon: React.ComponentProps<typeof FontAwesome>['name'];
+}[] = [
+  { mode: 'system', label: '시스템', icon: 'adjust' },
+  { mode: 'light', label: '밝게', icon: 'sun-o' },
+  { mode: 'dark', label: '어둡게', icon: 'moon-o' },
+];
 
 /** 오프라인 엔진 조절 범위 (백분율) */
 const FLITE_MIN = 50;
@@ -30,11 +44,12 @@ const FLITE_STEP = 10;
  * 앱 설정과 곱해지면 사용자가 결과를 예측할 수 없기 때문이다.
  */
 export default function SettingsScreen() {
-  const background = useThemeColor({}, 'background');
-  const card = useThemeColor({}, 'card');
-  const border = useThemeColor({}, 'border');
-  const muted = useThemeColor({}, 'muted');
-  const tint = useThemeColor({}, 'tint');
+  const { mode, setMode } = useAppTheme();
+  const background = useThemeColor('background');
+  const card = useThemeColor('card');
+  const border = useThemeColor('border');
+  const muted = useThemeColor('muted');
+  const accent = useThemeColor('accent');
 
   // 엔진이 바뀌면 목소리 목록도 바뀌므로 VoicePicker 를 다시 그리게 하는 카운터
   const [voiceListVersion, setVoiceListVersion] = useState(0);
@@ -84,6 +99,38 @@ export default function SettingsScreen() {
   return (
     <ScrollView style={{ backgroundColor: background }} contentContainerStyle={styles.content}>
       <View style={[styles.card, { backgroundColor: card, borderColor: border }]}>
+        <Text style={styles.title}>화면 모드</Text>
+        <View style={styles.modeRow}>
+          {THEME_MODES.map((item) => (
+            <Pressable
+              key={item.mode}
+              onPress={() => setMode(item.mode)}
+              accessibilityRole="radio"
+              accessibilityState={{ selected: mode === item.mode }}
+              accessibilityLabel={`${item.label} 모드`}
+              style={({ pressed }) => [
+                styles.modeButton,
+                { borderColor: mode === item.mode ? accent : border },
+                mode === item.mode && { backgroundColor: background },
+                pressed && { opacity: 0.6 },
+              ]}>
+              <FontAwesome
+                name={item.icon}
+                size={16}
+                color={mode === item.mode ? accent : muted}
+              />
+              <Text style={[styles.modeLabel, mode !== item.mode && { color: muted }]}>
+                {item.label}
+              </Text>
+            </Pressable>
+          ))}
+        </View>
+        <Text style={[styles.note, { color: muted }]}>
+          바꾸면 바로 적용됩니다. &quot;시스템&quot;은 기기의 밝게/어둡게 설정을 따릅니다.
+        </Text>
+      </View>
+
+      <View style={[styles.card, { backgroundColor: card, borderColor: border }]}>
         <Text style={styles.title}>목소리</Text>
 
         {engineKind === 'html5' ? (
@@ -129,9 +176,9 @@ export default function SettingsScreen() {
               onPress={() => void openSystemTtsSettings()}
               style={({ pressed }) => [
                 styles.button,
-                { borderColor: tint, opacity: pressed ? 0.6 : 1 },
+                { borderColor: accent, opacity: pressed ? 0.6 : 1 },
               ]}>
-              <Text style={[styles.buttonText, { color: tint }]}>시스템 설정 열기</Text>
+              <Text style={[styles.buttonText, { color: accent }]}>시스템 설정 열기</Text>
             </Pressable>
             <Text style={[styles.note, { color: muted }]}>
               엔진·말하기 속도·음높이는 시스템 설정(&quot;글자 읽어주기&quot;)에서 바꿉니다. 바꾸고
@@ -154,7 +201,7 @@ export default function SettingsScreen() {
         ) : null}
 
         {notice ? (
-          <Text style={[styles.notice, { color: tint }]} onPress={() => setNotice(null)}>
+          <Text style={[styles.notice, { color: accent }]} onPress={() => setNotice(null)}>
             {notice}
           </Text>
         ) : null}
@@ -187,9 +234,9 @@ export default function SettingsScreen() {
             onPress={() => void previewVoice('en', FLITE_VOICE_ID.slt)}
             style={({ pressed }) => [
               styles.button,
-              { borderColor: tint, opacity: pressed ? 0.6 : 1 },
+              { borderColor: accent, opacity: pressed ? 0.6 : 1 },
             ]}>
-            <Text style={[styles.buttonText, { color: tint }]}>이 설정으로 미리듣기</Text>
+            <Text style={[styles.buttonText, { color: accent }]}>이 설정으로 미리듣기</Text>
           </Pressable>
           <Text style={[styles.note, { color: muted }]}>
             빠르기·음높이는 오프라인({FLITE_VOICE_NAME}) 재생에만 적용됩니다. 변경은 다음 재생부터
@@ -234,6 +281,23 @@ const styles = StyleSheet.create({
     fontSize: 12,
     letterSpacing: 1,
     textTransform: 'uppercase',
+  },
+  modeRow: {
+    flexDirection: 'row',
+    gap: 8,
+  },
+  modeButton: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 7,
+    borderWidth: 1,
+    borderRadius: 10,
+    paddingVertical: 11,
+  },
+  modeLabel: {
+    fontSize: 14,
   },
   notice: {
     fontSize: 13,
