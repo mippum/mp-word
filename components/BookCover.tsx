@@ -11,18 +11,19 @@ const COVER_HEIGHT = 78;
  * 왼쪽에 책등 선을 그어 세워 둔 책처럼 보이게 하고, 가운데에 권차(`1st`)를 적는다.
  * 권차가 없는 단권(Entry 등)은 책 아이콘을 대신 넣는다.
  *
- * 표지만 늘어놓는 목록이라 상태는 표지 위에 얹는다 — 잠김(자물쇠), 읽던 위치(점).
+ * 표지만 늘어놓는 목록이라 상태는 표지 위에 얹는다 —
+ * 잠김은 자물쇠, 읽은 분량은 아래쪽 띠로 보여준다 (책에 끼운 갈피처럼).
  */
 export default function BookCover({
   volume,
   locked = false,
-  reading = false,
+  progress = 0,
 }: {
   /** '1st' 같은 짧은 권차. 없으면 책 아이콘 */
   volume: string | null;
   locked?: boolean;
-  /** 읽던 자리가 있는 책 */
-  reading?: boolean;
+  /** 읽은 비율 0~1. 0 이면 띠를 그리지 않는다 */
+  progress?: number;
 }) {
   const text = useThemeColor('text');
   const faint = useThemeColor('faint');
@@ -49,10 +50,17 @@ export default function BookCover({
         <FontAwesome name="book" size={20} color={ink} />
       )}
 
-      {locked ? (
-        <FontAwesome name="lock" size={10} color={faint} style={styles.badge} />
-      ) : reading ? (
-        <View style={[styles.dot, { backgroundColor: accent }]} />
+      {locked ? <FontAwesome name="lock" size={10} color={faint} style={styles.badge} /> : null}
+
+      {!locked && progress > 0 ? (
+        <View style={[styles.track, { backgroundColor: border }]}>
+          <View
+            style={[
+              styles.fill,
+              { backgroundColor: accent, width: `${Math.min(100, Math.max(4, progress * 100))}%` },
+            ]}
+          />
+        </View>
       ) : null}
     </View>
   );
@@ -92,12 +100,17 @@ const styles = StyleSheet.create({
     right: 5,
     bottom: 4,
   },
-  dot: {
+  track: {
     position: 'absolute',
+    left: 8,
     right: 6,
     bottom: 6,
-    width: 6,
-    height: 6,
-    borderRadius: 3,
+    height: 3,
+    borderRadius: 2,
+    overflow: 'hidden',
+  },
+  fill: {
+    height: '100%',
+    borderRadius: 2,
   },
 });

@@ -57,7 +57,7 @@ lib/
 components/
 ├── WordSpread.tsx        ← 단어 한 개의 지면 (한 쪽, 세로 스크롤)
 ├── WordIcon.tsx          ← 단어 아이콘 SVG (테마 색으로 tint)
-├── BookCover.tsx         ← 책장의 표지 타일 (책등 + 권차 + 잠김/읽던 자리 표시)
+├── BookCover.tsx         ← 책장의 표지 타일 (책등 + 권차 + 잠김 + 읽은 분량 띠)
 ├── VoicePicker.tsx       ← 언어별 목소리 선택 + 미리듣기
 ├── Stepper.tsx           ← −/+ 값 조절 (오프라인 엔진 빠르기·음높이)
 ├── FliteSynthHost.tsx    ← 오프라인 합성용 숨은 WebView (웹은 null 스텁)
@@ -189,7 +189,11 @@ mp-word 에서 달라진 점:
 표시 이름을 키로 쓰면 시리즈가 늘어날 때 저장값이 깨진다. 시리즈는 `Book.series`(책 이름의 첫 낱말).
 
 읽기 탭은 목록이 아니라 **표지를 늘어놓는 책장**이다. 표지에는 권차만 보이므로 나머지 정보
-(단어 수·잠김·이어보기)는 접근성 라벨이 실어 나른다. 44권뿐이라 가상화 없이 통째로 그린다.
+(단어 수·잠김·읽은 분량)는 접근성 라벨이 실어 나른다. 44권뿐이라 가상화 없이 통째로 그린다.
+
+읽은 분량은 표지 아래쪽 띠와 그 밑의 백분율로 보여준다 (`wordIndex / wordCount`).
+**완독하면 `player` 가 이어보기 위치를 0 으로 되돌리므로 100% 는 표시되지 않는다** —
+'다 읽음'을 남기려면 완독 여부를 따로 저장해야 한다 (TODO).
 
 권 이름은 데이터의 `Foundation Beginner First` 를 그대로 쓰지 않고 `displayName()` 으로
 `Foundation Beginner 1st` 처럼 줄여 보여준다 (`lib/books.ts`). 화면에 책 이름을 쓸 일이 있으면

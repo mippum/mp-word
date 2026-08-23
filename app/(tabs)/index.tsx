@@ -120,8 +120,11 @@ function BookTile({
   const router = useRouter();
   const muted = useThemeColor('muted');
 
-  const progress = getProgress(book.slug);
-  const read = progress && progress.wordIndex > 0 ? progress.wordIndex : 0;
+  const saved = getProgress(book.slug);
+  const read = saved && saved.wordIndex > 0 ? saved.wordIndex : 0;
+  // 읽은 비율 — 완독하면 위치가 0 으로 되돌아가므로 여기서는 항상 진행 중인 값이다
+  const ratio = book.wordCount > 0 ? read / book.wordCount : 0;
+  const percent = ratio > 0 ? Math.max(1, Math.round(ratio * 100)) : 0;
 
   // 잠긴 권도 책장에 남겨 두되(무엇이 있는지 보이도록) 누르면 구독 안내로 보낸다
   const open = () =>
@@ -132,10 +135,10 @@ function BookTile({
   // 표지에는 권차만 보이므로 나머지 정보는 접근성 라벨이 실어 나른다
   const state = locked
     ? '잠김, 구독 안내 열기'
-    : freeSample
-      ? '무료 공개'
-      : read > 0
-        ? `${read + 1}번째부터 이어보기`
+    : read > 0
+      ? `${book.wordCount}개 중 ${read}개 읽음, ${percent} 퍼센트`
+      : freeSample
+        ? '무료 공개'
         : '';
 
   return (
@@ -144,8 +147,12 @@ function BookTile({
       accessibilityRole="button"
       accessibilityLabel={`${displayName(book)} 단어 ${book.wordCount}개${state ? `, ${state}` : ''}`}
       style={({ pressed }) => [styles.tile, pressed && { opacity: 0.6 }]}>
-      <BookCover volume={volumeLabel(book)} locked={locked} reading={read > 0} />
-      {freeSample ? <Text style={[styles.caption, { color: muted }]}>무료</Text> : null}
+      <BookCover volume={volumeLabel(book)} locked={locked} progress={ratio} />
+      {percent > 0 ? (
+        <Text style={[styles.caption, { color: muted }]}>{percent}%</Text>
+      ) : freeSample ? (
+        <Text style={[styles.caption, { color: muted }]}>무료</Text>
+      ) : null}
     </Pressable>
   );
 }
