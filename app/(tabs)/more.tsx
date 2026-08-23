@@ -4,8 +4,8 @@ import { useMemo } from 'react';
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
 import { Text, useThemeColor } from '@/components/Themed';
-import { booksByLevel, listBooks } from '@/lib/books';
-import { FREE_LEVELS, PLAN, useSubscription } from '@/lib/subscription';
+import { booksByLevel, getBook, listBooks } from '@/lib/books';
+import { freeScopeLabel, PLAN, useSubscription } from '@/lib/subscription';
 
 /**
  * 더보기 — 앱 사용법과 수록 구성 안내.
@@ -18,6 +18,7 @@ export default function MoreScreen() {
   const muted = useThemeColor('muted');
   const router = useRouter();
   const { subscribed } = useSubscription();
+  const freeScope = freeScopeLabel((slug) => getBook(slug)?.name ?? slug);
 
   const books = listBooks();
   const levels = useMemo(() => booksByLevel(), []);
@@ -28,11 +29,9 @@ export default function MoreScreen() {
       <Card title="구독">
         <Row label="상태" value={subscribed ? '구독 중' : '구독 안 함'} />
         <Row label="요금" value={`${PLAN.label} (${PLAN.period}마다 결제)`} />
-        <Row label="무료" value={`${FREE_LEVELS.join(' · ')} 단계`} />
+        <Row label="무료" value={freeScope} />
         <Note>
-          {subscribed
-            ? '모든 레벨을 볼 수 있습니다.'
-            : `${FREE_LEVELS.join(' · ')} 외의 레벨은 구독해야 열립니다.`}
+          {subscribed ? '모든 책을 볼 수 있습니다.' : '그 밖의 책은 구독해야 열립니다.'}
         </Note>
         <Pressable
           onPress={() => router.push('/subscribe')}

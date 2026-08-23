@@ -196,11 +196,20 @@ mp-word 에서 달라진 점:
 
 ### 2.5 구독
 
-주 500원 구독제다. **Entry · Introductory 두 권은 무료**, 그 위 레벨(42권)은 구독해야 열린다.
-무료 범위는 `lib/subscription.ts` 의 `FREE_LEVELS` 한 곳에만 있다.
+주 500원 구독제다. 무료 범위는 `lib/subscription.ts` 두 상수에만 있다.
+
+| 상수 | 내용 |
+|---|---|
+| `FREE_LEVELS` | 레벨 통째로 무료 — `Entry` · `Introductory` |
+| `FREE_BOOKS` | 잠긴 레벨의 낱권 맛보기 — `foundation-essential-first` · `foundation-elementary-first` |
+
+판정은 레벨이 아니라 **권 단위**(`canOpenBook`)다. 한 레벨 안에 열린 권과 잠긴 권이 섞인다.
 
 - 잠긴 권도 목록에 **남겨 둔다** — 무엇이 있는지 보여야 구독할 이유가 생긴다.
   회색 + 자물쇠로 표시하고, 누르면 `/subscribe` 안내로 보낸다
+- 레벨 머리글 자물쇠는 **그 레벨의 모든 권이 잠겼을 때만** 붙는다
+  (Essential·Elementary 는 맛보기가 있어 자물쇠가 없다)
+- 낱권 맛보기는 목록에 `무료 공개` 로 표시한다 — 구독 전에만 (구독 중엔 이어보기를 보여준다)
 - `app/book/[slug].tsx` 가 한 번 더 막는다 — 목록을 거치지 않는 딥링크 대비
 
 #### 검증 방식 (결정 사항)

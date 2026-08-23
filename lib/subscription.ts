@@ -1,7 +1,10 @@
 /**
  * 구독 권한.
  *
- * Entry · Introductory 두 권은 맛보기로 열어 두고, 그 위 레벨은 구독해야 열린다.
+ * 무료로 열어 두는 것은 두 가지다.
+ *   - `FREE_LEVELS` — Entry · Introductory 레벨 전체
+ *   - `FREE_BOOKS`  — 잠긴 레벨 중 낱권으로 푼 맛보기 (Essential First · Elementary First)
+ * 나머지는 구독해야 열린다.
  *
  * ## 검증 방식
  *
@@ -36,14 +39,26 @@ export const PLAN = {
   productId: 'mpword.sub.weekly',
 } as const;
 
-/** 구독 없이 볼 수 있는 레벨 (쉬운 두 단계) */
+/** 구독 없이 볼 수 있는 레벨 — 이 레벨의 모든 권이 열린다 */
 export const FREE_LEVELS: readonly string[] = ['Entry', 'Introductory'];
+
+/**
+ * 레벨은 잠겨 있어도 낱권으로 열어 두는 책 (slug).
+ * 위쪽 레벨도 맛보고 살 수 있게 각 레벨 1권씩 풀어 둔 것이다.
+ */
+export const FREE_BOOKS: readonly string[] = [
+  'foundation-essential-first',
+  'foundation-elementary-first',
+];
 
 /** 만료 뒤 유예 — 갱신 확인을 못 한 채 잠기는 것을 막는다 */
 const GRACE_MS = 3 * 24 * 60 * 60 * 1000;
 
 /** 이 시간이 지나면 스토어에 다시 물어본다 */
 const RECHECK_AFTER_MS = 6 * 60 * 60 * 1000;
+
+/** 권한 판정에 필요한 최소 정보 */
+export type BookRef = { slug: string; level: string };
 
 type Entitlement = {
   /** 현재 구독 기간이 끝나는 시각 (ISO 8601). null 이면 권한 없음 */
@@ -125,14 +140,31 @@ export function markVerified(): void {
   save({ ...cache, lastVerifiedAt: new Date().toISOString() });
 }
 
-/** 구독 없이 열 수 있는 레벨인지 */
+/** 무료 범위 안내 문구 — 구독 화면과 더보기가 같은 문장을 쓴다 */
+export function freeScopeLabel(bookName: (slug: string) => string): string {
+  const levels = FREE_LEVELS.map((level) => `${level} 단계`);
+  const books = FREE_BOOKS.map(bookName);
+  return [...levels, ...books].join(' · ');
+}
+
+/** 레벨 전체가 무료인지 */
 export function isLevelFree(level: string): boolean {
   return FREE_LEVELS.includes(level);
 }
 
-/** 지금 이 레벨을 열 수 있는지 (무료이거나 구독 중) */
-export function canOpenLevel(level: string): boolean {
-  return isLevelFree(level) || isSubscribed();
+/** 구독 없이도 볼 수 있는 권인지 (무료 레벨이거나 낱권 무료) */
+export function isBookFree(book: BookRef): boolean {
+  return isLevelFree(book.level) || FREE_BOOKS.includes(book.slug);
+}
+
+/** 레벨은 잠겼는데 이 권만 열려 있는 경우 — 목록에 '무료' 표시를 붙인다 */
+export function isFreeSample(book: BookRef): boolean {
+  return !isLevelFree(book.level) && FREE_BOOKS.includes(book.slug);
+}
+
+/** 지금 이 권을 열 수 있는지 */
+export function canOpenBook(book: BookRef): boolean {
+  return isBookFree(book) || isSubscribed();
 }
 
 /** 구독 상태를 구독(subscribe)하는 훅 — 상태가 바뀌면 화면이 다시 그려진다 */
@@ -140,7 +172,7 @@ export function useSubscription(): {
   subscribed: boolean;
   inGrace: boolean;
   expiresAt: string | null;
-  canOpenLevel: (level: string) => boolean;
+  canOpenBook: (book: BookRef) => boolean;
 } {
   const subscribed = useSyncExternalStore(
     (listener) => {
@@ -156,7 +188,7 @@ export function useSubscription(): {
     subscribed,
     inGrace: subscribed && isInGracePeriod(),
     expiresAt: cache.expiresAt,
-    canOpenLevel: (level: string) => isLevelFree(level) || subscribed,
+    canOpenBook: (book: BookRef) => isBookFree(book) || subscribed,
   };
 }
 

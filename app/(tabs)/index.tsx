@@ -7,7 +7,7 @@ import { Text, useThemeColor } from '@/components/Themed';
 import { booksByLevel, type Book } from '@/lib/books';
 import { getProgress } from '@/lib/progress';
 import { getSettings, setSettings } from '@/lib/settings';
-import { useSubscription } from '@/lib/subscription';
+import { isFreeSample, useSubscription } from '@/lib/subscription';
 
 /**
  * 보기 탭 — 레벨별로 묶은 권 목록. 누르면 그 책을 펼친다.
@@ -18,7 +18,7 @@ import { useSubscription } from '@/lib/subscription';
 export default function BookListScreen() {
   const levels = useMemo(() => booksByLevel(), []);
   const [collapsed, setCollapsed] = useState<string[]>(() => getSettings().collapsedLevels);
-  const { canOpenLevel } = useSubscription();
+  const { subscribed, canOpenBook } = useSubscription();
 
   const background = useThemeColor('background');
 
@@ -37,10 +37,12 @@ export default function BookListScreen() {
       levels.map(({ level, books }) => ({
         title: level,
         count: books.length,
+        // 낱권 무료가 하나라도 있으면 레벨 자물쇠를 달지 않는다
+        locked: books.every((book) => !canOpenBook(book)),
         // 접힌 레벨은 항목을 비워 머리글만 남긴다
         data: collapsed.includes(level) ? [] : books,
       })),
-    [levels, collapsed]
+    [levels, collapsed, canOpenBook]
   );
 
   return (
@@ -55,11 +57,18 @@ export default function BookListScreen() {
           level={section.title}
           count={section.count}
           collapsed={collapsed.includes(section.title)}
-          locked={!canOpenLevel(section.title)}
+          locked={section.locked}
           onPress={() => toggle(section.title)}
         />
       )}
-      renderItem={({ item }) => <BookRow book={item} locked={!canOpenLevel(item.level)} />}
+      renderItem={({ item }) => (
+        // '무료 공개' 표시는 구독 전에만 의미가 있다 (구독 중에는 이어보기를 보여준다)
+        <BookRow
+          book={item}
+          locked={!canOpenBook(item)}
+          freeSample={!subscribed && isFreeSample(item)}
+        />
+      )}
     />
   );
 }
@@ -102,7 +111,15 @@ function LevelHeader({
   );
 }
 
-function BookRow({ book, locked }: { book: Book; locked: boolean }) {
+function BookRow({
+  book,
+  locked,
+  freeSample,
+}: {
+  book: Book;
+  locked: boolean;
+  freeSample: boolean;
+}) {
   const router = useRouter();
   const card = useThemeColor('card');
   const border = useThemeColor('border');
@@ -132,7 +149,13 @@ function BookRow({ book, locked }: { book: Book; locked: boolean }) {
         <Text style={[styles.bookName, locked && { color: faint }]}>{book.name}</Text>
         <Text style={[styles.meta, { color: locked ? faint : muted }]}>
           단어 {book.wordCount}개
-          {locked ? ' · 구독 필요' : read > 0 ? ` · ${read + 1}번째부터 이어보기` : ''}
+          {locked
+            ? ' · 구독 필요'
+            : freeSample
+              ? ' · 무료 공개'
+              : read > 0
+                ? ` · ${read + 1}번째부터 이어보기`
+                : ''}
         </Text>
       </View>
       {locked ? (

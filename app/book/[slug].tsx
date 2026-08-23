@@ -34,7 +34,7 @@ export default function BookScreen() {
 
   const player = usePlayer();
   const isCurrent = player.slug === book?.slug;
-  const { canOpenLevel } = useSubscription();
+  const { canOpenBook } = useSubscription();
 
   const listRef = useRef<FlatList<BookWord>>(null);
   // 저장된 위치에서 시작한다 (첫 렌더에서 한 번만 읽는다)
@@ -117,7 +117,7 @@ export default function BookScreen() {
   }
 
   // 목록에서 막아 두었지만 딥링크로도 들어올 수 있으므로 여기서 한 번 더 막는다
-  if (!canOpenLevel(book.level)) {
+  if (!canOpenBook(book)) {
     return <Redirect href={{ pathname: '/subscribe', params: { level: book.level } }} />;
   }
 

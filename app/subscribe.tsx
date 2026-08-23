@@ -3,7 +3,13 @@ import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
 import { Text, useThemeColor } from '@/components/Themed';
-import { devToggleSubscription, FREE_LEVELS, PLAN, useSubscription } from '@/lib/subscription';
+import { getBook } from '@/lib/books';
+import {
+  devToggleSubscription,
+  freeScopeLabel,
+  PLAN,
+  useSubscription,
+} from '@/lib/subscription';
 
 /**
  * 구독 안내.
@@ -16,6 +22,7 @@ export default function SubscribeScreen() {
   const { level } = useLocalSearchParams<{ level?: string }>();
   const router = useRouter();
   const { subscribed, inGrace, expiresAt } = useSubscription();
+  const freeScope = freeScopeLabel((slug) => getBook(slug)?.name ?? slug);
 
   const background = useThemeColor('background');
   const card = useThemeColor('card');
@@ -56,7 +63,7 @@ export default function SubscribeScreen() {
 
       <View style={[styles.card, { backgroundColor: card, borderColor: border }]}>
         <Text style={styles.title}>구독 없이도</Text>
-        <Bullet text={`${FREE_LEVELS.join(' · ')} 단계는 그대로 볼 수 있습니다.`} />
+        <Bullet text={`${freeScope}는 그대로 볼 수 있습니다.`} />
       </View>
 
       <View style={[styles.card, { backgroundColor: card, borderColor: border }]}>
