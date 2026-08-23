@@ -1,4 +1,4 @@
-import { Stack, useLocalSearchParams } from 'expo-router';
+import { Redirect, Stack, useLocalSearchParams } from 'expo-router';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { FlatList, StyleSheet, useWindowDimensions, View, type ViewToken } from 'react-native';
 
@@ -15,6 +15,7 @@ import {
   usePlayer,
 } from '@/lib/player';
 import { resumeIndex, setProgress } from '@/lib/progress';
+import { useSubscription } from '@/lib/subscription';
 import { supportsPause } from '@/lib/tts';
 
 /**
@@ -33,6 +34,7 @@ export default function BookScreen() {
 
   const player = usePlayer();
   const isCurrent = player.slug === book?.slug;
+  const { canOpenLevel } = useSubscription();
 
   const listRef = useRef<FlatList<BookWord>>(null);
   // 저장된 위치에서 시작한다 (첫 렌더에서 한 번만 읽는다)
@@ -112,6 +114,11 @@ export default function BookScreen() {
         <Text>책을 찾을 수 없습니다.</Text>
       </View>
     );
+  }
+
+  // 목록에서 막아 두었지만 딥링크로도 들어올 수 있으므로 여기서 한 번 더 막는다
+  if (!canOpenLevel(book.level)) {
+    return <Redirect href={{ pathname: '/subscribe', params: { level: book.level } }} />;
   }
 
   return (

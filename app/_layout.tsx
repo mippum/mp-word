@@ -71,6 +71,7 @@ function RootLayoutNav() {
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="book/[slug]" options={{ title: '' }} />
+        <Stack.Screen name="subscribe" options={{ title: '구독', presentation: 'modal' }} />
       </Stack>
       {/* 오프라인 합성용 숨은 WebView — 앱 루트에 상주해야 한다 */}
       <FliteSynthHost />

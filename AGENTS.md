@@ -34,7 +34,9 @@ app/
 ├── (tabs)/
 │   ├── index.tsx         ← 보기 (레벨별 권 목록, 접기·펼치기, 이어보기 표시)
 │   ├── settings.tsx      ← 화면 모드 · 목소리 · 오프라인 엔진 조절
-│   └── more.tsx          ← 더보기 (사용법 · 지면 보는 법 · 낭독 순서 · 레벨 · 수록)
+│   └── more.tsx          ← 더보기 (구독 · 사용법 · 지면 보는 법 · 낭독 순서 · 레벨 · 수록)
+├── book/[slug].tsx       ← 책 보기 + 듣기
+└── subscribe.tsx         ← 구독 안내 (모달)
 └── book/[slug].tsx       ← 책 보기 + 듣기 (지면 넘기기, 하이라이트, 재생 컨트롤)
 
 lib/
@@ -49,6 +51,7 @@ lib/
 ├── player.ts             ← 전역 단일 플레이어 (usePlayer 훅)
 ├── settings.ts           ← 목소리 선택 (voiceKo/voiceEn) + 오프라인 엔진 조절값
 ├── progress.ts           ← 이어보기 위치
+├── subscription.ts       ← 구독 권한 — 2.5 참고
 └── jsonStore.ts          ← settings/progress 공용 저장소 (네이티브 파일 / 웹 localStorage)
 
 components/
@@ -191,7 +194,44 @@ mp-word 에서 달라진 점:
 > 출판된 전자책은 초록(`#77bc65`) 괘선을 쓴다. 이 스킴에서는 무채색(`rule`)으로 바꿨으니,
 > 책과 같은 초록으로 되돌리려면 `rule` / `accent` 값만 바꾸면 된다.
 
-### 2.3 책 내용 — `mp-epub-foundation-words` 참고
+### 2.5 구독
+
+주 500원 구독제다. **Entry · Introductory 두 권은 무료**, 그 위 레벨(42권)은 구독해야 열린다.
+무료 범위는 `lib/subscription.ts` 의 `FREE_LEVELS` 한 곳에만 있다.
+
+- 잠긴 권도 목록에 **남겨 둔다** — 무엇이 있는지 보여야 구독할 이유가 생긴다.
+  회색 + 자물쇠로 표시하고, 누르면 `/subscribe` 안내로 보낸다
+- `app/book/[slug].tsx` 가 한 번 더 막는다 — 목록을 거치지 않는 딥링크 대비
+
+#### 검증 방식 (결정 사항)
+
+**자체 서버도 외부 구독 관리 서비스(RevenueCat 등)도 쓰지 않는다.**
+`react-native-iap` 로 스토어에 직접 물어보고 결과를 캐시한다.
+
+| 플랫폼 | 조회 | 검증 |
+|---|---|---|
+| iOS | StoreKit 2 `Transaction.currentEntitlements` | 애플 서명을 StoreKit 이 기기에서 검증 |
+| Android | Play Billing `queryPurchasesAsync()` | 구글 서명을 앱에 심은 공개키로 검증 |
+
+Android 는 공개키가 앱 안에 있어 루팅·리패키징으로 우회될 수 있다.
+**이 위험은 감수하기로 한 결정이다** (주 500원 앱에 서버 운영비가 더 크다).
+나중에 올리고 싶어지면 `applyEntitlement()` 를 서버 응답으로 채우면 되고 그 위 코드는 그대로다.
+
+#### 캐시와 유예
+
+앱이 콘텐츠·오프라인 TTS 를 품고 있어 인터넷 없이도 쓰인다. 그때는 스토어에 물어볼 수 없으므로
+`{ expiresAt, lastVerifiedAt, productId }` 를 들고 판단한다.
+
+- `isSubscribed()` — `now < expiresAt + GRACE_MS`(3일). 자동 갱신 시점에 오프라인이면
+  `expiresAt` 이 낡아 보이므로 유예를 준다 (**돈 낸 사람을 잘못 막는 쪽이 더 나쁘다**)
+- `needsRecheck()` — 6시간 경과 또는 만료 이후면 true. **앱 시작·포그라운드 복귀에서 불러
+  스토어 조회로 이어야 한다** (아직 호출부 없음 — SDK 를 붙일 자리)
+- 조회 성공 시 `applyEntitlement()` / `clearEntitlement()`, 변화 없으면 `markVerified()`.
+  **오프라인이라 조회에 실패했으면 아무것도 부르지 말 것** — 캐시를 그대로 둬야 유예가 동작한다
+
+> ⚠️ `devToggleSubscription()` 은 결제 연동 전 화면 확인용 임시 토글이다. SDK 를 붙일 때 지운다.
+
+### 2.3 책 내용### 2.3 책 내용 — `mp-epub-foundation-words` 참고
 
 앱이 보여줄 **책의 실제 구성**은
 **`I:\github\mp-epub-foundation-words\ref\epub\mp-word-en-basic\yes24`** 를 참고합니다

@@ -1,9 +1,11 @@
 import Constants from 'expo-constants';
+import { useRouter } from 'expo-router';
 import { useMemo } from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
 import { Text, useThemeColor } from '@/components/Themed';
 import { booksByLevel, listBooks } from '@/lib/books';
+import { FREE_LEVELS, PLAN, useSubscription } from '@/lib/subscription';
 
 /**
  * 더보기 — 앱 사용법과 수록 구성 안내.
@@ -11,6 +13,11 @@ import { booksByLevel, listBooks } from '@/lib/books';
  */
 export default function MoreScreen() {
   const background = useThemeColor('background');
+  const accent = useThemeColor('accent');
+  const border = useThemeColor('border');
+  const muted = useThemeColor('muted');
+  const router = useRouter();
+  const { subscribed } = useSubscription();
 
   const books = listBooks();
   const levels = useMemo(() => booksByLevel(), []);
@@ -18,6 +25,30 @@ export default function MoreScreen() {
 
   return (
     <ScrollView style={{ backgroundColor: background }} contentContainerStyle={styles.content}>
+      <Card title="구독">
+        <Row label="상태" value={subscribed ? '구독 중' : '구독 안 함'} />
+        <Row label="요금" value={`${PLAN.label} (${PLAN.period}마다 결제)`} />
+        <Row label="무료" value={`${FREE_LEVELS.join(' · ')} 단계`} />
+        <Note>
+          {subscribed
+            ? '모든 레벨을 볼 수 있습니다.'
+            : `${FREE_LEVELS.join(' · ')} 외의 레벨은 구독해야 열립니다.`}
+        </Note>
+        <Pressable
+          onPress={() => router.push('/subscribe')}
+          accessibilityRole="button"
+          accessibilityLabel={subscribed ? '구독 정보 보기' : '구독 안내 보기'}
+          style={({ pressed }) => [
+            styles.button,
+            { borderColor: subscribed ? border : accent },
+            pressed && { opacity: 0.6 },
+          ]}>
+          <Text style={[styles.buttonText, { color: subscribed ? muted : accent }]}>
+            {subscribed ? '구독 정보 보기' : '구독 안내 보기'}
+          </Text>
+        </Pressable>
+      </Card>
+
       <Card title="사용법">
         <Step n={1} text="보기 탭에서 권을 고릅니다. 레벨 이름을 누르면 접었다 펼 수 있습니다." />
         <Step n={2} text="지면을 좌우로 넘기며 읽습니다. 한 쪽이 단어 하나입니다." />
@@ -173,5 +204,16 @@ const styles = StyleSheet.create({
   note: {
     fontSize: 13,
     lineHeight: 21,
+  },
+  button: {
+    borderWidth: 1,
+    borderRadius: 10,
+    paddingVertical: 11,
+    alignItems: 'center',
+    marginTop: 2,
+  },
+  buttonText: {
+    fontSize: 14,
+    fontWeight: '600',
   },
 });

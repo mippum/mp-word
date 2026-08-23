@@ -61,6 +61,20 @@
 - [ ] 보기 탭이 이어보기 위치 변경을 즉시 반영하도록 (`useFocusEffect` 등) —
       지금은 화면이 마운트된 채로 돌아오면 갱신되지 않을 수 있다
 
+### 결제
+
+검증은 **자체 서버·외부 구독 서비스 없이 `react-native-iap` 만** 쓰기로 했다.
+Android 변조 우회 가능성은 감수한다 (AGENTS.md 2.5절).
+
+- [ ] **스토어 구독 상품 등록** (`mpword.sub.weekly`) — App Store Connect / Play Console.
+      주 단위 청구와 ₩500 가격이 각 스토어 정책·최소 금액에 맞는지 확인 필요
+- [ ] `react-native-iap` 연동 — 구매 · 복원 · 유효 구매 조회
+- [ ] 앱 시작·포그라운드 복귀에서 `needsRecheck()` → 스토어 조회 → `applyEntitlement()` /
+      `clearEntitlement()` 연결 (지금은 호출부가 없다)
+- [ ] 오프라인 조회 실패 시 캐시를 건드리지 않는지 확인 (유예가 그때 동작한다)
+- [ ] 구독 만료·환불 시 잠금 복구 확인
+- [ ] `devToggleSubscription()` 제거
+
 ### 콘텐츠 확장
 
 - [ ] `en_long_meanings` 커버리지 확대 (6,454 / `words` 155,561)
@@ -74,6 +88,7 @@
 - [x] 앱 기본 구현 — 권 목록 / 책 보기 / 낭독 (SSML 없이 순수 텍스트 + 실제 쉼)
 - [x] TTS 를 listening-trainer 구성으로 이식 — react-native-tts, 언어별 목소리 선택,
       미리듣기, Android 엔진 동기화, 시스템 설정 열기, 오디오 세션, 웹 대체 구현
+- [x] 구독 잠금 — Entry·Introductory 무료, 그 위는 잠금 + 구독 안내 화면
 - [x] 더보기 탭 — 사용법 · 지면 보는 법 · 낭독 순서 · 레벨 · 수록 정보
 - [x] 보기 탭 레벨별 접기·펼치기 (접은 상태 저장)
 - [x] 디자인 "집중" 스킴 적용 + 화면 모드(시스템/밝게/어둡게) 설정

@@ -163,6 +163,8 @@ export default function SettingsScreen() {
           <>
             <Pressable
               onPress={() => void openSystemTtsSettings()}
+              accessibilityRole="button"
+              accessibilityLabel="시스템 설정 열기"
               style={({ pressed }) => [
                 styles.button,
                 { borderColor: accent, opacity: pressed ? 0.6 : 1 },
@@ -221,6 +223,8 @@ export default function SettingsScreen() {
           />
           <Pressable
             onPress={() => void previewVoice('en', FLITE_VOICE_ID.slt)}
+            accessibilityRole="button"
+            accessibilityLabel="이 설정으로 미리듣기"
             style={({ pressed }) => [
               styles.button,
               { borderColor: accent, opacity: pressed ? 0.6 : 1 },

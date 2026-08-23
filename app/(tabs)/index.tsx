@@ -1,5 +1,5 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { Link } from 'expo-router';
+import { useRouter } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
 import { Pressable, SectionList, StyleSheet, View } from 'react-native';
 
@@ -7,6 +7,7 @@ import { Text, useThemeColor } from '@/components/Themed';
 import { booksByLevel, type Book } from '@/lib/books';
 import { getProgress } from '@/lib/progress';
 import { getSettings, setSettings } from '@/lib/settings';
+import { useSubscription } from '@/lib/subscription';
 
 /**
  * 보기 탭 — 레벨별로 묶은 권 목록. 누르면 그 책을 펼친다.
@@ -17,6 +18,7 @@ import { getSettings, setSettings } from '@/lib/settings';
 export default function BookListScreen() {
   const levels = useMemo(() => booksByLevel(), []);
   const [collapsed, setCollapsed] = useState<string[]>(() => getSettings().collapsedLevels);
+  const { canOpenLevel } = useSubscription();
 
   const background = useThemeColor('background');
 
@@ -53,10 +55,11 @@ export default function BookListScreen() {
           level={section.title}
           count={section.count}
           collapsed={collapsed.includes(section.title)}
+          locked={!canOpenLevel(section.title)}
           onPress={() => toggle(section.title)}
         />
       )}
-      renderItem={({ item }) => <BookRow book={item} />}
+      renderItem={({ item }) => <BookRow book={item} locked={!canOpenLevel(item.level)} />}
     />
   );
 }
@@ -65,11 +68,13 @@ function LevelHeader({
   level,
   count,
   collapsed,
+  locked,
   onPress,
 }: {
   level: string;
   count: number;
   collapsed: boolean;
+  locked: boolean;
   onPress: () => void;
 }) {
   const muted = useThemeColor('muted');
@@ -89,37 +94,53 @@ function LevelHeader({
         style={styles.chevron}
       />
       <Text style={[styles.level, { color: muted }]}>{level}</Text>
+      {locked ? (
+        <FontAwesome name="lock" size={11} color={muted} style={styles.levelLock} />
+      ) : null}
       <Text style={[styles.count, { color: muted }]}>{count}권</Text>
     </Pressable>
   );
 }
 
-function BookRow({ book }: { book: Book }) {
+function BookRow({ book, locked }: { book: Book; locked: boolean }) {
+  const router = useRouter();
   const card = useThemeColor('card');
   const border = useThemeColor('border');
   const muted = useThemeColor('muted');
+  const faint = useThemeColor('faint');
   const accent = useThemeColor('accent');
 
   const progress = getProgress(book.slug);
   const read = progress && progress.wordIndex > 0 ? progress.wordIndex : 0;
 
+  // 잠긴 권은 목록에 남겨 두되(무엇이 있는지 보이도록) 누르면 구독 안내로 보낸다
+  const open = () =>
+    locked
+      ? router.push({ pathname: '/subscribe', params: { level: book.level } })
+      : router.push({ pathname: '/book/[slug]', params: { slug: book.slug } });
+
   return (
-    <Link href={{ pathname: '/book/[slug]', params: { slug: book.slug } }} asChild>
-      <Pressable
-        style={({ pressed }) => [
-          styles.row,
-          { backgroundColor: card, borderColor: border, opacity: pressed ? 0.6 : 1 },
-        ]}>
-        <View style={styles.rowText}>
-          <Text style={styles.bookName}>{book.name}</Text>
-          <Text style={[styles.meta, { color: muted }]}>
-            단어 {book.wordCount}개
-            {read > 0 ? ` · ${read + 1}번째부터 이어보기` : ''}
-          </Text>
-        </View>
-        {read > 0 ? <View style={[styles.dot, { backgroundColor: accent }]} /> : null}
-      </Pressable>
-    </Link>
+    <Pressable
+      onPress={open}
+      accessibilityRole="button"
+      accessibilityLabel={locked ? `${book.name} 잠김, 구독 안내 열기` : book.name}
+      style={({ pressed }) => [
+        styles.row,
+        { backgroundColor: card, borderColor: border, opacity: pressed ? 0.6 : 1 },
+      ]}>
+      <View style={styles.rowText}>
+        <Text style={[styles.bookName, locked && { color: faint }]}>{book.name}</Text>
+        <Text style={[styles.meta, { color: locked ? faint : muted }]}>
+          단어 {book.wordCount}개
+          {locked ? ' · 구독 필요' : read > 0 ? ` · ${read + 1}번째부터 이어보기` : ''}
+        </Text>
+      </View>
+      {locked ? (
+        <FontAwesome name="lock" size={14} color={faint} />
+      ) : read > 0 ? (
+        <View style={[styles.dot, { backgroundColor: accent }]} />
+      ) : null}
+    </Pressable>
   );
 }
 
@@ -144,6 +165,9 @@ const styles = StyleSheet.create({
     fontSize: 13,
     letterSpacing: 1,
     textTransform: 'uppercase',
+  },
+  levelLock: {
+    marginRight: 8,
   },
   count: {
     fontSize: 12,
