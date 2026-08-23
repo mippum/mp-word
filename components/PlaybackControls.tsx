@@ -40,6 +40,8 @@ export default function PlaybackControls({
       <Pressable
         onPress={onPrev}
         disabled={position <= 1}
+        accessibilityRole="button"
+        accessibilityLabel="이전 단어"
         hitSlop={12}
         style={({ pressed }) => [styles.side, { opacity: position <= 1 ? 0.3 : pressed ? 0.5 : 1 }]}>
         <FontAwesome name="step-backward" size={22} color={text} />
@@ -47,6 +49,8 @@ export default function PlaybackControls({
 
       <Pressable
         onPress={onToggle}
+        accessibilityRole="button"
+        accessibilityLabel={playing ? (canPause ? '일시정지' : '정지') : '재생'}
         hitSlop={12}
         style={({ pressed }) => [styles.main, { backgroundColor: accent, opacity: pressed ? 0.7 : 1 }]}>
         <FontAwesome name={icon} size={22} color="#fff" />
@@ -55,6 +59,8 @@ export default function PlaybackControls({
       <Pressable
         onPress={onNext}
         disabled={position >= total}
+        accessibilityRole="button"
+        accessibilityLabel="다음 단어"
         hitSlop={12}
         style={({ pressed }) => [
           styles.side,

@@ -59,11 +59,14 @@ export default function BookScreen() {
     listRef.current?.scrollToIndex({ index, animated: true });
   }, []);
 
-  // 낭독이 다음 단어로 넘어가면 지면도 따라 넘긴다
+  // 낭독이 다음 단어로 넘어가면 지면도 따라 넘긴다.
+  // **재생 중일 때만** 따라간다 — 멈춘 동안에는 손으로 넘긴 쪽을 그대로 둬야 한다
+  // (안 그러면 ◀◀ ▶▶ 로 넘기자마자 멈춰 있던 자리로 되돌아간다)
   useEffect(() => {
-    if (!isCurrent || player.wordIndex < 0 || player.wordIndex === wordIndex) return;
+    if (!isCurrent || player.status !== 'playing') return;
+    if (player.wordIndex < 0 || player.wordIndex === wordIndex) return;
     goTo(player.wordIndex);
-  }, [isCurrent, player.wordIndex, wordIndex, goTo]);
+  }, [isCurrent, player.status, player.wordIndex, wordIndex, goTo]);
 
   const onViewableItemsChanged = useRef(({ viewableItems }: { viewableItems: ViewToken[] }) => {
     const first = viewableItems[0]?.index;
@@ -95,18 +98,26 @@ export default function BookScreen() {
       void pause();
       return;
     }
-    if (isCurrent && player.status === 'paused' && supportsPause) {
+    // 멈춘 자리 그대로면 이어서, 그 사이에 다른 쪽으로 넘겼으면 보이는 쪽부터 읽는다
+    if (
+      isCurrent &&
+      player.status === 'paused' &&
+      supportsPause &&
+      player.wordIndex === wordIndex
+    ) {
       resume(book);
       return;
     }
     playWord(book, wordIndex);
-  }, [book, isCurrent, player.status, wordIndex]);
+  }, [book, isCurrent, player.status, player.wordIndex, wordIndex]);
 
-  // 손으로 넘긴 위치도 이어보기로 남긴다 (단어 단위)
+  // 손으로 넘긴 위치도 이어보기로 남긴다 (단어 단위).
+  // 재생 중에는 player 가 기록하므로 건드리지 않는다
   useEffect(() => {
-    if (!book || isCurrent) return;
+    if (!book) return;
+    if (isCurrent && player.status === 'playing') return;
     setProgress(book.slug, wordIndex, book.words.length);
-  }, [book, isCurrent, wordIndex]);
+  }, [book, isCurrent, player.status, wordIndex]);
 
   if (!book) {
     return (
