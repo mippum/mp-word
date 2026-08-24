@@ -48,3 +48,4 @@ yarn-error.*
 # LibreOffice 락 파일
 .~lock.*#
 .claude
+*.db
