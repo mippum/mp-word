@@ -1,34 +1,48 @@
 /**
- * 팔레트 — "집중" 스킴.
+ * 팔레트 — 민트 크롬 + 중성 지면.
  *
- * 거의 무채색으로 두고 **채색은 하이라이트 하나뿐**이다. 그 노란색은 오직
- * "지금 낭독 중"만 뜻하므로, 장시간 낭독을 따라가는 동안 눈이 찾을 곳이 하나로 고정된다.
- * 다른 곳에 색을 더하면 이 신호가 약해지니 주의할 것.
+ * **앱 크롬(탭·책장·설정·더보기·구독)은 민트**, **책 지면은 중성**으로 나눠 둔다.
+ * 지면은 출판된 전자책을 옮긴 것이라 종이처럼 흰 바탕에 먹색 활자를 유지해야 하고,
+ * 낭독 하이라이트(노랑)가 화면에서 **유일한 채색**이어야 따라 읽기 쉽다.
+ * 지면에 민트가 들어가면 그 신호가 약해진다.
  *
- * 지면 구성은 출판된 전자책(`mp-word-en-beginner/yes24`)을 그대로 따르되,
- * 책의 초록(`#77bc65`)은 이 스킴에서 무채색 괘선으로 바꿨다.
- * 책과 같은 초록을 쓰고 싶으면 `accent` 와 `rule` 만 그 값으로 바꾸면 된다.
+ * 그래서 색을 두 갈래로 나눈다.
+ *
+ *   크롬  background · card · border · accent · onAccent · tabIcon*   ← 민트
+ *   지면  paper · text · muted · faint · rule · highlight            ← 중성
+ *
+ * 새 화면을 만들 때 배경은 `background`(크롬) 또는 `paper`(지면) 중에 고를 것.
  */
 export type ThemeMode = 'system' | 'light' | 'dark';
 
 export type Palette = {
-  /** 화면 바탕 */
+  /** 앱 화면 바탕 (민트) */
   background: string;
-  /** 지면(카드) 바탕 */
+  /**
+   * 아래쪽 바 — 탭바 · 재생 컨트롤.
+   * 본문 바탕과 **진하기를 달리해** 화면이 한 덩어리로 보이지 않게 한다
+   * (밝은 모드에서는 더 진하게, 어두운 모드에서는 더 밝게).
+   */
+  chrome: string;
+  /** 맨 위 헤더 — `chrome` 보다 한 단계 더 준다 (화면의 머리라 가장 또렷하게) */
+  header: string;
+  /** 카드·타일 바탕 */
   card: string;
+  /** 책 지면 바탕 — 민트를 섞지 않는다 */
+  paper: string;
   /** 본문 글자 */
   text: string;
   /** 보조 글자 — 발음기호, 라벨, 캡션 */
   muted: string;
   /** 더 옅은 글자 — 비활성, 힌트 */
   faint: string;
-  /** 테두리 */
+  /** 테두리 (민트) */
   border: string;
-  /** 지면의 구분 괘선 (전자책의 초록 괘선 자리) */
+  /** 지면의 구분 괘선 — 중성 */
   rule: string;
-  /** 낭독 중 하이라이트 — 화면에서 유일한 채색 */
+  /** 낭독 중 하이라이트 — 지면에서 유일한 채색 */
   highlight: string;
-  /** 강조 (버튼·선택 표시) — 집중 스킴에서는 본문색과 같은 무채색 */
+  /** 강조 (버튼·선택·진행) — 민트 */
   accent: string;
   /** 강조 위에 얹는 글자색 */
   onAccent: string;
@@ -37,33 +51,39 @@ export type Palette = {
 };
 
 const light: Palette = {
-  background: '#ffffff',
+  background: '#f1faf6',
+  chrome: '#d5eee4',
+  header: '#bfe3d3',
   card: '#ffffff',
-  text: '#0a0a0a',
-  muted: '#737373',
-  faint: '#a3a3a3',
-  border: '#e5e5e5',
+  paper: '#ffffff',
+  text: '#0d1a16',
+  muted: '#5f6f6a',
+  faint: '#9fb0aa',
+  border: '#d2e7de',
   rule: '#d4d4d4',
   highlight: '#ffe066',
-  accent: '#0a0a0a',
+  accent: '#0e9b78',
   onAccent: '#ffffff',
-  tabIconDefault: '#a3a3a3',
-  tabIconSelected: '#0a0a0a',
+  tabIconDefault: '#9fb0aa',
+  tabIconSelected: '#0e9b78',
 };
 
 const dark: Palette = {
-  background: '#000000',
-  card: '#0d0d0d',
-  text: '#fafafa',
-  muted: '#a3a3a3',
-  faint: '#737373',
-  border: '#262626',
+  background: '#06120f',
+  chrome: '#112722',
+  header: '#17352d',
+  card: '#0e1b17',
+  paper: '#000000',
+  text: '#eef5f2',
+  muted: '#97aca6',
+  faint: '#66807a',
+  border: '#1d332c',
   rule: '#333333',
   highlight: '#6b5300',
-  accent: '#fafafa',
-  onAccent: '#0a0a0a',
-  tabIconDefault: '#737373',
-  tabIconSelected: '#fafafa',
+  accent: '#4fd1ab',
+  onAccent: '#04120e',
+  tabIconDefault: '#66807a',
+  tabIconSelected: '#4fd1ab',
 };
 
 export const Palettes = { light, dark };

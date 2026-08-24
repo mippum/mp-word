@@ -29,14 +29,14 @@ export default function PlaybackControls({
   const accent = useThemeColor('accent');
   const text = useThemeColor('text');
   const muted = useThemeColor('muted');
-  const card = useThemeColor('card');
+  const chrome = useThemeColor('chrome');
   const border = useThemeColor('border');
 
   const playing = status === 'playing';
   const icon = playing ? (canPause ? 'pause' : 'stop') : 'play';
 
   return (
-    <View style={[styles.bar, { backgroundColor: card, borderColor: border }]}>
+    <View style={[styles.bar, { backgroundColor: chrome, borderColor: border }]}>
       <Pressable
         onPress={onPrev}
         disabled={position <= 1}

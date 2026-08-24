@@ -59,7 +59,8 @@ function RootLayoutNav() {
     colors: {
       ...base.colors,
       background: palette.background,
-      card: palette.background,
+      // 네비게이션 헤더 — 본문·탭바보다 한 단계 진하게
+      card: palette.header,
       text: palette.text,
       border: palette.border,
       primary: palette.accent,
@@ -68,7 +69,12 @@ function RootLayoutNav() {
 
   return (
     <ThemeProvider value={navTheme}>
-      <Stack>
+      <Stack
+        screenOptions={{
+          headerTitleStyle: { fontWeight: '700' },
+          // 기본값이 플랫폼마다 다르다 (Android·웹은 왼쪽) — 가운데로 통일한다
+          headerTitleAlign: 'center',
+        }}>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="book/[slug]" options={{ title: '' }} />
         <Stack.Screen name="subscribe" options={{ title: '구독', presentation: 'modal' }} />

@@ -176,88 +176,44 @@ mp-word 에서 달라진 점:
 - 오프라인 한국어 엔진(케이브)은 도입했다가 제거했다. 되살릴 일이 있으면
   listening-trainer 의 `lib/tts-ko/` 와 `assets/tts-ko/units.m4a` 를 참고할 것
 
-### 2.4 디자인 — "집중" 스킴
+### 2.4 디자인 — 민트 크롬 + 중성 지면
 
 팔레트는 `constants/Colors.ts` 한 곳에 있다 (`Palettes.light` / `Palettes.dark`).
 
-**거의 무채색으로 두고 채색은 하이라이트(`#ffe066` / 다크 `#6b5300`) 하나뿐이다.**
-그 노란색은 오직 "지금 낭독 중"만 뜻하므로, 다른 곳에 색을 더하면 신호가 약해진다.
-새 UI 를 만들 때 강조색이 필요하면 `accent`(무채색)를 쓰고 하이라이트를 전용하지 말 것.
+**색을 두 갈래로 나눠 쓴다.**
+
+| 갈래 | 토큰 | 색 |
+|---|---|---|
+| 앱 크롬 (탭·책장·설정·더보기·구독) | `background` `chrome` `header` `card` `border` `accent` `onAccent` `tabIcon*` | 민트 |
+| 책 지면 | `paper` `text` `muted` `faint` `rule` `highlight` | 중성 |
+
+지면은 출판된 전자책을 옮긴 것이라 종이처럼 흰 바탕에 먹색 활자를 유지해야 하고,
+**낭독 하이라이트(`#ffe066`)가 지면에서 유일한 채색**이어야 따라 읽기 쉽다.
+지면에 민트를 섞으면 그 신호가 약해진다.
+
+- 새 화면의 배경은 `background`(크롬)와 `paper`(지면) 중에 고를 것.
+  `app/book/[slug].tsx` 만 `paper` 를 쓴다
+- 바탕은 **세 단계**로 둔다 — 본문 `background` < 아래쪽 바 `chrome` < 맨 위 헤더 `header`.
+  밝은 모드에서는 점점 진하게, 어두운 모드에서는 점점 밝게 잡아 화면이 한 덩어리로
+  보이지 않게 한다. 탭바·재생 컨트롤이 `chrome`, 헤더가 `header` 다
+- 헤더 제목은 굵게(`headerTitleStyle: { fontWeight: '700' }`) **가운데 정렬**
+  (`headerTitleAlign: 'center'`)한다. 정렬 기본값은 플랫폼마다 달라서(Android·웹은 왼쪽)
+  명시하지 않으면 iOS 와 어긋난다. 탭바 라벨은 굵기를 올리지 않는다
+- 강조가 필요하면 `accent`(민트)를 쓰고 **하이라이트를 전용하지 말 것**
+- 색은 `useThemeColor('text')` 처럼 팔레트 키로 꺼낸다. 하드코딩 금지 — 다크 모드에서 깨진다
 
 읽기 탭의 권 목록은 레벨 머리글로 접었다 펼 수 있고, 접은 레벨은 `AppSettings.collapsedLevels` 에 남는다.
 **처음 열면 전부 접혀 있다** — 44권을 한꺼번에 보여주기보다 레벨을 훑게 하는 편이 낫기 때문이다.
 `collapsedLevels` 는 `string[] | null` 이고 **`null` 이 '아직 손대지 않음'** 을 뜻한다.
 이 센티널이 없으면 사용자가 직접 모두 펼친 상태(`[]`)와 구별할 수 없어, 다시 들어올 때마다
 전부 접혀 버린다.
-머리글에는 시리즈까지 붙여 보여주지만(`FOUNDATION ENTRY`), **저장 키는 레벨 이름(`Entry`)** 이다 —
-표시 이름을 키로 쓰면 시리즈가 늘어날 때 저장값이 깨진다. 시리즈는 `Book.series`(책 이름의 첫 낱말).
-
-읽기 탭은 목록이 아니라 **표지를 늘어놓는 책장**이다. 표지에는 권차만 보이므로 나머지 정보
-(단어 수·잠김·읽은 분량)는 접근성 라벨이 실어 나른다. 44권뿐이라 가상화 없이 통째로 그린다.
-
-읽은 분량은 표지 아래쪽 띠와 그 밑의 백분율로 보여준다 (`wordIndex / wordCount`).
-**완독하면 `player` 가 이어보기 위치를 0 으로 되돌리므로 100% 는 표시되지 않는다** —
-'다 읽음'을 남기려면 완독 여부를 따로 저장해야 한다 (TODO).
-
-권 이름은 데이터의 `Foundation Beginner First` 를 그대로 쓰지 않고 `displayName()` 으로
-`Foundation Beginner 1st` 처럼 줄여 보여준다 (`lib/books.ts`). 화면에 책 이름을 쓸 일이 있으면
-`book.name` 이 아니라 **`displayName(book)` 을 쓸 것** — 목록·헤더·구독 안내가 같아야 한다.
-서수 변환은 `ordinalNumeral()` 이 하고 11·12·13 예외를 처리한다.
 
 화면 모드는 시스템 / 밝게 / 어둡게 3택이고 `lib/theme.tsx` 가 공급한다.
 설정은 `AppSettings.themeMode` 에 저장되며 `getSettings()` 가 동기라 첫 렌더부터 올바른
 모드로 그린다 (모드가 늦게 적용돼 화면이 번쩍이는 것을 막는다).
 
-색은 `useThemeColor('text')` 처럼 팔레트 키로 꺼낸다. 하드코딩 금지 — 다크 모드에서 깨진다.
-
-> 출판된 전자책은 초록(`#77bc65`) 괘선을 쓴다. 이 스킴에서는 무채색(`rule`)으로 바꿨으니,
-> 책과 같은 초록으로 되돌리려면 `rule` / `accent` 값만 바꾸면 된다.
-
-### 2.5 구독
-
-주 500원 구독제다. 무료 범위는 `lib/subscription.ts` 두 상수에만 있다.
-
-| 상수 | 내용 |
-|---|---|
-| `FREE_LEVELS` | 레벨 통째로 무료 — `Entry` · `Introductory` |
-| `FREE_BOOKS` | 잠긴 레벨의 낱권 맛보기 — `foundation-essential-first` · `foundation-elementary-first` |
-
-판정은 레벨이 아니라 **권 단위**(`canOpenBook`)다. 한 레벨 안에 열린 권과 잠긴 권이 섞인다.
-
-- 잠긴 권도 책장에 **남겨 둔다** — 무엇이 있는지 보여야 구독할 이유가 생긴다.
-  표지를 흐리게 + 자물쇠 배지로 표시하고, 누르면 `/subscribe` 안내로 보낸다
-- 레벨 머리글 자물쇠는 **그 레벨의 모든 권이 잠겼을 때만** 붙는다
-  (Essential·Elementary 는 맛보기가 있어 자물쇠가 없다)
-- 낱권 맛보기는 표지 아래에 `무료` 로 표시한다 — 구독 전에만
-- `app/book/[slug].tsx` 가 한 번 더 막는다 — 목록을 거치지 않는 딥링크 대비
-
-#### 검증 방식 (결정 사항)
-
-**자체 서버도 외부 구독 관리 서비스(RevenueCat 등)도 쓰지 않는다.**
-`react-native-iap` 로 스토어에 직접 물어보고 결과를 캐시한다.
-
-| 플랫폼 | 조회 | 검증 |
-|---|---|---|
-| iOS | StoreKit 2 `Transaction.currentEntitlements` | 애플 서명을 StoreKit 이 기기에서 검증 |
-| Android | Play Billing `queryPurchasesAsync()` | 구글 서명을 앱에 심은 공개키로 검증 |
-
-Android 는 공개키가 앱 안에 있어 루팅·리패키징으로 우회될 수 있다.
-**이 위험은 감수하기로 한 결정이다** (주 500원 앱에 서버 운영비가 더 크다).
-나중에 올리고 싶어지면 `applyEntitlement()` 를 서버 응답으로 채우면 되고 그 위 코드는 그대로다.
-
-#### 캐시와 유예
-
-앱이 콘텐츠·오프라인 TTS 를 품고 있어 인터넷 없이도 쓰인다. 그때는 스토어에 물어볼 수 없으므로
-`{ expiresAt, lastVerifiedAt, productId }` 를 들고 판단한다.
-
-- `isSubscribed()` — `now < expiresAt + GRACE_MS`(3일). 자동 갱신 시점에 오프라인이면
-  `expiresAt` 이 낡아 보이므로 유예를 준다 (**돈 낸 사람을 잘못 막는 쪽이 더 나쁘다**)
-- `needsRecheck()` — 6시간 경과 또는 만료 이후면 true. **앱 시작·포그라운드 복귀에서 불러
-  스토어 조회로 이어야 한다** (아직 호출부 없음 — SDK 를 붙일 자리)
-- 조회 성공 시 `applyEntitlement()` / `clearEntitlement()`, 변화 없으면 `markVerified()`.
-  **오프라인이라 조회에 실패했으면 아무것도 부르지 말 것** — 캐시를 그대로 둬야 유예가 동작한다
-
-> ⚠️ `devToggleSubscription()` 은 결제 연동 전 화면 확인용 임시 토글이다. SDK 를 붙일 때 지운다.
+> 출판된 전자책은 초록(`#77bc65`) 괘선을 쓴다. 지면에서는 무채색(`rule`)으로 바꿨으니,
+> 책과 같은 초록으로 되돌리려면 `rule` 값만 바꾸면 된다.
 
 ### 2.3 책 내용### 2.3 책 내용 — `mp-epub-foundation-words` 참고
 

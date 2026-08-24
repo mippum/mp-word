@@ -20,9 +20,14 @@ export default function TabLayout() {
       screenOptions={{
         tabBarActiveTintColor: palette.tabIconSelected,
         tabBarInactiveTintColor: palette.tabIconDefault,
-        tabBarStyle: { backgroundColor: palette.background, borderTopColor: palette.border },
-        headerStyle: { backgroundColor: palette.background },
+        // 위아래 바는 본문보다 진하게 — 한 덩어리로 보이지 않게 한다.
+        // 헤더는 그보다 한 단계 더 준다
+        tabBarStyle: { backgroundColor: palette.chrome, borderTopColor: palette.border },
+        headerStyle: { backgroundColor: palette.header },
         headerTintColor: palette.text,
+        headerTitleStyle: { fontWeight: '700' },
+        // 기본값이 플랫폼마다 다르다 (Android·웹은 왼쪽) — 가운데로 통일한다
+        headerTitleAlign: 'center',
         headerShadowVisible: false,
         sceneStyle: { backgroundColor: palette.background },
         // 웹에서 헤더를 정적 렌더링하면 하이드레이션 오류가 나므로 클라이언트에서만 켠다

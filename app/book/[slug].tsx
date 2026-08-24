@@ -45,7 +45,8 @@ export default function BookScreen() {
   // 낭독이 넘긴 쪽인지, 손으로 넘긴 쪽인지 구분한다
   const scrollingTo = useRef<number | null>(null);
 
-  const background = useThemeColor('background');
+  // 지면은 종이색(paper) — 앱 크롬의 민트를 섞지 않는다 (constants/Colors.ts 참고)
+  const background = useThemeColor('paper');
   const muted = useThemeColor('muted');
 
   useEffect(() => subscribeError(setError), []);
