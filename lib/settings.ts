@@ -11,8 +11,12 @@ import { createJsonStore } from './jsonStore';
 export type AppSettings = {
   /** 화면 모드 — 'system' 이면 기기 설정을 따른다 */
   themeMode: ThemeMode;
-  /** 읽기 탭에서 접어 둔 레벨 이름 (예: ['Core', 'Elementary']) */
-  collapsedLevels: string[];
+  /**
+   * 읽기 탭에서 접어 둔 레벨 이름 (예: ['Core', 'Elementary']).
+   * `null` 은 **아직 손대지 않음** — 처음 열 때는 전부 접어서 보여준다.
+   * 사용자가 한 번이라도 접거나 펴면 배열이 되므로, 모두 펼친 상태(`[]`)와 구분된다.
+   */
+  collapsedLevels: string[] | null;
   /** 한국어 문장에 쓸 목소리 id. null = 자동(시스템 기본) */
   voiceKo: string | null;
   /** 영어 문장에 쓸 목소리 id. null = 자동 */
@@ -28,7 +32,7 @@ export type AppSettings = {
 
 export const DEFAULT_SETTINGS: AppSettings = {
   themeMode: 'system',
-  collapsedLevels: [],
+  collapsedLevels: null,
   voiceKo: null,
   voiceEn: null,
   fliteRate: 100,

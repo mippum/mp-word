@@ -14,14 +14,19 @@ import { isFreeSample, useSubscription } from '@/lib/subscription';
  * 읽기 탭 — 레벨별 책장. 표지를 누르면 그 책을 펼친다.
  *
  * 44권이 한 번에 늘어서면 훑기 어려워서 레벨 머리글로 접었다 펼 수 있게 했다.
- * 접은 레벨은 설정(`collapsedLevels`)에 남아 다시 들어와도 유지된다.
+ * **처음 열면 전부 접혀 있고**(레벨 훑기가 먼저다), 접고 편 상태는
+ * 설정(`collapsedLevels`)에 남아 다시 들어와도 유지된다.
  *
  * 목록이 아니라 표지를 늘어놓는 형태라 상태(잠김·읽던 위치)는 표지 위에 얹는다.
  * 44권뿐이라 가상화 없이 통째로 그린다.
  */
 export default function BookListScreen() {
   const levels = useMemo(() => booksByLevel(), []);
-  const [collapsed, setCollapsed] = useState<string[]>(() => getSettings().collapsedLevels);
+  const [collapsed, setCollapsed] = useState<string[]>(() => {
+    const saved = getSettings().collapsedLevels;
+    // 아직 손대지 않았으면 전부 접어서 시작한다
+    return saved ?? levels.map((group) => group.level);
+  });
   const { subscribed, canOpenBook } = useSubscription();
 
   const background = useThemeColor('background');
