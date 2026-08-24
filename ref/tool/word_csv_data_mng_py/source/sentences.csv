@@ -558,7 +558,7 @@ id,word_id,word,sentence,ko_translation,ko_read_aloud
 0199de40-94da-700b-f8b9-b767e12f47d7,01992796-3333-709c-e8b4-cfec333986f5,soft,The blanket is soft.,담요가 부드럽습니다.,담요가 부드럽습니다.
 0199de40-9505-7060-5aa5-2ae3f3148b7f,01992796-2bba-7075-70d2-c873e8313d9e,role,She got the lead role in the play.,그녀는 연극에서 주인공을 맡았습니다.,그녀는 연극에서 주인공을 맡았습니다.
 0199de5f-7527-7076-4b12-7d3bb1c5c691,01992798-7ef6-702c-a4ae-7d65856b896b,anymore,I don’t play soccer anymore.,나는 더 이상 축구를 하지 않습니다.,나는 더 이상 축구를 하지 않습니다.
-0199de5f-753b-7082-d7ae-e2624122e71c,0199277f-8788-7023-cb8d-603c0c888502,sir,"Yes, sir, I understand.","네, 선생님, 알겠습니다.","네, 선생님, 알겠습니다."
+0199de5f-753b-7082-d7ae-e2624122e71c,0199277f-8788-7023-cb8d-603c0c888502,sir,"Yes, sir, I understand.","네, 알겠습니다.","네, 알겠습니다."
 0199de5f-7542-70d7-ded5-8f4ac90ce552,0199279c-0c7b-701f-5448-6b4105559a05,shortcut,I took a shortcut to school.,나는 학교에 지름길로 갔습니다.,나는 학교에 지름길로 갔습니다.
 0199de5f-754a-70ee-b0a5-2ae2edfb21b6,0199279d-f0ec-7041-5aff-eca36b2ea3a9,preferred,She preferred coffee to tea.,그녀는 차보다 커피를 더 좋아했다.,그녀는 차보다 커피를 더 좋아했다.
 0199de5f-7550-7029-abdd-51fd000828b2,01992799-aeb6-70ec-6f69-c18a6f8e7bbd,preview,We watched a movie preview.,우리는 영화 예고편을 보았다.,우리는 영화 예고편을 보았다.
@@ -620,7 +620,7 @@ id,word_id,word,sentence,ko_translation,ko_read_aloud
 0199de5f-77f0-706c-5153-ac61e44fdf70,01992798-6e4a-7083-ef23-e4098373b943,ability,She has the ability to sing well.,그녀는 노래를 잘합니다.,그녀는 노래를 잘합니다.
 0199de5f-77f7-7095-9839-56030e3e0a7a,0199277f-5ccb-7057-5ac0-b137fe53a339,mad,He was mad at his friend.,그는 친구에게 화가 났습니다.,그는 친구에게 화가 났습니다.
 0199de5f-780e-7061-3a00-529c1491994d,0199279b-cc5b-702f-2e57-2bd29c930e8e,pregnant,The woman is pregnant.,그 여자는 임신 중입니다.,그 여자는 임신 중입니다.
-0199de5f-7815-70b6-a61e-a3d43db7da1f,0199277f-1eef-7081-ef27-f75ceb81c75e,bug,There’s a bug in the code.,코드에 버그가 있습니다.,코드에 버그가 있습니다.
+0199de5f-7815-70b6-a61e-a3d43db7da1f,0199277f-1eef-7081-ef27-f75ceb81c75e,bug,There is a bug in my room.,내 방에 벌레가 있어.,내 방에 벌레가 있어.
 0199de5f-781b-700f-ed73-7b0ed707a110,0199279c-cc8d-705e-218f-67577f75cda4,certainly,I will certainly help you.,저는 반드시 당신을 도울 것입니다.,저는 반드시 당신을 도울 것입니다.
 0199de5f-7821-706e-f683-aedc45c60df1,0199279a-7b17-7014-6de6-396961ad3f34,balanced,He has a balanced diet.,그는 균형 잡힌 식단을 유지합니다.,그는 균형 잡힌 식단을 유지합니다.
 0199de5f-7834-707b-9886-d8a8c0cab21c,01992796-f3ee-7002-f4c0-e53b769eb6b1,stage,He sang on the big stage.,그는 큰 무대에서 노래했습니다.,그는 큰 무대에서 노래했습니다.
