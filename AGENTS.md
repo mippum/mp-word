@@ -203,6 +203,11 @@ mp-word 에서 달라진 점:
 - 강조가 필요하면 `accent`(민트)를 쓰고 **하이라이트를 전용하지 말 것**
 - 색은 `useThemeColor('text')` 처럼 팔레트 키로 꺼낸다. 하드코딩 금지 — 다크 모드에서 깨진다
 
+책장 맨 아래에는 아직 안 나온 시리즈를 **`준비 중`** 으로 보여준다
+(`lib/books.ts` 의 `UPCOMING` — Intermediate 3종 · Mastery 2종). 누를 수 없고 무엇이 더
+올지만 알리는 줄이다. 출간되면 `UPCOMING` 에서 지우고 `word_by_books` 에 넣은 뒤
+`npm run export-books` 를 돌리면 정식 레벨로 올라온다.
+
 읽기 탭의 권 목록은 레벨 머리글로 접었다 펼 수 있고, 접은 레벨은 `AppSettings.collapsedLevels` 에 남는다.
 **처음 열면 전부 접혀 있다** — 44권을 한꺼번에 보여주기보다 레벨을 훑게 하는 편이 낫기 때문이다.
 `collapsedLevels` 는 `string[] | null` 이고 **`null` 이 '아직 손대지 않음'** 을 뜻한다.

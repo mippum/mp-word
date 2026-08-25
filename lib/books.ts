@@ -96,6 +96,21 @@ export function displayName(book: Book): string {
   return volume ? `${book.series} ${book.level} ${volume}` : book.name;
 }
 
+/**
+ * 아직 나오지 않은 시리즈 — 책장 맨 아래에 '준비 중'으로 보여준다.
+ * 무엇이 더 나올지 알려 주는 용도이고 열리지 않는다.
+ *
+ * 출간되면 여기서 지우고 `word_by_books` 에 넣은 뒤 `npm run export-books` 를 돌리면
+ * 저절로 정식 레벨로 올라온다.
+ */
+export const UPCOMING: readonly { series: string; level: string }[] = [
+  { series: 'Intermediate', level: 'Standard' },
+  { series: 'Intermediate', level: 'Comprehensive' },
+  { series: 'Intermediate', level: 'Advanced' },
+  { series: 'Mastery', level: 'Proficient' },
+  { series: 'Mastery', level: 'Expert' },
+];
+
 const iconCache = new Map<string, Record<string, string>>();
 
 /** 그 권의 단어 아이콘 (word_id -> SVG 문자열). 첫 호출에서만 JSON 을 파싱한다. */

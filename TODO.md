@@ -154,7 +154,9 @@ Android 변조 우회 가능성은 감수한다 (AGENTS.md 2.5절).
 - [ ] `word_svgs` 커버리지 확대 (4,512)
 - [ ] `pronunciations`의 `us` / `gb` 양쪽 누락분 채우기
 - [ ] `words.is_banned` 필터링 기준 정리
-- [ ] 상위 레벨 교재 편성 — 현재 `Entry` ~ `Core` 44권
+- [ ] 상위 레벨 교재 편성 — 현재 Foundation 44권.
+      Intermediate(Standard · Comprehensive · Advanced) · Mastery(Proficient · Expert) 는
+      책장에 `준비 중` 으로만 걸어 뒀다 (`lib/books.ts` 의 `UPCOMING`)
 
 ## 완료
 

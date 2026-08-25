@@ -5,7 +5,7 @@ import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
 import BookCover from '@/components/BookCover';
 import { Text, useThemeColor } from '@/components/Themed';
-import { booksByLevel, displayName, volumeLabel, type Book } from '@/lib/books';
+import { booksByLevel, displayName, UPCOMING, volumeLabel, type Book } from '@/lib/books';
 import { getProgress } from '@/lib/progress';
 import { getSettings, setSettings } from '@/lib/settings';
 import { isFreeSample, useSubscription } from '@/lib/subscription';
@@ -70,7 +70,25 @@ export default function BookListScreen() {
           </View>
         );
       })}
+
+      {UPCOMING.map(({ series, level }) => (
+        <UpcomingHeader key={`${series} ${level}`} title={`${series} ${level}`} />
+      ))}
     </ScrollView>
+  );
+}
+
+/** 아직 안 나온 시리즈 — 누를 수 없고 무엇이 더 올지만 알린다 */
+function UpcomingHeader({ title }: { title: string }) {
+  const faint = useThemeColor('faint');
+  const border = useThemeColor('border');
+
+  return (
+    <View style={[styles.header, { borderColor: border }]}>
+      <View style={styles.chevron} />
+      <Text style={[styles.level, { color: faint }]}>{title}</Text>
+      <Text style={[styles.count, { color: faint }]}>준비 중</Text>
+    </View>
   );
 }
 
