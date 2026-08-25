@@ -7,6 +7,9 @@
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web",
+    "apk": "bash scripts/build-apk.sh",
+    "apk:install": "bash scripts/install-apk.sh",
+    "apk:deploy": "npm run apk && npm run apk:install",
     "export-books": "cd ref/tool/word_csv_data_mng_py/scripts && python export_book_json.py"
   },
   "dependencies": {

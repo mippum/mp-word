@@ -49,3 +49,6 @@ yarn-error.*
 .~lock.*#
 .claude
 *.db
+
+# apk output
+/build
