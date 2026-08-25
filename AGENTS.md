@@ -216,7 +216,54 @@ mp-word 에서 달라진 점:
 > 출판된 전자책은 초록(`#77bc65`) 괘선을 쓴다. 지면에서는 무채색(`rule`)으로 바꿨으니,
 > 책과 같은 초록으로 되돌리려면 `rule` 값만 바꾸면 된다.
 
-### 2.3 책 내용### 2.3 책 내용 — `mp-epub-foundation-words` 참고
+### 2.5 구독
+
+주 500원 구독제다. 무료 범위는 `lib/subscription.ts` 두 상수에만 있다.
+
+| 상수 | 내용 |
+|---|---|
+| `FREE_LEVELS` | 레벨 통째로 무료 — `Entry` · `Introductory` |
+| `FREE_BOOKS` | 잠긴 레벨의 낱권 맛보기 — `foundation-beginner-first` · `foundation-essential-first` · `foundation-elementary-first` |
+
+판정은 레벨이 아니라 **권 단위**(`canOpenBook`)다. 한 레벨 안에 열린 권과 잠긴 권이 섞인다.
+
+- 잠긴 권도 책장에 **남겨 둔다** — 무엇이 있는지 보여야 구독할 이유가 생긴다.
+  표지를 흐리게 + 자물쇠 배지로 표시하고, 누르면 `/subscribe` 안내로 보낸다
+- 레벨 머리글 자물쇠는 **그 레벨의 모든 권이 잠겼을 때만** 붙는다
+  (Beginner · Essential · Elementary 는 맛보기가 있어 자물쇠가 없다)
+- 낱권 맛보기는 표지 아래에 `무료` 로 표시한다 — 구독 전에만
+- 무료 범위 안내 문구는 `freeScopeLabel()` 한 곳에서 만든다 (구독 화면과 더보기가 같이 쓴다)
+- `app/book/[slug].tsx` 가 한 번 더 막는다 — 책장을 거치지 않는 딥링크 대비
+
+#### 검증 방식 (결정 사항)
+
+**자체 서버도 외부 구독 관리 서비스(RevenueCat 등)도 쓰지 않는다.**
+`react-native-iap` 로 스토어에 직접 물어보고 결과를 캐시한다.
+
+| 플랫폼 | 조회 | 검증 |
+|---|---|---|
+| iOS | StoreKit 2 `Transaction.currentEntitlements` | 애플 서명을 StoreKit 이 기기에서 검증 |
+| Android | Play Billing `queryPurchasesAsync()` | 구글 서명을 앱에 심은 공개키로 검증 |
+
+Android 는 공개키가 앱 안에 있어 루팅·리패키징으로 우회될 수 있다.
+**이 위험은 감수하기로 한 결정이다** (주 500원 앱에 서버 운영비가 더 크다).
+나중에 올리고 싶어지면 `applyEntitlement()` 를 서버 응답으로 채우면 되고 그 위 코드는 그대로다.
+
+#### 캐시와 유예
+
+앱이 콘텐츠·오프라인 TTS 를 품고 있어 인터넷 없이도 쓰인다. 그때는 스토어에 물어볼 수 없으므로
+`{ expiresAt, lastVerifiedAt, productId }` 를 들고 판단한다.
+
+- `isSubscribed()` — `now < expiresAt + GRACE_MS`(3일). 자동 갱신 시점에 오프라인이면
+  `expiresAt` 이 낡아 보이므로 유예를 준다 (**돈 낸 사람을 잘못 막는 쪽이 더 나쁘다**)
+- `needsRecheck()` — 6시간 경과 또는 만료 이후면 true. **앱 시작·포그라운드 복귀에서 불러
+  스토어 조회로 이어야 한다** (아직 호출부 없음 — SDK 를 붙일 자리)
+- 조회 성공 시 `applyEntitlement()` / `clearEntitlement()`, 변화 없으면 `markVerified()`.
+  **오프라인이라 조회에 실패했으면 아무것도 부르지 말 것** — 캐시를 그대로 둬야 유예가 동작한다
+
+> ⚠️ `devToggleSubscription()` 은 결제 연동 전 화면 확인용 임시 토글이다. SDK 를 붙일 때 지운다.
+
+### 2.3 책 내용 — `mp-epub-foundation-words` 참고
 
 앱이 보여줄 **책의 실제 구성**은
 **`I:\github\mp-epub-foundation-words\ref\epub\mp-word-en-basic\yes24`** 를 참고합니다

@@ -44,9 +44,10 @@ export const FREE_LEVELS: readonly string[] = ['Entry', 'Introductory'];
 
 /**
  * 레벨은 잠겨 있어도 낱권으로 열어 두는 책 (slug).
- * 위쪽 레벨도 맛보고 살 수 있게 각 레벨 1권씩 풀어 둔 것이다.
+ * 위쪽 레벨도 맛보고 살 수 있게 첫 권을 풀어 둔 것이다.
  */
 export const FREE_BOOKS: readonly string[] = [
+  'foundation-beginner-first',
   'foundation-essential-first',
   'foundation-elementary-first',
 ];
