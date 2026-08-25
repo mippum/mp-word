@@ -1,6 +1,13 @@
 import { Redirect, Stack, useLocalSearchParams } from 'expo-router';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { FlatList, StyleSheet, useWindowDimensions, View, type ViewToken } from 'react-native';
+import {
+  FlatList,
+  StyleSheet,
+  useWindowDimensions,
+  View,
+  type LayoutChangeEvent,
+  type ViewToken,
+} from 'react-native';
 
 import PlaybackControls from '@/components/PlaybackControls';
 import { Text, useThemeColor } from '@/components/Themed';
@@ -42,6 +49,12 @@ export default function BookScreen() {
     book ? resumeIndex(book.slug, book.words.length) : 0
   );
   const [error, setError] = useState<string | null>(null);
+  /**
+   * 리스트의 세로 크기. 가로 FlatList 에서는 `flex: 1` 이 **너비**를 정하므로
+   * 지면 높이는 이렇게 재서 직접 줘야 한다. 안 그러면 지면이 내용 높이만큼 늘어나
+   * 안쪽 ScrollView 가 뷰포트를 못 잡고 내용이 잘린다.
+   */
+  const [pageHeight, setPageHeight] = useState(0);
   // 낭독이 넘긴 쪽인지, 손으로 넘긴 쪽인지 구분한다
   const scrollingTo = useRef<number | null>(null);
 
@@ -139,6 +152,9 @@ export default function BookScreen() {
 
       <FlatList
         ref={listRef}
+        // 세로 공간을 다 차지해야 지면 안쪽 ScrollView 가 뷰포트를 잡는다
+        style={styles.pager}
+        onLayout={(e: LayoutChangeEvent) => setPageHeight(e.nativeEvent.layout.height)}
         data={book.words}
         keyExtractor={(item) => item.wordId}
         horizontal
@@ -149,7 +165,7 @@ export default function BookScreen() {
         onViewableItemsChanged={onViewableItemsChanged}
         viewabilityConfig={{ itemVisiblePercentThreshold: 60 }}
         renderItem={({ item, index }) => (
-          <View style={[styles.page, { width }]}>
+          <View style={[styles.page, { width }, pageHeight > 0 && { height: pageHeight }]}>
             <WordSpread
               word={item}
               iconXml={icons[item.wordId]}
@@ -187,7 +203,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  pager: {
+    flex: 1,
+  },
   page: {
+    // 높이는 onLayout 으로 잰 값을 직접 준다 (위 pageHeight 주석 참고)
     paddingHorizontal: 22,
     paddingTop: 8,
     paddingBottom: 4,

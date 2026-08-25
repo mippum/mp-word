@@ -253,6 +253,11 @@ How To Use     사용법
 
 낭독 중인 슬롯이 화면 밖이면 그 자리로 세로 스크롤한다 (`onLayout` 으로 슬롯 y 를 재 둔다).
 
+> ⚠️ **가로 FlatList 안에서 `flex: 1` 은 높이를 정해 주지 않는다** (행 방향이라 너비를 정한다).
+> 지면 높이를 안 주면 내용 높이만큼 늘어나 안쪽 `ScrollView` 가 뷰포트를 못 잡고 내용이 잘린다.
+> 그래서 `app/book/[slug].tsx` 가 리스트 높이를 `onLayout` 으로 재서(`pageHeight`)
+> 각 지면에 직접 준다. 실제로 겪은 버그다.
+
 지면 구성의 기준은 출판본 `mp-word-en-beginner/yes24` 의 PDF 다
 (`mp-word-en-entry` · `mp-word-en-Introductory` 두 레벨은 구성이 다르다).
 
