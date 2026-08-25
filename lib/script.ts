@@ -32,7 +32,52 @@ export type Utterance = {
   /** 책 안에서 몇 번째 단어인지 (0-based) */
   wordIndex: number;
   slot: Slot;
+  /**
+   * 한 슬롯이 여러 조각으로 나뉠 때 그 안에서의 순번 (0-based).
+   * 지금은 영영 뜻만 문장 단위로 나뉜다 — 지면이 이 값으로 읽는 문장만 표시한다.
+   */
+  part?: number;
 };
+
+/** 문장 끝으로 볼 부호 */
+const TERMINATORS = '.!?…';
+/** 종결 부호 뒤에 따라붙어도 같은 문장으로 보는 닫는 부호 */
+const CLOSERS = `'"’”)`;
+
+/**
+ * 영영 뜻처럼 여러 문장인 글을 문장 단위로 쪼갠다.
+ *
+ * **조각을 이어붙이면 원문과 정확히 같아야 한다** — 지면(`WordSpread`)이 같은 함수로 쪼개
+ * 그리고, 낭독 중인 조각만 표시하기 때문이다. 한쪽만 고치면 하이라이트가 어긋난다.
+ *
+ * 종결 부호 뒤가 공백이나 글 끝일 때만 경계로 본다 (`3.14`, `a.m.` 이 쪼개지지 않게).
+ */
+export function splitSentences(text: string): string[] {
+  const out: string[] = [];
+  let start = 0;
+
+  for (let i = 0; i < text.length; i += 1) {
+    if (!TERMINATORS.includes(text[i])) continue;
+
+    // 뒤따르는 종결·닫는 부호까지 이 문장에 포함시킨다 (`... 'drop the ball'.`)
+    let end = i + 1;
+    while (end < text.length && (TERMINATORS.includes(text[end]) || CLOSERS.includes(text[end]))) {
+      end += 1;
+    }
+    const next = text[end];
+    if (next !== undefined && !/\s/.test(next)) continue; // 문장 끝이 아니다
+
+    // 뒤 공백까지 붙여 두면 이어붙였을 때 원문이 그대로 복원된다
+    while (end < text.length && /\s/.test(text[end])) end += 1;
+
+    out.push(text.slice(start, end));
+    start = end;
+    i = end - 1;
+  }
+
+  if (start < text.length) out.push(text.slice(start));
+  return out.length > 0 ? out : [text];
+}
 
 const SHORT = 300;
 const LONG = 600;
@@ -41,9 +86,15 @@ const BETWEEN_WORDS = 900;
 /** 단어 하나의 낭독 대본. wordIndex 는 0-based, 순번 안내는 order 를 쓴다. */
 export function utterancesForWord(word: BookWord, wordIndex: number): Utterance[] {
   const out: Utterance[] = [];
-  const push = (text: string, lang: 'en' | 'ko', pauseAfterMs: number, slot: Slot) => {
+  const push = (
+    text: string,
+    lang: 'en' | 'ko',
+    pauseAfterMs: number,
+    slot: Slot,
+    part?: number
+  ) => {
     const trimmed = text.trim();
-    if (trimmed) out.push({ text: trimmed, lang, pauseAfterMs, wordIndex, slot });
+    if (trimmed) out.push({ text: trimmed, lang, pauseAfterMs, wordIndex, slot, part });
   };
 
   // 1. 예문 → 순번 안내 → 예문
@@ -57,8 +108,12 @@ export function utterancesForWord(word: BookWord, wordIndex: number): Utterance[
   push(word.spelling, 'en', 100, 'keyword');
   push(`${word.word}.`, 'en', LONG, 'keyword');
 
-  // 3. 영영사전 뜻
-  push(word.meaningEn, 'en', LONG, 'meaningEn');
+  // 3. 영영사전 뜻 — 문장 하나씩 읽는다 (지면도 읽는 문장만 표시한다)
+  const definition = splitSentences(word.meaningEn).filter((part) => part.trim());
+  definition.forEach((sentence, index) => {
+    const last = index === definition.length - 1;
+    push(sentence, 'en', last ? LONG : SHORT, 'meaningEn', index);
+  });
 
   // 4. 한글 뜻 → 단어 → 한글 뜻 → 단어
   push(word.meaningKoReadAloud, 'ko', SHORT, 'meaningKo');

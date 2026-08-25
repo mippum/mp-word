@@ -23,6 +23,8 @@ export type PlayerSnapshot = {
   utteranceIndex: number;
   /** 지면의 어느 부분을 읽고 있는지 */
   slot: Utterance['slot'] | null;
+  /** 그 부분이 여러 조각으로 나뉠 때 지금 읽는 조각 (영영 뜻의 문장 순번). 없으면 null */
+  part: number | null;
   /** 이 책의 총 단어 수 */
   total: number;
 };
@@ -33,6 +35,7 @@ const IDLE: PlayerSnapshot = {
   wordIndex: -1,
   utteranceIndex: -1,
   slot: null,
+  part: null,
   total: 0,
 };
 
@@ -90,6 +93,7 @@ function run(book: Book, fromUtterance: number) {
     utteranceIndex: fromUtterance,
     wordIndex: prepared.utterances[fromUtterance]?.wordIndex ?? 0,
     slot: prepared.utterances[fromUtterance]?.slot ?? null,
+    part: prepared.utterances[fromUtterance]?.part ?? null,
   });
 
   void tts.speak(prepared.utterances, fromUtterance, {
@@ -97,16 +101,21 @@ function run(book: Book, fromUtterance: number) {
       const utterance = prepared.utterances[index];
       if (!utterance) return;
       const wordChanged = utterance.wordIndex !== snapshot.wordIndex;
-      update({ utteranceIndex: index, wordIndex: utterance.wordIndex, slot: utterance.slot });
+      update({
+        utteranceIndex: index,
+        wordIndex: utterance.wordIndex,
+        slot: utterance.slot,
+        part: utterance.part ?? null,
+      });
       if (wordChanged) setProgress(book.slug, utterance.wordIndex, book.words.length);
     },
     onDone: () => {
       // 끝까지 들었으면 이어보기 위치를 처음으로 되돌린다
       setProgress(book.slug, 0, book.words.length);
-      update({ status: 'idle', slot: null });
+      update({ status: 'idle', slot: null, part: null });
     },
     onError: (message) => {
-      update({ status: 'idle', slot: null });
+      update({ status: 'idle', slot: null, part: null });
       emitError(message);
     },
   });
@@ -121,7 +130,7 @@ export function playBook(book: Book, wordIndex = 0): void {
 
 export async function stopPlayback(): Promise<void> {
   await tts.stop();
-  update({ status: 'idle', slot: null });
+  update({ status: 'idle', slot: null, part: null });
 }
 
 /** iOS·웹만 진짜 일시정지. Android 는 정지하고 위치를 기억한다 */

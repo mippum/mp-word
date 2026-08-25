@@ -70,10 +70,13 @@ export default function MoreScreen() {
       </Card>
 
       <Card title="낭독 순서">
-        <Note>단어 하나를 아래 차례로 읽습니다. 종이책·전자책과 같은 순서입니다.</Note>
+        <Note>
+          단어 하나를 아래 차례로 읽습니다. 종이책·전자책과 같은 순서이며, 지금 읽는 부분이
+          노랗게 표시됩니다.
+        </Note>
         <Row label="1" value="예문 → 순번 안내 → 예문" />
         <Row label="2" value="Keyword → 단어 → 철자 → 단어" />
-        <Row label="3" value="영영사전 뜻" />
+        <Row label="3" value="영영사전 뜻 (한 문장씩)" />
         <Row label="4" value="한글 뜻 ↔ 단어" />
         <Row label="5" value="해석 ↔ 예문" />
         <Row label="6" value="예문" />

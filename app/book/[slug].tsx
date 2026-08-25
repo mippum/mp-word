@@ -170,6 +170,7 @@ export default function BookScreen() {
               word={item}
               iconXml={icons[item.wordId]}
               activeSlot={isCurrent && player.wordIndex === index ? player.slot : null}
+              activePart={isCurrent && player.wordIndex === index ? player.part : null}
             />
           </View>
         )}

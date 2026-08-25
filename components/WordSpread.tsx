@@ -5,7 +5,7 @@ import { Text, useThemeColor } from '@/components/Themed';
 import WordIcon from '@/components/WordIcon';
 import type { BookWord } from '@/lib/books';
 import { ordinalWord } from '@/lib/ordinal';
-import type { Slot } from '@/lib/script';
+import { splitSentences, type Slot } from '@/lib/script';
 
 /**
  * 단어 한 개의 지면.
@@ -18,15 +18,19 @@ import type { Slot } from '@/lib/script';
  *   ─ 영영사전 뜻 ─ 한글 뜻 ─ 해석 + 예문
  *
  * 낭독 중인 슬롯에 하이라이트가 붙고, 화면 밖이면 그 자리로 스크롤한다.
+ * 영영 뜻은 여러 문장이라 **읽고 있는 문장 하나만** 표시한다 (`activePart`).
  */
 export default function WordSpread({
   word,
   iconXml,
   activeSlot,
+  activePart,
 }: {
   word: BookWord;
   iconXml?: string;
   activeSlot: Slot | null;
+  /** 영영 뜻에서 지금 읽는 문장 번호 (lib/script.ts 의 Utterance.part) */
+  activePart?: number | null;
 }) {
   const text = useThemeColor('text');
   const muted = useThemeColor('muted');
@@ -53,6 +57,9 @@ export default function WordSpread({
   }, [activeSlot]);
 
   const mark = (slot: Slot) => (activeSlot === slot ? { backgroundColor: highlight } : null);
+
+  // 대본과 **같은 함수로** 쪼개야 하이라이트가 문장과 맞는다 (lib/script.ts 참고)
+  const definition = splitSentences(word.meaningEn);
 
   return (
     <ScrollView
@@ -94,12 +101,20 @@ export default function WordSpread({
 
       <View onLayout={measure('meaningEn')}>
         <Text style={[styles.caption, { color: faint }]}>(영영사전 뜻)</Text>
-        <View style={mark('meaningEn')}>
-          <Text style={styles.definition}>
-            {'   '}
-            {word.meaningEn}
-          </Text>
-        </View>
+        <Text style={styles.definition}>
+          {'   '}
+          {definition.map((sentence, index) => (
+            <Text
+              key={index}
+              style={
+                activeSlot === 'meaningEn' && activePart === index
+                  ? { backgroundColor: highlight }
+                  : undefined
+              }>
+              {sentence}
+            </Text>
+          ))}
+        </Text>
       </View>
 
       <View style={[styles.divider, { backgroundColor: rule }]} />
