@@ -52,7 +52,7 @@ path = '/Users/kei/github/mp-word/assets/images/words'
 
 def copy_from_assets(word):
     '/github/mp-word/'
-    shutil.copy(path + '/' + word + '/word_icon.svg', 'word_icon.svg')
+    shutil.copy(path + '/_' + word + '/word_icon.svg', 'word_icon.svg')
 
 def copy_to_assets(word):
     shutil.copy('output.svg', path + '/' + word + '/word_icon.svg')
@@ -66,6 +66,10 @@ def main():
     #     print(word)
     #     copy_from_assets(word)
     #     convert_from_svg_to_png()
+        copy_from_assets(word)
+        convert_from_svg_to_png()
+        shutil.copy('output.png', f'work/{word}.png')
+
     #     convert_from_png_to_ppm()
     #     convert_from_ppm_to_line_svg()
     #     copy_to_assets(word)
