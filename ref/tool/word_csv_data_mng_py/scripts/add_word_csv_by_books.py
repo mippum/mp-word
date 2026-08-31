@@ -6,7 +6,10 @@ import uuid6
 
 from repository.word_repository import WordRepository
 
-BOOK_PRE_NAME = 'Foundation Elementary'
+# BOOK_PRE_NAME = 'Foundation Elementary'
+# BOOK_PRE_NAME = 'Intermediate Standard'
+# BOOK_PRE_NAME = 'Intermediate Comprehensive'
+BOOK_PRE_NAME = 'Intermediate Advanced'
 
 word_repository = WordRepository()
 
@@ -49,6 +52,11 @@ order_spell = [
     'Seventeenth',
     'Eighteenth',
     'Nineteenth',
+    'Twentieth',
+    'Twenty First',
+    'Twenty Second',
+    'Twenty Third',
+    'Twenty Fourth',
 ]
 
 

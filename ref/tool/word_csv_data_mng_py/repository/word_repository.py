@@ -34,9 +34,14 @@ class WordRepository:
         return the_one[0]
 
     def read_word_id(self, word):
-        return self._fetch_one(f"""
-            SELECT id FROM words WHERE word = '{word}';
-        """)
+        try:
+            word_id = self._fetch_one(f"""
+                SELECT id FROM words WHERE word = '{word.replace("'", "''")}';
+            """)
+        except sqlite3.OperationalError:
+            print(f"{word} not found")
+            raise Exception
+        return word_id
 
     def read_word_svg(self, word_id):
         return self._fetch_one(f"""SELECT svg FROM word_svgs WHERE word_id = '{word_id}';""")
