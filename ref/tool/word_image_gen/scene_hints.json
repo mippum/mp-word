@@ -1,15 +1,7 @@
 {
-    "native":
-        "A small wild bird living naturally on a simple island habitat with a matching native plant and a small nest. Do not depict ethnicity or a stereotyped human culture."
-    ,
-    "becoming":
-        "A butterfly emerging from an open chrysalis, with a caterpillar nearby, showing a clear transformation in one cohesive scene."
-    ,
-    "absolutely":
-        "One cheerful person standing firmly and giving two confident thumbs-up, using posture and expression rather than written symbols."
-    ,
-    "modest":
-        "A simply dressed person responding humbly while another person offers a small trophy; the modest person does not boast."
-    ,
-    "rapidly": "A person sprinting fast with a forward lean and a few motion lines."
+  "reasoning_effort": "low",
+  "scene_hints": {
+    "during": "A child holds an umbrella while rain falls around them, with puddles forming beneath their boots.",
+    "earlier": "One friend is already seated on a park bench as another friend approaches along the path, showing that the seated friend arrived earlier."
+  }
 }

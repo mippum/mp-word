@@ -1,12 +1,15 @@
 # AGENTS.md
 
-이 디렉터리는 words.txt → scene_hints.json → new/*.png 고정 파이프라인입니다.
+이 디렉터리는 words.txt → scene_hints.json → new/*.png 두 단계 파이프라인입니다.
 
 ## 입력과 실행
 
-- 단어의 유일한 입력은 words.txt입니다.
-- 명령행 단어, 다른 단어 목록, 하드코딩된 기본 단어를 사용하지 않습니다.
-- 실행 명령은 python gen_with_codex.py 하나입니다.
+- 장면 설명 생성 대상 단어의 유일한 입력은 words.txt입니다.
+- 이미지 생성 대상 단어의 유일한 입력은 scene_hints.json의 scene_hints 키입니다.
+- 명령행 단어나 하드코딩된 기본 단어를 사용하지 않습니다.
+- 장면 생성 명령은 python gen_hints_with_codex.py입니다.
+- 이미지 생성 명령은 python gen_img_with_codex.py입니다.
+- 두 스크립트는 독립 실행하며 서로를 자동 호출하지 않습니다.
 - ref/는 읽기 전용 스타일 참고 자료입니다.
 
 ## 1단계: 장면 설명
@@ -17,12 +20,18 @@
 - 글자, 숫자, 라벨, 국기, 로고가 있어야만 이해되는 장면을 만들지 않습니다.
 - 고정관념, 희화화, 그래픽한 폭력, 비하 표현을 피합니다.
 - 결과 JSON은 words.txt와 키가 정확히 일치해야 합니다.
+- scene_hints.json의 reasoning_effort를 읽어 Codex 추론 수준으로 사용합니다.
+- reasoning_effort가 없으면 medium을 기본값으로 추가합니다.
 - 검증에 성공한 전체 결과만 scene_hints.json을 원자적으로 교체합니다.
-- 실패 시 이전 scene_hints.json으로 이미지 단계를 진행하지 않습니다.
+- 이 단계는 이미지를 생성하거나 new/를 수정하지 않습니다.
 
 ## 2단계: 이미지
 
-- 반드시 디스크에 저장된 scene_hints.json을 다시 읽어 장면 지시로 사용합니다.
+- words.txt를 읽지 않고 디스크에 저장된 scene_hints.json만 입력으로 사용합니다.
+- scene_hints.json의 reasoning_effort를 모든 이미지 Codex 작업에 적용합니다.
+- 허용 추론 수준은 none, low, medium, high, xhigh, max입니다.
+- scene_hints 객체의 키가 이미지 생성 대상 단어가 됩니다.
+- 사용자가 scene_hints의 값을 수정하고 이 단계만 다시 실행할 수 있어야 합니다.
 - 한 Codex 작업은 단어 하나와 new/<word>.png 하나만 처리합니다.
 - 새 래스터 그림은 imagegen 스킬과 내장 이미지 생성 도구로 만듭니다.
 - 첨부된 참고 PNG는 스타일 참고일 뿐 편집하거나 피사체를 복제하지 않습니다.
