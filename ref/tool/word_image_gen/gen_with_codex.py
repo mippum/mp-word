@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import queue
 import re
 import shlex
@@ -29,7 +30,6 @@ SCENE_HINTS_PATH = PROJECT_DIR / "scene_hints.json"
 OUTPUT_DIR = PROJECT_DIR / "new"
 LOG_DIR = PROJECT_DIR / "logs"
 
-CODEX_EXECUTABLE = "codex"
 TIMEOUT_SECONDS = 20 * 60
 RETRIES = 2
 
@@ -65,6 +65,52 @@ class WordResult:
     word: str
     status: str
     message: str
+
+
+def resolve_codex_executable() -> Path | None:
+    """Find Codex even when an IDE does not inherit Codex Desktop's PATH."""
+    candidates: list[Path] = []
+
+    override = os.environ.get("CODEX_EXECUTABLE", "").strip().strip('"')
+    if override:
+        candidates.append(Path(override).expanduser())
+
+    path_match = shutil.which("codex")
+    if path_match:
+        candidates.append(Path(path_match))
+
+    local_app_data = os.environ.get("LOCALAPPDATA")
+    if local_app_data:
+        local_root = Path(local_app_data)
+        desktop_bin = local_root / "OpenAI" / "Codex" / "bin"
+        if desktop_bin.is_dir():
+            desktop_executables = sorted(
+                desktop_bin.glob("*/codex.exe"),
+                key=lambda path: path.stat().st_mtime,
+                reverse=True,
+            )
+            candidates.extend(desktop_executables)
+        candidates.extend(
+            (
+                desktop_bin / "codex.exe",
+                local_root / "Programs" / "Codex" / "codex.exe",
+                local_root / "Microsoft" / "WinGet" / "Links" / "codex.exe",
+            )
+        )
+
+    seen: set[str] = set()
+    for candidate in candidates:
+        try:
+            resolved = candidate.resolve()
+        except OSError:
+            continue
+        normalized = os.path.normcase(str(resolved))
+        if normalized in seen:
+            continue
+        seen.add(normalized)
+        if resolved.is_file():
+            return resolved
+    return None
 
 
 def filename_for_word(word: str) -> str:
@@ -117,21 +163,23 @@ def validate_references() -> tuple[Path, ...]:
     return tuple(path.resolve() for path in REFERENCE_PATHS)
 
 
-def build_base_codex_command(sandbox: str) -> list[str]:
+def build_base_codex_command(codex_executable: Path, sandbox: str) -> list[str]:
     command = [
-        CODEX_EXECUTABLE,
+        str(codex_executable),
         "exec",
         "--ephemeral",
         "--color",
         "never",
-        "--sandbox",
-        sandbox,
         "--skip-git-repo-check",
         "--cd",
         str(PROJECT_DIR),
     ]
+    # --approve-for-me already selects the workspace-write sandbox in current
+    # Codex CLI versions, so combining it with --sandbox is a CLI usage error.
     if sandbox == "workspace-write":
         command.append("--approve-for-me")
+    else:
+        command.extend(("--sandbox", sandbox))
     return command
 
 
@@ -152,6 +200,10 @@ def stream_codex(
             process = subprocess.Popen(
                 command,
                 cwd=PROJECT_DIR,
+                # Pass the complete prompt through a private pipe and close it
+                # immediately. This avoids both open IDE stdin pipes and --image's
+                # variadic arguments consuming a positional prompt.
+                stdin=subprocess.PIPE,
                 stdout=subprocess.PIPE,
                 stderr=subprocess.STDOUT,
                 text=True,
@@ -176,7 +228,18 @@ def stream_codex(
 
         reader = threading.Thread(target=read_output, daemon=True)
         reader.start()
+        assert process.stdin is not None
+        try:
+            process.stdin.write(prompt)
+            process.stdin.close()
+        except (BrokenPipeError, OSError):
+            # Preserve and report the CLI's actual stderr/stdout and exit code.
+            try:
+                process.stdin.close()
+            except OSError:
+                pass
         deadline = time.monotonic() + TIMEOUT_SECONDS
+        next_progress_notice = time.monotonic() + 30
         stream_finished = False
         timed_out = False
 
@@ -184,20 +247,40 @@ def stream_codex(
             try:
                 output_line = lines.get(timeout=0.25)
             except queue.Empty:
-                if not timed_out and time.monotonic() >= deadline:
+                now = time.monotonic()
+                if not timed_out and now >= deadline:
                     timed_out = True
                     process.kill()
                     message = f"Timed out after {TIMEOUT_SECONDS / 60:.0f} minutes.\n"
                     print(f"[{label}] {message}", end="", file=sys.stderr)
                     log.write(message)
                     log.flush()
+                elif not timed_out and now >= next_progress_notice:
+                    message = "AI is still working; no keyboard input is required.\n"
+                    print(f"[{label}] {message}", end="")
+                    log.write(message)
+                    log.flush()
+                    next_progress_notice = now + 30
                 continue
             if output_line is None:
                 stream_finished = True
                 continue
+            if output_line.strip() in {
+                "Reading additional input from stdin...",
+                "Reading prompt from stdin...",
+            }:
+                print(
+                    f"[{label}] prompt sent; AI is working "
+                    "(no keyboard input is required)."
+                )
+                log.write(output_line)
+                log.flush()
+                next_progress_notice = time.monotonic() + 30
+                continue
             print(f"[{label}] {output_line}", end="")
             log.write(output_line)
             log.flush()
+            next_progress_notice = time.monotonic() + 30
 
         return_code = process.wait()
         reader.join(timeout=1)
@@ -284,7 +367,9 @@ def load_scene_hints(words: Sequence[str]) -> dict[str, str]:
     return validate_scene_payload(payload, words)
 
 
-def regenerate_scene_hints(words: Sequence[str], run_stamp: str) -> dict[str, str]:
+def regenerate_scene_hints(
+    words: Sequence[str], run_stamp: str, codex_executable: Path
+) -> dict[str, str]:
     previous_failure: str | None = None
     with tempfile.TemporaryDirectory(prefix="word-image-scenes-") as temp_directory:
         temp_dir = Path(temp_directory)
@@ -297,14 +382,15 @@ def regenerate_scene_hints(words: Sequence[str], run_stamp: str) -> dict[str, st
 
         for attempt in range(1, RETRIES + 2):
             prompt = build_scene_prompt(words, previous_failure)
-            command = build_base_codex_command("read-only")
+            command = build_base_codex_command(codex_executable, "read-only")
             command.extend(
                 (
                     "--output-schema",
                     str(schema_path),
                     "--output-last-message",
                     str(response_path),
-                    prompt,
+                    "--",
+                    "-",
                 )
             )
             log_path = LOG_DIR / f"{run_stamp}-scene-hints-attempt-{attempt}.log"
@@ -317,6 +403,8 @@ def regenerate_scene_hints(words: Sequence[str], run_stamp: str) -> dict[str, st
                 continue
             if return_code != 0:
                 previous_failure = f"Codex exited with status {return_code}; see {log_path}"
+                if return_code == 2:
+                    break
                 continue
             try:
                 payload = json.loads(response_path.read_text(encoding="utf-8-sig"))
@@ -382,23 +470,31 @@ Output contract:
 """.strip()
 
 
-def build_image_command(prompt: str, references: Sequence[Path]) -> list[str]:
-    command = build_base_codex_command("workspace-write")
+def build_image_command(
+    references: Sequence[Path], codex_executable: Path
+) -> list[str]:
+    command = build_base_codex_command(codex_executable, "workspace-write")
     for reference in references:
         command.extend(("--image", str(reference)))
-    command.append(prompt)
+    command.extend(("--", "-"))
     return command
 
 
 def flatten_png_to_white(path: Path) -> None:
     if Image is None:
         raise RuntimeError("Pillow is required to process PNG files")
-    with Image.open(path) as image:
-        image.load()
-        rgba = image.convert("RGBA")
-        flattened = Image.new("RGB", rgba.size, (255, 255, 255))
-        flattened.paste(rgba, mask=rgba.getchannel("A"))
-        flattened.save(path, format="PNG", optimize=True)
+    temporary_path = path.with_name(f".{path.name}.white.tmp")
+    try:
+        with Image.open(path) as image:
+            image.load()
+            rgba = image.convert("RGBA")
+            flattened = Image.new("RGB", rgba.size, (255, 255, 255))
+            flattened.paste(rgba, mask=rgba.getchannel("A"))
+            flattened.save(temporary_path, format="PNG", optimize=True)
+        temporary_path.replace(path)
+    finally:
+        if temporary_path.exists():
+            temporary_path.unlink()
 
 
 def validate_png(path: Path) -> PngValidation:
@@ -495,6 +591,7 @@ def generate_word(
     scene_hint: str,
     references: Sequence[Path],
     run_stamp: str,
+    codex_executable: Path,
 ) -> WordResult:
     output_path = OUTPUT_DIR / filename_for_word(word)
     previous_file_bytes = output_path.read_bytes() if output_path.is_file() else None
@@ -503,7 +600,7 @@ def generate_word(
 
     for attempt in range(1, RETRIES + 2):
         prompt = build_image_prompt(word, scene_hint, output_path, previous_failure)
-        command = build_image_command(prompt, references)
+        command = build_image_command(references, codex_executable)
         log_path = LOG_DIR / f"{run_stamp}-{filename_for_word(word)[:-4]}-attempt-{attempt}.log"
         print(f"\n[{word}] attempt {attempt}/{RETRIES + 1}")
         print(f"[{word}] output: {output_path}")
@@ -515,6 +612,8 @@ def generate_word(
             continue
         if return_code != 0:
             previous_failure = f"Codex exited with status {return_code}; see {log_path}"
+            if return_code == 2:
+                break
             continue
 
         if file_digest(output_path) == original_digest:
@@ -574,8 +673,13 @@ def main() -> int:
     if Image is None:
         print("error: Pillow is required: python -m pip install Pillow", file=sys.stderr)
         return 2
-    if shutil.which(CODEX_EXECUTABLE) is None:
-        print(f"error: Codex CLI executable not found: {CODEX_EXECUTABLE}", file=sys.stderr)
+    codex_executable = resolve_codex_executable()
+    if codex_executable is None:
+        print(
+            "error: Codex CLI executable not found in PATH or the Codex Desktop "
+            "installation directory",
+            file=sys.stderr,
+        )
         return 2
 
     try:
@@ -586,11 +690,12 @@ def main() -> int:
         return 2
 
     print(f"project: {PROJECT_DIR}")
+    print(f"codex: {codex_executable}")
     print(f"words.txt: {', '.join(words)}")
     print("phase 1/2: regenerate scene_hints.json with Codex")
     run_stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
     try:
-        scene_hints = regenerate_scene_hints(words, run_stamp)
+        scene_hints = regenerate_scene_hints(words, run_stamp, codex_executable)
     except (OSError, RuntimeError, ValueError, json.JSONDecodeError) as error:
         print(f"error: {error}", file=sys.stderr)
         return 1
@@ -598,7 +703,9 @@ def main() -> int:
     print(f"scene hints: {SCENE_HINTS_PATH}")
     print("phase 2/2: generate one independent PNG per scene hint")
     results = [
-        generate_word(word, scene_hints[word], references, run_stamp)
+        generate_word(
+            word, scene_hints[word], references, run_stamp, codex_executable
+        )
         for word in words
     ]
     print_summary(results)
