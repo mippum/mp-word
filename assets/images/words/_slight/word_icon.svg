@@ -2,14 +2,15 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
  "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="101.000000pt" height="102.000000pt" viewBox="0 0 101.000000 102.000000"
+ width="413.000000pt" height="415.000000pt" viewBox="0 0 413.000000 415.000000"
  preserveAspectRatio="xMidYMid meet">
 <metadata>
 Created by potrace 1.16, written by Peter Selinger 2001-2019
 </metadata>
-<g transform="translate(0.000000,102.000000) scale(0.100000,-0.100000)"
+<g transform="translate(0.000000,415.000000) scale(0.100000,-0.100000)"
 fill="#000000" stroke="none">
-<path d="M492 527 c-273 -273 -492 -500 -492 -510 0 -9 6 -17 13 -17 19 0 997
-983 997 1003 0 9 -6 17 -13 17 -6 0 -234 -222 -505 -493z"/>
+<path d="M3509 3551 c-327 -330 -1055 -1063 -1619 -1629 -1500 -1507 -1890
+-1901 -1890 -1912 0 -30 49 13 276 242 285 290 1621 1633 2947 2964 499 502
+907 917 907 923 0 6 -6 11 -13 11 -8 0 -281 -270 -608 -599z"/>
 </g>
 </svg>
