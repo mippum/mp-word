@@ -31,6 +31,10 @@ LOG_DIR = PROJECT_DIR / "logs"
 TIMEOUT_SECONDS = 20 * 60
 RETRIES = 2
 REASONING_EFFORTS = ("none", "low", "medium", "high", "xhigh", "max")
+USAGE_LIMIT_PATTERN = re.compile(
+    r"you(?:['\N{RIGHT SINGLE QUOTATION MARK}])?ve hit your usage limit",
+    re.IGNORECASE,
+)
 
 REFERENCE_PATHS = (
     PROJECT_DIR / "ref" / "abandon.png",
@@ -204,7 +208,7 @@ def stream_codex(
     prompt: str,
     label: str,
     log_path: Path,
-) -> tuple[int, bool]:
+) -> tuple[int, bool, bool]:
     log_path.parent.mkdir(parents=True, exist_ok=True)
     with log_path.open("w", encoding="utf-8", newline="\n") as log:
         log.write(
@@ -228,7 +232,7 @@ def stream_codex(
             message = f"Could not start Codex: {error}\n"
             print(f"[{label}] {message}", end="", file=sys.stderr)
             log.write(message)
-            return 127, False
+            return 127, False, False
 
         assert process.stdout is not None
         lines: queue.Queue[str | None] = queue.Queue()
@@ -255,6 +259,7 @@ def stream_codex(
         next_progress_notice = time.monotonic() + 30
         stream_finished = False
         timed_out = False
+        usage_limit_hit = False
 
         while not stream_finished:
             try:
@@ -293,11 +298,25 @@ def stream_codex(
             print(f"[{label}] {output_line}", end="")
             log.write(output_line)
             log.flush()
+            if USAGE_LIMIT_PATTERN.search(output_line):
+                usage_limit_hit = True
+                try:
+                    process.kill()
+                except OSError:
+                    pass
+                message = (
+                    "Usage limit reached; stopping this Codex process and "
+                    "all remaining image generation.\n"
+                )
+                print(f"[{label}] {message}", end="", file=sys.stderr)
+                log.write(message)
+                log.flush()
+                break
             next_progress_notice = time.monotonic() + 30
 
         return_code = process.wait()
         reader.join(timeout=1)
-        return return_code, timed_out
+        return return_code, timed_out, usage_limit_hit
 
 
 def build_image_prompt(
@@ -453,6 +472,18 @@ def file_digest(path: Path) -> str | None:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def restore_previous_output(
+    output_path: Path, previous_file_bytes: bytes | None
+) -> str:
+    if previous_file_bytes is not None:
+        output_path.write_bytes(previous_file_bytes)
+        return " Previous file was restored."
+    if output_path.is_file():
+        output_path.unlink()
+        return " Incomplete new file was removed."
+    return ""
+
+
 def generate_word(
     word: str,
     scene_hint: str,
@@ -475,7 +506,19 @@ def generate_word(
         print(f"\n[{word}] attempt {attempt}/{RETRIES + 1}")
         print(f"[{word}] output: {output_path}")
         OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-        return_code, timed_out = stream_codex(command, prompt, word, log_path)
+        return_code, timed_out, usage_limit_hit = stream_codex(
+            command, prompt, word, log_path
+        )
+
+        if usage_limit_hit:
+            restore_note = restore_previous_output(
+                output_path, previous_file_bytes
+            )
+            return WordResult(
+                word,
+                "usage_limit",
+                f"Codex usage limit reached; see {log_path}.{restore_note}".strip(),
+            )
 
         if timed_out:
             previous_failure = "the Codex process timed out"
@@ -508,11 +551,7 @@ def generate_word(
         previous_failure = validation.message
         print(f"[{word}] validation failed: {validation.message}", file=sys.stderr)
 
-    if previous_file_bytes is not None:
-        output_path.write_bytes(previous_file_bytes)
-        restore_note = " Previous file was restored."
-    else:
-        restore_note = ""
+    restore_note = restore_previous_output(output_path, previous_file_bytes)
     return WordResult(
         word,
         "failed",
@@ -527,8 +566,9 @@ def print_summary(results: Sequence[WordResult]) -> None:
         print(f"{result.word:<16} {result.status:<10} {result.message}")
     generated = sum(result.status == "generated" for result in results)
     failed = sum(result.status == "failed" for result in results)
+    stopped = sum(result.status == "usage_limit" for result in results)
     print("-" * 72)
-    print(f"generated={generated}, failed={failed}")
+    print(f"generated={generated}, failed={failed}, stopped={stopped}")
 
 
 def main() -> int:
@@ -567,8 +607,9 @@ def main() -> int:
     print(f"words: {', '.join(scene_hints)}")
     print("generate one independent PNG per scene hint")
     run_stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
-    results = [
-        generate_word(
+    results: list[WordResult] = []
+    for word, scene_hint in scene_hints.items():
+        result = generate_word(
             word,
             scene_hint,
             references,
@@ -576,10 +617,13 @@ def main() -> int:
             codex_executable,
             reasoning_effort,
         )
-        for word, scene_hint in scene_hints.items()
-    ]
+        results.append(result)
+        if result.status == "usage_limit":
+            break
     print_summary(results)
-    return 1 if any(result.status == "failed" for result in results) else 0
+    return 1 if any(
+        result.status in {"failed", "usage_limit"} for result in results
+    ) else 0
 
 
 if __name__ == "__main__":
