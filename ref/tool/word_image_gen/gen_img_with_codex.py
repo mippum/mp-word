@@ -354,7 +354,17 @@ Scene direction loaded from scene_hints.json:
 Visual contract:
 - minimalist educational black line art matching the references
 - one centered cohesive scene with generous empty margin
-- smooth, confident outlines and a simple readable silhouette
+- crisp, confident outlines and a simple readable silhouette
+- a subtly sharper, more mature visual character: favor natural proportions,
+  controlled straight segments, gently angular contours, and clearly defined
+  corners where the subject naturally has them
+- keep curves where anatomically or structurally appropriate, but avoid making
+  people and objects uniformly soft, inflated, circular, or pill-shaped
+- avoid chibi, kawaii, bubbly, preschool-cartoon, mascot, and toy-like styling;
+  do not use oversized round heads, stubby rounded limbs, or excessively round
+  facial features
+- the sharper quality must remain restrained and approachable, never jagged,
+  aggressive, photorealistic, or mechanically geometric
 - solid, fully opaque pure white background with no alpha transparency
 - black and white pixels only; no color, gray shading, gradients, hatching,
   shadows, textures, or patterned background
