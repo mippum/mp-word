@@ -23,7 +23,7 @@ LOG_DIR = PROJECT_DIR / "logs"
 
 TIMEOUT_SECONDS = 20 * 60
 RETRIES = 2
-DEFAULT_REASONING_EFFORT = "medium"
+DEFAULT_REASONING_EFFORT = "low"
 REASONING_EFFORTS = ("none", "low", "medium", "high", "xhigh", "max")
 
 WORD_PATTERN = re.compile(r"^[A-Za-z][A-Za-z'-]*$")

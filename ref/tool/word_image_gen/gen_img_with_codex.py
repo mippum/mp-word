@@ -36,6 +36,12 @@ USAGE_LIMIT_PATTERN = re.compile(
     re.IGNORECASE,
 )
 
+MODEL = "gpt-5.6-sol"
+# MODEL = "gpt-6-astra"
+# MODEL = "gpt-5.6-sol"
+# MODEL = "gpt-5.6-terra"
+# MODEL = "gpt-5.6-luna"
+
 REFERENCE_PATHS = (
     PROJECT_DIR / "ref" / "abandon.png",
     PROJECT_DIR / "ref" / "able.png",
@@ -193,6 +199,8 @@ def build_codex_command(
         "--skip-git-repo-check",
         "--cd",
         str(PROJECT_DIR),
+        "--model",
+        MODEL,
         "--config",
         f'model_reasoning_effort="{reasoning_effort}"',
         "--approve-for-me",
