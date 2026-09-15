@@ -36,7 +36,7 @@ USAGE_LIMIT_PATTERN = re.compile(
     re.IGNORECASE,
 )
 
-MODEL = "gpt-5.6-sol"
+MODEL = "gpt-5.6-luna"
 # MODEL = "gpt-6-astra"
 # MODEL = "gpt-5.6-sol"
 # MODEL = "gpt-5.6-terra"
@@ -148,8 +148,8 @@ def load_scene_hints() -> tuple[str, dict[str, str]]:
 
     reasoning_effort = validate_reasoning_effort(document["reasoning_effort"])
     payload = document["scene_hints"]
-    if not isinstance(payload, dict) or not payload:
-        raise ValueError("scene_hints must be a non-empty JSON object")
+    if not isinstance(payload, dict):
+        raise ValueError("scene_hints must be a JSON object")
 
     scene_hints: dict[str, str] = {}
     filenames: dict[str, str] = {}
@@ -173,6 +173,50 @@ def load_scene_hints() -> tuple[str, dict[str, str]]:
         filenames[filename] = word
         scene_hints[word] = raw_hint.strip()
     return reasoning_effort, scene_hints
+
+
+def replace_with_retries(source: Path, destination: Path) -> None:
+    for attempt in range(10):
+        try:
+            source.replace(destination)
+            return
+        except PermissionError:
+            if attempt == 9:
+                raise
+            time.sleep(0.25)
+
+
+def remove_completed_scene_hint(word: str) -> None:
+    document = json.loads(SCENE_HINTS_PATH.read_text(encoding="utf-8-sig"))
+    if not isinstance(document, dict):
+        raise ValueError("scene_hints.json must be a JSON object")
+    if set(document) != {"reasoning_effort", "scene_hints"}:
+        raise ValueError(
+            "scene_hints.json changed to an unsupported structure while running"
+        )
+    validate_reasoning_effort(document["reasoning_effort"])
+    scene_hints = document["scene_hints"]
+    if not isinstance(scene_hints, dict):
+        raise ValueError("scene_hints must be a JSON object")
+    if word not in scene_hints:
+        raise ValueError(
+            f"completed word {word!r} is no longer present in scene_hints.json"
+        )
+
+    del scene_hints[word]
+    temporary_path = SCENE_HINTS_PATH.with_name(
+        f".{SCENE_HINTS_PATH.name}.{os.getpid()}.tmp"
+    )
+    try:
+        temporary_path.write_text(
+            json.dumps(document, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+            newline="\n",
+        )
+        replace_with_retries(temporary_path, SCENE_HINTS_PATH)
+    finally:
+        if temporary_path.exists():
+            temporary_path.unlink()
 
 
 def validate_references() -> tuple[Path, ...]:
@@ -613,8 +657,18 @@ def main() -> int:
 
     try:
         reasoning_effort, scene_hints = load_scene_hints()
-        references = validate_references()
     except (OSError, ValueError, json.JSONDecodeError) as error:
+        print(f"error: {error}", file=sys.stderr)
+        return 2
+
+    if not scene_hints:
+        print(f"scene hints: {SCENE_HINTS_PATH}")
+        print("nothing to generate: scene_hints is empty")
+        return 0
+
+    try:
+        references = validate_references()
+    except (OSError, ValueError) as error:
         print(f"error: {error}", file=sys.stderr)
         return 2
 
@@ -627,6 +681,7 @@ def main() -> int:
     run_stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
     results: list[WordResult] = []
     for word, scene_hint in scene_hints.items():
+        checkpoint_failed = False
         result = generate_word(
             word,
             scene_hint,
@@ -635,8 +690,23 @@ def main() -> int:
             codex_executable,
             reasoning_effort,
         )
+        if result.status == "generated":
+            try:
+                remove_completed_scene_hint(word)
+            except (OSError, ValueError, json.JSONDecodeError) as error:
+                result = WordResult(
+                    word,
+                    "failed",
+                    f"PNG generated but could not remove scene hint: {error}",
+                )
+                checkpoint_failed = True
+                print(f"[{word}] error: {result.message}", file=sys.stderr)
+            else:
+                print(f"[{word}] removed from {SCENE_HINTS_PATH.name}")
         results.append(result)
         if result.status == "usage_limit":
+            break
+        if checkpoint_failed:
             break
     print_summary(results)
     return 1 if any(

@@ -68,6 +68,9 @@ absolutely
 생성할 수 있습니다.
 
 각 단어마다 별도의 Codex 작업을 순차 실행하며 `new/<word>.png`를 만듭니다.
+각 PNG가 생성·후처리·검증까지 성공하면 해당 단어 키를 `scene_hints.json`에서 즉시
+원자적으로 제거합니다. 따라서 실행이 중간에 멈춰도 다음 실행에서는 남은 단어만 처리하며,
+모든 단어가 완료된 뒤의 빈 `scene_hints` 객체는 정상 상태입니다.
 
 - `ref/abandon.png`, `ref/able.png`, `ref/operations.png`를 스타일 참고로 사용
 - 최소한의 또렷한 검은 선, 완전히 불투명한 흰색 배경, 충분한 흰 여백
