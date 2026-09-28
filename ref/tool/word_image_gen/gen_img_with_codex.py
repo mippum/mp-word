@@ -429,10 +429,12 @@ def flatten_png_to_white(path: Path) -> None:
     try:
         with Image.open(path) as image:
             image.load()
-            rgba = image.convert("RGBA")
-            flattened = Image.new("RGB", rgba.size, (255, 255, 255))
-            flattened.paste(rgba, mask=rgba.getchannel("A"))
-            flattened.save(temporary_path, format="PNG", optimize=True)
+            if image.mode == "RGB" and "transparency" not in image.info:
+                return
+            with image.convert("RGBA") as rgba:
+                with Image.new("RGB", rgba.size, (255, 255, 255)) as flattened:
+                    flattened.paste(rgba, mask=rgba.getchannel("A"))
+                    flattened.save(temporary_path, format="PNG", optimize=True)
         temporary_path.replace(path)
     finally:
         if temporary_path.exists():
