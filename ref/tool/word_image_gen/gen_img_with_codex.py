@@ -29,7 +29,6 @@ OUTPUT_DIR = PROJECT_DIR / "new"
 LOG_DIR = PROJECT_DIR / "logs"
 
 TIMEOUT_SECONDS = 20 * 60
-RETRIES = 2
 REASONING_EFFORTS = ("none", "low", "medium", "high", "xhigh", "max")
 USAGE_LIMIT_PATTERN = re.compile(
     r"you(?:['\N{RIGHT SINGLE QUOTATION MARK}])?ve hit your usage limit",
@@ -375,19 +374,15 @@ def build_image_prompt(
     word: str,
     scene_hint: str,
     output_path: Path,
-    previous_failure: str | None,
 ) -> str:
-    retry_note = (
-        "\nA previous attempt failed local validation for this reason: "
-        f"{previous_failure}\nReplace only the target PNG and correct that problem."
-        if previous_failure
-        else ""
-    )
     return f"""
 Generate exactly one final image asset for the English word {word!r}.
 
 Use the installed imagegen skill and its built-in image-generation tool. This is a
 new raster illustration, not an SVG, diagram, contact sheet, or code placeholder.
+Call the image-generation tool exactly once. Do not generate a variant, edit the
+generated image, or call image generation again, even if the result is imperfect
+or a later save or validation step fails.
 The attached images are style references only. Do not edit or copy their subjects.
 The references are already attached and visible; do not inspect them with local
 Python, Pillow, ImageMagick, or other shell commands.
@@ -424,7 +419,6 @@ Output contract:
 - do not run any Git command
 - confirm that the subject is not cut off and has generous white margin
 - finish only after the exact target file exists as a valid opaque white-background PNG
-{retry_note}
 """.strip()
 
 
@@ -557,68 +551,68 @@ def generate_word(
     output_path = OUTPUT_DIR / filename_for_word(word)
     previous_file_bytes = output_path.read_bytes() if output_path.is_file() else None
     original_digest = file_digest(output_path)
-    previous_failure = None
-
-    for attempt in range(1, RETRIES + 2):
-        prompt = build_image_prompt(word, scene_hint, output_path, previous_failure)
-        command = build_codex_command(
-            references, codex_executable, reasoning_effort
-        )
-        log_path = LOG_DIR / f"{run_stamp}-{filename_for_word(word)[:-4]}-attempt-{attempt}.log"
-        print(f"\n[{word}] attempt {attempt}/{RETRIES + 1}")
-        print(f"[{word}] output: {output_path}")
-        OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-        return_code, timed_out, usage_limit_hit = stream_codex(
-            command, prompt, word, log_path
-        )
-
-        if usage_limit_hit:
-            restore_note = restore_previous_output(
-                output_path, previous_file_bytes
-            )
-            return WordResult(
-                word,
-                "usage_limit",
-                f"Codex usage limit reached; see {log_path}.{restore_note}".strip(),
-            )
-
-        if timed_out:
-            previous_failure = "the Codex process timed out"
-            continue
-        if return_code != 0:
-            previous_failure = f"Codex exited with status {return_code}; see {log_path}"
-            if return_code == 2:
-                break
-            continue
-
-        if file_digest(output_path) == original_digest:
-            previous_failure = "target PNG was not replaced with a newly generated image"
-            print(f"[{word}] validation failed: {previous_failure}", file=sys.stderr)
-            continue
-        try:
-            flatten_png_to_white(output_path)
-        except (OSError, RuntimeError, UnidentifiedImageError, ValueError) as error:
-            previous_failure = f"could not flatten PNG onto white: {error}"
-            print(f"[{word}] validation failed: {previous_failure}", file=sys.stderr)
-            continue
-
-        validation = validate_png(output_path)
-        if validation.ok:
-            return WordResult(
-                word,
-                "generated",
-                f"{validation.message}; log: {log_path}",
-            )
-
-        previous_failure = validation.message
-        print(f"[{word}] validation failed: {validation.message}", file=sys.stderr)
-
-    restore_note = restore_previous_output(output_path, previous_file_bytes)
-    return WordResult(
-        word,
-        "failed",
-        f"all {RETRIES + 1} attempts failed: {previous_failure}.{restore_note}".strip(),
+    prompt = build_image_prompt(word, scene_hint, output_path)
+    command = build_codex_command(references, codex_executable, reasoning_effort)
+    log_path = LOG_DIR / f"{run_stamp}-{filename_for_word(word)[:-4]}-attempt-1.log"
+    print(f"\n[{word}] generation 1/1")
+    print(f"[{word}] output: {output_path}")
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    return_code, timed_out, usage_limit_hit = stream_codex(
+        command, prompt, word, log_path
     )
+
+    if usage_limit_hit:
+        restore_note = restore_previous_output(output_path, previous_file_bytes)
+        return WordResult(
+            word,
+            "usage_limit",
+            f"Codex usage limit reached; see {log_path}.{restore_note}".strip(),
+        )
+
+    if timed_out:
+        restore_note = restore_previous_output(output_path, previous_file_bytes)
+        return WordResult(
+            word,
+            "failed",
+            f"Codex process timed out; see {log_path}.{restore_note}".strip(),
+        )
+    if return_code != 0:
+        restore_note = restore_previous_output(output_path, previous_file_bytes)
+        return WordResult(
+            word,
+            "failed",
+            f"Codex exited with status {return_code}; see {log_path}.{restore_note}".strip(),
+        )
+
+    if file_digest(output_path) == original_digest:
+        message = "target PNG was not replaced with a newly generated image"
+        print(f"[{word}] validation failed: {message}", file=sys.stderr)
+        return WordResult(word, "failed", f"{message}; see {log_path}")
+
+    try:
+        flatten_png_to_white(output_path)
+    except (OSError, RuntimeError, UnidentifiedImageError, ValueError) as error:
+        message = (
+            f"could not flatten PNG onto white: {error}; generated PNG was kept "
+            "for manual review and no new image was generated"
+        )
+        print(f"[{word}] validation failed: {message}", file=sys.stderr)
+        return WordResult(word, "failed", f"{message}; see {log_path}")
+
+    validation = validate_png(output_path)
+    if validation.ok:
+        return WordResult(
+            word,
+            "generated",
+            f"{validation.message}; log: {log_path}",
+        )
+
+    message = (
+        f"{validation.message}; generated PNG was kept for manual review and "
+        "no new image was generated"
+    )
+    print(f"[{word}] validation failed: {message}", file=sys.stderr)
+    return WordResult(word, "failed", f"{message}; see {log_path}")
 
 
 def print_summary(results: Sequence[WordResult]) -> None:
