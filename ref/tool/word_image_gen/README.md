@@ -11,12 +11,13 @@ python gen_hints_with_codex.py
 python gen_img_with_codex.py
 ```
 
-대기 후 이미지 생성 진행.(1시간후, 2시간후, 3시간후, 4시간후)
+대기 후 이미지 생성 진행.(1시간후, 2시간후, 3시간후, 4시간후, 5시간후)
 ```bash
 timeout /t 3600 /nobreak && python gen_img_with_codex.py
 timeout /t 7200 /nobreak && python gen_img_with_codex.py
 timeout /t 10800 /nobreak && python gen_img_with_codex.py
 timeout /t 14400 /nobreak && python gen_img_with_codex.py
+timeout /t 18000 /nobreak && python gen_img_with_codex.py
 ```
 첫 번째 명령은 `words.txt`로 `scene_hints.json`만 만듭니다. 두 번째 명령은
 `scene_hints.json`만 읽어 `new/*.png`를 만듭니다. 따라서 이미지를 확인한 뒤 JSON의
