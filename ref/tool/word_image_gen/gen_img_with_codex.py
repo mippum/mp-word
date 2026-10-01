@@ -12,7 +12,7 @@ import sys
 import threading
 import time
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Sequence
 
@@ -31,9 +31,16 @@ LOG_DIR = PROJECT_DIR / "logs"
 TIMEOUT_SECONDS = 20 * 60
 REASONING_EFFORTS = ("none", "low", "medium", "high", "xhigh", "max")
 USAGE_LIMIT_PATTERN = re.compile(
-    r"you(?:['\N{RIGHT SINGLE QUOTATION MARK}])?ve hit your usage limit",
+    r"(?:you(?:['\N{RIGHT SINGLE QUOTATION MARK}])?ve hit your usage limit"
+    r"|usage_limit_(?:reached|exceeded)"
+    r"|usage limit has been reached)",
     re.IGNORECASE,
 )
+USAGE_LIMIT_RESET_AT_PATTERN = re.compile(
+    r"resets_at\\?[\"']?\s*:\s*(\d+)",
+    re.IGNORECASE,
+)
+KST = timezone(timedelta(hours=9), name="KST")
 
 MODEL = "gpt-5.6-luna"
 # MODEL = "gpt-6-astra"
@@ -56,6 +63,18 @@ WINDOWS_RESERVED_NAMES = {
     *(f"COM{number}" for number in range(1, 10)),
     *(f"LPT{number}" for number in range(1, 10)),
 }
+
+
+def extract_usage_limit_reset_at(output: str) -> int | None:
+    match = USAGE_LIMIT_RESET_AT_PATTERN.search(output)
+    if match is None:
+        return None
+    return int(match.group(1))
+
+
+def format_usage_limit_reset_time(reset_at: int) -> str:
+    reset_time = datetime.fromtimestamp(reset_at, tz=timezone.utc).astimezone(KST)
+    return reset_time.strftime("%Y-%m-%d %H:%M:%S KST")
 
 
 @dataclass(frozen=True)
@@ -259,7 +278,7 @@ def stream_codex(
     prompt: str,
     label: str,
     log_path: Path,
-) -> tuple[int, bool, bool]:
+) -> tuple[int, bool, bool, int | None]:
     log_path.parent.mkdir(parents=True, exist_ok=True)
     with log_path.open("w", encoding="utf-8", newline="\n") as log:
         log.write(
@@ -283,7 +302,7 @@ def stream_codex(
             message = f"Could not start Codex: {error}\n"
             print(f"[{label}] {message}", end="", file=sys.stderr)
             log.write(message)
-            return 127, False, False
+            return 127, False, False, None
 
         assert process.stdout is not None
         lines: queue.Queue[str | None] = queue.Queue()
@@ -311,6 +330,7 @@ def stream_codex(
         stream_finished = False
         timed_out = False
         usage_limit_hit = False
+        usage_limit_reset_at: int | None = None
 
         while not stream_finished:
             try:
@@ -351,14 +371,26 @@ def stream_codex(
             log.flush()
             if USAGE_LIMIT_PATTERN.search(output_line):
                 usage_limit_hit = True
+                usage_limit_reset_at = extract_usage_limit_reset_at(output_line)
                 try:
                     process.kill()
                 except OSError:
                     pass
-                message = (
-                    "Usage limit reached; stopping this Codex process and "
-                    "all remaining image generation.\n"
-                )
+                if usage_limit_reset_at is None:
+                    message = (
+                        "Usage limit reached; the service did not provide a "
+                        "reset time. Stopping this Codex process and all "
+                        "remaining image generation.\n"
+                    )
+                else:
+                    reset_time = format_usage_limit_reset_time(
+                        usage_limit_reset_at
+                    )
+                    message = (
+                        f"Usage limit reached; available again at {reset_time}. "
+                        "Stopping this Codex process and all remaining image "
+                        "generation.\n"
+                    )
                 print(f"[{label}] {message}", end="", file=sys.stderr)
                 log.write(message)
                 log.flush()
@@ -367,7 +399,7 @@ def stream_codex(
 
         return_code = process.wait()
         reader.join(timeout=1)
-        return return_code, timed_out, usage_limit_hit
+        return return_code, timed_out, usage_limit_hit, usage_limit_reset_at
 
 
 def build_image_prompt(
@@ -559,16 +591,26 @@ def generate_word(
     print(f"\n[{word}] generation 1/1")
     print(f"[{word}] output: {output_path}")
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    return_code, timed_out, usage_limit_hit = stream_codex(
+    return_code, timed_out, usage_limit_hit, usage_limit_reset_at = stream_codex(
         command, prompt, word, log_path
     )
 
     if usage_limit_hit:
         restore_note = restore_previous_output(output_path, previous_file_bytes)
+        if usage_limit_reset_at is None:
+            reset_note = "reset time unavailable"
+        else:
+            reset_note = (
+                "available again at "
+                f"{format_usage_limit_reset_time(usage_limit_reset_at)}"
+            )
         return WordResult(
             word,
             "usage_limit",
-            f"Codex usage limit reached; see {log_path}.{restore_note}".strip(),
+            (
+                f"Codex usage limit reached; {reset_note}; see {log_path}."
+                f"{restore_note}"
+            ).strip(),
         )
 
     if timed_out:
