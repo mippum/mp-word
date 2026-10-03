@@ -23,6 +23,75 @@ timeout /t 18000 /nobreak && python gen_img_with_codex.py
 `scene_hints.json`만 읽어 `new/*.png`를 만듭니다. 따라서 이미지를 확인한 뒤 JSON의
 장면 설명이나 추론 수준을 직접 수정하고 이미지 생성만 다시 실행할 수 있습니다.
 
+## 개발 환경 설정
+
+`Makefile`로 가상환경 생성과 실행을 처리합니다. VS Code에 Makefile 실행 버튼
+확장(`nvms.makefile-buttons-improved`)을 설치하면 타깃 줄 위의 버튼으로 바로 실행할
+수 있습니다.
+
+```bash
+make install      # .venv 생성 + requirements.txt 설치
+make hints        # gen_hints_with_codex.py 실행
+make images       # gen_img_with_codex.py 실행
+make freeze       # 설치된 패키지를 requirements.txt에 기록
+make clean        # __pycache__ 정리
+make clean-venv   # .venv 삭제
+make reset        # .venv 삭제 후 재설치
+```
+
+Python 버전은 `Makefile` 상단의 `PY_VERSION`에서 지정합니다(기본 3.13). Windows에서는
+`py -3.13`, 그 외 환경에서는 `python3.13`으로 가상환경을 만듭니다. 모든 타깃이
+`.venv` 안의 Python을 직접 호출하므로 별도 activate가 필요하지 않습니다.
+
+VS Code에서 이 폴더를 열면 `.venv`가 자동으로 인터프리터로 선택됩니다.
+
+## 디버깅
+
+중단점은 **디버거가 실행하거나 연결된 프로세스**에서만 멈춥니다. `make images`처럼
+터미널에서 그냥 실행하면 멈추지 않습니다. 두 가지 방법이 있습니다.
+
+### 1. 파일을 직접 실행 (launch)
+
+간단한 디버깅에 적합합니다. 두 스크립트는 명령행 인자를 받지 않으므로 추가 설정이
+필요 없습니다.
+
+1. 디버깅할 `.py` 파일을 연다
+2. 줄 번호 왼쪽을 클릭해 중단점을 찍는다(F9)
+3. F5 → `Python Debugger` → `Python File`
+
+이 방식은 **현재 활성화된 에디터의 파일**을 실행합니다.
+
+### 2. make 실행에 연결 (attach)
+
+make가 설정하는 환경 그대로 디버깅할 때 사용합니다.
+
+```bash
+make debug-hints    # 디버거 연결을 기다리며 gen_hints_with_codex.py 실행
+make debug-images   # 디버거 연결을 기다리며 gen_img_with_codex.py 실행
+```
+
+`--wait-for-client` 옵션 때문에 디버거가 붙을 때까지 스크립트는 시작되지 않습니다.
+VS Code에서 아래 구성을 실행해 연결합니다.
+
+```json
+{
+  "name": "디버거 연결 (포트 5678)",
+  "type": "debugpy",
+  "request": "attach",
+  "connect": { "host": "localhost", "port": 5678 }
+}
+```
+
+이 구성은 경로에 의존하지 않으므로 프로젝트마다 `.vscode/launch.json`을 만드는 대신
+VS Code 사용자 설정(프로필)의 `launch` 항목에 한 번만 넣어 두고 재사용할 수 있습니다.
+
+연결 방식은 **활성 에디터와 무관**하며, 실행 및 디버그 패널(Ctrl+Shift+D)의
+드롭다운에서 선택된 구성이 F5로 실행됩니다. 포트는 `Makefile`의 `DEBUG_PORT`에서
+바꿀 수 있고, 여러 프로젝트를 동시에 디버깅할 때는 포트를 다르게 지정합니다.
+
+디버깅용 `debugpy`는 `requirements.txt`에 포함하지 않으며 `make debugpy`로 설치합니다.
+`make debug-*` 타깃이 자동으로 설치를 먼저 수행합니다.
+
 ## 1단계: 장면 설명 생성
 
 `gen_hints_with_codex.py`는 다음 순서로 동작합니다.
