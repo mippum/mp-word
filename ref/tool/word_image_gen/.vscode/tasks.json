@@ -1,0 +1,65 @@
+{
+  "version": "2.0.0",
+  "options": {
+    "cwd": "${workspaceFolder}"
+  },
+  "presentation": {
+    "echo": true,
+    "reveal": "always",
+    "panel": "dedicated",
+    "clear": false
+  },
+  "tasks": [
+    {
+      "label": "install (venv + 패키지)",
+      "type": "shell",
+      "command": "make install",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "hints (장면 설명 생성)",
+      "type": "shell",
+      "command": "make hints",
+      "problemMatcher": []
+    },
+    {
+      "label": "images (이미지 생성)",
+      "type": "shell",
+      "command": "make images",
+      "problemMatcher": []
+    },
+    {
+      "label": "debug-hints (디버거 대기)",
+      "type": "shell",
+      "command": "make debug-hints",
+      "problemMatcher": [],
+      "detail": "실행 후 F5로 '디버거 연결 (포트 5678)' 실행"
+    },
+    {
+      "label": "debug-images (디버거 대기)",
+      "type": "shell",
+      "command": "make debug-images",
+      "problemMatcher": [],
+      "detail": "실행 후 F5로 '디버거 연결 (포트 5678)' 실행"
+    },
+    {
+      "label": "freeze (requirements.txt 갱신)",
+      "type": "shell",
+      "command": "make freeze",
+      "problemMatcher": []
+    },
+    {
+      "label": "clean (__pycache__ 정리)",
+      "type": "shell",
+      "command": "make clean",
+      "problemMatcher": []
+    },
+    {
+      "label": "reset (venv 재생성)",
+      "type": "shell",
+      "command": "make reset",
+      "problemMatcher": []
+    }
+  ]
+}
