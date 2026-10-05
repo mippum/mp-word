@@ -44,6 +44,12 @@
       "detail": "실행 후 F5로 '디버거 연결 (포트 5678)' 실행"
     },
     {
+      "label": "디버깅 시작",
+      "type": "shell",
+      "command": "echo ${command:workbench.action.debug.start}",
+      "problemMatcher": []
+    },
+    {
       "label": "freeze (requirements.txt 갱신)",
       "type": "shell",
       "command": "make freeze",
