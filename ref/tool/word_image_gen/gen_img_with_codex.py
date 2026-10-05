@@ -40,6 +40,10 @@ USAGE_LIMIT_RESET_AT_PATTERN = re.compile(
     r"resets_at\\?[\"']?\s*:\s*(\d+)",
     re.IGNORECASE,
 )
+MODEL_CAPACITY_PATTERN = re.compile(
+    r"selected model is at capacity",
+    re.IGNORECASE,
+)
 KST = timezone(timedelta(hours=9), name="KST")
 
 MODEL = "gpt-5.6-luna"
@@ -278,7 +282,7 @@ def stream_codex(
     prompt: str,
     label: str,
     log_path: Path,
-) -> tuple[int, bool, bool, int | None]:
+) -> tuple[int, bool, bool, int | None, bool]:
     log_path.parent.mkdir(parents=True, exist_ok=True)
     with log_path.open("w", encoding="utf-8", newline="\n") as log:
         log.write(
@@ -302,7 +306,7 @@ def stream_codex(
             message = f"Could not start Codex: {error}\n"
             print(f"[{label}] {message}", end="", file=sys.stderr)
             log.write(message)
-            return 127, False, False, None
+            return 127, False, False, None, False
 
         assert process.stdout is not None
         lines: queue.Queue[str | None] = queue.Queue()
@@ -331,6 +335,7 @@ def stream_codex(
         timed_out = False
         usage_limit_hit = False
         usage_limit_reset_at: int | None = None
+        model_capacity_hit = False
 
         while not stream_finished:
             try:
@@ -395,11 +400,31 @@ def stream_codex(
                 log.write(message)
                 log.flush()
                 break
+            if MODEL_CAPACITY_PATTERN.search(output_line):
+                model_capacity_hit = True
+                try:
+                    process.kill()
+                except OSError:
+                    pass
+                message = (
+                    "Selected model is at capacity; stopping this Codex "
+                    "process and all remaining image generation.\n"
+                )
+                print(f"[{label}] {message}", end="", file=sys.stderr)
+                log.write(message)
+                log.flush()
+                break
             next_progress_notice = time.monotonic() + 30
 
         return_code = process.wait()
         reader.join(timeout=1)
-        return return_code, timed_out, usage_limit_hit, usage_limit_reset_at
+        return (
+            return_code,
+            timed_out,
+            usage_limit_hit,
+            usage_limit_reset_at,
+            model_capacity_hit,
+        )
 
 
 def build_image_prompt(
@@ -591,9 +616,13 @@ def generate_word(
     print(f"\n[{word}] generation 1/1")
     print(f"[{word}] output: {output_path}")
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    return_code, timed_out, usage_limit_hit, usage_limit_reset_at = stream_codex(
-        command, prompt, word, log_path
-    )
+    (
+        return_code,
+        timed_out,
+        usage_limit_hit,
+        usage_limit_reset_at,
+        model_capacity_hit,
+    ) = stream_codex(command, prompt, word, log_path)
 
     if usage_limit_hit:
         restore_note = restore_previous_output(output_path, previous_file_bytes)
@@ -609,6 +638,17 @@ def generate_word(
             "usage_limit",
             (
                 f"Codex usage limit reached; {reset_note}; see {log_path}."
+                f"{restore_note}"
+            ).strip(),
+        )
+
+    if model_capacity_hit:
+        restore_note = restore_previous_output(output_path, previous_file_bytes)
+        return WordResult(
+            word,
+            "model_capacity",
+            (
+                f"Selected model is at capacity; see {log_path}."
                 f"{restore_note}"
             ).strip(),
         )
@@ -666,7 +706,9 @@ def print_summary(results: Sequence[WordResult]) -> None:
         print(f"{result.word:<16} {result.status:<10} {result.message}")
     generated = sum(result.status == "generated" for result in results)
     failed = sum(result.status == "failed" for result in results)
-    stopped = sum(result.status == "usage_limit" for result in results)
+    stopped = sum(
+        result.status in {"usage_limit", "model_capacity"} for result in results
+    )
     print("-" * 72)
     print(f"generated={generated}, failed={failed}, stopped={stopped}")
 
@@ -742,13 +784,14 @@ def main() -> int:
             else:
                 print(f"[{word}] removed from {SCENE_HINTS_PATH.name}")
         results.append(result)
-        if result.status == "usage_limit":
+        if result.status in {"usage_limit", "model_capacity"}:
             break
         if checkpoint_failed:
             break
     print_summary(results)
     return 1 if any(
-        result.status in {"failed", "usage_limit"} for result in results
+        result.status in {"failed", "usage_limit", "model_capacity"}
+        for result in results
     ) else 0
 
 
