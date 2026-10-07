@@ -52,3 +52,4 @@ yarn-error.*
 
 # apk output
 /build
+.venv
