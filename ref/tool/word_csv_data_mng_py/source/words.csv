@@ -929,7 +929,7 @@ id,word,is_banned,warning_level
 0199277f-b3c4-70fa-d129-5b4c6b34c22f,amos,0,normal
 0199277f-b3fd-70a5-ad72-34adc8df047a,amps,0,normal
 0199277f-b435-7054-381b-e00ea922b110,amyl,0,normal
-0199277f-b463-703c-fd3d-3a6c70eb47a4,anal,0,normal
+0199277f-b463-703c-fd3d-3a6c70eb47a4,anal,0,offensive
 0199277f-b48a-705e-e975-90718442bef2,andy,0,normal
 0199277f-b4b4-707f-a6c3-dc05879245a6,anew,0,normal
 0199277f-b4e4-706d-32b1-e153faecafa5,ankh,0,normal
@@ -942,7 +942,7 @@ id,word,is_banned,warning_level
 0199277f-b642-70b9-b560-c0a2e9a788b4,anti,0,normal
 0199277f-b685-70ec-82c5-555bc9dbef18,ants,0,normal
 0199277f-b6b4-70ae-1e8d-65547346064c,anum,0,normal
-0199277f-b6e1-706a-30b1-e66a62ab30f2,anus,0,normal
+0199277f-b6e1-706a-30b1-e66a62ab30f2,anus,0,offensive
 0199277f-b717-702c-0490-c5298109ac3f,aped,0,normal
 0199277f-b753-7037-5711-4f58cbf259e5,apes,0,caution
 0199277f-b77b-7070-8032-79c9833376b6,apex,0,normal
@@ -2272,14 +2272,14 @@ id,word,is_banned,warning_level
 01992796-0eab-70e5-2a25-3cbdfcb494c8,laky,0,normal
 01992796-0eb9-702c-8618-e5355a24a5cf,lama,0,normal
 01992796-0ec0-701a-182c-9153eeab8fc9,lamb,0,normal
-01992796-0ec7-7043-f2f2-e5a58bc640eb,lame,0,normal
+01992796-0ec7-7043-f2f2-e5a58bc640eb,lame,0,caution
 01992796-0eec-70db-8406-90be06e77286,lamp,0,normal
 01992796-0ef5-7049-da67-782242e5b6dc,land,0,normal
 01992796-0f02-702a-3fbe-fbab6600cf09,lane,0,normal
 01992796-0f0b-70c2-b02c-cb73e0057c5d,lang,0,normal
 01992796-0f10-705c-b77f-5632f73d4fd5,lank,0,normal
 01992796-0f18-703b-a899-054f7b7cfd7a,laos,0,normal
-01992796-0f20-706d-b33b-0c8c995bfdde,lapp,0,normal
+01992796-0f20-706d-b33b-0c8c995bfdde,lapp,0,caution
 01992796-0f26-7062-4f65-0d1236d68e43,laps,0,normal
 01992796-0f2e-70a6-765a-62de31592ac8,lard,0,normal
 01992796-0f53-706a-ba66-ced8cd78f14d,lark,0,normal
@@ -2418,7 +2418,7 @@ id,word,is_banned,warning_level
 01992796-141b-70ed-0a6c-ffb89be08d24,lure,0,normal
 01992796-1421-700c-d3fa-6c2c98737a0a,lurk,0,normal
 01992796-1425-70c3-b12d-cd7d0bbe98bb,lush,0,normal
-01992796-142b-70e3-3c84-e2ddaecefd85,lust,0,normal
+01992796-142b-70e3-3c84-e2ddaecefd85,lust,0,caution
 01992796-1432-70a4-a757-bfb6547f8002,lute,0,normal
 01992796-1438-708d-b9f7-a9680c0801f0,lyes,0,normal
 01992796-143d-70ab-88a8-b07a522be1e7,lynx,0,normal
@@ -2847,7 +2847,7 @@ id,word,is_banned,warning_level
 01992796-23c3-7093-0358-b066f07fade1,pile,0,normal
 01992796-23cd-7061-4124-f04485cd73da,pili,0,normal
 01992796-23d5-70ea-0457-a63a3043bff3,pill,0,normal
-01992796-23da-7081-aee5-6d72f4705455,pimp,0,normal
+01992796-23da-7081-aee5-6d72f4705455,pimp,0,offensive
 01992796-23e0-70af-6c0d-00d736870275,pine,0,normal
 01992796-23e5-7046-fd21-af091e7e1a08,ping,0,normal
 01992796-23ea-70de-3b8f-19d1cb843272,pink,0,normal
@@ -2896,14 +2896,14 @@ id,word,is_banned,warning_level
 01992796-2511-708b-2e43-c71b32abc1c2,pony,0,normal
 01992796-2517-708b-7091-86e8fa28dbd1,pooh,0,normal
 01992796-251c-7083-1c02-b996c20bf196,pool,0,normal
-01992796-2521-701a-c072-fd9b10815526,poop,0,normal
+01992796-2521-701a-c072-fd9b10815526,poop,0,caution
 01992796-2530-70c0-4d43-69451ec78b62,poor,0,normal
 01992796-2538-704a-4b9a-22dbe2da9d85,pope,0,normal
 01992796-253e-70c0-34c3-32b2e45f31d8,pops,0,normal
 01992796-2544-70a4-ac73-3dd572bc577f,pore,0,normal
 01992796-2549-7079-deea-fb29dcd07d03,pori,0,normal
 01992796-254f-7098-eee0-9549ad89a7aa,pork,0,normal
-01992796-2553-705b-cce8-2709b9815e52,porn,0,normal
+01992796-2553-705b-cce8-2709b9815e52,porn,0,offensive
 01992796-255f-7081-8f47-b6ba835e5076,port,0,normal
 01992796-2565-705e-7326-65897fdfdeb9,pose,0,normal
 01992796-256a-7005-ee98-30252d71af16,posh,0,normal
@@ -2941,7 +2941,7 @@ id,word,is_banned,warning_level
 01992796-2649-7086-40af-a9424ec2df15,puff,0,normal
 01992796-2661-70cf-cd94-7eb9248941ab,pugs,0,normal
 01992796-266b-7093-e1aa-af6d16257af4,puis,0,normal
-01992796-2671-7055-ce06-b476308d345d,puke,0,normal
+01992796-2671-7055-ce06-b476308d345d,puke,0,caution
 01992796-2676-7034-ed08-5ec2af26b30c,pull,0,normal
 01992796-267b-7024-916b-61a822b41d78,pulp,0,normal
 01992796-2681-70ff-95ed-e19f797e0fce,puma,0,normal
@@ -2997,7 +2997,7 @@ id,word,is_banned,warning_level
 01992796-281a-701b-7d23-38adbca5062e,rani,0,normal
 01992796-2820-70d6-a5b9-ab2ee4ecf1f1,rank,0,normal
 01992796-2828-70e4-a27d-8d4bd0318506,rant,0,normal
-01992796-282d-7090-c00f-0d15420c7525,rape,0,normal
+01992796-282d-7090-c00f-0d15420c7525,rape,0,offensive
 01992796-28be-705c-5dbc-97bdef7475f1,raps,0,normal
 01992796-28c3-7054-d427-4afb0b474379,rapt,0,normal
 01992796-28c8-7095-7fbe-37d99a768123,rare,0,normal
@@ -5175,7 +5175,7 @@ id,word,is_banned,warning_level
 01992796-6c36-706b-4a31-18e53043beee,dames,0,normal
 01992796-6c41-706e-5b7e-678771a0cd20,damna,0,normal
 01992796-6c51-703b-c734-adc8e0098ba0,damno,0,normal
-01992796-6c57-707f-9a85-cd70cba8e891,damns,0,normal
+01992796-6c57-707f-9a85-cd70cba8e891,damns,0,caution
 01992796-6c5e-701e-e10b-94c41a38c842,dance,0,normal
 01992796-6c65-70f1-eed5-6165d5fe744c,dandy,0,normal
 01992796-6c6b-701f-b738-f31799bad601,danes,0,normal
@@ -6063,7 +6063,7 @@ id,word,is_banned,warning_level
 01992796-8be9-708c-1be5-2713ea5a0407,gilts,0,normal
 01992796-8bf9-7016-597e-6a9bc60ff8ab,gimps,0,normal
 01992796-8c09-7070-31a5-a859c7d7ded0,gimpy,0,normal
-01992796-8c29-7077-e30c-94bf00c3cfc5,gipsy,0,normal
+01992796-8c29-7077-e30c-94bf00c3cfc5,gipsy,0,caution
 01992796-8c46-706a-c391-8c0a91b4d306,girds,0,normal
 01992796-8c5a-70a2-1998-ac94e2afc6d3,girls,0,normal
 01992796-8c68-70cb-7f1c-0ef59d332936,girth,0,normal
@@ -6436,7 +6436,7 @@ id,word,is_banned,warning_level
 01992796-9c8f-70a7-c8f3-662793674e4f,horae,0,normal
 01992796-9c95-70a2-3c47-b09af6fd115d,horde,0,normal
 01992796-9c9a-70a1-0e61-bd8d8c14c084,horns,0,normal
-01992796-9cad-7053-177a-1e26678f9642,horny,0,normal
+01992796-9cad-7053-177a-1e26678f9642,horny,0,offensive
 01992796-9cb3-7087-e0cc-5d6d0cf5a660,horol,0,normal
 01992796-9cc0-70ee-87d7-a1a1405d144b,horse,0,normal
 01992796-9ccb-703b-48b7-bb84656ae641,horsy,0,normal
@@ -6830,7 +6830,7 @@ id,word,is_banned,warning_level
 01992796-aa3c-7048-641d-67ab23af0302,lapin,0,normal
 01992796-aa41-7001-00fb-eaa36f440651,lapis,0,normal
 01992796-aa46-7087-adce-0094e7c7309b,lappa,0,normal
-01992796-aa60-7077-8120-1e36b7f08ae3,lapps,0,normal
+01992796-aa60-7077-8120-1e36b7f08ae3,lapps,0,caution
 01992796-aa66-70d0-699e-dd75b52ab2ff,lapse,0,normal
 01992796-aa6e-70e5-7ec5-6198d2553302,larch,0,normal
 01992796-aa9c-7070-2980-0393d3689096,lards,0,normal
@@ -7065,7 +7065,7 @@ id,word,is_banned,warning_level
 01992796-b2e5-7043-3747-c1f06c4f487c,lures,0,normal
 01992796-b2ed-7094-727d-1b1208f5ae8a,lurid,0,normal
 01992796-b2fd-70a7-a64b-85ba1331bc1a,lurks,0,normal
-01992796-b302-7050-425a-fde2739aab88,lusts,0,normal
+01992796-b302-7050-425a-fde2739aab88,lusts,0,caution
 01992796-b30a-70a6-a95b-cae51ad4d7b6,lusty,0,normal
 01992796-b317-7008-0913-482d0baf4a67,lusus,0,normal
 01992796-b31d-7024-7e0e-caca9381ce84,lutea,0,normal
@@ -7784,7 +7784,7 @@ id,word,is_banned,warning_level
 01992796-ca63-7072-a0cc-1d2d8b2e48dc,pence,0,normal
 01992796-ca69-7075-b732-d69b83c037d3,pends,0,normal
 01992796-ca6d-707d-f659-da3785f74269,penes,0,normal
-01992796-ca73-7044-1bbb-567d6eb333e6,penis,0,normal
+01992796-ca73-7044-1bbb-567d6eb333e6,penis,0,caution
 01992796-ca89-70e5-c93e-da8a24180cf6,penny,0,normal
 01992796-ca97-70a8-6810-184925dde2d6,pense,0,normal
 01992796-ca9c-7088-2521-39b9f4981cc5,peons,0,normal
@@ -7838,7 +7838,7 @@ id,word,is_banned,warning_level
 01992796-cbf3-7039-b2d0-f96d37cd5e70,pills,0,normal
 01992796-cbf8-7016-1f59-5fd1fb724815,pilot,0,normal
 01992796-cbfd-7091-963d-6d6ddafb59ce,pilus,0,normal
-01992796-cc11-70fc-839a-79916b63b047,pimps,0,normal
+01992796-cc11-70fc-839a-79916b63b047,pimps,0,offensive
 01992796-cc21-7053-cc05-b26c08e254ff,pinch,0,normal
 01992796-cc2d-7001-0519-6dd6e90c8266,pined,0,normal
 01992796-cc32-7076-1f3a-c52d9251e278,pines,0,normal
@@ -7939,7 +7939,7 @@ id,word,is_banned,warning_level
 01992796-ceba-7022-5c66-eb6434d79876,pooch,0,normal
 01992796-ced4-7085-3783-ec14a2eec0f8,poohs,0,normal
 01992796-ced9-7095-0558-aa49736291b0,pools,0,normal
-01992796-cede-70bc-9fe6-a480966e63a8,poops,0,normal
+01992796-cede-70bc-9fe6-a480966e63a8,poops,0,caution
 01992796-cee9-7020-a8e6-89fb4a85bb18,popes,0,normal
 01992796-cef1-7049-22d3-b618586e215b,poppy,0,normal
 01992796-cef6-7063-de2d-47dc78c674f5,porch,0,normal
@@ -7948,7 +7948,7 @@ id,word,is_banned,warning_level
 01992796-cf15-70ef-fc1d-9dbacbc98d68,porgy,0,normal
 01992796-cf1a-7062-b150-7c7e0397e9c8,poria,0,normal
 01992796-cf1f-702d-8928-2b636cf68ad1,porky,0,normal
-01992796-cf3a-7077-dff9-4055e98d077c,porno,0,normal
+01992796-cf3a-7077-dff9-4055e98d077c,porno,0,offensive
 01992796-cf46-7058-444d-b49ffe1b8e75,porta,0,normal
 01992796-cf4c-709f-bbcb-c67f284c0433,ports,0,normal
 01992796-cf5f-70f0-1ab3-2fd28e51eeb0,porus,0,normal
@@ -8020,8 +8020,8 @@ id,word,is_banned,warning_level
 01992796-d1af-7079-2c74-c064b4589d08,psoas,0,normal
 01992796-d1b5-7053-87ab-c0c38d7bbf49,psora,0,normal
 01992796-d1ba-7033-251e-2974ca979628,psych,0,normal
-01992796-d1c3-7009-b469-f27d9ea1498a,pubes,0,normal
-01992796-d1c8-70d7-9770-6ac28d7abc3e,pubic,0,normal
+01992796-d1c3-7009-b469-f27d9ea1498a,pubes,0,caution
+01992796-d1c8-70d7-9770-6ac28d7abc3e,pubic,0,caution
 01992796-d1cd-7004-58ae-5dc8d0bb36dd,pubis,0,normal
 01992796-d1d6-70b2-e254-00030e4014a6,pucks,0,normal
 01992796-d1db-7002-1976-05b67e583d29,pudgy,0,normal
@@ -8029,7 +8029,7 @@ id,word,is_banned,warning_level
 01992796-d1e5-701a-0ae5-5a1457795747,puffs,0,normal
 01992796-d1e9-705f-0708-144d47798840,puffy,0,normal
 01992796-d1f1-70a7-8296-6a5157c0bd71,puggy,0,normal
-01992796-d1f6-70ff-a94f-91e9da891ffe,puked,0,normal
+01992796-d1f6-70ff-a94f-91e9da891ffe,puked,0,caution
 01992796-d1fb-709c-148f-8f1de82e2f63,pukes,0,normal
 01992796-d206-7062-c3a9-051f8c603c0c,pukka,0,normal
 01992796-d20b-7087-81ef-28fc74523d3c,pulex,0,normal
@@ -8152,9 +8152,9 @@ id,word,is_banned,warning_level
 01992796-d5cb-7084-17e7-3f87e6eae1a7,ranis,0,normal
 01992796-d5db-70a1-300e-b768e644a363,ranks,0,normal
 01992796-d5e0-7007-fad0-2134a290e8d8,rants,0,normal
-01992796-d5fd-7084-09a5-1ca0ca12fcb6,raped,0,normal
+01992796-d5fd-7084-09a5-1ca0ca12fcb6,raped,0,offensive
 01992796-d605-709a-e197-53d841bff691,raper,0,normal
-01992796-d60b-70f4-127f-47e49f715969,rapes,0,normal
+01992796-d60b-70f4-127f-47e49f715969,rapes,0,offensive
 01992796-d610-7005-dc3d-9f631439e3c2,raphe,0,normal
 01992796-d615-7025-70c4-8447d9677b32,rapid,0,normal
 01992796-d61a-708b-2000-a127dfe9ede8,rarer,0,normal
@@ -8545,7 +8545,7 @@ id,word,is_banned,warning_level
 01992796-e408-7059-ffee-aa8ab3e354fc,seize,0,normal
 01992796-e40d-70f0-bbd9-0fbd86666ffa,sella,0,normal
 01992796-e412-7094-f718-93973d6b60a1,sells,0,normal
-01992796-e417-7007-3d1d-dbf020d2bb32,semen,0,normal
+01992796-e417-7007-3d1d-dbf020d2bb32,semen,0,caution
 01992796-e41d-70c8-544c-7e957071e731,sends,0,normal
 01992796-e424-703d-a270-4e352208c4bd,senna,0,normal
 01992796-e429-7065-c39f-d54bfa031e91,sensa,0,normal
@@ -8897,7 +8897,7 @@ id,word,is_banned,warning_level
 01992796-f0d3-70f7-4266-37e2c638c637,spelt,0,normal
 01992796-f0fe-70c3-2b8e-44a9849b798c,spend,0,normal
 01992796-f11b-7051-f4d1-3bb2cbe20987,spent,0,normal
-01992796-f121-7088-16d3-dfe4d88a2c40,sperm,0,normal
+01992796-f121-7088-16d3-dfe4d88a2c40,sperm,0,caution
 01992796-f126-70ba-e448-b9c7b94a4479,spews,0,normal
 01992796-f12b-7093-7385-41b8d608a319,spica,0,normal
 01992796-f133-7095-9f5a-e7749380c868,spice,0,normal
@@ -9722,7 +9722,7 @@ id,word,is_banned,warning_level
 01992797-0ef7-70ad-549a-0a62cdddeafa,vowel,0,normal
 01992797-0f14-7026-d1a3-bcc39ecb1f3c,vower,0,normal
 01992797-0f19-70cd-4f24-c982306b8558,vults,0,normal
-01992797-0f1e-702b-d090-5f2ab8195561,vulva,0,normal
+01992797-0f1e-702b-d090-5f2ab8195561,vulva,0,offensive
 01992797-0f23-70e5-5602-071e82306c8c,vying,0,normal
 01992797-0f28-7078-b624-92717e253ec9,wacky,0,normal
 01992797-0f2d-7032-a292-f5127c39a89b,waded,0,normal
@@ -11840,7 +11840,7 @@ id,word,is_banned,warning_level
 01992797-553e-70f0-85cb-67a50427b514,concha,0,normal
 01992797-5543-7044-1cc0-6ad5e9119bd5,conchs,0,normal
 01992797-5548-7057-370c-99d76a8f8a09,concur,0,normal
-01992797-554e-708e-acb3-7b4e16845419,condom,0,normal
+01992797-554e-708e-acb3-7b4e16845419,condom,0,caution
 01992797-5553-7082-40bb-e54ac5fb9704,condor,0,normal
 01992797-555c-704f-7e8b-3b8a0061e65c,condos,0,normal
 01992797-5561-701a-6fdc-006f287efd78,coneys,0,normal
@@ -12024,7 +12024,7 @@ id,word,is_banned,warning_level
 01992797-5b11-707d-b926-937075fc8dcf,crooks,0,normal
 01992797-5b16-7062-7d4b-0125b724916a,croons,0,normal
 01992797-5b1c-705d-96d7-70ab0828aef2,crosby,0,normal
-01992797-5b21-70ae-90c9-3ed9850db35a,crotch,0,normal
+01992797-5b21-70ae-90c9-3ed9850db35a,crotch,0,caution
 01992797-5b26-70a9-3e3b-6e770bcfec30,crotin,0,normal
 01992797-5b2b-702b-47e4-9f705558ba9c,croton,0,normal
 01992797-5b30-70dd-7ee0-e4d788241b1a,crouch,0,normal
@@ -13123,7 +13123,7 @@ id,word,is_banned,warning_level
 01992797-7f49-702d-a2a4-4e991499c200,fester,0,normal
 01992797-7f4e-70b9-9eea-b9e23e8f12ae,fetich,0,normal
 01992797-7f54-7031-ed0b-731d3acc4d1d,feting,0,normal
-01992797-7f6a-70ab-0208-23978dfa3b39,fetish,0,normal
+01992797-7f6a-70ab-0208-23978dfa3b39,fetish,0,caution
 01992797-7f79-706e-7b1e-2359518dcf63,fetter,0,normal
 01992797-7f7f-7084-6b8c-7cc66ed1ce91,fettle,0,normal
 01992797-7f83-706b-65b9-6f01b894bcf1,feudal,0,normal
@@ -13620,7 +13620,7 @@ id,word,is_banned,warning_level
 01992797-8ff0-7093-a993-e7c835b0d106,gifted,0,normal
 01992797-8ff6-70ad-4d7a-7cfe82914ed4,giggle,0,normal
 01992797-8ffc-703b-adae-60d819f37676,giggly,0,normal
-01992797-9006-70ee-417e-b30503feeeaf,gigolo,0,normal
+01992797-9006-70ee-417e-b30503feeeaf,gigolo,0,offensive
 01992797-900b-709e-0a58-9afa14781d2b,gilded,0,normal
 01992797-9011-707f-fb6c-298a3774a2cd,gilder,0,normal
 01992797-9016-701b-2052-3a2e388d1add,gimlet,0,normal
@@ -14167,7 +14167,7 @@ id,word,is_banned,warning_level
 01992797-a3a6-701f-8021-286685698042,hoofer,0,normal
 01992797-a3ab-70cc-37ad-bfb4494fb28f,hookah,0,normal
 01992797-a3b1-70b3-d511-d6fd6d2b8f4c,hooked,0,normal
-01992797-a3bd-70ce-2244-ebcd3fd776cb,hooker,0,normal
+01992797-a3bd-70ce-2244-ebcd3fd776cb,hooker,0,offensive
 01992797-a3c2-7094-84d9-afe1591d8339,hookey,0,normal
 01992797-a3da-7094-3a67-577d6fb12bc3,hookup,0,normal
 01992797-a3df-704d-3a39-739385e1d78f,hooper,0,normal
@@ -14331,7 +14331,7 @@ id,word,is_banned,warning_level
 01992797-a946-7031-fd60-ea727c1802c5,inborn,0,normal
 01992797-a952-70d4-d3a6-c6ec49a9754b,inbred,0,normal
 01992797-a960-701b-a7f0-bde12d3eb0b8,incase,0,normal
-01992797-a965-7089-84f8-4e9f332211f1,incest,0,normal
+01992797-a965-7089-84f8-4e9f332211f1,incest,0,offensive
 01992797-a96a-7083-ba1b-596e1a38c948,inched,0,normal
 01992797-a971-700f-7107-d207ad4e7f90,inches,0,normal
 01992797-a977-7055-f8dc-635a9cfc1b92,incise,0,normal
@@ -14794,7 +14794,7 @@ id,word,is_banned,warning_level
 01992797-b985-70e3-b4da-293cb4cfee3b,lamaze,0,normal
 01992797-b98a-705d-2293-789eb19cfa0e,lambda,0,normal
 01992797-b98f-7059-91cc-4b137f42cd3a,lambed,0,normal
-01992797-b994-70bc-01d0-0ccfe50d91af,lamely,0,normal
+01992797-b994-70bc-01d0-0ccfe50d91af,lamely,0,caution
 01992797-b99a-70bb-99cb-2f881eff9f21,lament,0,normal
 01992797-b9a1-70c8-8540-b4c2ae20999d,lamest,0,normal
 01992797-b9bf-7045-85c9-5f7f6166de25,lamias,0,normal
@@ -14906,7 +14906,7 @@ id,word,is_banned,warning_level
 01992797-bd63-707e-b40a-165153ad6b0d,leaven,0,normal
 01992797-bd69-7000-da44-c819297f028d,leaver,0,normal
 01992797-bd70-70be-0d07-fee16c7712f3,leaves,0,normal
-01992797-bd75-708a-dcae-d007b36bfeb4,lecher,0,normal
+01992797-bd75-708a-dcae-d007b36bfeb4,lecher,0,offensive
 01992797-bd7b-708c-a07c-8c4bd0328b20,lectin,0,normal
 01992797-bd80-70ff-9c0f-792e7ce3fc44,ledger,0,normal
 01992797-bd88-705e-0e29-a5bec9b326a3,ledges,0,normal
@@ -15174,7 +15174,7 @@ id,word,is_banned,warning_level
 01992797-c96b-7047-3740-9a4382c34923,luring,0,normal
 01992797-c972-70d5-bf3e-f81fb21e812c,lurked,0,normal
 01992797-c977-705a-402f-2e572bd29a8e,lushes,0,normal
-01992797-c97d-70f6-26da-d38f53f3c70a,lusted,0,normal
+01992797-c97d-70f6-26da-d38f53f3c70a,lusted,0,caution
 01992797-c986-70df-3b8d-11ac2bd29c96,luster,0,normal
 01992797-c98c-7019-be6b-df1ae32306b4,lustre,0,normal
 01992797-c991-7074-2a73-c47c202b78d6,luteae,0,normal
@@ -15578,7 +15578,7 @@ id,word,is_banned,warning_level
 01992797-d7f1-7092-8e10-a60e547a6692,molars,0,normal
 01992797-d7f7-70a6-8cca-4e28e0e9ece1,molded,0,normal
 01992797-d7fc-70a1-81a6-bab24d69288e,molder,0,normal
-01992797-d80c-704f-e27e-ce8f6136ef08,molest,0,normal
+01992797-d80c-704f-e27e-ce8f6136ef08,molest,0,offensive
 01992797-d811-705d-b987-7acc8e64483e,molted,0,normal
 01992797-d816-7060-2494-789eaf91c62f,molten,0,normal
 01992797-d81b-7096-6433-d3882e4f021f,molter,0,normal
@@ -15857,7 +15857,7 @@ id,word,is_banned,warning_level
 01992797-e1b6-70fd-1058-88a3970a7010,ninths,0,normal
 01992797-e1bc-7000-d31e-2043f2f0da74,nipped,0,normal
 01992797-e1c4-70b5-2fcd-74dcf32c0287,nipper,0,normal
-01992797-e1c9-709b-7579-fc849f90f412,nipple,0,normal
+01992797-e1c9-709b-7579-fc849f90f412,nipple,0,caution
 01992797-e1cf-7081-4f07-36fc4a7f9c8f,nippon,0,normal
 01992797-e1d6-70f8-2efb-5fec7eb40b19,niseis,0,normal
 01992797-e1db-705c-8276-c88851fbf5d7,nitric,0,normal
@@ -16078,7 +16078,7 @@ id,word,is_banned,warning_level
 01992797-e975-70de-d590-52eca36f40f5,orexia,0,normal
 01992797-e985-7008-4955-d117ffb58c9f,orexis,0,normal
 01992797-e992-7078-7c03-9d074e714d2d,organs,0,normal
-01992797-e998-70fb-5ee8-6f75fa829f95,orgasm,0,normal
+01992797-e998-70fb-5ee8-6f75fa829f95,orgasm,0,offensive
 01992797-e99f-700d-8367-7b338e2c3481,orgies,0,normal
 01992797-e9a4-70ea-0d87-79cb8e624223,oriels,0,normal
 01992797-e9a9-70ec-3236-7ac1587542ec,orient,0,normal
@@ -16470,7 +16470,7 @@ id,word,is_banned,warning_level
 01992797-f503-7076-d9da-b706f9ca08cb,pilose,0,normal
 01992797-f50b-70e0-0166-f9ac7236b8f7,pilots,0,normal
 01992797-f510-70ab-733c-d77ff85adc3d,pilule,0,normal
-01992797-f517-709f-6312-33c84f3416d2,pimped,0,normal
+01992797-f517-709f-6312-33c84f3416d2,pimped,0,offensive
 01992797-f51c-70db-cf7d-05a11895a064,pimple,0,normal
 01992797-f521-7015-3cec-e8c72a7efa65,pimply,0,normal
 01992797-f526-700f-1c60-8b995bfcdc58,pincer,0,normal
@@ -16630,7 +16630,7 @@ id,word,is_banned,warning_level
 01992797-f970-70ff-d635-86fe64fcc0cb,pontic,0,normal
 01992797-f975-70b8-3af8-29e80b806269,poodle,0,normal
 01992797-f97b-70e9-53e2-72948e0c90af,pooled,0,normal
-01992797-f980-70ba-95bb-eb6436e2c73d,pooped,0,normal
+01992797-f980-70ba-95bb-eb6436e2c73d,pooped,0,caution
 01992797-f9a3-70de-9d7a-8a45bad60184,pooper,0,normal
 01992797-f9a8-7093-50d7-46d869845a35,poorer,0,normal
 01992797-f9ae-70fc-4e93-f61484582edf,poorly,0,normal
@@ -16794,7 +16794,7 @@ id,word,is_banned,warning_level
 01992797-feb6-7048-b8c0-99beed642fc0,puffer,0,normal
 01992797-febc-7032-bc15-36d06fba5681,puffin,0,normal
 01992797-fec2-7085-15d9-007446033d28,puisne,0,normal
-01992797-fec6-7011-dd1f-04b6867bd5b9,puking,0,normal
+01992797-fec6-7011-dd1f-04b6867bd5b9,puking,0,caution
 01992797-fecb-701e-6dc6-98a77d79ea25,pulled,0,normal
 01992797-fed9-70fb-7766-99ca276892a3,puller,0,normal
 01992797-fedf-7079-74dc-ed118d8d1ce6,pullet,0,normal
@@ -17001,8 +17001,8 @@ id,word,is_banned,warning_level
 01992798-058c-704f-6717-3ce7d05d62d2,rapids,0,normal
 01992798-0590-70f6-58d7-2a4e09453e65,rapier,0,normal
 01992798-0596-7042-1bc0-6fea49ae8db9,rapine,0,normal
-01992798-059b-70f3-9719-b850671534c4,raping,0,normal
-01992798-05a2-7038-cd59-58af61d816e6,rapist,0,normal
+01992798-059b-70f3-9719-b850671534c4,raping,0,offensive
+01992798-05a2-7038-cd59-58af61d816e6,rapist,0,offensive
 01992798-05a7-703f-86e4-e1bc08f6b4a3,rapped,0,normal
 01992798-05ab-7016-824b-f0d146ebc518,rapper,0,normal
 01992798-05b0-702a-8930-551c8d6c7711,raptly,0,normal
@@ -17096,10 +17096,10 @@ id,word,is_banned,warning_level
 01992798-07d7-70cd-d8cf-84283aaeb88d,recopy,0,normal
 01992798-07dc-709b-6218-5252a74a80a2,record,0,normal
 01992798-07e2-70ac-764b-168c79bc4318,recoup,0,normal
-01992798-07e7-70b2-30db-b600e05d32e6,rectal,0,normal
+01992798-07e7-70b2-30db-b600e05d32e6,rectal,0,caution
 01992798-07eb-70e5-cb46-fd20acf9dd63,rector,0,normal
 01992798-07f0-705c-a114-814bf2d86570,rectos,0,normal
-01992798-07f5-7002-bca6-093c11a2f8f2,rectum,0,normal
+01992798-07f5-7002-bca6-093c11a2f8f2,rectum,0,caution
 01992798-07fb-70d2-46e8-b8df356c7c28,rectus,0,normal
 01992798-0801-7057-3817-caae081f8332,recurs,0,normal
 01992798-0812-7074-ac02-04104426f34e,recuse,0,normal
@@ -17618,7 +17618,7 @@ id,word,is_banned,warning_level
 01992798-17a4-70e3-b0c6-d1c15563f49b,saunas,0,normal
 01992798-17bf-702d-0ebf-93a3745e7a46,sauted,0,normal
 01992798-17c5-70f4-f2de-80e8076e1007,sautes,0,normal
-01992798-17ca-70f5-b29b-f4f4e6a27b81,savage,0,normal
+01992798-17ca-70f5-b29b-f4f4e6a27b81,savage,0,caution
 01992798-17d0-7013-de1e-fc93ece5b2ce,savant,0,normal
 01992798-17d7-70f1-4ba3-51ab63ef82bd,savers,0,normal
 01992798-17dc-702a-9f9c-2f16e534591e,saving,0,normal
@@ -17748,7 +17748,7 @@ id,word,is_banned,warning_level
 01992798-1b72-7001-ae63-e75c175e93c6,sedate,0,normal
 01992798-1b77-7024-6280-59403342b2b2,seders,0,normal
 01992798-1b82-7065-e341-9c4ca558c7dd,sedges,0,normal
-01992798-1b87-70fd-5acc-ee4488e0c53a,seduce,0,normal
+01992798-1b87-70fd-5acc-ee4488e0c53a,seduce,0,caution
 01992798-1b8b-70d3-71bc-5b95d877ce9f,seeded,0,normal
 01992798-1b90-70b4-a621-b42392707c1b,seeder,0,normal
 01992798-1b95-7016-1d50-3a3045c7171c,seeing,0,normal
@@ -18206,7 +18206,7 @@ id,word,is_banned,warning_level
 01992798-28b5-7035-5610-4f59d313e646,sodden,0,normal
 01992798-28bc-70ab-88a6-a753a956b27b,sodium,0,normal
 01992798-28c2-7050-1fae-061763a71b93,sodoku,0,normal
-01992798-28c7-708e-0d99-d665751c2e90,sodomy,0,normal
+01992798-28c7-708e-0d99-d665751c2e90,sodomy,0,offensive
 01992798-28cc-7049-bcd3-e917b64c5ce5,soever,0,normal
 01992798-28d3-7066-5266-09fac8fa8bca,soften,0,normal
 01992798-28d7-7052-3e3e-7db61a6197ce,softer,0,normal
@@ -18756,7 +18756,7 @@ id,word,is_banned,warning_level
 01992798-3d1b-7032-604e-640a07081039,taming,0,normal
 01992798-3d1f-70f0-0446-52c7ee52cf18,tamped,0,normal
 01992798-3d24-700b-ef89-e2d0689cd249,tamper,0,normal
-01992798-3d29-70f4-edc2-06d8273ab0bf,tampon,0,normal
+01992798-3d29-70f4-edc2-06d8273ab0bf,tampon,0,caution
 01992798-3d2e-70ae-28be-400764e1366d,tandem,0,normal
 01992798-3d33-707f-368f-2b2a501371fa,tangle,0,normal
 01992798-3d39-7090-e4c6-309d84bd237c,tangos,0,normal
@@ -19502,7 +19502,7 @@ id,word,is_banned,warning_level
 01992798-582c-70ad-f6c7-04bda50322a3,vadium,0,normal
 01992798-5832-70c6-f885-b3f09724ef3e,vagary,0,normal
 01992798-5837-706a-5778-543c2e357ed9,vagged,0,normal
-01992798-585c-70c4-4921-ca9072895922,vagina,0,normal
+01992798-585c-70c4-4921-ca9072895922,vagina,0,caution
 01992798-5861-709f-b4aa-3610af3a15be,vaguer,0,normal
 01992798-5866-7076-1404-d82e5d474fb5,vainly,0,normal
 01992798-586c-709b-e8ba-ea6334d9a3a2,vakeel,0,normal
@@ -21537,7 +21537,7 @@ id,word,is_banned,warning_level
 01992798-9edf-704e-755f-7d55330065fc,bombing,0,normal
 01992798-9eee-70be-c089-6c834aecbdee,bonanza,0,normal
 01992798-9ef4-706e-5f8e-acb37c5225c7,bonbons,0,normal
-01992798-9efa-7073-e938-5a1c7e2336a5,bondage,0,normal
+01992798-9efa-7073-e938-5a1c7e2336a5,bondage,0,caution
 01992798-9eff-7097-075b-b57a40d4647a,bonders,0,normal
 01992798-9f05-7035-9d74-6bbc6deb50d0,bonding,0,normal
 01992798-9f0b-7020-3092-4abcd0dde2d3,bondman,0,normal
@@ -21745,7 +21745,7 @@ id,word,is_banned,warning_level
 01992798-a64f-70bb-536f-33b0d92d572c,brooder,0,normal
 01992798-a664-70d8-b500-e16865c198b3,brooked,0,normal
 01992798-a669-70b8-815b-4752c5e21be4,broomed,0,normal
-01992798-a66e-7022-ff97-f60b537f810b,brothel,0,normal
+01992798-a66e-7022-ff97-f60b537f810b,brothel,0,offensive
 01992798-a672-70b2-5bb2-68f592f826d5,brother,0,normal
 01992798-a677-70b6-1132-c9585dcbdef5,brought,0,normal
 01992798-a67b-702f-0db7-6aee673cf823,browned,0,normal
@@ -22780,7 +22780,7 @@ id,word,is_banned,warning_level
 01992798-cab8-7056-8492-4ed0254c0d5c,condemn,0,normal
 01992798-cabf-70a5-25ce-947baae57ab4,condign,0,normal
 01992798-cac5-7015-4e47-798b4cdb625b,condole,0,normal
-01992798-cacb-70a2-1a9c-bee12e45cc30,condoms,0,normal
+01992798-cacb-70a2-1a9c-bee12e45cc30,condoms,0,caution
 01992798-cad3-708a-2415-fdb591b8e347,condone,0,normal
 01992798-cad9-70be-de20-05b78881ee23,condors,0,normal
 01992798-cae0-70e7-1cd5-d4a7c9f67566,conduce,0,normal
@@ -23282,7 +23282,7 @@ id,word,is_banned,warning_level
 01992798-dc52-70ee-0655-96f0f0e08e2a,damages,0,normal
 01992798-dc57-7026-42d6-6b94a47972d0,damming,0,normal
 01992798-dc5c-70bb-36df-b8fdcbfd94ec,damnify,0,normal
-01992798-dc62-70e1-a184-b2ee8f0157b4,damning,0,normal
+01992798-dc62-70e1-a184-b2ee8f0157b4,damning,0,caution
 01992798-dc68-707f-5d58-a01796aa90d3,damnosa,0,normal
 01992798-dc6e-706f-b22c-c8649fedc410,dampens,0,normal
 01992798-dc73-7002-dc45-c409e047c2f8,dampers,0,normal
@@ -25381,7 +25381,7 @@ id,word,is_banned,warning_level
 01992799-2435-7067-7720-3ac3215e7428,genesis,0,normal
 01992799-243d-706f-b027-b30b1e76f461,genetic,0,normal
 01992799-2443-700a-1034-d386221b1f4b,genghis,0,normal
-01992799-2457-701b-a5e8-9d56da3ea891,genital,0,normal
+01992799-2457-701b-a5e8-9d56da3ea891,genital,0,caution
 01992799-245d-70dc-996c-504c8dddabc2,genitor,0,normal
 01992799-2462-70c8-a5df-6e8b6c7a2239,genomic,0,normal
 01992799-2467-70bb-f9ae-7a59528dcc57,genteel,0,normal
@@ -25448,7 +25448,7 @@ id,word,is_banned,warning_level
 01992799-2609-70a1-d02d-71b01e8642bb,gingiva,0,normal
 01992799-2611-70e1-335d-3a09826d9cc5,ginning,0,normal
 01992799-2616-7005-cdf1-50bec7aafcf0,ginseng,0,normal
-01992799-261b-70bd-e231-4ffaf6e07ed5,gipsies,0,normal
+01992799-261b-70bd-e231-4ffaf6e07ed5,gipsies,0,caution
 01992799-2628-70b3-fddb-50011464b55f,giraffe,0,normal
 01992799-262f-70bc-909b-58e77aaffee8,girders,0,normal
 01992799-2634-708e-0fa2-ff1467c8b224,girding,0,normal
@@ -25996,7 +25996,7 @@ id,word,is_banned,warning_level
 01992799-36c0-70fe-125f-a727cc894bdd,hearten,0,normal
 01992799-36c4-706f-9499-427fb7143fff,hearths,0,normal
 01992799-36ca-703e-3c73-8b5f3c0d8fa4,heaters,0,normal
-01992799-36d4-7086-b2eb-80bf3bedf1ec,heathen,0,normal
+01992799-36d4-7086-b2eb-80bf3bedf1ec,heathen,0,caution
 01992799-36d9-70c8-286f-b332e3d78d3d,heather,0,normal
 01992799-36de-708a-f942-5e1036deb4ec,heating,0,normal
 01992799-36e6-707f-b922-7e10d6ff7b6a,heavens,0,normal
@@ -26198,7 +26198,7 @@ id,word,is_banned,warning_level
 01992799-3c6e-70c8-ee4f-c0d5eb16b02c,hoodoos,0,normal
 01992799-3c74-70cc-7c05-a52ced1fd5ce,hoofing,0,normal
 01992799-3c7a-7084-2b4c-fd0d4c55c3d1,hookahs,0,normal
-01992799-3c85-70cd-9069-5fa00436005d,hookers,0,normal
+01992799-3c85-70cd-9069-5fa00436005d,hookers,0,offensive
 01992799-3c8d-70d5-10d2-ec24f14ca65e,hooking,0,normal
 01992799-3c99-70e3-570a-2cbe33c74b23,hooklet,0,normal
 01992799-3ca0-70cd-9a9c-3e6437ebf0ee,hookups,0,normal
@@ -26216,7 +26216,7 @@ id,word,is_banned,warning_level
 01992799-3ddf-70d4-d29b-9412a1eec305,horizon,0,normal
 01992799-3de4-70cf-ff8c-c3288314df1e,hormone,0,normal
 01992799-3ded-70f9-82a2-a34984ba153d,hornets,0,normal
-01992799-3df5-70f1-fe25-be483019ef5d,hornier,0,normal
+01992799-3df5-70f1-fe25-be483019ef5d,hornier,0,offensive
 01992799-3dfa-7005-01f9-d8500a3f1fde,horning,0,normal
 01992799-3e01-70f9-4363-29a4b8af423d,horrify,0,normal
 01992799-3e08-706e-6fe0-13c28f85ef1a,horrors,0,normal
@@ -26367,7 +26367,7 @@ id,word,is_banned,warning_level
 01992799-42b6-7007-db32-68750fee778d,idahoan,0,normal
 01992799-42bb-705b-2091-749487e9f615,ideally,0,normal
 01992799-42c1-7085-5e46-4485cb6bb64e,identic,0,normal
-01992799-42c7-7065-0d12-36d79255f3c3,idiotic,0,normal
+01992799-42c7-7065-0d12-36d79255f3c3,idiotic,0,caution
 01992799-42cd-70f5-83ae-dc46c91a287d,idolize,0,normal
 01992799-42df-70f8-6204-ed96270297ed,idyllic,0,normal
 01992799-42e6-70db-80f1-333055198139,ignatia,0,normal
@@ -27189,8 +27189,8 @@ id,word,is_banned,warning_level
 01992799-5b69-701e-2d84-10c4a5edb2b3,leavers,0,normal
 01992799-5b6e-7069-f488-d075dceb065e,leaving,0,normal
 01992799-5b87-70c5-bf6e-e943941cd0bc,lebanon,0,normal
-01992799-5b8d-703d-fe3f-428dfb435c05,lechers,0,normal
-01992799-5b93-7004-0718-64a925bf4d44,lechery,0,normal
+01992799-5b8d-703d-fe3f-428dfb435c05,lechers,0,offensive
+01992799-5b93-7004-0718-64a925bf4d44,lechery,0,offensive
 01992799-5b98-706b-4f47-788532697a25,lectern,0,normal
 01992799-5ba2-704e-178a-6c813eb6d60b,lecture,0,normal
 01992799-5ba8-70b5-67e6-4abfdd16d8f6,ledgers,0,normal
@@ -27520,10 +27520,10 @@ id,word,is_banned,warning_level
 01992799-64bd-70c4-bd63-b87007d40fd1,lurches,0,normal
 01992799-64c2-70e7-11a1-f3dc75b427a9,luridly,0,normal
 01992799-64c7-70d5-2f6d-96a7819154ef,lurking,0,normal
-01992799-64cc-70b2-ae50-86add00ac1a7,lustful,0,normal
+01992799-64cc-70b2-ae50-86add00ac1a7,lustful,0,caution
 01992799-64d4-7003-1a77-07c0a90e4e5a,lustier,0,normal
 01992799-64ec-70d8-2b51-15750cde3363,lustily,0,normal
-01992799-64f3-7057-8cb8-f2920563e242,lusting,0,normal
+01992799-64f3-7057-8cb8-f2920563e242,lusting,0,caution
 01992799-64f8-70a5-7148-148b7fd8bc24,luteoma,0,normal
 01992799-64fe-7080-14e5-3d83d7aace0b,lutists,0,normal
 01992799-6503-70cb-d7d4-9f9f406433d6,luxated,0,normal
@@ -28079,7 +28079,7 @@ id,word,is_banned,warning_level
 01992799-75fd-709a-21d8-d49d940d8572,molders,0,normal
 01992799-760b-70ab-020b-2fcb69ae2bcd,moldier,0,normal
 01992799-7611-7081-211f-3ac62e976845,molding,0,normal
-01992799-7617-701f-cfae-f9d640c001c4,molests,0,normal
+01992799-7617-701f-cfae-f9d640c001c4,molests,0,offensive
 01992799-7622-70d3-d2a4-bcc39bbfea54,moliere,0,normal
 01992799-7627-70e7-8afb-4a83afe36140,molimen,0,normal
 01992799-762e-701b-c792-88f220cc9fb4,molisch,0,normal
@@ -28479,7 +28479,7 @@ id,word,is_banned,warning_level
 01992799-8350-707f-c149-29f54da34a87,nippers,0,normal
 01992799-8356-70c4-4302-434aa86b2165,nippier,0,normal
 01992799-8375-7095-bbe8-5800fae382e0,nipping,0,normal
-01992799-837b-70d9-9f92-fc371ef15bf5,nipples,0,normal
+01992799-837b-70d9-9f92-fc371ef15bf5,nipples,0,caution
 01992799-8380-70bb-c6b0-1e884ce6994a,nirvana,0,normal
 01992799-8386-70aa-723d-db9145a67040,nitpick,0,normal
 01992799-838c-70ee-e7bc-f6991bbe66c2,nitrate,0,normal
@@ -28792,7 +28792,7 @@ id,word,is_banned,warning_level
 01992799-8ddb-7013-b344-3b5b1a6edbfb,organon,0,normal
 01992799-8de1-7056-bfba-67d4f1394bcb,organum,0,normal
 01992799-8de6-7018-172b-9155f8da582d,organza,0,normal
-01992799-8deb-70da-ba15-3df1fe24bc3e,orgasms,0,normal
+01992799-8deb-70da-ba15-3df1fe24bc3e,orgasms,0,offensive
 01992799-8e0d-7003-55a1-27e1f00e782d,orients,0,normal
 01992799-8e13-7078-d2b2-06060f39f108,orifice,0,normal
 01992799-8e1a-7057-9a00-32f8446c5153,origami,0,normal
@@ -29217,7 +29217,7 @@ id,word,is_banned,warning_level
 01992799-9c5a-7014-9dd3-47eed048f906,pendent,0,normal
 01992799-9c5f-7033-eb00-3f3b6c6cd6ea,pending,0,normal
 01992799-9c84-7011-98c7-1b32a9baa50e,penguin,0,normal
-01992799-9c89-7056-838d-3a7bb92bb0ec,penises,0,normal
+01992799-9c89-7056-838d-3a7bb92bb0ec,penises,0,caution
 01992799-9c90-7090-0980-657b39acb171,pennant,0,normal
 01992799-9c95-7022-5750-8cca4f2fff6e,pennate,0,normal
 01992799-9c9a-7027-7cf6-59df4de6963e,pennies,0,normal
@@ -29412,7 +29412,7 @@ id,word,is_banned,warning_level
 01992799-a361-708e-5917-68c397aa8dc4,pilular,0,normal
 01992799-a367-702d-9564-34d9a3a652aa,pimelic,0,normal
 01992799-a377-705b-cbe6-1de008878f37,pimento,0,normal
-01992799-a390-7064-4e5e-ec81c4514b81,pimping,0,normal
+01992799-a390-7064-4e5e-ec81c4514b81,pimping,0,offensive
 01992799-a395-70a6-bcbb-720be24bce28,pimpled,0,normal
 01992799-a39b-705c-569b-04444aa660f0,pimples,0,normal
 01992799-a3a2-708f-fb3b-3762473c5907,pinball,0,normal
@@ -30092,8 +30092,8 @@ id,word,is_banned,warning_level
 01992799-b93c-7059-32f3-29f24275832f,queened,0,normal
 01992799-b943-7064-69e1-2828511b9493,queenly,0,normal
 01992799-b948-7025-ff8d-c42d95612aae,queered,0,caution
-01992799-b94c-70e9-83d5-a0a2498ad899,queerer,0,normal
-01992799-b951-7078-8b4f-edb5c1a5f7e5,queerly,0,normal
+01992799-b94c-70e9-83d5-a0a2498ad899,queerer,0,caution
+01992799-b951-7078-8b4f-edb5c1a5f7e5,queerly,0,caution
 01992799-b956-7094-344c-de75ae09218d,quelled,0,normal
 01992799-b95c-7060-36f0-0e752147012e,queller,0,normal
 01992799-b961-70e6-f516-908e19d1ca7e,querela,0,normal
@@ -30233,7 +30233,7 @@ id,word,is_banned,warning_level
 01992799-bd14-7000-7135-b6ef88ddbb10,raphael,0,normal
 01992799-bd19-7020-6ec9-a2ce2346f5f6,rapidly,0,normal
 01992799-bd21-70ef-cc2f-881aea47a461,rapiers,0,normal
-01992799-bd27-70fa-bfce-c98439933551,rapists,0,normal
+01992799-bd27-70fa-bfce-c98439933551,rapists,0,offensive
 01992799-bd2c-70f7-e181-e3eae9d25e63,rappers,0,normal
 01992799-bd31-70d4-fa69-1e5b6c0dfdcc,rapping,0,normal
 01992799-bd3c-7007-bc9a-ce37acb68d9d,rapport,0,normal
@@ -31131,7 +31131,7 @@ id,word,is_banned,warning_level
 01992799-dbe9-7025-f145-88d8a09920d3,savable,0,normal
 01992799-dbef-70bf-4313-96b5cad3c046,savaged,0,normal
 01992799-dbf7-7021-d2b7-1f75ed417fb8,savager,0,normal
-01992799-dbfd-701b-5f8c-9e756cc1803e,savages,0,normal
+01992799-dbfd-701b-5f8c-9e756cc1803e,savages,0,caution
 01992799-dc08-70b7-d711-cfd9d28f5704,savanna,0,normal
 01992799-dc0e-700f-4119-bb5a94d4688e,savants,0,normal
 01992799-dc13-708e-1eeb-3c6e71eb469d,savings,0,normal
@@ -31261,7 +31261,7 @@ id,word,is_banned,warning_level
 01992799-dff1-707f-8f4f-dd6666cccb92,scrolls,0,normal
 01992799-dff6-707b-b209-1a64aa24b51f,scrooge,0,normal
 01992799-dffb-707e-17f9-9b1dbf64b86b,scrotal,0,normal
-01992799-e001-70f1-736b-c1855725b30f,scrotum,0,normal
+01992799-e001-70f1-736b-c1855725b30f,scrotum,0,caution
 01992799-e00a-7036-dfb9-03e46b6bd6ef,scrubby,0,normal
 01992799-e00f-702a-07a2-178c7abd4318,scruffs,0,normal
 01992799-e015-70b2-33e7-eadd944cc1e2,scruffy,0,normal
@@ -31324,10 +31324,10 @@ id,word,is_banned,warning_level
 01992799-e1dc-702a-a6be-c6a3df73a4d9,secures,0,normal
 01992799-e1e2-7052-115d-a00a50745653,sedated,0,normal
 01992799-e1e7-709d-179e-d036a07d9161,sedates,0,normal
-01992799-e1ed-7030-d080-0fcbcb989521,seduced,0,normal
+01992799-e1ed-7030-d080-0fcbcb989521,seduced,0,caution
 01992799-e1f3-70e7-22f4-5ffdd841bce9,seducee,0,normal
 01992799-e1f8-7059-050d-33d8a2a03a45,seducer,0,normal
-01992799-e1fd-70ab-869e-87c95962e03c,seduces,0,normal
+01992799-e1fd-70ab-869e-87c95962e03c,seduces,0,caution
 01992799-e20b-708b-036f-246798c205d0,seeable,0,normal
 01992799-e211-7004-a323-c9853da1704f,seeders,0,normal
 01992799-e217-703b-3b75-97972c19f991,seedier,0,normal
@@ -31580,7 +31580,7 @@ id,word,is_banned,warning_level
 01992799-eaae-7009-721e-42f1eed6636c,shutout,0,normal
 01992799-eab3-70f4-80a7-c1d1d4aff2ab,shutter,0,normal
 01992799-eab7-7084-9457-fadb5a33ef12,shuttle,0,normal
-01992799-eabc-7090-9b55-da43c201c1c0,shylock,0,normal
+01992799-eabc-7090-9b55-da43c201c1c0,shylock,0,caution
 01992799-eadd-707d-3180-eb1bc68c6c79,shyness,0,normal
 01992799-eae3-7018-1007-f2a8713fe9cf,shyster,0,normal
 01992799-eae8-704f-20b3-20884ad96054,sialoid,0,normal
@@ -32721,7 +32721,7 @@ id,word,is_banned,warning_level
 0199279a-1343-70df-9a62-1d6cc7a1cd1f,tambour,0,normal
 0199279a-1348-7035-aec8-ddfa4b89cc63,tampers,0,normal
 0199279a-134e-708a-880d-a71ea3d33799,tamping,0,normal
-0199279a-1355-705b-fcda-4ffe0831dbb5,tampons,0,normal
+0199279a-1355-705b-fcda-4ffe0831dbb5,tampons,0,caution
 0199279a-1364-70fb-c7f2-65268c4ee17d,tanager,0,normal
 0199279a-1369-70cf-9476-9587e3da9b7a,tanbark,0,normal
 0199279a-137a-7090-623d-0976339f80a6,tandems,0,normal
@@ -33731,7 +33731,7 @@ id,word,is_banned,warning_level
 0199279a-364a-704b-f1d5-552bd9bd2689,vacuums,0,normal
 0199279a-3651-703a-89ff-60e454f7d855,vagging,0,normal
 0199279a-365d-7023-aefd-e78d0b90b2c9,vaginae,0,normal
-0199279a-366e-70d8-ddc8-554f8bce648a,vaginal,0,normal
+0199279a-366e-70d8-ddc8-554f8bce648a,vaginal,0,caution
 0199279a-3674-7086-0278-52340da81fa3,vaginas,0,normal
 0199279a-3679-70d4-3baa-a5382c3481e9,vagitus,0,normal
 0199279a-3680-700a-783b-c1121a4d3212,vagrant,0,normal
@@ -34528,7 +34528,7 @@ id,word,is_banned,warning_level
 0199279a-5240-70a3-5ad6-2431891bec4b,abomasus,0,normal
 0199279a-5245-70b2-9bf2-eabef79918ae,aborning,0,normal
 0199279a-524a-701d-8852-041e89561051,aborting,0,normal
-0199279a-5253-7065-08f9-c5f062185358,abortion,0,normal
+0199279a-5253-7065-08f9-c5f062185358,abortion,0,caution
 0199279a-5259-70bd-ac26-bb36dba5aa62,abortive,0,normal
 0199279a-525e-70ed-7a9e-a9713ddfa59c,abounded,0,normal
 0199279a-5263-701c-b742-24f148971ac0,abradant,0,normal
@@ -36262,7 +36262,7 @@ id,word,is_banned,warning_level
 0199279a-9050-7096-9c4c-a96a1631b3ee,bootless,0,normal
 0199279a-9056-708c-f523-cfa6d01e286c,bootlick,0,normal
 0199279a-905b-70a8-0213-5b8cadbeb037,booziest,0,normal
-0199279a-9074-7004-6d15-2578ec3546bd,bordello,0,normal
+0199279a-9074-7004-6d15-2578ec3546bd,bordello,0,offensive
 0199279a-9079-70e0-2a31-77c264af4139,bordered,0,normal
 0199279a-907f-7058-0e3f-1094b4cbd8da,borderer,0,normal
 0199279a-9083-70ba-1332-c132b5f29e40,borealis,0,normal
@@ -36568,7 +36568,7 @@ id,word,is_banned,warning_level
 0199279a-9b16-700d-28a1-ae8281007d73,butchery,0,normal
 0199279a-9b1b-70c7-895a-25affce1708c,buttered,0,normal
 0199279a-9b1f-706f-854d-f4db6e939941,butterer,0,normal
-0199279a-9b24-707c-abe0-624b51b38ca6,buttocks,0,normal
+0199279a-9b24-707c-abe0-624b51b38ca6,buttocks,0,caution
 0199279a-9b2b-709b-1391-994eb9b55eb7,buttoned,0,normal
 0199279a-9b31-707a-3cbf-0af4a55de357,buttoner,0,normal
 0199279a-9b3c-700b-33e0-c744fe29d6b1,buttress,0,normal
@@ -37355,9 +37355,9 @@ id,word,is_banned,warning_level
 0199279a-b77c-704f-af7f-6faf1c833997,clipping,0,normal
 0199279a-b7a0-7048-a55f-ee88e0c743fb,cliquier,0,normal
 0199279a-b7a6-701f-acfd-efb6bf9cce31,cliquish,0,normal
-0199279a-b7aa-708d-2f45-cd32934cc1e2,clitoral,0,normal
+0199279a-b7aa-708d-2f45-cd32934cc1e2,clitoral,0,offensive
 0199279a-b7b0-702a-2952-20a8eb9f5ae7,clitoric,0,normal
-0199279a-b7b6-7076-9aa1-56caf15aef9c,clitoris,0,normal
+0199279a-b7b6-7076-9aa1-56caf15aef9c,clitoris,0,offensive
 0199279a-b7bc-7040-6d60-9ae3a0787afb,cloaking,0,normal
 0199279a-b7cb-7077-6491-aa9d1594a271,clobbers,0,normal
 0199279a-b7d1-704f-392f-43c1fcaa5fde,clockers,0,normal
@@ -37991,7 +37991,7 @@ id,word,is_banned,warning_level
 0199279a-ced4-7018-e73b-738d6861b04b,crinkled,0,normal
 0199279a-cedc-7068-2890-5a124c457784,crinkles,0,normal
 0199279a-cee1-702e-5b3f-2c1d10f8a860,crippled,0,caution
-0199279a-cf2f-70e8-6b60-9ef7fb011462,crippler,0,normal
+0199279a-cf2f-70e8-6b60-9ef7fb011462,crippler,0,caution
 0199279a-cf35-70af-4345-8ef72cf855bf,cripples,0,caution
 0199279a-cf3c-70bc-6ff9-91e8d87ff449,crispest,0,normal
 0199279a-cf41-7091-fa2e-f84fa3426329,crispier,0,normal
@@ -38967,7 +38967,7 @@ id,word,is_banned,warning_level
 0199279a-ecff-702b-abd7-306e97a989b4,doubters,0,normal
 0199279a-ed05-70e7-664d-4e9e2c048fc2,doubtful,0,normal
 0199279a-ed0c-701b-42fb-20ae081f8436,doubting,0,normal
-0199279a-ed11-7084-f22c-0aac403e748d,douching,0,normal
+0199279a-ed11-7084-f22c-0aac403e748d,douching,0,caution
 0199279a-ed17-7063-4a4b-9715a4f4da66,doughboy,0,normal
 0199279a-ed1d-7072-09d5-12d8048baec4,doughier,0,normal
 0199279a-ed22-70cc-b213-4c447168b656,doughnut,0,normal
@@ -39584,7 +39584,7 @@ id,word,is_banned,warning_level
 0199279a-ff5f-70c3-c282-44cd37aec1ba,erasures,0,normal
 0199279a-ff64-7061-b569-ed673cf720ba,erectile,0,normal
 0199279a-ff69-7045-2c0b-b25dbb91a37e,erecting,0,normal
-0199279a-ff70-708b-3f9a-458ef521c780,erection,0,normal
+0199279a-ff70-708b-3f9a-458ef521c780,erection,0,caution
 0199279a-ff76-702c-5d4e-6f430242438b,erectors,0,normal
 0199279a-ff7c-70ed-ff36-12b65ba72ff9,eremites,0,normal
 0199279a-ff81-7052-ad6b-100f1d65a404,eremitic,0,normal
@@ -40034,7 +40034,7 @@ id,word,is_banned,warning_level
 0199279b-0ee6-70a1-6410-2486305e4952,fetchers,0,normal
 0199279b-0eec-70c2-d2d6-b91a576803d5,fetching,0,normal
 0199279b-0ef8-7022-2a6e-aa0726a8d943,feticide,0,normal
-0199279b-0efe-70c5-1107-f1a04fa962ef,fetishes,0,normal
+0199279b-0efe-70c5-1107-f1a04fa962ef,fetishes,0,caution
 0199279b-0f05-7084-c757-61df397fd29e,fetlocks,0,normal
 0199279b-0f0c-70a0-4887-cc68a4fc0319,fetology,0,normal
 0199279b-0f11-7075-fe96-f7116ffa94f5,fettered,0,normal
@@ -40412,7 +40412,7 @@ id,word,is_banned,warning_level
 0199279b-1a92-7002-8180-ff7a648a83f3,foreseen,0,normal
 0199279b-1a9c-7036-366e-8448df83f230,foreseer,0,normal
 0199279b-1ab0-701d-01ad-5ecff14ba559,foresees,0,normal
-0199279b-1ab5-70cf-0197-f0eed56164d3,foreskin,0,normal
+0199279b-1ab5-70cf-0197-f0eed56164d3,foreskin,0,caution
 0199279b-1abb-70f4-4a97-149fe084f43a,forestay,0,normal
 0199279b-1abf-7047-b6b9-7a38abae67f8,forested,0,normal
 0199279b-1ac4-70a3-477c-9987daacd00e,forester,0,normal
@@ -40761,7 +40761,7 @@ id,word,is_banned,warning_level
 0199279b-2614-700a-66e2-3a79b3134520,genetics,0,normal
 0199279b-261a-70d3-c048-26e713a81260,genially,0,normal
 0199279b-2620-70ab-3713-ba6ae53a7391,genicula,0,normal
-0199279b-2626-707c-bc36-ddb0d82840c8,genitals,0,normal
+0199279b-2626-707c-bc36-ddb0d82840c8,genitals,0,caution
 0199279b-262c-702b-7cef-353e9739570b,genitive,0,normal
 0199279b-2632-7033-dcb3-ed87dcb90a06,geniuses,0,normal
 0199279b-2637-7003-fce3-7dc873e82e2e,genocide,0,normal
@@ -41385,7 +41385,7 @@ id,word,is_banned,warning_level
 0199279b-3c2a-70b9-1953-56b38068876d,heartily,0,normal
 0199279b-3c2f-708c-74a2-cc191b3ad167,heatable,0,normal
 0199279b-3c34-7090-9d61-102eb603ed9a,heatedly,0,normal
-0199279b-3c3d-703b-5b14-556c1f565299,heathens,0,normal
+0199279b-3c3d-703b-5b14-556c1f565299,heathens,0,caution
 0199279b-3c42-7009-61c9-cb9daf96e09e,heathery,0,normal
 0199279b-3c4a-7078-7c06-ac4b70524c83,heatless,0,normal
 0199279b-3c67-70ad-d72f-6467d909a417,heavenly,0,normal
@@ -42520,7 +42520,7 @@ id,word,is_banned,warning_level
 0199279b-62cb-7093-6a5a-83840bab3816,lamellae,0,normal
 0199279b-62d2-70c8-a5e2-7dc978fd8bc0,lamellar,0,normal
 0199279b-62d9-701f-5d73-2a78dce5e4c7,lamellas,0,normal
-0199279b-62de-7039-c531-a4a54a84b604,lameness,0,normal
+0199279b-62de-7039-c531-a4a54a84b604,lameness,0,caution
 0199279b-62e3-70f4-b7ba-7a37a490e3c1,lamented,0,normal
 0199279b-62e9-701c-4814-8d85f22b0082,lamenter,0,normal
 0199279b-62f1-708c-335d-3a0c8c9b621c,laminate,0,normal
@@ -43611,8 +43611,8 @@ id,word,is_banned,warning_level
 0199279b-862f-702a-657c-3ec2121532bb,molecule,0,normal
 0199279b-8634-7013-2fb1-e97baef5bed8,molehill,0,normal
 0199279b-863c-7001-7b64-84687b328815,moleskin,0,normal
-0199279b-864f-70cf-ce98-900671225a59,molested,0,normal
-0199279b-8666-70b2-7019-30a4a652aa5a,molester,0,normal
+0199279b-864f-70cf-ce98-900671225a59,molested,0,offensive
+0199279b-8666-70b2-7019-30a4a652aa5a,molester,0,offensive
 0199279b-866d-70c7-d3cb-7f1a05cef45e,molimina,0,normal
 0199279b-8672-70f9-c3e3-271d1a2a882a,molliter,0,normal
 0199279b-8677-703a-a485-aed93477ba3e,mollusca,0,normal
@@ -43698,7 +43698,7 @@ id,word,is_banned,warning_level
 0199279b-88e9-7072-979e-54c9f058e679,moribund,0,normal
 0199279b-88fc-70a9-e479-b2103bf827dc,mornings,0,normal
 0199279b-8902-70d6-9b86-cd70c7969a3e,moroccan,0,normal
-0199279b-891e-706a-597d-6892a47d8627,moronism,0,normal
+0199279b-891e-706a-597d-6892a47d8627,moronism,0,caution
 0199279b-8925-7032-8502-7d6ba1e38d1b,moronity,0,normal
 0199279b-893d-70dd-0379-522ff6426a4c,morosely,0,normal
 0199279b-8943-703f-55ef-ab8cbaffce08,morpheae,0,normal
@@ -44422,7 +44422,7 @@ id,word,is_banned,warning_level
 0199279b-a193-7059-5cbf-a9115b92cc45,organist,0,normal
 0199279b-a198-70f7-032d-d7acd62d6059,organize,0,normal
 0199279b-a19e-709d-0851-7c79e821ec39,organoid,0,normal
-0199279b-a1a4-705c-1f86-44c2fdae6d18,orgasmic,0,normal
+0199279b-a1a4-705c-1f86-44c2fdae6d18,orgasmic,0,offensive
 0199279b-a1c7-7033-b6f7-b18fbbfbb59a,orgastic,0,normal
 0199279b-a1cd-70e4-a58f-dea7a95bcdee,oriental,0,caution
 0199279b-a1d5-7040-7896-89eaf91eaafa,oriented,0,normal
@@ -45747,7 +45747,7 @@ id,word,is_banned,warning_level
 0199279b-d1a3-70b9-bc80-4f083e1dd6da,prospect,0,normal
 0199279b-d1a7-70bf-2da6-b69cebc4110d,prospers,0,normal
 0199279b-d1ae-700d-1a5d-8378cfa3c5f0,prossing,0,normal
-0199279b-d1b3-7060-0f2e-b70a0d238b4c,prostate,0,normal
+0199279b-d1b3-7060-0f2e-b70a0d238b4c,prostate,0,caution
 0199279b-d1bb-70dc-6873-0bdc2a41c720,protagon,0,normal
 0199279b-d1c3-704a-158a-73a4db5a33f1,protease,0,normal
 0199279b-d1c8-701a-b32e-d084252e78cf,protects,0,normal
@@ -47437,7 +47437,7 @@ id,word,is_banned,warning_level
 0199279c-03c1-701b-1413-26862c4aeec7,sediment,0,normal
 0199279c-03c6-701b-34b1-dc3a8c0fa718,sedition,0,normal
 0199279c-03cb-7083-47d9-6c8e84eb0a73,seducers,0,normal
-0199279c-03d1-7020-4601-33fb509d25e1,seducing,0,normal
+0199279c-03d1-7020-4601-33fb509d25e1,seducing,0,caution
 0199279c-03d6-70f6-2cf9-5ad6232d7adb,sedulous,0,normal
 0199279c-03db-70d8-a8c2-d2d6b60c1d6c,seediest,0,normal
 0199279c-03e0-70c6-9cb8-c5b32fd39368,seedings,0,normal
@@ -48657,7 +48657,7 @@ id,word,is_banned,warning_level
 0199279c-2b71-70fa-4a84-b80a0d228635,stripers,0,normal
 0199279c-2b76-7079-bc45-23e2ff58ba9b,striping,0,normal
 0199279c-2b7c-70d9-6c90-8f1cdd016b15,stripped,0,normal
-0199279c-2b9b-7027-872e-53156ee8418d,stripper,0,normal
+0199279c-2b9b-7027-872e-53156ee8418d,stripper,0,caution
 0199279c-2ba2-70fd-4a7e-987fb1f9cb0f,strivers,0,normal
 0199279c-2ba7-70e7-57ff-f6d1328917d9,striving,0,normal
 0199279c-2bb0-70f7-4987-cc6699cb2f87,strobila,0,normal
@@ -49262,7 +49262,7 @@ id,word,is_banned,warning_level
 0199279c-407b-7007-4544-85d07f0dc4ac,testandi,0,normal
 0199279c-4080-7011-5060-ee87dbb4f199,testator,0,normal
 0199279c-4086-702a-07a7-30fa52ac66fc,testatum,0,normal
-0199279c-408e-70bb-b557-93da891f00a3,testicle,0,normal
+0199279c-408e-70bb-b557-93da891f00a3,testicle,0,caution
 0199279c-4093-7030-0898-e0995d060816,testiest,0,normal
 0199279c-4099-7056-6f27-79e920e82609,testings,0,normal
 0199279c-40a0-70bc-909b-59eb900c8c99,tetanies,0,normal
@@ -50507,7 +50507,7 @@ id,word,is_banned,warning_level
 0199279c-699f-70f9-94fb-2ae4f622c77d,vibrancy,0,normal
 0199279c-69a4-701c-171d-50392c3276ba,vibrated,0,normal
 0199279c-69a9-7040-139f-e3923245c509,vibrates,0,normal
-0199279c-69af-70e1-47c3-f994fb2dee22,vibrator,0,normal
+0199279c-69af-70e1-47c3-f994fb2dee22,vibrator,0,caution
 0199279c-69b3-70e0-fa42-5b02f8d541c6,vibratos,0,normal
 0199279c-69b9-701c-3bd3-6ca7fe021253,vibrissa,0,normal
 0199279c-69c1-7069-142c-a09a24e717bf,viburnum,0,normal
@@ -51149,7 +51149,7 @@ id,word,is_banned,warning_level
 0199279c-7c03-7018-a5f4-d54cfd105a90,abolition,0,normal
 0199279c-7c07-70c2-1c46-0b67df29317a,abominate,0,normal
 0199279c-7c0c-70d1-a6ce-12f181b1f2a8,aborigine,0,normal
-0199279c-7c11-7071-3ee2-b1d205a320b7,abortions,0,normal
+0199279c-7c11-7071-3ee2-b1d205a320b7,abortions,0,caution
 0199279c-7c16-7034-e2cd-595ab6836b8d,abortuses,0,normal
 0199279c-7c1f-7084-ed13-9bcd31903d81,abounding,0,normal
 0199279c-7c27-70ce-842c-500b48489200,abradable,0,normal
@@ -52580,7 +52580,7 @@ id,word,is_banned,warning_level
 0199279c-a84c-7047-a667-12278c48c4fe,basophile,0,normal
 0199279c-a854-70a9-54aa-56af6c0f06f2,bassinets,0,normal
 0199279c-a85b-70a8-754f-2ef850a85ac8,basswoods,0,normal
-0199279c-a861-70dc-f229-f961f9bdc49f,bastardly,0,normal
+0199279c-a861-70dc-f229-f961f9bdc49f,bastardly,0,caution
 0199279c-a869-70cf-2f7e-ea16b43f21ea,bastinade,0,normal
 0199279c-a87c-702f-2e5a-390fa2fd0b40,bastinado,0,normal
 0199279c-a88e-7021-e414-b7599af4f8fd,bastioned,0,normal
@@ -53160,7 +53160,7 @@ id,word,is_banned,warning_level
 0199279c-bc73-7047-ca20-40e0a28acd64,bufonidae,0,normal
 0199279c-bc7c-708b-8c1d-ef52ce10e753,bufotalin,0,normal
 0199279c-bc8d-70ea-9b48-971cc8948e08,bufotoxin,0,normal
-0199279c-bc96-707f-6373-171b43fd29d6,buggeries,0,normal
+0199279c-bc96-707f-6373-171b43fd29d6,buggeries,0,caution
 0199279c-bc9f-70b3-00e6-7ec45a784a09,buildings,0,normal
 0199279c-bca9-7050-7763-8882f2342f50,bulgarian,0,normal
 0199279c-bcaf-7005-27b4-1035daa4a54f,bulkheads,0,normal
@@ -54660,8 +54660,8 @@ id,word,is_banned,warning_level
 0199279c-f02d-707f-b409-123dfc371ded,crinklier,0,normal
 0199279c-f032-704a-aa77-54414ab194d2,crinkling,0,normal
 0199279c-f03a-705f-66e2-38729287eb02,crinoline,0,normal
-0199279c-f040-704c-7668-a8125fa92eec,cripplers,0,normal
-0199279c-f046-7014-9eda-6a8250093c11,crippling,0,normal
+0199279c-f040-704c-7668-a8125fa92eec,cripplers,0,caution
+0199279c-f046-7014-9eda-6a8250093c11,crippling,0,caution
 0199279c-f04d-70a4-ff10-55785a5ab57d,crispiest,0,normal
 0199279c-f053-7053-29d5-abdb48d55118,crispness,0,normal
 0199279c-f058-7084-4efa-faf2cd2d78d2,criterion,0,normal
@@ -55971,7 +55971,7 @@ id,word,is_banned,warning_level
 0199279d-1df6-70ff-0f4b-4d9e322009cd,eiderdown,0,normal
 0199279d-1e08-70e6-17c2-875b34f324db,eighteens,0,normal
 0199279d-1e0e-70db-b90a-0603fce481db,eightieth,0,normal
-0199279d-1e1a-70c4-4301-403c6d6bd4e0,ejaculate,0,normal
+0199279d-1e1a-70c4-4301-403c6d6bd4e0,ejaculate,0,offensive
 0199279d-1e1f-70e7-e5c2-1b42fa1ca1ce,ejectable,0,normal
 0199279d-1e26-7026-5434-06827bdfecff,ejections,0,normal
 0199279d-1e2b-7037-16ca-b01147322523,ejectment,0,normal
@@ -57409,7 +57409,7 @@ id,word,is_banned,warning_level
 0199279d-4f7f-7066-7a33-8f355b27b30a,geniality,0,normal
 0199279d-4f83-7018-5e8d-a697055189bc,genically,0,normal
 0199279d-4f88-700f-1645-16a0de75b115,geniculum,0,normal
-0199279d-4fa9-7056-702f-9c80ade05b26,genitalia,0,normal
+0199279d-4fa9-7056-702f-9c80ade05b26,genitalia,0,caution
 0199279d-4fae-70b0-fbda-530e50681637,genitalic,0,normal
 0199279d-4fb3-70d1-72c6-8a5f3e18c17e,genitives,0,normal
 0199279d-4fb8-7033-8501-7853381ff365,genocidal,0,normal
@@ -59333,7 +59333,7 @@ id,word,is_banned,warning_level
 0199279d-9015-70fd-d42c-636ae84dc7ff,leathered,0,normal
 0199279d-901d-70a4-3b38-6862b2548ecb,leavening,0,normal
 0199279d-9022-704e-25d0-a3bdc8b22398,lecheries,0,normal
-0199279d-9042-7092-109c-db76bd4e52b0,lecherous,0,normal
+0199279d-9042-7092-109c-db76bd4e52b0,lecherous,0,offensive
 0199279d-904e-7079-5023-c15e91baf28d,lecturers,0,normal
 0199279d-9054-70ea-eee6-b4d3059f0e67,lecturing,0,normal
 0199279d-905b-70da-0fbc-7f4af6eec50f,ledgeless,0,normal
@@ -60030,7 +60030,7 @@ id,word,is_banned,warning_level
 0199279d-a919-708d-45b0-a2199ab6c1a5,menorrhea,0,normal
 0199279d-a91e-70f5-dc6b-85582bce842d,menotaxes,0,normal
 0199279d-a923-7056-27c1-5150a02f0cad,menotaxis,0,normal
-0199279d-a928-7041-3e74-8b591f907495,menstrual,0,normal
+0199279d-a928-7041-3e74-8b591f907495,menstrual,0,caution
 0199279d-a92d-708b-fc49-788019fda84f,menstruum,0,normal
 0199279d-a935-7096-0246-5bf4b3a41c9f,mentalist,0,normal
 0199279d-a942-70c9-11fa-ad7649085078,mentality,0,normal
@@ -60351,8 +60351,8 @@ id,word,is_banned,warning_level
 0199279d-b214-70d8-a09a-22dbe4e2c01a,molecules,0,normal
 0199279d-b21c-7043-013b-2712e74dca0e,molehills,0,normal
 0199279d-b225-70e8-5f22-906960a3116a,moleskins,0,normal
-0199279d-b22a-70e1-2928-4e0d5891cd4d,molesters,0,normal
-0199279d-b22f-701e-af0f-4117af2ac351,molesting,0,normal
+0199279d-b22a-70e1-2928-4e0d5891cd4d,molesters,0,offensive
+0199279d-b22f-701e-af0f-4117af2ac351,molesting,0,offensive
 0199279d-b23b-704b-88c5-44034346961d,mollified,0,normal
 0199279d-b242-70ce-b210-38ecf2f80429,mollifier,0,normal
 0199279d-b253-70c3-5664-f59b2a0189a9,mollifies,0,normal
@@ -61747,7 +61747,7 @@ id,word,is_banned,warning_level
 0199279d-da42-706b-4722-d4c14a2f0db5,pediments,0,normal
 0199279d-da47-7061-c6bd-5fa51ea4de69,pedologic,0,normal
 0199279d-da4c-7073-03b9-96c102c9e930,pedometer,0,normal
-0199279d-da51-7036-7dd1-9ea661f7ae81,pedophile,0,normal
+0199279d-da51-7036-7dd1-9ea661f7ae81,pedophile,0,offensive
 0199279d-da56-707c-ea20-e310a4083b11,peduncled,0,normal
 0199279d-da5d-70a3-fd08-34e9f40a568f,peduncles,0,normal
 0199279d-da66-70cb-4c1a-9dc503beb13a,pedunculi,0,normal
@@ -62909,7 +62909,7 @@ id,word,is_banned,warning_level
 0199279d-fe51-70aa-a22b-f443757f1d13,quaverers,0,normal
 0199279d-fe57-700b-fed5-3177be5260eb,quavering,0,normal
 0199279d-fe5c-7076-8f67-5989a086c02e,queasiest,0,normal
-0199279d-fe61-70a7-bbb0-3e2a17f78cd7,queerness,0,normal
+0199279d-fe61-70a7-bbb0-3e2a17f78cd7,queerness,0,caution
 0199279d-fe71-708f-4ac2-ed5d08154e49,quenching,0,normal
 0199279d-fe77-7083-b4fc-d12237afc7d5,quercetin,0,normal
 0199279d-fe7b-70d3-a4b9-b25282945f21,quercitin,0,normal
@@ -64302,8 +64302,8 @@ id,word,is_banned,warning_level
 0199279e-27c6-7086-c239-d99047b1a41f,sediments,0,normal
 0199279e-27da-70af-0e3c-004e84add420,seditious,0,normal
 0199279e-27df-7022-4a0d-63c8c273f77d,seducible,0,normal
-0199279e-27e4-708c-47bd-de1fffa22cf6,seduction,0,normal
-0199279e-27ef-704c-991a-b64021e514b8,seductive,0,normal
+0199279e-27e4-708c-47bd-de1fffa22cf6,seduction,0,caution
+0199279e-27ef-704c-991a-b64021e514b8,seductive,0,caution
 0199279e-27f4-705d-ab3e-344ce182e5f6,seediness,0,normal
 0199279e-27ff-701e-b530-d38c47bddb13,seedlings,0,normal
 0199279e-2807-70cd-cb8f-6c6ddd0dab31,seemingly,0,normal
@@ -65366,7 +65366,7 @@ id,word,is_banned,warning_level
 0199279e-482a-70c5-565d-d307a93922ff,stringier,0,normal
 0199279e-482f-7097-f609-4e692376e412,stringing,0,normal
 0199279e-4836-70ad-2ee1-d8986e619ce7,stripling,0,normal
-0199279e-483c-70b1-c2b5-46406b5b868f,strippers,0,normal
+0199279e-483c-70b1-c2b5-46406b5b868f,strippers,0,caution
 0199279e-4840-7036-6556-81830db86f07,stripping,0,normal
 0199279e-4845-70d4-10d3-f343778a50f0,strivings,0,normal
 0199279e-484d-70c2-fca5-456c4e4058fa,strobilae,0,normal
@@ -65975,7 +65975,7 @@ id,word,is_banned,warning_level
 0199279e-5b16-70e3-14bd-76191a36c123,testators,0,normal
 0199279e-5b1b-706c-b33b-11a50735f21b,testatrix,0,normal
 0199279e-5b20-70b4-31db-b6fdcf13f48a,testcross,0,normal
-0199279e-5b25-70d5-8e47-b9cac67f2c5f,testicles,0,normal
+0199279e-5b25-70d5-8e47-b9cac67f2c5f,testicles,0,caution
 0199279e-5b2a-7056-94e1-acb78ea58dd3,testified,0,normal
 0199279e-5b2f-7078-e201-61e249c5fea9,testifier,0,normal
 0199279e-5b33-7052-9e23-d4bc2fb70907,testifies,0,normal
@@ -67167,7 +67167,7 @@ id,word,is_banned,warning_level
 0199279e-81a1-702b-e3ed-f70f68d8048a,vibrantly,0,normal
 0199279e-81a5-70a9-af71-2875d1b61e74,vibrating,0,normal
 0199279e-81ab-70ea-354c-e07ac468bb71,vibration,0,normal
-0199279e-81b1-7001-b68b-9548a87140eb,vibrators,0,normal
+0199279e-81b1-7001-b68b-9548a87140eb,vibrators,0,caution
 0199279e-81c4-70d9-7ce0-ed013f3a6342,vibratory,0,normal
 0199279e-81ca-7021-dff8-3e4dc908cadc,vibrioses,0,normal
 0199279e-81ef-70ee-1397-b9d709a82ef0,vibriosis,0,normal
@@ -67216,7 +67216,7 @@ id,word,is_banned,warning_level
 0199279e-832f-703c-3969-63b3589f158c,viperidae,0,normal
 0199279e-8333-707c-c97a-06b061d507a3,virginals,0,normal
 0199279e-8337-701a-99b2-ad4c7568a913,virginian,0,normal
-0199279e-8342-7068-cecd-999623ed374f,virginity,0,normal
+0199279e-8342-7068-cecd-999623ed374f,virginity,0,caution
 0199279e-8348-70e5-8f1a-d5dbc95f7e5a,virginium,0,normal
 0199279e-834d-7048-5bee-9727008dbf15,viricidal,0,normal
 0199279e-8352-702d-a2a4-4f9e2bfd703b,virilized,0,normal
@@ -69040,7 +69040,7 @@ id,word,is_banned,warning_level
 0199279e-bfc0-707c-dfe4-da9868400767,bespatters,0,normal
 0199279e-bfc5-70ec-663e-02508dd273c7,bespeaking,0,normal
 0199279e-bfca-708d-6a6d-e22309c4ba58,besprinkle,0,normal
-0199279e-bfd0-708a-aab4-857fec22e512,bestiality,0,normal
+0199279e-bfd0-708a-aab4-857fec22e512,bestiality,0,offensive
 0199279e-bfd5-70ac-28c6-639ff4e8aca3,bestialize,0,normal
 0199279e-bfda-702b-ef2c-0ec2a0db6670,bestiaries,0,normal
 0199279e-bfdf-70fe-a84c-86bb1537d583,bestirring,0,normal
@@ -71928,8 +71928,8 @@ id,word,is_banned,warning_level
 0199279f-2204-7061-793a-b8ed778d5d2a,eimeriidae,0,normal
 0199279f-2209-70be-35d0-71c78f79adf9,eisenhower,0,normal
 0199279f-220f-70d8-4bf2-d86265d1e509,eisteddfod,0,normal
-0199279f-2215-7080-6473-16142373d8e1,ejaculated,0,normal
-0199279f-221a-70da-a29c-26e91bcfb932,ejaculates,0,normal
+0199279f-2215-7080-6473-16142373d8e1,ejaculated,0,offensive
+0199279f-221a-70da-a29c-26e91bcfb932,ejaculates,0,offensive
 0199279f-221f-70d0-7cf9-6d33bb0d0f26,ejaculator,0,normal
 0199279f-2224-7091-6440-15ac1a80337d,elaborated,0,normal
 0199279f-222a-70db-cf7b-fa7147107a36,elaborates,0,normal
@@ -74141,7 +74141,7 @@ id,word,is_banned,warning_level
 0199279f-69bc-70ce-bf51-59cbeb385501,incautious,0,normal
 0199279f-69c2-700a-2cc2-430b700ef8ac,incendiary,0,normal
 0199279f-69c6-7076-4b15-886b8040c103,incentives,0,normal
-0199279f-69de-70cf-0199-fc21b2175c88,incestuous,0,normal
+0199279f-69de-70cf-0199-fc21b2175c88,incestuous,0,offensive
 0199279f-69e3-7095-51d6-3eb4c8cfb416,inchoately,0,normal
 0199279f-69e7-7053-5cd5-13e336665ea3,incidences,0,normal
 0199279f-69ec-7014-7d36-964ec3e53148,incidental,0,normal
@@ -75411,7 +75411,7 @@ id,word,is_banned,warning_level
 0199279f-941d-70fb-c0d1-d3aff3b3a41e,mastoideal,0,normal
 0199279f-9424-70aa-f7d5-47e49f715760,mastoidean,0,normal
 0199279f-9451-70dd-3058-2cd39c930a7c,mastopathy,0,normal
-0199279f-9455-704c-0b54-828f45ab8bb8,masturbate,0,normal
+0199279f-9455-704c-0b54-828f45ab8bb8,masturbate,0,offensive
 0199279f-945b-70f4-a042-6c556705e360,matchbooks,0,normal
 0199279f-945f-7039-fc42-55e4759cb09c,matchlocks,0,normal
 0199279f-9464-70fb-1578-1a1b38c638c8,matchmaker,0,normal
@@ -75529,7 +75529,7 @@ id,word,is_banned,warning_level
 0199279f-983f-70e3-5c23-9da9754e28de,mennonites,0,normal
 0199279f-9844-70dd-ba0c-0d1d6abb69de,menopausal,0,normal
 0199279f-9849-701a-e93e-7ebb2fbb1a53,menstruant,0,normal
-0199279f-9859-7050-9704-4e7c841f0fed,menstruate,0,normal
+0199279f-9859-7050-9704-4e7c841f0fed,menstruate,0,caution
 0199279f-985e-7077-8a4d-e7994aa96e2c,menstruous,0,normal
 0199279f-9864-7091-53ea-9c4fb7a71fa5,menstruums,0,normal
 0199279f-986b-70dd-6150-6c2ea4aa65fe,mensurable,0,normal
@@ -77178,7 +77178,7 @@ id,word,is_banned,warning_level
 0199279f-d2e7-70ae-155f-9df3ebbdf17d,pedologies,0,normal
 0199279f-d2ef-709f-a662-f8b49beed354,pedologist,0,normal
 0199279f-d2fe-702f-ed13-9cd143dc83fc,pedometers,0,normal
-0199279f-d303-7063-fabd-c08c7cc875f2,pedophilia,0,normal
+0199279f-d303-7063-fabd-c08c7cc875f2,pedophilia,0,offensive
 0199279f-d308-705c-f5b6-b04f7974d7d9,pedophilic,0,normal
 0199279f-d30d-70b8-0c16-4829f756cbf3,peduncular,0,normal
 0199279f-d312-7061-0a11-38e6d8840bad,pedunculus,0,normal
@@ -78195,7 +78195,7 @@ id,word,is_banned,warning_level
 0199279f-f1af-701a-5d85-81f752b48fb1,prostheses,0,normal
 0199279f-f1b6-70c7-d1c1-535dd9232860,prosthesis,0,normal
 0199279f-f1cd-7066-df29-317ad2aadd55,prosthetic,0,normal
-0199279f-f1e1-7013-60a7-23bd4628f554,prostitute,0,normal
+0199279f-f1e1-7013-60a7-23bd4628f554,prostitute,0,offensive
 0199279f-f1e8-70c4-d9f1-2b0597e3adb9,prostrated,0,normal
 0199279f-f1ee-7095-bef7-9a1dc68549dd,prostrates,0,normal
 0199279f-f1f4-7077-bd4c-447168b85fb5,protanopia,0,normal
@@ -80372,7 +80372,7 @@ id,word,is_banned,warning_level
 019927a0-3f70-700d-63c7-bc59869556ef,stringless,0,normal
 019927a0-3f76-70ab-8bb5-e86956723acd,stripeless,0,normal
 019927a0-3f7b-7052-3618-d6e5f82aea14,striplings,0,normal
-019927a0-3f84-70a7-0833-e7ebe4b4d719,striptease,0,normal
+019927a0-3f84-70a7-0833-e7ebe4b4d719,striptease,0,offensive
 019927a0-3f89-70f6-84b4-f8bdcbc05d93,strobiloid,0,normal
 019927a0-3f96-70c7-2a80-0185976535da,stroganoff,0,normal
 019927a0-3fa6-70a3-a03a-409425fd8399,stronghold,0,normal
@@ -80970,7 +80970,7 @@ id,word,is_banned,warning_level
 019927a0-5433-701f-34a8-ac66faaf8074,testamento,0,normal
 019927a0-5439-70c1-6cda-fd6503de4de9,testaments,0,normal
 019927a0-543e-70a5-8092-5b104219b951,testatoris,0,normal
-019927a0-5444-706a-2062-8a8d2204ae5a,testicular,0,normal
+019927a0-5444-706a-2062-8a8d2204ae5a,testicular,0,caution
 019927a0-5449-70b9-8e9c-6219555ed923,testifiers,0,normal
 019927a0-544e-7023-47f9-0b4d5ff4a86b,testifying,0,normal
 019927a0-5462-7021-638f-a07568a91673,testimento,0,normal
@@ -85936,8 +85936,8 @@ id,word,is_banned,warning_level
 019927a0-f811-7031-8918-de0da71c97a2,eikonometer,0,normal
 019927a0-f817-7063-0905-feea983b5e25,einsteinium,0,normal
 019927a0-f81c-70a2-babb-792d79d5be39,eisteddfods,0,normal
-019927a0-f835-70e1-bc0b-02ec9421e829,ejaculating,0,normal
-019927a0-f83a-7013-e43a-79b0050a2497,ejaculation,0,normal
+019927a0-f835-70e1-bc0b-02ec9421e829,ejaculating,0,offensive
+019927a0-f83a-7013-e43a-79b0050a2497,ejaculation,0,offensive
 019927a0-f83f-7086-dab1-e87799993437,ejaculators,0,normal
 019927a0-f844-707a-bc3f-0661d2fb7145,ejaculatory,0,normal
 019927a0-f84f-7006-5180-9052e8942c22,elaborately,0,normal
@@ -87570,7 +87570,7 @@ id,word,is_banned,warning_level
 019927a1-31c5-70ae-c3c8-9ebedd18e327,idiopathies,0,normal
 019927a1-31d2-7019-0ae6-623afb38281f,idioplasmic,0,normal
 019927a1-31e8-7025-5e68-ed6c5259c7d8,idioretinal,0,normal
-019927a1-31f2-70e3-e6d9-892313f8a13c,idiotically,0,normal
+019927a1-31f2-70e3-e6d9-892313f8a13c,idiotically,0,caution
 019927a1-31ff-7048-b5b1-5599fe2ce1e4,idolization,0,normal
 019927a1-3208-70d0-6589-7edbcf7cfd7f,ignominious,0,normal
 019927a1-3226-7084-16e3-2c347fe3ef06,ignoramuses,0,normal
@@ -88808,8 +88808,8 @@ id,word,is_banned,warning_level
 019927a1-58ed-704f-1b9a-b1a93b2e347c,mastoplasia,0,normal
 019927a1-58f3-70d0-9da2-54bdb44f7042,mastoplasty,0,normal
 019927a1-5906-70fb-20b0-104114a4f8ec,mastotomies,0,normal
-019927a1-590c-70b4-c1a9-0a390053a12e,masturbated,0,normal
-019927a1-5911-7000-795d-65e23c86ec09,masturbates,0,normal
+019927a1-590c-70b4-c1a9-0a390053a12e,masturbated,0,offensive
+019927a1-5911-7000-795d-65e23c86ec09,masturbates,0,offensive
 019927a1-5917-706a-f99d-29f652b9a921,masturbatic,0,normal
 019927a1-591c-70ac-fade-6971fd9e21c8,masturbator,0,normal
 019927a1-5921-7089-5408-2cc6596c1111,matchlessly,0,normal
@@ -89202,7 +89202,7 @@ id,word,is_banned,warning_level
 019927a1-676d-70bb-2ba4-b59df4ecc208,moisturizer,0,normal
 019927a1-6773-70df-46c0-ee69410a721a,moisturizes,0,normal
 019927a1-6781-702c-914f-da5723aaeb98,molecularly,0,normal
-019927a1-678c-7037-4ee2-7ed19c9a2e1a,molestation,0,normal
+019927a1-678c-7037-4ee2-7ed19c9a2e1a,molestation,0,offensive
 019927a1-6791-70f6-82aa-ccfd8fd373c5,mollycoddle,0,normal
 019927a1-6795-7081-3790-2c2f6467d802,momentarily,0,normal
 019927a1-679b-7084-8d37-6c7711f07fa9,momentously,0,normal
@@ -89719,7 +89719,7 @@ id,word,is_banned,warning_level
 019927a1-76dc-709a-efdf-8f2f3ea891de,nutritional,0,normal
 019927a1-76e1-70a2-8fe6-d16584667410,nutritively,0,normal
 019927a1-76e7-70f7-a244-716ac1845417,nympholepsy,0,normal
-019927a1-76f3-7078-13f9-a44981a9cd04,nymphomania,0,normal
+019927a1-76f3-7078-13f9-a44981a9cd04,nymphomania,0,offensive
 019927a1-76fd-70ad-58af-67f38de7db95,oarsmanship,0,normal
 019927a1-7702-7058-fad9-520d4e5de977,obdormition,0,normal
 019927a1-770f-7096-8cfa-3c42962806a7,obediential,0,normal
@@ -90107,7 +90107,7 @@ id,word,is_banned,warning_level
 019927a1-82e6-70e0-d690-4ccc1a1e4913,packsaddles,0,normal
 019927a1-82ed-7086-676e-f57c8f570516,packthreads,0,normal
 019927a1-82f2-705f-99df-923d7dba2cad,paediatrics,0,normal
-019927a1-82f7-70df-550c-3c0c8576be57,paedophilia,0,normal
+019927a1-82f7-70df-550c-3c0c8576be57,paedophilia,0,offensive
 019927a1-82ff-7077-512e-f6437065aa24,painfulness,0,normal
 019927a1-8305-70b8-2bb1-f2a87243fb1f,painkillers,0,normal
 019927a1-830c-70a8-eda8-83976c5464f7,painkilling,0,normal
@@ -90816,7 +90816,7 @@ id,word,is_banned,warning_level
 019927a1-9b99-70e1-995d-0502fde9983c,popularized,0,normal
 019927a1-9b9e-7065-4837-3c8afb4b86bd,popularizes,0,normal
 019927a1-9bac-7022-73d7-dcc64a21c781,populations,0,normal
-019927a1-9bbc-702f-6981-49eab7d70dbc,pornography,0,normal
+019927a1-9bbc-702f-6981-49eab7d70dbc,pornography,0,offensive
 019927a1-9bc1-7086-697e-3baeb47b4d0f,poroplastic,0,normal
 019927a1-9bc9-7065-cbca-8f7081368e23,porphyritic,0,normal
 019927a1-9be4-7007-ba8e-9952ce14f89c,portability,0,normal
@@ -91202,8 +91202,8 @@ id,word,is_banned,warning_level
 019927a1-aa31-70f0-095f-be99c306d311,prosternere,0,normal
 019927a1-aa37-70da-0ebc-825524b62080,prosthetics,0,normal
 019927a1-aa3b-7022-2a6a-98b9d4fc6e35,prosthetist,0,normal
-019927a1-aa40-70bf-1c51-4152d73eb1ba,prostituted,0,normal
-019927a1-aa45-7090-a27a-7c0192d88304,prostitutes,0,normal
+019927a1-aa40-70bf-1c51-4152d73eb1ba,prostituted,0,offensive
+019927a1-aa45-7090-a27a-7c0192d88304,prostitutes,0,offensive
 019927a1-aa4a-708f-bd07-ea7fbc32c33c,prostrating,0,normal
 019927a1-aa4f-70e3-bafc-bec0886a781b,prostration,0,normal
 019927a1-aa55-701f-4b1a-a3e27fd8bc24,prosuffrage,0,normal
@@ -92294,7 +92294,7 @@ id,word,is_banned,warning_level
 019927a1-ed2b-703c-f827-d8c75b74319a,seditionary,0,normal
 019927a1-ed37-706e-5a79-5129dac85966,seditionist,0,normal
 019927a1-ed41-70f3-8ff2-0c68e645a97d,seditiously,0,normal
-019927a1-ed47-7076-dadf-cd6698c40efa,seductively,0,normal
+019927a1-ed47-7076-dadf-cd6698c40efa,seductively,0,caution
 019927a1-ed59-70b8-a927-ca7d12e5429d,seemingness,0,normal
 019927a1-ed5f-704b-9f3a-47b5b569f17b,segregating,0,normal
 019927a1-ed67-7095-7794-80c65e8581f5,segregation,0,normal
@@ -99069,8 +99069,8 @@ id,word,is_banned,warning_level
 019927a2-d7c1-70cf-4d12-761814206187,mastopathies,0,normal
 019927a2-d7d2-7080-ea15-ac1b8442c1ff,mastorrhagia,0,normal
 019927a2-d7df-70b7-98d3-58403858114d,mastoscirrhi,0,normal
-019927a2-d7e6-7050-a756-b794c005d727,masturbating,0,normal
-019927a2-d7ec-703f-c622-58549b0b66e0,masturbation,0,normal
+019927a2-d7e6-7050-a756-b794c005d727,masturbating,0,offensive
+019927a2-d7ec-703f-c622-58549b0b66e0,masturbation,0,offensive
 019927a2-d7f1-702c-3db0-b7836d96a783,masturbators,0,normal
 019927a2-d7f9-709b-7c9d-9f42706ac493,masturbatory,0,normal
 019927a2-d7fe-7095-323b-922a1b09de3b,materialists,0,normal
@@ -99138,7 +99138,7 @@ id,word,is_banned,warning_level
 019927a2-da48-7057-65f5-9c2c0bb0538c,meniscectomy,0,normal
 019927a2-da4e-70c6-3bd5-77d4c044159c,menorrhalgia,0,normal
 019927a2-da53-70cf-37a6-980860cad2bb,menstruating,0,normal
-019927a2-da58-7031-c442-ff3407899962,menstruation,0,normal
+019927a2-da58-7031-c442-ff3407899962,menstruation,0,caution
 019927a2-da5c-701e-71db-f5383a7dc049,mercantilism,0,normal
 019927a2-da66-702e-0cb4-5db98671a5e7,merchandised,0,normal
 019927a2-da6e-7095-354a-d23cb9e75804,merchandiser,0,normal
@@ -99840,7 +99840,7 @@ id,word,is_banned,warning_level
 019927a2-efe8-707f-79e1-fa425c040304,nuttallioses,0,normal
 019927a2-efed-700b-2ab4-04f9d3359032,nuttalliosis,0,normal
 019927a2-effc-704a-da68-79244c0d61bf,nympholeptic,0,normal
-019927a2-f002-7097-b8d4-fd75523c365b,nymphomaniac,0,normal
+019927a2-f002-7097-b8d4-fd75523c365b,nymphomaniac,0,offensive
 019927a2-f008-7026-aff6-c3ec56e98c00,obdurateness,0,normal
 019927a2-f027-705f-d921-1d2c882110ee,objectifying,0,normal
 019927a2-f035-7078-8c54-00041663af41,objurgations,0,normal
@@ -100636,8 +100636,8 @@ id,word,is_banned,warning_level
 019927a3-0b4f-701f-ae08-218c5c25a8d7,pontificator,0,normal
 019927a3-0b55-703d-aba1-24d3b203f8ce,popularizing,0,normal
 019927a3-0b5a-7021-3ac0-14267f09b365,populousness,0,normal
-019927a3-0b63-70e0-3156-1b864ff8eebc,pornographer,0,normal
-019927a3-0b68-70e1-3565-5b98e6b9ec70,pornographic,0,normal
+019927a3-0b63-70e0-3156-1b864ff8eebc,pornographer,0,offensive
+019927a3-0b68-70e1-3565-5b98e6b9ec70,pornographic,0,offensive
 019927a3-0b6e-706d-d2d4-b0f2a97a6899,porocephalus,0,normal
 019927a3-0b74-70c6-130d-0b0d238a46c4,porphyropsin,0,normal
 019927a3-0b80-70ff-b27c-58434aa86a1a,portcullises,0,normal
@@ -100954,7 +100954,7 @@ id,word,is_banned,warning_level
 019927a3-1577-7095-81c5-5a71297cef39,prosperously,0,normal
 019927a3-157c-7050-e58c-0b94c51d42f4,prostatolith,0,normal
 019927a3-1582-7000-22aa-ec9e53c6e528,prostituting,0,normal
-019927a3-1586-701b-10fe-c9f15dfcd842,prostitution,0,normal
+019927a3-1586-701b-10fe-c9f15dfcd842,prostitution,0,offensive
 019927a3-158c-70c5-1415-2da4ab6e2571,prostrations,0,normal
 019927a3-1595-70c5-8857-1c8a5c31e1d3,protactinium,0,normal
 019927a3-159a-707a-eb2b-17f1716297cd,protagonists,0,normal
@@ -102722,7 +102722,7 @@ id,word,is_banned,warning_level
 019927a3-50c7-7051-b38e-acb480647317,transversely,0,normal
 019927a3-50cd-7017-31b1-e35d26a8d636,transversion,0,normal
 019927a3-50d3-708e-2308-bd9acd339964,transvestism,0,normal
-019927a3-50e3-7029-a0a7-64ffd014f281,transvestite,0,normal
+019927a3-50e3-7029-a0a7-64ffd014f281,transvestite,0,caution
 019927a3-50f0-70b0-ee94-1ac69289f633,trapshooting,0,normal
 019927a3-50f6-701c-f77d-8c46bcda10c1,traumatizing,0,normal
 019927a3-50fd-7096-ac9b-023a1cde0375,traumatology,0,normal
@@ -109091,7 +109091,7 @@ id,word,is_banned,warning_level
 019927a4-246c-703e-85e0-d37f0496e5b4,transtracheal,0,normal
 019927a4-2471-70d9-1f10-f69c2b0598ea,transurethral,0,normal
 019927a4-2477-70c9-319a-6f5f8da48edc,transversalis,0,normal
-019927a4-247e-70a2-9502-4f84a7b9a923,transvestites,0,normal
+019927a4-247e-70a2-9502-4f84a7b9a923,transvestites,0,caution
 019927a4-2484-70b3-1554-62f08cebf507,traumatically,0,normal
 019927a4-2488-7046-4897-1cc8958f0e9b,treacherously,0,normal
 019927a4-248d-70dc-7edf-e3d16eb12ed3,treasurership,0,normal
@@ -118838,7 +118838,7 @@ id,word,is_banned,warning_level
 019936a4-5580-70fb-fe03-186fe4292026,nfl,0,normal
 019936a4-6699-70e3-b5e0-43b0a8371dec,nw,0,normal
 019936a4-6878-7081-c041-045392e2b5e3,ff,0,normal
-019936a4-6a35-708a-e7e5-c52b88262650,dildo,0,normal
+019936a4-6a35-708a-e7e5-c52b88262650,dildo,0,offensive
 019936a4-6fc1-7095-cb39-bc01d21908da,iso,0,normal
 019936a4-7af6-7025-5f6b-faa4467269b5,holdem,0,normal
 019936a4-8363-704c-eaaf-af5cc2b54539,spyware,0,normal
@@ -119012,7 +119012,7 @@ id,word,is_banned,warning_level
 019936cd-120b-70db-ddc3-38ce5f70161c,deutsch,0,normal
 019936cd-1332-704b-950a-711a2e9b7b98,webcam,0,normal
 019936cd-13c9-7097-e2a3-8bce648a880a,nutten,0,normal
-019936cd-14da-70b8-0906-06091e7c12e7,pee,0,normal
+019936cd-14da-70b8-0906-06091e7c12e7,pee,0,caution
 019936cd-178d-70e1-44af-a0137e41c929,manga,0,normal
 019936cd-1909-7066-01d5-2743da78ce9c,mhz,0,normal
 019936cd-1b89-702b-6fab-0a34e4db9a74,meta,0,normal
@@ -119121,7 +119121,7 @@ id,word,is_banned,warning_level
 019936cd-df58-70e3-aebe-ad28c3545dd5,ir,0,normal
 019936cd-df8f-7014-e53f-8bf93d47ad8a,zdnet,0,normal
 019936cd-e2d2-7088-9860-185a7b5a5084,ecommerce,0,normal
-019936cd-e69d-709d-b098-e7be00c9eb3c,dildos,0,normal
+019936cd-e69d-709d-b098-e7be00c9eb3c,dildos,0,offensive
 019936cd-ef4d-700c-cddb-e1d587252444,mitsubishi,0,normal
 019936cd-f3a8-7058-5cc7-ceb31655680a,mozilla,0,normal
 019936cd-f5c1-70dd-2831-7cdacd75e310,oclc,0,normal
@@ -119177,7 +119177,7 @@ id,word,is_banned,warning_level
 019936ce-7904-70c0-dd13-c8b11b76fe94,lopez,0,normal
 019936ce-7b1b-7076-8e65-526813299671,upskirts,0,normal
 019936ce-7ea3-709d-86c9-5966f184c138,ebook,0,normal
-019936ce-7fdf-706f-2774-d1b929a5bec9,peeing,0,normal
+019936ce-7fdf-706f-2774-d1b929a5bec9,peeing,0,caution
 019936ce-8517-70c7-c99b-aa80861bf886,lt,0,normal
 019936ce-887c-704a-d859-3708847bdbd6,atm,0,normal
 019936ce-88bb-70a0-9d33-293281f02c0f,xanax,0,normal
@@ -120173,7 +120173,7 @@ id,word,is_banned,warning_level
 019936e8-ce4b-7095-87e4-e1b8f5a24a90,ecards,0,normal
 019936e8-d94b-7065-f081-b60a1034d58e,acura,0,normal
 019936e8-df0e-704f-9604-528dcc585190,seth,0,normal
-019936e8-e3e0-70e4-6035-e8ece4afc0b5,clit,0,normal
+019936e8-e3e0-70e4-6035-e8ece4afc0b5,clit,0,offensive
 019936e8-f114-7069-99c2-ffb898d3573b,fedex,0,normal
 019936e8-f5a1-7016-38d8-924fd748e295,snowboarding,0,normal
 019936e8-fd28-70ad-6d1a-3ee8cd480540,martinique,0,normal
@@ -122748,7 +122748,7 @@ id,word,is_banned,warning_level
 0199bf56-1a31-7012-35d3-8006a00d62c2,african-american,0,normal
 0199bf56-1a66-70a6-f9ec-b3ba8779c87c,ma'am,0,normal
 0199bf56-1a96-7014-f17b-93707702a63a,health-care,0,normal
-0199bf56-1b0b-7030-41b6-cbd7d39a88da,goddamn,0,normal
+0199bf56-1b0b-7030-41b6-cbd7d39a88da,goddamn,0,caution
 0199bf56-1b48-70ac-d009-c1aa0e494680,iphone,0,normal
 0199bf56-1b78-70b2-f7be-d2e2f41db430,follow-up,0,normal
 0199bf56-1bb1-70d4-956c-5e94c82c8412,grown-up,0,normal
@@ -122760,7 +122760,7 @@ id,word,is_banned,warning_level
 0199bf56-1cf0-700d-63ca-c68440b4c7c4,all-star,0,normal
 0199bf56-1d26-7082-3fb6-cfec2f263182,aah,0,normal
 0199bf56-1d57-70fa-5ee6-65493f5f1d77,co-worker,0,normal
-0199bf56-1d8d-70fc-87b1-e150f1c2f790,fart,0,normal
+0199bf56-1d8d-70fc-87b1-e150f1c2f790,fart,0,caution
 0199bf56-1dbd-70eb-e8c6-266dae23a3c5,hip-hop,0,normal
 0199bf56-1de8-70f2-6c44-12909b56de54,good-bye,0,normal
 0199bf56-1e14-700a-35ee-075aae5ab784,shh,0,normal
@@ -122838,7 +122838,7 @@ id,word,is_banned,warning_level
 0199bf56-a8e1-705c-7844-edd6667c3dbd,mm-hmm,0,normal
 0199bf5b-43da-70f9-a85d-da2a47e29955,a.m.,0,normal
 0199bf5b-4519-70e1-665a-91c62b861f07,abel,0,normal
-0199bf5b-4571-70c8-d4cd-842c5319844d,abo,0,normal
+0199bf5b-4571-70c8-d4cd-842c5319844d,abo,0,offensive
 0199bf5b-45d5-70f2-d554-24bb39edf914,above-mentioned,0,normal
 0199bf5b-4615-7079-2343-e6b8e75c1453,abuzz,0,normal
 0199bf5b-467f-7064-f9b4-97d876c473f4,acid-fast,0,normal
@@ -123466,7 +123466,7 @@ id,word,is_banned,warning_level
 0199bf5b-ea7e-7061-1d71-dd016d1e5037,far-flung,0,normal
 0199bf5b-eaaf-7024-0fe0-325c380262e5,far-off,0,normal
 0199bf5b-ead8-7054-f4c8-0eec75833374,far-out,0,normal
-0199bf5b-eb09-70ad-0511-462d11ced2b3,farting,0,normal
+0199bf5b-eb09-70ad-0511-462d11ced2b3,farting,0,caution
 0199bf5b-eb38-7009-1343-1ab84b50b182,fasces,0,normal
 0199bf5b-eb66-707a-dce0-cb575294f1f9,fascista,0,normal
 0199bf5b-eb9e-700c-506c-2b977170dd01,fast-growing,0,normal
@@ -123628,7 +123628,7 @@ id,word,is_banned,warning_level
 0199bf5c-0df9-709e-682e-aede4bdf7ac4,goateed,0,normal
 0199bf5c-0e37-7069-c189-6d8554146ad4,godard,0,normal
 0199bf5c-0e70-70e8-0d89-84fd6606eb85,goddam,0,normal
-0199bf5c-0eb1-70d9-afdf-50f5d85c4133,goddamned,0,normal
+0199bf5c-0eb1-70d9-afdf-50f5d85c4133,goddamned,0,caution
 0199bf5c-0ee1-703d-9842-81c2471cb947,goddard,0,normal
 0199bf5c-0f20-703c-54f4-c603beab209f,godforsaken,0,normal
 0199bf5c-0f55-70ba-c6b2-29b71a5a7847,goer,0,normal
@@ -123896,7 +123896,7 @@ id,word,is_banned,warning_level
 0199bf5c-51f4-7030-8e35-634e5eec84d0,jerker,0,normal
 0199bf5c-523f-7083-2222-43e9c3182c96,jesuitry,0,normal
 0199bf5c-5271-706a-525c-d515eb58f7cd,jet-black,0,normal
-0199bf5c-529d-701a-1f4a-1899b6c3af20,jewess,0,normal
+0199bf5c-529d-701a-1f4a-1899b6c3af20,jewess,0,offensive
 0199bf5c-52d8-7095-89ee-0b6d01c1bf7b,jewison,0,normal
 0199bf5c-5301-7028-5944-4aa868111f66,jhvh,0,normal
 0199bf5c-5369-70a1-f6ea-afb063e13b84,jillion,0,normal
@@ -124225,7 +124225,7 @@ id,word,is_banned,warning_level
 0199bf5c-ac7d-70ab-0f4b-498de5d579de,numinous,0,normal
 0199bf5c-ad93-70eb-ff3a-2610dd23170d,nutcase,0,normal
 0199bf5c-add4-70fc-c3dd-0a99e19b631e,nutter,0,normal
-0199bf5c-ae2f-706f-d1ca-7d15f07579fc,nympho,0,normal
+0199bf5c-ae2f-706f-d1ca-7d15f07579fc,nympho,0,offensive
 0199bf5c-ae62-7084-a093-024f85aed72b,oates,0,normal
 0199bf5c-ae98-7052-1987-5b31e6eae3b0,objectification,0,normal
 0199bf5c-aedb-70c6-cfb9-2fc44611835c,obsessive-compulsive,0,normal
@@ -124418,7 +124418,7 @@ id,word,is_banned,warning_level
 0199bf5c-e538-708d-7ed3-a2b49df8011d,poignance,0,normal
 0199bf5c-e5a7-7090-7aaf-01f8d43eb9e6,point-blank,0,normal
 0199bf5c-e5fb-7053-eca6-7869a5001154,poitier,0,normal
-0199bf5c-e63d-7074-4602-3a1ad8e90767,polack,0,normal
+0199bf5c-e63d-7074-4602-3a1ad8e90767,polack,0,offensive
 0199bf5c-e682-70ed-7067-b34b6102e67a,policy-making,0,normal
 0199bf5c-e6c6-70b1-070f-39eefd25c568,pollard,0,normal
 0199bf5c-e716-70ba-6ae5-3c7fc55d8376,pollock,0,normal
@@ -128985,7 +128985,7 @@ id,word,is_banned,warning_level
 0199bf98-41f4-70c1-b74f-681c5658b78d,bocce,0,normal
 0199bf98-4200-709b-6114-431294ab9f19,bocci,0,normal
 0199bf98-420d-70d1-9ea4-58ccf6692b9e,bocconia,0,normal
-0199bf98-4213-7097-16ac-197914faa756,boche,0,normal
+0199bf98-4213-7097-16ac-197914faa756,boche,0,offensive
 0199bf98-4235-7014-9ccf-39b2cff65ffc,boddhisatva,0,normal
 0199bf98-4244-7020-9380-c867ab23af01,bodega,0,normal
 0199bf98-424b-70fb-e484-e6f51898b0aa,bodensee,0,normal
@@ -144921,7 +144921,7 @@ id,word,is_banned,warning_level
 0199bf9d-d894-70df-261f-2b7be5087b50,paducah,0,normal
 0199bf9d-d8a8-7096-9321-e92d26369d71,paederastic,0,normal
 0199bf9d-d8c5-7036-0782-73bd58817ce9,paediatrician,0,normal
-0199bf9d-d8d5-70a9-eb9d-51bcbc792963,paedophile,0,normal
+0199bf9d-d8d5-70a9-eb9d-51bcbc792963,paedophile,0,offensive
 0199bf9d-d8e9-70fc-9803-475aee993336,paella,0,normal
 0199bf9d-d8f2-7072-9cb7-bf98b8d3f551,paeonia,0,normal
 0199bf9d-d8fa-70b7-a0fb-093e1ac99fc0,paeoniaceae,0,normal
@@ -146161,7 +146161,7 @@ id,word,is_banned,warning_level
 0199bf9e-3992-70d6-b918-4f456b4a3012,piscivorous,0,normal
 0199bf9e-39b1-706b-f175-76f151c6e839,pisonia,0,normal
 0199bf9e-39bf-703b-901e-e82e2e5b3f2b,piss-up,0,normal
-0199bf9e-39d1-708f-324f-f6e07dd3a8d1,pisser,0,normal
+0199bf9e-39d1-708f-324f-f6e07dd3a8d1,pisser,0,caution
 0199bf9e-39ea-700f-8673-ac0514567238,pissis,0,normal
 0199bf9e-39fa-70f3-6524-82211f38bd0a,pistacia,0,normal
 0199bf9e-3a03-70fc-ce12-f286c54a21c9,piste,0,normal
@@ -150084,7 +150084,7 @@ id,word,is_banned,warning_level
 0199bf9f-ac3f-7090-c836-b8f7ac754600,sissiness,0,normal
 0199bf9f-ac57-7030-ee16-a7000a35ebfa,sissoo,0,normal
 0199bf9f-ac60-701f-ad04-0e39f41aa8fa,sissu,0,normal
-0199bf9f-ac6f-70a3-bab9-7004c6d0c153,sissyish,0,normal
+0199bf9f-ac6f-70a3-bab9-7004c6d0c153,sissyish,0,caution
 0199bf9f-ac95-7015-f899-16a2ebb1b268,sisterlike,0,normal
 0199bf9f-aca2-701b-969b-468ef624d0a6,sistership,0,normal
 0199bf9f-aca9-70ce-13f5-9300496c4104,sistrurus,0,normal
@@ -150400,9 +150400,9 @@ id,word,is_banned,warning_level
 0199bf9f-cb2f-70b6-63cb-d0adf3b9c4a9,sodalite,0,normal
 0199bf9f-cb38-7003-1254-6d287e00859a,sodality,0,normal
 0199bf9f-cb5f-7063-a926-c35c85860db1,soddy,0,normal
-0199bf9f-cb77-709e-189e-d13aafbda70a,sodomise,0,normal
+0199bf9f-cb77-709e-189e-d13aafbda70a,sodomise,0,offensive
 0199bf9f-cb7d-703f-1dd3-cc801d1203d9,sodomist,0,normal
-0199bf9f-cb8a-707e-a4b9-b459a01898b0,sodomize,0,normal
+0199bf9f-cb8a-707e-a4b9-b459a01898b0,sodomize,0,offensive
 0199bf9f-cba2-7036-3565-5ea728d4ade4,soffit,0,normal
 0199bf9f-cbbe-706b-05d7-263bb2cadffb,soft-boiled,0,normal
 0199bf9f-cbce-704d-8fe4-ca44f7084339,soft-cover,0,normal
@@ -155377,7 +155377,7 @@ id,word,is_banned,warning_level
 0199bfa1-a3e7-70dc-8f39-728c6761b152,yhwh,0,normal
 0199bfa1-a3f3-7078-c986-42bade293079,yib,0,normal
 0199bfa1-a4cc-70cc-9277-9dac88a293f9,yibit,0,normal
-0199bfa1-a4d3-7025-d0a1-b6a92de8ff47,yid,0,normal
+0199bfa1-a4d3-7025-d0a1-b6a92de8ff47,yid,0,offensive
 0199bfa1-a4e9-705f-d50f-cccea1bed5ee,yielder,0,normal
 0199bfa1-a503-703c-7aaf-fbde6662ba7b,yieldingly,0,normal
 0199bfa1-a540-70bf-ffbd-b75ba421bb45,yisrael,0,normal
