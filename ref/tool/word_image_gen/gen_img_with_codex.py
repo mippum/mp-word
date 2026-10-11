@@ -711,6 +711,7 @@ def print_summary(results: Sequence[WordResult]) -> None:
     )
     print("-" * 72)
     print(f"generated={generated}, failed={failed}, stopped={stopped}")
+    print(f"finished_at={datetime.now(KST).strftime('%Y-%m-%d %H:%M:%S KST')}")
 
 
 def main() -> int:
